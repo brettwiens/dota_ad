@@ -1,0 +1,438 @@
+{
+  "source_image": "C:\\Program Files (x86)\\Steam\\userdata\\59046080\\760\\remote\\570\\screenshots\\20260215170759_1.jpg",
+  "ultimates": [
+    {
+      "cell": "Ultimate1",
+      "name": "culling_blade",
+      "conf": 0.9985558390617371
+    },
+    {
+      "cell": "Ultimate2",
+      "name": "sharpshooter",
+      "conf": 0.9998231530189514
+    },
+    {
+      "cell": "Ultimate3",
+      "name": "guardian_angel",
+      "conf": 0.9999866485595703
+    },
+    {
+      "cell": "Ultimate4",
+      "name": "terrorize",
+      "conf": 0.9999492168426514
+    },
+    {
+      "cell": "Ultimate5",
+      "name": "fire_remnant",
+      "conf": 0.9997870326042175
+    },
+    {
+      "cell": "Ultimate6",
+      "name": "juxtapose",
+      "conf": 0.9998993873596191
+    },
+    {
+      "cell": "Ultimate7",
+      "name": "arena_of_blood",
+      "conf": 0.9950636029243469
+    },
+    {
+      "cell": "Ultimate8",
+      "name": "dream_coil",
+      "conf": 0.9998306035995483
+    },
+    {
+      "cell": "Ultimate9",
+      "name": "viper_strike",
+      "conf": 0.996722400188446
+    },
+    {
+      "cell": "Ultimate10",
+      "name": "infest",
+      "conf": 0.9999955892562866
+    },
+    {
+      "cell": "Ultimate11",
+      "name": "unknown",
+      "conf": 0.2566368281841278
+    },
+    {
+      "cell": "Ultimate12",
+      "name": "devour_secondary",
+      "conf": 0.4624626338481903
+    }
+  ],
+  "heroes": [
+    {
+      "cell": "Hero1",
+      "name": "morphling",
+      "conf": 0.44550958275794983
+    },
+    {
+      "cell": "Hero2",
+      "name": "phantom_lancer",
+      "conf": 0.5360714197158813
+    },
+    {
+      "cell": "Hero3",
+      "name": "hoodwink",
+      "conf": 0.8630058169364929
+    },
+    {
+      "cell": "Hero4",
+      "name": "ember_spirit",
+      "conf": 0.960468590259552
+    },
+    {
+      "cell": "Hero5",
+      "name": "omniknight",
+      "conf": 0.9361897110939026
+    },
+    {
+      "cell": "Hero6",
+      "name": "dark_willow",
+      "conf": 0.890897810459137
+    },
+    {
+      "cell": "Hero7",
+      "name": "mars",
+      "conf": 0.335235059261322
+    },
+    {
+      "cell": "Hero8",
+      "name": "muerta",
+      "conf": 0.9001151919364929
+    },
+    {
+      "cell": "Hero9",
+      "name": "puck",
+      "conf": 0.7429941296577454
+    },
+    {
+      "cell": "Hero10",
+      "name": "largo",
+      "conf": 0.8454412221908569
+    },
+    {
+      "cell": "Hero11",
+      "name": "viper",
+      "conf": 0.664969265460968
+    },
+    {
+      "cell": "Hero12",
+      "name": "lifestealer",
+      "conf": 0.8401017189025879
+    }
+  ],
+  "abilities": [
+    {
+      "cell": "Ability1",
+      "name": "waveform",
+      "conf": 0.9999892711639404
+    },
+    {
+      "cell": "Ability2",
+      "name": "adaptive_strike_agility",
+      "conf": 0.9999455213546753
+    },
+    {
+      "cell": "Ability3",
+      "name": "counter_helix",
+      "conf": 0.9999866485595703
+    },
+    {
+      "cell": "Ability4",
+      "name": "spirit_lance",
+      "conf": 0.9999871253967285
+    },
+    {
+      "cell": "Ability5",
+      "name": "doppelganger",
+      "conf": 0.9999881982803345
+    },
+    {
+      "cell": "Ability6",
+      "name": "phantom_rush",
+      "conf": 0.9998095631599426
+    },
+    {
+      "cell": "Ability7",
+      "name": "acorn_shot",
+      "conf": 0.9999998807907104
+    },
+    {
+      "cell": "Ability8",
+      "name": "bushwhack",
+      "conf": 0.9990717172622681
+    },
+    {
+      "cell": "Ability9",
+      "name": "scurry",
+      "conf": 0.9998924732208252
+    },
+    {
+      "cell": "Ability10",
+      "name": "searing_chains",
+      "conf": 1.0
+    },
+    {
+      "cell": "Ability11",
+      "name": "sleight_of_fist",
+      "conf": 0.9998267292976379
+    },
+    {
+      "cell": "Ability12",
+      "name": "flame_guard",
+      "conf": 0.9995726943016052
+    },
+    {
+      "cell": "Ability13",
+      "name": "purification",
+      "conf": 0.9998936653137207
+    },
+    {
+      "cell": "Ability14",
+      "name": "heavenly_grace",
+      "conf": 0.5014153718948364
+    },
+    {
+      "cell": "Ability15",
+      "name": "hammer_of_purity",
+      "conf": 0.9999951124191284
+    },
+    {
+      "cell": "Ability16",
+      "name": "bramble_maze",
+      "conf": 0.9999488592147827
+    },
+    {
+      "cell": "Ability17",
+      "name": "shadow_realm",
+      "conf": 0.9999305009841919
+    },
+    {
+      "cell": "Ability18",
+      "name": "cursed_crown",
+      "conf": 0.9999992847442627
+    },
+    {
+      "cell": "Ability19",
+      "name": "spear_of_mars",
+      "conf": 0.9980767965316772
+    },
+    {
+      "cell": "Ability20",
+      "name": "god_s_rebuke",
+      "conf": 0.999992847442627
+    },
+    {
+      "cell": "Ability21",
+      "name": "bulwark",
+      "conf": 0.9602705836296082
+    },
+    {
+      "cell": "Ability22",
+      "name": "divine_favor",
+      "conf": 0.8912741541862488
+    },
+    {
+      "cell": "Ability23",
+      "name": "unknown",
+      "conf": 0.09594686329364777
+    },
+    {
+      "cell": "Ability24",
+      "name": "death_seeker",
+      "conf": 0.6299363374710083
+    },
+    {
+      "cell": "Ability25",
+      "name": "illusory_orb",
+      "conf": 0.9950418472290039
+    },
+    {
+      "cell": "Ability26",
+      "name": "waning_rift",
+      "conf": 0.999442994594574
+    },
+    {
+      "cell": "Ability27",
+      "name": "phase_shift",
+      "conf": 0.9997968077659607
+    },
+    {
+      "cell": "Ability28",
+      "name": "unknown",
+      "conf": 0.20822648704051971
+    },
+    {
+      "cell": "Ability29",
+      "name": "unknown",
+      "conf": 0.15985006093978882
+    },
+    {
+      "cell": "Ability30",
+      "name": "leap_secondary",
+      "conf": 0.6889777779579163
+    },
+    {
+      "cell": "Ability31",
+      "name": "poison_attack",
+      "conf": 0.9982948899269104
+    },
+    {
+      "cell": "Ability32",
+      "name": "nethertoxin",
+      "conf": 0.9998832941055298
+    },
+    {
+      "cell": "Ability33",
+      "name": "corrosive_skin",
+      "conf": 0.9992308616638184
+    },
+    {
+      "cell": "Ability34",
+      "name": "rage",
+      "conf": 0.9999772310256958
+    },
+    {
+      "cell": "Ability35",
+      "name": "open_wounds",
+      "conf": 0.9999680519104004
+    },
+    {
+      "cell": "Ability36",
+      "name": "ghoul_frenzy",
+      "conf": 0.9999028444290161
+    }
+  ],
+  "warnings": [],
+  "hero_vec": [
+    "morphling",
+    "phantom_lancer",
+    "hoodwink",
+    "ember_spirit",
+    "omniknight",
+    "dark_willow",
+    "mars",
+    "muerta",
+    "puck",
+    "largo",
+    "viper",
+    "lifestealer"
+  ],
+  "ultimate_vec": [
+    "culling_blade",
+    "sharpshooter",
+    "guardian_angel",
+    "terrorize",
+    "fire_remnant",
+    "juxtapose",
+    "arena_of_blood",
+    "dream_coil",
+    "viper_strike",
+    "infest",
+    "unknown",
+    "devour_secondary"
+  ],
+  "ability_vec": [
+    "waveform",
+    "adaptive_strike_agility",
+    "counter_helix",
+    "spirit_lance",
+    "doppelganger",
+    "phantom_rush",
+    "acorn_shot",
+    "bushwhack",
+    "scurry",
+    "searing_chains",
+    "sleight_of_fist",
+    "flame_guard",
+    "purification",
+    "heavenly_grace",
+    "hammer_of_purity",
+    "bramble_maze",
+    "shadow_realm",
+    "cursed_crown",
+    "spear_of_mars",
+    "god_s_rebuke",
+    "bulwark",
+    "divine_favor",
+    "unknown",
+    "death_seeker",
+    "illusory_orb",
+    "waning_rift",
+    "phase_shift",
+    "unknown",
+    "unknown",
+    "leap_secondary",
+    "poison_attack",
+    "nethertoxin",
+    "corrosive_skin",
+    "rage",
+    "open_wounds",
+    "ghoul_frenzy"
+  ],
+  "all_picks_vec": [
+    "morphling",
+    "phantom_lancer",
+    "hoodwink",
+    "ember_spirit",
+    "omniknight",
+    "dark_willow",
+    "mars",
+    "muerta",
+    "puck",
+    "largo",
+    "viper",
+    "lifestealer",
+    "culling_blade",
+    "sharpshooter",
+    "guardian_angel",
+    "terrorize",
+    "fire_remnant",
+    "juxtapose",
+    "arena_of_blood",
+    "dream_coil",
+    "viper_strike",
+    "infest",
+    "unknown",
+    "devour_secondary",
+    "waveform",
+    "adaptive_strike_agility",
+    "counter_helix",
+    "spirit_lance",
+    "doppelganger",
+    "phantom_rush",
+    "acorn_shot",
+    "bushwhack",
+    "scurry",
+    "searing_chains",
+    "sleight_of_fist",
+    "flame_guard",
+    "purification",
+    "heavenly_grace",
+    "hammer_of_purity",
+    "bramble_maze",
+    "shadow_realm",
+    "cursed_crown",
+    "spear_of_mars",
+    "god_s_rebuke",
+    "bulwark",
+    "divine_favor",
+    "unknown",
+    "death_seeker",
+    "illusory_orb",
+    "waning_rift",
+    "phase_shift",
+    "unknown",
+    "unknown",
+    "leap_secondary",
+    "poison_attack",
+    "nethertoxin",
+    "corrosive_skin",
+    "rage",
+    "open_wounds",
+    "ghoul_frenzy"
+  ]
+}

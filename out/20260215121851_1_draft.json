@@ -1,0 +1,438 @@
+{
+  "source_image": "C:\\Program Files (x86)\\Steam\\userdata\\59046080\\760\\remote\\570\\screenshots\\20260215121851_1.jpg",
+  "ultimates": [
+    {
+      "cell": "Ultimate1",
+      "name": "sonic_wave",
+      "conf": 0.9991605281829834
+    },
+    {
+      "cell": "Ultimate2",
+      "name": "terrorize",
+      "conf": 0.9994986057281494
+    },
+    {
+      "cell": "Ultimate3",
+      "name": "unleash",
+      "conf": 0.9999963045120239
+    },
+    {
+      "cell": "Ultimate4",
+      "name": "ghostship",
+      "conf": 0.9999955892562866
+    },
+    {
+      "cell": "Ultimate5",
+      "name": "macropyre",
+      "conf": 0.9999940395355225
+    },
+    {
+      "cell": "Ultimate6",
+      "name": "magnetize",
+      "conf": 0.9999992847442627
+    },
+    {
+      "cell": "Ultimate7",
+      "name": "eclipse",
+      "conf": 0.9921183586120605
+    },
+    {
+      "cell": "Ultimate8",
+      "name": "reincarnation",
+      "conf": 0.9999496936798096
+    },
+    {
+      "cell": "Ultimate9",
+      "name": "flux_dire",
+      "conf": 0.4688156247138977
+    },
+    {
+      "cell": "Ultimate10",
+      "name": "nether_strike",
+      "conf": 0.9999762773513794
+    },
+    {
+      "cell": "Ultimate11",
+      "name": "wall_of_replica",
+      "conf": 0.9999988079071045
+    },
+    {
+      "cell": "Ultimate12",
+      "name": "earth_splitter",
+      "conf": 0.9999996423721313
+    }
+  ],
+  "heroes": [
+    {
+      "cell": "Hero1",
+      "name": "queen_of_pain",
+      "conf": 0.7689979672431946
+    },
+    {
+      "cell": "Hero2",
+      "name": "earth_spirit",
+      "conf": 0.6159183382987976
+    },
+    {
+      "cell": "Hero3",
+      "name": "dark_willow",
+      "conf": 0.9785955548286438
+    },
+    {
+      "cell": "Hero4",
+      "name": "jakiro",
+      "conf": 0.9170690178871155
+    },
+    {
+      "cell": "Hero5",
+      "name": "marci",
+      "conf": 0.3865213990211487
+    },
+    {
+      "cell": "Hero6",
+      "name": "kunkka",
+      "conf": 0.9673089981079102
+    },
+    {
+      "cell": "Hero7",
+      "name": "luna",
+      "conf": 0.9030488133430481
+    },
+    {
+      "cell": "Hero8",
+      "name": "elder_titan",
+      "conf": 0.8640704154968262
+    },
+    {
+      "cell": "Hero9",
+      "name": "wraith_king",
+      "conf": 0.8857747912406921
+    },
+    {
+      "cell": "Hero10",
+      "name": "void_spirit",
+      "conf": 0.7795135974884033
+    },
+    {
+      "cell": "Hero11",
+      "name": "faceless_void",
+      "conf": 0.5072073340415955
+    },
+    {
+      "cell": "Hero12",
+      "name": "spirit_breaker",
+      "conf": 0.6368163824081421
+    }
+  ],
+  "abilities": [
+    {
+      "cell": "Ability1",
+      "name": "shadow_strike",
+      "conf": 0.9999991655349731
+    },
+    {
+      "cell": "Ability2",
+      "name": "blink_queen_of_pain",
+      "conf": 0.9999854564666748
+    },
+    {
+      "cell": "Ability3",
+      "name": "scream_of_pain",
+      "conf": 0.9999966621398926
+    },
+    {
+      "cell": "Ability4",
+      "name": "boulder_smash",
+      "conf": 0.9996250867843628
+    },
+    {
+      "cell": "Ability5",
+      "name": "rolling_boulder",
+      "conf": 0.9999998807907104
+    },
+    {
+      "cell": "Ability6",
+      "name": "geomagnetic_grip",
+      "conf": 0.999997615814209
+    },
+    {
+      "cell": "Ability7",
+      "name": "bramble_maze",
+      "conf": 0.9999904632568359
+    },
+    {
+      "cell": "Ability8",
+      "name": "shadow_realm",
+      "conf": 0.9999709129333496
+    },
+    {
+      "cell": "Ability9",
+      "name": "cursed_crown",
+      "conf": 0.9999998807907104
+    },
+    {
+      "cell": "Ability10",
+      "name": "dual_breath",
+      "conf": 0.9999954700469971
+    },
+    {
+      "cell": "Ability11",
+      "name": "ice_path",
+      "conf": 0.9999908208847046
+    },
+    {
+      "cell": "Ability12",
+      "name": "liquid_frost",
+      "conf": 0.9999866485595703
+    },
+    {
+      "cell": "Ability13",
+      "name": "dispose",
+      "conf": 0.9994742274284363
+    },
+    {
+      "cell": "Ability14",
+      "name": "rebound",
+      "conf": 0.9999375343322754
+    },
+    {
+      "cell": "Ability15",
+      "name": "sidekick",
+      "conf": 0.9999898672103882
+    },
+    {
+      "cell": "Ability16",
+      "name": "torrent",
+      "conf": 0.9999774694442749
+    },
+    {
+      "cell": "Ability17",
+      "name": "tidebringer",
+      "conf": 0.9943373799324036
+    },
+    {
+      "cell": "Ability18",
+      "name": "return_kunkka",
+      "conf": 0.5010384917259216
+    },
+    {
+      "cell": "Ability19",
+      "name": "lucent_beam",
+      "conf": 0.9999288320541382
+    },
+    {
+      "cell": "Ability20",
+      "name": "moon_glaives",
+      "conf": 0.9999706745147705
+    },
+    {
+      "cell": "Ability21",
+      "name": "unknown",
+      "conf": 0.2419215440750122
+    },
+    {
+      "cell": "Ability22",
+      "name": "echo_stomp",
+      "conf": 0.9983968138694763
+    },
+    {
+      "cell": "Ability23",
+      "name": "astral_spirit",
+      "conf": 0.9997953772544861
+    },
+    {
+      "cell": "Ability24",
+      "name": "natural_order",
+      "conf": 0.9990647435188293
+    },
+    {
+      "cell": "Ability25",
+      "name": "wraithfire_blast",
+      "conf": 0.9970001578330994
+    },
+    {
+      "cell": "Ability26",
+      "name": "vampiric_aura",
+      "conf": 0.9998667240142822
+    },
+    {
+      "cell": "Ability27",
+      "name": "mortal_strike",
+      "conf": 0.9999381303787231
+    },
+    {
+      "cell": "Ability28",
+      "name": "vacuum",
+      "conf": 0.999987006187439
+    },
+    {
+      "cell": "Ability29",
+      "name": "ion_shell",
+      "conf": 0.9997674822807312
+    },
+    {
+      "cell": "Ability30",
+      "name": "surge",
+      "conf": 0.981903076171875
+    },
+    {
+      "cell": "Ability31",
+      "name": "time_walk",
+      "conf": 0.999975323677063
+    },
+    {
+      "cell": "Ability32",
+      "name": "time_dilation",
+      "conf": 0.9999750852584839
+    },
+    {
+      "cell": "Ability33",
+      "name": "time_lock",
+      "conf": 0.9999352693557739
+    },
+    {
+      "cell": "Ability34",
+      "name": "charge_of_darkness",
+      "conf": 0.9999055862426758
+    },
+    {
+      "cell": "Ability35",
+      "name": "bulldoze",
+      "conf": 0.9983678460121155
+    },
+    {
+      "cell": "Ability36",
+      "name": "greater_bash",
+      "conf": 0.999788224697113
+    }
+  ],
+  "warnings": [],
+  "hero_vec": [
+    "queen_of_pain",
+    "earth_spirit",
+    "dark_willow",
+    "jakiro",
+    "marci",
+    "kunkka",
+    "luna",
+    "elder_titan",
+    "wraith_king",
+    "void_spirit",
+    "faceless_void",
+    "spirit_breaker"
+  ],
+  "ultimate_vec": [
+    "sonic_wave",
+    "terrorize",
+    "unleash",
+    "ghostship",
+    "macropyre",
+    "magnetize",
+    "eclipse",
+    "reincarnation",
+    "flux_dire",
+    "nether_strike",
+    "wall_of_replica",
+    "earth_splitter"
+  ],
+  "ability_vec": [
+    "shadow_strike",
+    "blink_queen_of_pain",
+    "scream_of_pain",
+    "boulder_smash",
+    "rolling_boulder",
+    "geomagnetic_grip",
+    "bramble_maze",
+    "shadow_realm",
+    "cursed_crown",
+    "dual_breath",
+    "ice_path",
+    "liquid_frost",
+    "dispose",
+    "rebound",
+    "sidekick",
+    "torrent",
+    "tidebringer",
+    "return_kunkka",
+    "lucent_beam",
+    "moon_glaives",
+    "unknown",
+    "echo_stomp",
+    "astral_spirit",
+    "natural_order",
+    "wraithfire_blast",
+    "vampiric_aura",
+    "mortal_strike",
+    "vacuum",
+    "ion_shell",
+    "surge",
+    "time_walk",
+    "time_dilation",
+    "time_lock",
+    "charge_of_darkness",
+    "bulldoze",
+    "greater_bash"
+  ],
+  "all_picks_vec": [
+    "queen_of_pain",
+    "earth_spirit",
+    "dark_willow",
+    "jakiro",
+    "marci",
+    "kunkka",
+    "luna",
+    "elder_titan",
+    "wraith_king",
+    "void_spirit",
+    "faceless_void",
+    "spirit_breaker",
+    "sonic_wave",
+    "terrorize",
+    "unleash",
+    "ghostship",
+    "macropyre",
+    "magnetize",
+    "eclipse",
+    "reincarnation",
+    "flux_dire",
+    "nether_strike",
+    "wall_of_replica",
+    "earth_splitter",
+    "shadow_strike",
+    "blink_queen_of_pain",
+    "scream_of_pain",
+    "boulder_smash",
+    "rolling_boulder",
+    "geomagnetic_grip",
+    "bramble_maze",
+    "shadow_realm",
+    "cursed_crown",
+    "dual_breath",
+    "ice_path",
+    "liquid_frost",
+    "dispose",
+    "rebound",
+    "sidekick",
+    "torrent",
+    "tidebringer",
+    "return_kunkka",
+    "lucent_beam",
+    "moon_glaives",
+    "unknown",
+    "echo_stomp",
+    "astral_spirit",
+    "natural_order",
+    "wraithfire_blast",
+    "vampiric_aura",
+    "mortal_strike",
+    "vacuum",
+    "ion_shell",
+    "surge",
+    "time_walk",
+    "time_dilation",
+    "time_lock",
+    "charge_of_darkness",
+    "bulldoze",
+    "greater_bash"
+  ]
+}
