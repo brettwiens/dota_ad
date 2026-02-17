@@ -1,0 +1,438 @@
+{
+  "source_image": "C:\\Program Files (x86)\\Steam\\userdata\\59046080\\760\\remote\\570\\screenshots\\20260216212955_1.jpg",
+  "ultimates": [
+    {
+      "cell": "Ultimate1",
+      "name": "macropyre",
+      "conf": 0.999850869178772
+    },
+    {
+      "cell": "Ultimate2",
+      "name": "flaming_lasso",
+      "conf": 0.9998685121536255
+    },
+    {
+      "cell": "Ultimate3",
+      "name": "dream_coil",
+      "conf": 0.9999483823776245
+    },
+    {
+      "cell": "Ultimate4",
+      "name": "duel",
+      "conf": 0.9998063445091248
+    },
+    {
+      "cell": "Ultimate5",
+      "name": "dismember",
+      "conf": 0.9995930790901184
+    },
+    {
+      "cell": "Ultimate6",
+      "name": "chronosphere",
+      "conf": 0.9999829530715942
+    },
+    {
+      "cell": "Ultimate7",
+      "name": "ball_lightning",
+      "conf": 0.9980000853538513
+    },
+    {
+      "cell": "Ultimate8",
+      "name": "untouchable",
+      "conf": 0.9995983242988586
+    },
+    {
+      "cell": "Ultimate9",
+      "name": "culling_blade",
+      "conf": 0.9995081424713135
+    },
+    {
+      "cell": "Ultimate10",
+      "name": "life_drain",
+      "conf": 0.9994237422943115
+    },
+    {
+      "cell": "Ultimate11",
+      "name": "global_silence",
+      "conf": 0.9999978542327881
+    },
+    {
+      "cell": "Ultimate12",
+      "name": "psionic_trap",
+      "conf": 0.9994102716445923
+    }
+  ],
+  "heroes": [
+    {
+      "cell": "Hero1",
+      "name": "jakiro",
+      "conf": 0.9053005576133728
+    },
+    {
+      "cell": "Hero2",
+      "name": "faceless_void",
+      "conf": 0.7282642722129822
+    },
+    {
+      "cell": "Hero3",
+      "name": "batrider",
+      "conf": 0.6843694448471069
+    },
+    {
+      "cell": "Hero4",
+      "name": "pudge",
+      "conf": 0.8466823697090149
+    },
+    {
+      "cell": "Hero5",
+      "name": "ogre_magi",
+      "conf": 0.9477779269218445
+    },
+    {
+      "cell": "Hero6",
+      "name": "legion_commander",
+      "conf": 0.9077693819999695
+    },
+    {
+      "cell": "Hero7",
+      "name": "storm_spirit",
+      "conf": 0.7703797221183777
+    },
+    {
+      "cell": "Hero8",
+      "name": "unknown",
+      "conf": 0.10958912968635559
+    },
+    {
+      "cell": "Hero9",
+      "name": "enchantress",
+      "conf": 0.3875681459903717
+    },
+    {
+      "cell": "Hero10",
+      "name": "silencer",
+      "conf": 0.8615895509719849
+    },
+    {
+      "cell": "Hero11",
+      "name": "axe",
+      "conf": 0.7899588942527771
+    },
+    {
+      "cell": "Hero12",
+      "name": "pugna",
+      "conf": 0.689447283744812
+    }
+  ],
+  "abilities": [
+    {
+      "cell": "Ability1",
+      "name": "dual_breath",
+      "conf": 0.9999840259552002
+    },
+    {
+      "cell": "Ability2",
+      "name": "ice_path",
+      "conf": 0.9999887943267822
+    },
+    {
+      "cell": "Ability3",
+      "name": "liquid_fire",
+      "conf": 0.9999979734420776
+    },
+    {
+      "cell": "Ability4",
+      "name": "time_walk",
+      "conf": 0.9999974966049194
+    },
+    {
+      "cell": "Ability5",
+      "name": "time_dilation",
+      "conf": 0.9999998807907104
+    },
+    {
+      "cell": "Ability6",
+      "name": "time_lock",
+      "conf": 0.9999927282333374
+    },
+    {
+      "cell": "Ability7",
+      "name": "sticky_napalm",
+      "conf": 0.9998160004615784
+    },
+    {
+      "cell": "Ability8",
+      "name": "flamebreak",
+      "conf": 0.9879383444786072
+    },
+    {
+      "cell": "Ability9",
+      "name": "firefly",
+      "conf": 0.9999977350234985
+    },
+    {
+      "cell": "Ability10",
+      "name": "meat_hook",
+      "conf": 0.9999933242797852
+    },
+    {
+      "cell": "Ability11",
+      "name": "rot",
+      "conf": 0.9967474937438965
+    },
+    {
+      "cell": "Ability12",
+      "name": "flesh_heap",
+      "conf": 0.9999628067016602
+    },
+    {
+      "cell": "Ability13",
+      "name": "fireblast",
+      "conf": 0.9999971389770508
+    },
+    {
+      "cell": "Ability14",
+      "name": "ignite",
+      "conf": 0.9996564388275146
+    },
+    {
+      "cell": "Ability15",
+      "name": "bloodlust",
+      "conf": 0.999987006187439
+    },
+    {
+      "cell": "Ability16",
+      "name": "overwhelming_odds",
+      "conf": 0.9970398545265198
+    },
+    {
+      "cell": "Ability17",
+      "name": "press_the_attack",
+      "conf": 0.9998078942298889
+    },
+    {
+      "cell": "Ability18",
+      "name": "moment_of_courage",
+      "conf": 0.9999997615814209
+    },
+    {
+      "cell": "Ability19",
+      "name": "static_remnant",
+      "conf": 0.9999896287918091
+    },
+    {
+      "cell": "Ability20",
+      "name": "electric_vortex",
+      "conf": 0.9984629154205322
+    },
+    {
+      "cell": "Ability21",
+      "name": "overload",
+      "conf": 0.9991657733917236
+    },
+    {
+      "cell": "Ability22",
+      "name": "refraction",
+      "conf": 0.9999821186065674
+    },
+    {
+      "cell": "Ability23",
+      "name": "meld",
+      "conf": 0.9991554021835327
+    },
+    {
+      "cell": "Ability24",
+      "name": "psi_blades",
+      "conf": 0.9999668598175049
+    },
+    {
+      "cell": "Ability25",
+      "name": "impetus",
+      "conf": 0.9851197600364685
+    },
+    {
+      "cell": "Ability26",
+      "name": "enchant",
+      "conf": 0.9996083378791809
+    },
+    {
+      "cell": "Ability27",
+      "name": "nature_s_attendants",
+      "conf": 0.9361448884010315
+    },
+    {
+      "cell": "Ability28",
+      "name": "arcane_curse",
+      "conf": 0.9999687671661377
+    },
+    {
+      "cell": "Ability29",
+      "name": "glaives_of_wisdom",
+      "conf": 0.9977174997329712
+    },
+    {
+      "cell": "Ability30",
+      "name": "last_word",
+      "conf": 0.9983202815055847
+    },
+    {
+      "cell": "Ability31",
+      "name": "berserker_s_call",
+      "conf": 0.8448510766029358
+    },
+    {
+      "cell": "Ability32",
+      "name": "battle_hunger",
+      "conf": 0.42658448219299316
+    },
+    {
+      "cell": "Ability33",
+      "name": "counter_helix",
+      "conf": 0.999996542930603
+    },
+    {
+      "cell": "Ability34",
+      "name": "nether_blast",
+      "conf": 0.9999700784683228
+    },
+    {
+      "cell": "Ability35",
+      "name": "decrepify",
+      "conf": 0.9982073307037354
+    },
+    {
+      "cell": "Ability36",
+      "name": "nether_ward",
+      "conf": 0.9988137483596802
+    }
+  ],
+  "warnings": [],
+  "hero_vec": [
+    "jakiro",
+    "faceless_void",
+    "batrider",
+    "pudge",
+    "ogre_magi",
+    "legion_commander",
+    "storm_spirit",
+    "unknown",
+    "enchantress",
+    "silencer",
+    "axe",
+    "pugna"
+  ],
+  "ultimate_vec": [
+    "macropyre",
+    "flaming_lasso",
+    "dream_coil",
+    "duel",
+    "dismember",
+    "chronosphere",
+    "ball_lightning",
+    "untouchable",
+    "culling_blade",
+    "life_drain",
+    "global_silence",
+    "psionic_trap"
+  ],
+  "ability_vec": [
+    "dual_breath",
+    "ice_path",
+    "liquid_fire",
+    "time_walk",
+    "time_dilation",
+    "time_lock",
+    "sticky_napalm",
+    "flamebreak",
+    "firefly",
+    "meat_hook",
+    "rot",
+    "flesh_heap",
+    "fireblast",
+    "ignite",
+    "bloodlust",
+    "overwhelming_odds",
+    "press_the_attack",
+    "moment_of_courage",
+    "static_remnant",
+    "electric_vortex",
+    "overload",
+    "refraction",
+    "meld",
+    "psi_blades",
+    "impetus",
+    "enchant",
+    "nature_s_attendants",
+    "arcane_curse",
+    "glaives_of_wisdom",
+    "last_word",
+    "berserker_s_call",
+    "battle_hunger",
+    "counter_helix",
+    "nether_blast",
+    "decrepify",
+    "nether_ward"
+  ],
+  "all_picks_vec": [
+    "jakiro",
+    "faceless_void",
+    "batrider",
+    "pudge",
+    "ogre_magi",
+    "legion_commander",
+    "storm_spirit",
+    "unknown",
+    "enchantress",
+    "silencer",
+    "axe",
+    "pugna",
+    "macropyre",
+    "flaming_lasso",
+    "dream_coil",
+    "duel",
+    "dismember",
+    "chronosphere",
+    "ball_lightning",
+    "untouchable",
+    "culling_blade",
+    "life_drain",
+    "global_silence",
+    "psionic_trap",
+    "dual_breath",
+    "ice_path",
+    "liquid_fire",
+    "time_walk",
+    "time_dilation",
+    "time_lock",
+    "sticky_napalm",
+    "flamebreak",
+    "firefly",
+    "meat_hook",
+    "rot",
+    "flesh_heap",
+    "fireblast",
+    "ignite",
+    "bloodlust",
+    "overwhelming_odds",
+    "press_the_attack",
+    "moment_of_courage",
+    "static_remnant",
+    "electric_vortex",
+    "overload",
+    "refraction",
+    "meld",
+    "psi_blades",
+    "impetus",
+    "enchant",
+    "nature_s_attendants",
+    "arcane_curse",
+    "glaives_of_wisdom",
+    "last_word",
+    "berserker_s_call",
+    "battle_hunger",
+    "counter_helix",
+    "nether_blast",
+    "decrepify",
+    "nether_ward"
+  ]
+}

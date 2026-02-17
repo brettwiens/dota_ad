@@ -1,0 +1,452 @@
+{
+  "source_image": "C:\\Program Files (x86)\\Steam\\userdata\\59046080\\760\\remote\\570\\screenshots\\20260216204000_1.jpg",
+  "ultimates": [
+    {
+      "cell": "Ultimate1",
+      "name": "god_s_strength",
+      "conf": 0.9999690055847168
+    },
+    {
+      "cell": "Ultimate2",
+      "name": "true_form",
+      "conf": 0.9982155561447144
+    },
+    {
+      "cell": "Ultimate3",
+      "name": "proximity_mines",
+      "conf": 0.9999923706054688
+    },
+    {
+      "cell": "Ultimate4",
+      "name": "viper_strike",
+      "conf": 0.9997344613075256
+    },
+    {
+      "cell": "Ultimate5",
+      "name": "arena_of_blood",
+      "conf": 0.9999481439590454
+    },
+    {
+      "cell": "Ultimate6",
+      "name": "fire_remnant",
+      "conf": 0.9999947547912598
+    },
+    {
+      "cell": "Ultimate7",
+      "name": "mana_void",
+      "conf": 0.9951605200767517
+    },
+    {
+      "cell": "Ultimate8",
+      "name": "pulverize",
+      "conf": 0.9985744953155518
+    },
+    {
+      "cell": "Ultimate9",
+      "name": "requiem_of_souls",
+      "conf": 0.9999748468399048
+    },
+    {
+      "cell": "Ultimate10",
+      "name": "hand_of_god",
+      "conf": 0.9999984502792358
+    },
+    {
+      "cell": "Ultimate11",
+      "name": "cloak_and_dagger",
+      "conf": 0.9999959468841553
+    },
+    {
+      "cell": "Ultimate12",
+      "name": "duel",
+      "conf": 0.9997120499610901
+    }
+  ],
+  "heroes": [
+    {
+      "cell": "Hero1",
+      "name": "sven",
+      "conf": 0.5446915030479431
+    },
+    {
+      "cell": "Hero2",
+      "name": "ember_spirit",
+      "conf": 0.9078288078308105
+    },
+    {
+      "cell": "Hero3",
+      "name": "lone_druid",
+      "conf": 0.509221613407135
+    },
+    {
+      "cell": "Hero4",
+      "name": "unknown",
+      "conf": 0.08252297341823578
+    },
+    {
+      "cell": "Hero5",
+      "name": "techies",
+      "conf": 0.9016486406326294
+    },
+    {
+      "cell": "Hero6",
+      "name": "unknown",
+      "conf": 0.008114613592624664
+    },
+    {
+      "cell": "Hero7",
+      "name": "anti-mage",
+      "conf": 0.84956955909729
+    },
+    {
+      "cell": "Hero8",
+      "name": "unknown",
+      "conf": 0.03350687399506569
+    },
+    {
+      "cell": "Hero9",
+      "name": "primal_beast",
+      "conf": 0.8865370154380798
+    },
+    {
+      "cell": "Hero10",
+      "name": "unknown",
+      "conf": 0.08330576866865158
+    },
+    {
+      "cell": "Hero11",
+      "name": "shadow_fiend",
+      "conf": 0.9294021129608154
+    },
+    {
+      "cell": "Hero12",
+      "name": "unknown",
+      "conf": 0.23442895710468292
+    }
+  ],
+  "abilities": [
+    {
+      "cell": "Ability1",
+      "name": "storm_hammer",
+      "conf": 0.9999791383743286
+    },
+    {
+      "cell": "Ability2",
+      "name": "great_cleave",
+      "conf": 0.9999450445175171
+    },
+    {
+      "cell": "Ability3",
+      "name": "warcry",
+      "conf": 0.9999539852142334
+    },
+    {
+      "cell": "Ability4",
+      "name": "searing_chains",
+      "conf": 0.9999998807907104
+    },
+    {
+      "cell": "Ability5",
+      "name": "sleight_of_fist",
+      "conf": 0.999717652797699
+    },
+    {
+      "cell": "Ability6",
+      "name": "flame_guard",
+      "conf": 0.9973303079605103
+    },
+    {
+      "cell": "Ability7",
+      "name": "spirit_link",
+      "conf": 0.999666690826416
+    },
+    {
+      "cell": "Ability8",
+      "name": "savage_roar",
+      "conf": 0.9999984502792358
+    },
+    {
+      "cell": "Ability9",
+      "name": "summon_spirit_bear",
+      "conf": 0.999996542930603
+    },
+    {
+      "cell": "Ability10",
+      "name": "spear_of_mars",
+      "conf": 0.4404507279396057
+    },
+    {
+      "cell": "Ability11",
+      "name": "god_s_rebuke",
+      "conf": 0.8296239972114563
+    },
+    {
+      "cell": "Ability12",
+      "name": "minefield_sign",
+      "conf": 0.8239725828170776
+    },
+    {
+      "cell": "Ability13",
+      "name": "sticky_bomb",
+      "conf": 0.9972959160804749
+    },
+    {
+      "cell": "Ability14",
+      "name": "reactive_tazer",
+      "conf": 0.5825813412666321
+    },
+    {
+      "cell": "Ability15",
+      "name": "blast_off",
+      "conf": 0.9995191097259521
+    },
+    {
+      "cell": "Ability16",
+      "name": "buyback",
+      "conf": 0.9501937627792358
+    },
+    {
+      "cell": "Ability17",
+      "name": "buyback",
+      "conf": 0.9705939888954163
+    },
+    {
+      "cell": "Ability18",
+      "name": "illuminate_spirit_form",
+      "conf": 0.5147021412849426
+    },
+    {
+      "cell": "Ability19",
+      "name": "mana_break",
+      "conf": 0.9999966621398926
+    },
+    {
+      "cell": "Ability20",
+      "name": "blink_anti_mage",
+      "conf": 0.9998192191123962
+    },
+    {
+      "cell": "Ability21",
+      "name": "counterspell",
+      "conf": 0.4110760986804962
+    },
+    {
+      "cell": "Ability22",
+      "name": "buyback",
+      "conf": 0.9766345620155334
+    },
+    {
+      "cell": "Ability23",
+      "name": "buyback",
+      "conf": 0.9284706711769104
+    },
+    {
+      "cell": "Ability24",
+      "name": "buyback",
+      "conf": 0.9817994236946106
+    },
+    {
+      "cell": "Ability25",
+      "name": "onslaught",
+      "conf": 0.9998214840888977
+    },
+    {
+      "cell": "Ability26",
+      "name": "trample",
+      "conf": 0.9996886253356934
+    },
+    {
+      "cell": "Ability27",
+      "name": "uproar_max",
+      "conf": 0.9996880292892456
+    },
+    {
+      "cell": "Ability28",
+      "name": "buyback",
+      "conf": 0.8184271454811096
+    },
+    {
+      "cell": "Ability29",
+      "name": "friendly_shadow",
+      "conf": 0.40507087111473083
+    },
+    {
+      "cell": "Ability30",
+      "name": "illuminate_spirit_form",
+      "conf": 0.4623849391937256
+    },
+    {
+      "cell": "Ability31",
+      "name": "shadowraze_medium",
+      "conf": 0.9991661310195923
+    },
+    {
+      "cell": "Ability32",
+      "name": "culling_blade",
+      "conf": 0.5217100977897644
+    },
+    {
+      "cell": "Ability33",
+      "name": "presence_of_the_dark_lord",
+      "conf": 0.999977707862854
+    },
+    {
+      "cell": "Ability34",
+      "name": "illuminate_spirit_form",
+      "conf": 0.6187888383865356
+    },
+    {
+      "cell": "Ability35",
+      "name": "illuminate_spirit_form",
+      "conf": 0.5569732189178467
+    },
+    {
+      "cell": "Ability36",
+      "name": "buyback",
+      "conf": 0.9956132173538208
+    }
+  ],
+  "warnings": [
+    "Low/failed match for Hero6: best IoU=0.000",
+    "Low/failed match for Hero8: best IoU=0.227",
+    "Low/failed match for Ability17: best IoU=0.000",
+    "Low/failed match for Ability18: best IoU=0.000",
+    "Low/failed match for Ability22: best IoU=0.000",
+    "Low/failed match for Ability23: best IoU=0.000",
+    "Low/failed match for Ability24: best IoU=0.000",
+    "Low/failed match for Ability28: best IoU=0.000",
+    "Low/failed match for Ability29: best IoU=0.000",
+    "Low/failed match for Ability30: best IoU=0.000",
+    "Low/failed match for Ability34: best IoU=0.000",
+    "Low/failed match for Ability35: best IoU=0.000",
+    "Low/failed match for Ability36: best IoU=0.000"
+  ],
+  "hero_vec": [
+    "sven",
+    "ember_spirit",
+    "lone_druid",
+    "unknown",
+    "techies",
+    "unknown",
+    "anti-mage",
+    "unknown",
+    "primal_beast",
+    "unknown",
+    "shadow_fiend",
+    "unknown"
+  ],
+  "ultimate_vec": [
+    "god_s_strength",
+    "true_form",
+    "proximity_mines",
+    "viper_strike",
+    "arena_of_blood",
+    "fire_remnant",
+    "mana_void",
+    "pulverize",
+    "requiem_of_souls",
+    "hand_of_god",
+    "cloak_and_dagger",
+    "duel"
+  ],
+  "ability_vec": [
+    "storm_hammer",
+    "great_cleave",
+    "warcry",
+    "searing_chains",
+    "sleight_of_fist",
+    "flame_guard",
+    "spirit_link",
+    "savage_roar",
+    "summon_spirit_bear",
+    "spear_of_mars",
+    "god_s_rebuke",
+    "minefield_sign",
+    "sticky_bomb",
+    "reactive_tazer",
+    "blast_off",
+    "buyback",
+    "buyback",
+    "illuminate_spirit_form",
+    "mana_break",
+    "blink_anti_mage",
+    "counterspell",
+    "buyback",
+    "buyback",
+    "buyback",
+    "onslaught",
+    "trample",
+    "uproar_max",
+    "buyback",
+    "friendly_shadow",
+    "illuminate_spirit_form",
+    "shadowraze_medium",
+    "culling_blade",
+    "presence_of_the_dark_lord",
+    "illuminate_spirit_form",
+    "illuminate_spirit_form",
+    "buyback"
+  ],
+  "all_picks_vec": [
+    "sven",
+    "ember_spirit",
+    "lone_druid",
+    "unknown",
+    "techies",
+    "unknown",
+    "anti-mage",
+    "unknown",
+    "primal_beast",
+    "unknown",
+    "shadow_fiend",
+    "unknown",
+    "god_s_strength",
+    "true_form",
+    "proximity_mines",
+    "viper_strike",
+    "arena_of_blood",
+    "fire_remnant",
+    "mana_void",
+    "pulverize",
+    "requiem_of_souls",
+    "hand_of_god",
+    "cloak_and_dagger",
+    "duel",
+    "storm_hammer",
+    "great_cleave",
+    "warcry",
+    "searing_chains",
+    "sleight_of_fist",
+    "flame_guard",
+    "spirit_link",
+    "savage_roar",
+    "summon_spirit_bear",
+    "spear_of_mars",
+    "god_s_rebuke",
+    "minefield_sign",
+    "sticky_bomb",
+    "reactive_tazer",
+    "blast_off",
+    "buyback",
+    "buyback",
+    "illuminate_spirit_form",
+    "mana_break",
+    "blink_anti_mage",
+    "counterspell",
+    "buyback",
+    "buyback",
+    "buyback",
+    "onslaught",
+    "trample",
+    "uproar_max",
+    "buyback",
+    "friendly_shadow",
+    "illuminate_spirit_form",
+    "shadowraze_medium",
+    "culling_blade",
+    "presence_of_the_dark_lord",
+    "illuminate_spirit_form",
+    "illuminate_spirit_form",
+    "buyback"
+  ]
+}
