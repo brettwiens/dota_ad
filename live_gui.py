@@ -1,13 +1,10 @@
 from __future__ import annotations
 
-"""
-live_gui.py
-"""
-
 import re
 import traceback
+import threading
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 import importlib.util
 import inspect
@@ -15,8 +12,9 @@ import tkinter as tk
 from tkinter import ttk
 
 from windrun_collector import (
-    _norm as normalize_name,
+    norm_with_alias as normalize_name,
     load_windrun_ability_weights,
+    load_windrun_hero_weights,
     load_windrun_ability_pairs,
 )
 
@@ -64,7 +62,6 @@ def latest_image_in_folder(folder: Path) -> Path:
     files = [p for p in folder.iterdir() if p.is_file() and p.suffix.lower() in IMAGE_EXTS]
     if not files:
         raise FileNotFoundError(f"No screenshots found in: {folder}")
-
     files.sort(key=lambda p: p.stat().st_mtime, reverse=True)
     return files[0]
 
@@ -77,9 +74,11 @@ def build_picks(infer_out: dict) -> List[dict]:
             if not name:
                 continue
 
+            ptype = "hero" if kind == "heroes" else "ultimate" if kind == "ultimates" else "ability"
+
             picks.append(
                 {
-                    "type": ("hero" if kind == "heroes" else "ultimate" if kind == "ultimates" else "ability"),
+                    "type": ptype,
                     "cell": item.get("cell"),
                     "name": name,
                     "name_norm": normalize_name(name),
@@ -89,21 +88,31 @@ def build_picks(infer_out: dict) -> List[dict]:
     return picks
 
 
-def rank_by_weight(picks: List[dict], weights: dict) -> List[dict]:
+def rank_by_weight(
+    picks: List[dict],
+    ability_weights: Dict[str, float],
+    hero_weights: Dict[str, float],
+) -> List[dict]:
     out = []
     for p in picks:
         p2 = dict(p)
-        p2["weight"] = weights.get(p["name_norm"])
+        if p2["type"] == "hero":
+            p2["weight"] = hero_weights.get(p2["name_norm"])
+        else:
+            p2["weight"] = ability_weights.get(p2["name_norm"])
         out.append(p2)
 
-    out.sort(
-        key=lambda d: (
-            d.get("weight") is not None,
-            d.get("weight") if d.get("weight") is not None else -1,
-            d.get("conf") if d.get("conf") is not None else -1,
-        ),
-        reverse=True,
-    )
+    def sort_key(d: dict):
+        w = d.get("weight")
+        c = d.get("conf")
+        has_w = (w is not None)
+        return (
+            0 if has_w else 1,
+            -(w if w is not None else 0),
+            -(c if c is not None else 0),
+        )
+
+    out.sort(key=sort_key)
     return out
 
 
@@ -113,12 +122,14 @@ def available_ability_norm_set(infer_out: dict) -> set:
     return {normalize_name(x) for x in vals}
 
 
-def outstanding_pairs(infer_out: dict, pairs_source: Optional[List[dict]] = None) -> List[dict]:
+def outstanding_pairs(infer_out: dict, pairs_source: Optional[List[dict]]) -> List[dict]:
+    if not pairs_source:
+        return []
+
     norm_set = available_ability_norm_set(infer_out)
-    pairs = pairs_source if pairs_source is not None else load_windrun_ability_pairs()
 
     out = []
-    for p in pairs:
+    for p in pairs_source:
         if p.get("a_norm") in norm_set and p.get("b_norm") in norm_set:
             out.append(p)
 
@@ -205,7 +216,7 @@ class LiveDraftGUI(tk.Tk):
         top = ttk.Frame(self, padding=6)
         top.pack(fill="x")
 
-        self.status = tk.StringVar(value="Starting up... loading Windrun tables")
+        self.status = tk.StringVar(value="Starting up...")
         ttk.Label(top, textvariable=self.status).pack(side="left")
 
         ttk.Button(top, text="Refresh (R)", command=self.refresh).pack(side="right")
@@ -246,7 +257,7 @@ class LiveDraftGUI(tk.Tk):
             )
             t.heading("#0", text="Pick")
             t.heading("rank", text="#")
-            t.heading("weight", text="Weight")
+            t.heading("weight", text="WR")
             t.heading("conf", text="Conf")
             t.heading("cell", text="Cell")
             t.heading("pair", text="Best Pair")
@@ -279,28 +290,31 @@ class LiveDraftGUI(tk.Tk):
         self.bind("<q>", lambda e: self.destroy())
         self.bind("<Q>", lambda e: self.destroy())
 
+        self.ability_weights: Dict[str, float] = {}
+        self.hero_weights: Dict[str, float] = {}
+        self.pairs_cache: List[dict] = []
+        self.pairs_loaded = False
+        self.pairs_loading = False
+
         try:
-            self.status.set("Loading Windrun ability weights...")
+            self.status.set("Loading WR ALL ability win rates...")
             self.update_idletasks()
-            self.weights = load_windrun_ability_weights()
+            self.ability_weights = load_windrun_ability_weights()
 
-            print("weights count:", len(self.weights))
-            print("has flamebreak:", "flamebreak" in self.weights, "value:", self.weights.get("flamebreak"))
-            print("sample keys:", list(self.weights.keys())[:20])
-
-            self.status.set("Loading Windrun ability pairs...")
+            self.status.set("Loading hero win rates...")
             self.update_idletasks()
-            self.pairs_cache = load_windrun_ability_pairs()
+            self.hero_weights = load_windrun_hero_weights()
+
+            self._start_pairs_load()
 
             self.status.set(
-                f"Windrun loaded: weights={len(self.weights)} pairs={len(self.pairs_cache)}"
+                f"Windrun loaded: abilities={len(self.ability_weights)} heroes={len(self.hero_weights)}"
             )
+
         except Exception as e:
             self.status.set("Windrun load failed")
             self.pairs_box.delete("1.0", "end")
             self.pairs_box.insert("end", str(e) + "\n\n" + traceback.format_exc())
-            self.weights = {}
-            self.pairs_cache = []
 
         self.after(150, self.refresh)
 
@@ -318,24 +332,61 @@ class LiveDraftGUI(tk.Tk):
             foreground=[("selected", "#000000")],
         )
 
+    def _start_pairs_load(self):
+        if self.pairs_loading or self.pairs_loaded:
+            return
+
+        self.pairs_loading = True
+        self.pairs_box.delete("1.0", "end")
+        self.pairs_box.insert("end", "Loading ability pairs in background...\n")
+
+        def worker():
+            try:
+                pairs = load_windrun_ability_pairs()
+                self.after(0, lambda: self._pairs_loaded_ok(pairs))
+            except Exception as e:
+                self.after(0, lambda: self._pairs_loaded_fail(e))
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def _pairs_loaded_ok(self, pairs: List[dict]):
+        self.pairs_cache = pairs
+        self.pairs_loaded = True
+        self.pairs_loading = False
+        self.refresh()
+
+    def _pairs_loaded_fail(self, e: Exception):
+        self.pairs_loaded = False
+        self.pairs_loading = False
+        self.pairs_cache = []
+        print("[pairs load failed]", repr(e))
+        traceback.print_exc()
+
+        self.pairs_box.delete("1.0", "end")
+        self.pairs_box.insert("end", "Failed to load pairs:\n\n")
+        self.pairs_box.insert("end", str(e) + "\n\n" + traceback.format_exc())
+
     def refresh(self):
         try:
-            self.status.set("Scanning...")
-            self.update_idletasks()
-
             img_path = latest_image_in_folder(SCREENSHOT_DIR)
             infer_out = infer_one(str(img_path), verbose=False)
 
             picks = build_picks(infer_out)
-            ranked = rank_by_weight(picks, self.weights)
+            ranked = rank_by_weight(picks, self.ability_weights, self.hero_weights)
 
-            pairs = outstanding_pairs(infer_out, pairs_source=self.pairs_cache)
+            pairs = outstanding_pairs(infer_out, self.pairs_cache if self.pairs_loaded else None)
             bmap = best_pair_map(pairs)
 
             self._render_ranked(ranked, bmap)
             self._render_pairs(pairs)
 
-            self.status.set(f"Loaded: {img_path.name}")
+            extra = ""
+            if self.pairs_loading:
+                extra = " (pairs loading...)"
+            elif not self.pairs_loaded:
+                extra = " (pairs not loaded)"
+
+            self.status.set(f"Loaded: {img_path.name}{extra}")
 
         except Exception as e:
             self.status.set("Error")
@@ -399,6 +450,15 @@ class LiveDraftGUI(tk.Tk):
 
     def _render_pairs(self, pairs: List[dict]):
         self.pairs_box.delete("1.0", "end")
+
+        if self.pairs_loading:
+            self.pairs_box.insert("end", "Loading ability pairs in background...\n")
+            return
+
+        if not self.pairs_loaded:
+            self.pairs_box.insert("end", "(pairs not loaded)\n")
+            return
+
         if not pairs:
             self.pairs_box.insert("end", "(none)\n")
             return
