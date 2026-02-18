@@ -305,6 +305,10 @@ class LiveDraftGUI(tk.Tk):
             self.update_idletasks()
             self.hero_weights = load_windrun_hero_weights()
 
+            print("[debug] hero_weights loaded:", len(self.hero_weights))
+            print("[debug] sample hero keys:", list(self.hero_weights.keys())[:10])
+
+
             self._start_pairs_load()
 
             self.status.set(

@@ -43,6 +43,38 @@ def _norm(s: str) -> str:
     s = re.sub(r"_+", "_", s).strip("_")
     return s
 
+def _parse_hero_wr_from_ssr_html(html: str) -> Dict[str, float]:
+    """
+    Parse Windrun SSR hero page (no JSON, no <table>) by reading anchor + percent text.
+    We take the first percent after the hero name in its row.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    out: Dict[str, float] = {}
+
+    # Heuristic: hero rows are anchors with a percent nearby in the same parent text
+    for a in soup.find_all("a"):
+        name = a.get_text(strip=True)
+        if not name or len(name) < 2:
+            continue
+
+        parent_text = (a.parent.get_text(" ", strip=True) if a.parent else "")
+        if "%" not in parent_text:
+            continue
+
+        # Find the first percent in the parent text (this is the main WR column on the page)
+        m = re.search(r"(\d{1,2}\.\d{1,2})\s*%", parent_text)
+        if not m:
+            continue
+
+        wr = _to_float(m.group(1))
+        if wr is None:
+            continue
+
+        key = norm_with_alias(name)
+        out[key] = wr
+
+    return out
+
 
 def _to_float(x) -> Optional[float]:
     if x is None:
@@ -235,46 +267,44 @@ def load_windrun_ability_weights() -> Dict[str, float]:
 # Public API: hero weights
 # --------------------------------------------------------------------------------------
 def load_windrun_hero_weights() -> Dict[str, float]:
+    """
+    Load hero win rates from Windrun.
+
+    Strategy:
+    1) Try JSON (if Windrun exposes it).
+    2) Try HTML <table> parsing (Windrun sometimes serves a real table with headers like 7·40).
+    3) Fall back to SSR parsing (anchors with a nearby percent).
+    """
+    # -------------------------
+    # 1) Try JSON first
+    # -------------------------
     payload = _fetch_json(HERO_WEIGHTS_URL)
     recs = _as_records(payload)
 
     out: Dict[str, float] = {}
 
-    # For heroes, Windrun often has patch columns. We will choose the first numeric-ish
-    # winrate field we find that looks like a percent.
     if recs:
         sample_keys = set().union(*(r.keys() for r in recs[:10]))
 
-        hero_key = None
-        for k in ("hero", "name", "heroName"):
-            if k in sample_keys:
-                hero_key = k
-                break
+        hero_key = next((k for k in ("hero", "name", "heroName") if k in sample_keys), None)
         if hero_key is None:
             for k in sample_keys:
-                if "hero" in k.lower() or k.lower() == "name":
+                lk = k.lower()
+                if "hero" in lk or lk == "name":
                     hero_key = k
                     break
 
-        # pick a likely winrate column
-        win_key = None
-        for k in sample_keys:
-            lk = k.lower()
-            if "win" in lk and ("rate" in lk or "pct" in lk or "%" in lk):
-                win_key = k
-                break
+        # Prefer patch-like key if present, else a winrate-like key
+        patch_keys = [
+            k for k in sample_keys
+            if re.fullmatch(r"\d+\.\d+[a-z]?", str(k).strip().lower().replace("·", "."))
+        ]
+        win_key = patch_keys[0] if patch_keys else None
 
-        # if none, pick first key where most values look percentish
         if win_key is None:
-            def pctish(v) -> bool:
-                return _to_float(v) is not None
-
             for k in sample_keys:
-                if k == hero_key:
-                    continue
-                vals = [r.get(k) for r in recs[:20]]
-                ok = sum(1 for v in vals if pctish(v))
-                if ok >= 10:
+                lk = k.lower()
+                if ("win" in lk and ("rate" in lk or "pct" in lk or "%" in lk)) or ("wr" in lk and "all" in lk):
                     win_key = k
                     break
 
@@ -282,44 +312,74 @@ def load_windrun_hero_weights() -> Dict[str, float]:
             for r in recs:
                 h_raw = r.get(hero_key)
                 w_raw = r.get(win_key)
-                hkey = _norm(h_raw)
+                hkey = norm_with_alias(h_raw)
                 w = _to_float(w_raw)
                 if hkey and w is not None:
                     out[hkey] = w
-            return out
+            if out:
+                return out
 
-    # Fallback HTML
-    headers, rows = _fetch_table_html(HERO_WEIGHTS_URL)
-    headers_l = [h.strip().lower() for h in headers]
-    hero_i = headers_l.index("hero") if "hero" in headers_l else 0
+    # -------------------------
+    # 2) Try HTML <table> parsing
+    # -------------------------
+    try:
+        headers, rows = _fetch_table_html(HERO_WEIGHTS_URL)
+        headers_l = [h.strip().lower() for h in headers]
 
-    # Choose first column that looks like patch (e.g. 7.38) or win%
-    win_i = None
-    for i, h in enumerate(headers_l):
-        if i == hero_i:
-            continue
-        if re.fullmatch(r"\d+\.\d+[a-z]?", h):
-            win_i = i
-            break
-    if win_i is None:
+        hero_i = headers_l.index("hero") if "hero" in headers_l else 0
+
+        win_i = None
+        # Prefer patch-style headers like 7.40 / 7·40 / 7.40c / 7·40c
         for i, h in enumerate(headers_l):
             if i == hero_i:
                 continue
-            if "win" in h:
+            hh = h.replace("·", ".").replace("\u00b7", ".").strip()
+            if re.fullmatch(r"\d+\.\d+[a-z]?", hh):
                 win_i = i
                 break
-    if win_i is None:
-        raise RuntimeError(f"Could not detect hero winrate column in headers: {headers}")
 
-    for r in rows:
-        if len(r) <= max(hero_i, win_i):
-            continue
-        hkey = _norm(r[hero_i])
-        w = _to_float(r[win_i])
-        if hkey and w is not None:
-            out[hkey] = w
+        # Otherwise, fall back to any "win"/"wr" column
+        if win_i is None:
+            for i, h in enumerate(headers_l):
+                if i == hero_i:
+                    continue
+                if "win" in h or ("wr" in h and "all" in h):
+                    win_i = i
+                    break
+
+        if win_i is not None:
+            out = {}
+            for r in rows:
+                if len(r) <= max(hero_i, win_i):
+                    continue
+                hkey = norm_with_alias(r[hero_i])
+                w = _to_float(r[win_i])
+                if hkey and w is not None:
+                    out[hkey] = w
+
+            if out:
+                return out
+    except Exception:
+        # If table parsing doesn't work, we will try SSR parsing next.
+        pass
+
+    # -------------------------
+    # 3) SSR HTML parse (anchors + nearby percent)
+    # -------------------------
+    r = requests.get(HERO_WEIGHTS_URL, timeout=45, headers=UA)
+    r.raise_for_status()
+    out = _parse_hero_wr_from_ssr_html(r.text)
+
+    if not out:
+        raise RuntimeError(
+            "Could not parse hero winrates from Windrun heroes page. "
+            "Both table parsing and SSR parsing failed (format likely changed)."
+        )
 
     return out
+
+
+
 
 
 # --------------------------------------------------------------------------------------
