@@ -1,10 +1,14 @@
+# windrun_collector.py
 """
 windrun_collector.py
 
 Fetch Windrun datasets for Dota 2 Ability Draft.
 
-Uses JSON-first requests against api.windrun.io endpoints.
-Falls back to HTML table parsing only if JSON is not returned.
+Design goals:
+- JSON-first against api.windrun.io where possible
+- HTML parsing fallbacks where JSON is not returned
+- Pool-aware ability pairs (only fetch/keep pairs for the current draft pool)
+- Robust to Windrun frontend changes: multiple endpoint attempts + multiple parse strategies
 
 Fixes included:
 - possessive artifact: nature_s_attendants -> natures_attendants
@@ -14,16 +18,59 @@ Fixes included:
 from __future__ import annotations
 
 import re
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any, Tuple, Iterable, Set
 
+from scrape_windrun_ability_pairs import get_windrun_ability_pairs
 import requests
 from bs4 import BeautifulSoup
 
+# ----------------------------
+# URLs
+# ----------------------------
 ABILITY_WEIGHTS_URL = "https://api.windrun.io/ability-high-skill"
 HERO_WEIGHTS_URL = "https://api.windrun.io/heroes"
-ABILITY_PAIRS_URL = "https://api.windrun.io/ability-pairs"
+
+# Static abilities map (confirmed by you)
+STATIC_ABILITIES_URL = "https://api.windrun.io/api/v2/static/abilities"
+
+# Public site pages (sometimes shells, sometimes SSR)
+WINDRUN_PAIRS_PAGE_URLS = [
+    "https://windrun.io/ability-pairs",
+    "https://old.windrun.io/ability-pairs",
+    "https://api.windrun.io/ability-pairs",
+]
+
+# Persisted query style endpoints (Windrun 3.x frontend uses these patterns, names can change)
+PAIR_API_CANDIDATES = [
+    # Most likely patterns
+    "https://api.windrun.io/api/v2/queries/ability-pairs",
+    "https://api.windrun.io/api/v2/queries/ability_pairs",
+    "https://api.windrun.io/api/v2/query/ability-pairs",
+    "https://api.windrun.io/api/v2/query/ability_pairs",
+    "https://api.windrun.io/api/v2/persisted/ability-pairs",
+    "https://api.windrun.io/api/v2/persisted/ability_pairs",
+    "https://api.windrun.io/api/v2/persisted-query/ability-pairs",
+    "https://api.windrun.io/api/v2/persisted-query/ability_pairs",
+    # Sometimes these are under "stats" or "ability-draft"
+    "https://api.windrun.io/api/v2/ability-draft/ability-pairs",
+    "https://api.windrun.io/api/v2/ability-draft/ability_pairs",
+    "https://api.windrun.io/api/v2/stats/ability-pairs",
+    "https://api.windrun.io/api/v2/stats/ability_pairs",
+]
 
 UA = {"User-Agent": "Mozilla/5.0"}
+
+
+def _browser_headers() -> Dict[str, str]:
+    h = dict(UA)
+    h.update(
+        {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-CA,en;q=0.9",
+            "Connection": "keep-alive",
+        }
+    )
+    return h
 
 
 # --------------------------------------------------------------------------------------
@@ -42,38 +89,6 @@ def _norm(s: str) -> str:
     s = re.sub(r"[^a-z0-9_]+", "", s)
     s = re.sub(r"_+", "_", s).strip("_")
     return s
-
-def _parse_hero_wr_from_ssr_html(html: str) -> Dict[str, float]:
-    """
-    Parse Windrun SSR hero page (no JSON, no <table>) by reading anchor + percent text.
-    We take the first percent after the hero name in its row.
-    """
-    soup = BeautifulSoup(html, "html.parser")
-    out: Dict[str, float] = {}
-
-    # Heuristic: hero rows are anchors with a percent nearby in the same parent text
-    for a in soup.find_all("a"):
-        name = a.get_text(strip=True)
-        if not name or len(name) < 2:
-            continue
-
-        parent_text = (a.parent.get_text(" ", strip=True) if a.parent else "")
-        if "%" not in parent_text:
-            continue
-
-        # Find the first percent in the parent text (this is the main WR column on the page)
-        m = re.search(r"(\d{1,2}\.\d{1,2})\s*%", parent_text)
-        if not m:
-            continue
-
-        wr = _to_float(m.group(1))
-        if wr is None:
-            continue
-
-        key = norm_with_alias(name)
-        out[key] = wr
-
-    return out
 
 
 def _to_float(x) -> Optional[float]:
@@ -102,12 +117,17 @@ def norm_with_alias(name: str) -> str:
 # --------------------------------------------------------------------------------------
 # Low-level fetchers
 # --------------------------------------------------------------------------------------
-def _fetch_json(url: str) -> Any:
-    r = requests.get(url, timeout=45, headers=UA)
+def _fetch(url: str, *, timeout: int = 45, headers: Optional[Dict[str, str]] = None) -> requests.Response:
+    h = headers or UA
+    r = requests.get(url, timeout=timeout, headers=h)
     r.raise_for_status()
+    return r
+
+
+def _fetch_json(url: str, *, timeout: int = 45, headers: Optional[Dict[str, str]] = None) -> Any:
+    r = _fetch(url, timeout=timeout, headers=headers or UA)
 
     ctype = (r.headers.get("content-type") or "").lower()
-    # Windrun APIs should be JSON
     if "application/json" in ctype or "json" in ctype:
         return r.json()
 
@@ -118,9 +138,8 @@ def _fetch_json(url: str) -> Any:
         return None
 
 
-def _fetch_table_html(url: str) -> Tuple[List[str], List[List[str]]]:
-    r = requests.get(url, timeout=45, headers=UA)
-    r.raise_for_status()
+def _fetch_table_html(url: str, *, timeout: int = 45, headers: Optional[Dict[str, str]] = None) -> Tuple[List[str], List[List[str]]]:
+    r = _fetch(url, timeout=timeout, headers=headers or UA)
 
     soup = BeautifulSoup(r.text, "html.parser")
     table = soup.find("table")
@@ -128,7 +147,7 @@ def _fetch_table_html(url: str) -> Tuple[List[str], List[List[str]]]:
         raise RuntimeError(f"No <table> found at {url}")
 
     thead = table.find("thead")
-    headers = [th.get_text(strip=True) for th in (thead.find_all("th") if thead else table.find_all("th"))]
+    headers_out = [th.get_text(strip=True) for th in (thead.find_all("th") if thead else table.find_all("th"))]
 
     tbody = table.find("tbody")
     body_rows = tbody.find_all("tr") if tbody else table.find_all("tr")
@@ -142,16 +161,18 @@ def _fetch_table_html(url: str) -> Tuple[List[str], List[List[str]]]:
         if any(v.strip() for v in vals):
             rows.append(vals)
 
-    return headers, rows
+    return headers_out, rows
 
 
 def _as_records(payload: Any) -> List[dict]:
     """
     Convert various JSON shapes to a list[dict].
+
     Handles:
-      - list of dicts
-      - dict with 'data' key
-      - dict with 'rows' key
+      - list[dict]
+      - dict with 'data' / 'rows' / 'results'
+      - dict with nested dict containing those keys
+      - dict that itself is a single record
     """
     if payload is None:
         return []
@@ -160,12 +181,21 @@ def _as_records(payload: Any) -> List[dict]:
         return [x for x in payload if isinstance(x, dict)]
 
     if isinstance(payload, dict):
-        for key in ("data", "rows", "results"):
+        for key in ("data", "rows", "results", "items", "abilities"):
             v = payload.get(key)
             if isinstance(v, list):
                 return [x for x in v if isinstance(x, dict)]
-        # sometimes the dict itself is a single record
-        return [payload]
+
+        for outer_key in ("data", "result", "payload"):
+            outer = payload.get(outer_key)
+            if isinstance(outer, dict):
+                for key in ("rows", "results", "items", "abilities"):
+                    v = outer.get(key)
+                    if isinstance(v, list):
+                        return [x for x in v if isinstance(x, dict)]
+
+        if any(isinstance(v, (str, int, float)) for v in payload.values()):
+            return [payload]
 
     return []
 
@@ -173,12 +203,10 @@ def _as_records(payload: Any) -> List[dict]:
 # --------------------------------------------------------------------------------------
 # Public API: ability weights (WR ALL)
 # --------------------------------------------------------------------------------------
-def load_windrun_ability_weights() -> Dict[str, float]:
-    payload = _fetch_json(ABILITY_WEIGHTS_URL)
+def load_windrun_ability_weights(*, timeout: int = 45) -> Dict[str, float]:
+    payload = _fetch_json(ABILITY_WEIGHTS_URL, timeout=timeout)
     recs = _as_records(payload)
 
-    # Windrun may use different field names over time.
-    # We prefer WR ALL / Overall Win % / overallWin / winrateAll etc.
     candidates_name = ("ability", "name", "abilityName")
     candidates_wr = (
         "wrAll",
@@ -198,15 +226,13 @@ def load_windrun_ability_weights() -> Dict[str, float]:
     out: Dict[str, float] = {}
 
     if recs:
-        # Find actual keys present
         sample_keys = set().union(*(r.keys() for r in recs[:10]))
         name_key = next((k for k in candidates_name if k in sample_keys), None)
         wr_key = next((k for k in candidates_wr if k in sample_keys), None)
 
-        # If we did not find exact matches, fall back to fuzzy contains
         if name_key is None:
             for k in sample_keys:
-                if "ability" in k.lower() or "name" == k.lower():
+                if "ability" in k.lower() or k.lower() == "name":
                     name_key = k
                     break
 
@@ -231,10 +257,11 @@ def load_windrun_ability_weights() -> Dict[str, float]:
                 w = _to_float(w_raw)
                 if a and w is not None:
                     out[a] = w
-            return out
+            if out:
+                return out
 
-    # Fallback to HTML table parsing if JSON did not work
-    headers, rows = _fetch_table_html(ABILITY_WEIGHTS_URL)
+    # HTML fallback
+    headers, rows = _fetch_table_html(ABILITY_WEIGHTS_URL, timeout=timeout)
     headers_l = [h.strip().lower() for h in headers]
 
     ability_i = headers_l.index("ability") if "ability" in headers_l else 0
@@ -266,23 +293,52 @@ def load_windrun_ability_weights() -> Dict[str, float]:
 # --------------------------------------------------------------------------------------
 # Public API: hero weights
 # --------------------------------------------------------------------------------------
-def load_windrun_hero_weights() -> Dict[str, float]:
+def _parse_hero_wr_from_ssr_html(html: str) -> Dict[str, float]:
+    """
+    Parse Windrun SSR hero page (no JSON, maybe no usable <table>)
+    by reading anchor + percent text.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    out: Dict[str, float] = {}
+
+    for a in soup.find_all("a"):
+        name = a.get_text(strip=True)
+        if not name or len(name) < 2:
+            continue
+
+        parent_text = (a.parent.get_text(" ", strip=True) if a.parent else "")
+        if "%" not in parent_text:
+            continue
+
+        m = re.search(r"(\d{1,2}\.\d{1,2})\s*%", parent_text)
+        if not m:
+            continue
+
+        wr = _to_float(m.group(1))
+        if wr is None:
+            continue
+
+        key = norm_with_alias(name)
+        out[key] = wr
+
+    return out
+
+
+def load_windrun_hero_weights(*, timeout: int = 45) -> Dict[str, float]:
     """
     Load hero win rates from Windrun.
 
     Strategy:
-    1) Try JSON (if Windrun exposes it).
-    2) Try HTML <table> parsing (Windrun sometimes serves a real table with headers like 7·40).
-    3) Fall back to SSR parsing (anchors with a nearby percent).
+    1) Try JSON.
+    2) Try HTML <table>.
+    3) Fall back to SSR parse (anchors + nearby percent).
     """
-    # -------------------------
-    # 1) Try JSON first
-    # -------------------------
-    payload = _fetch_json(HERO_WEIGHTS_URL)
+    payload = _fetch_json(HERO_WEIGHTS_URL, timeout=timeout)
     recs = _as_records(payload)
 
     out: Dict[str, float] = {}
 
+    # 1) JSON
     if recs:
         sample_keys = set().union(*(r.keys() for r in recs[:10]))
 
@@ -294,10 +350,9 @@ def load_windrun_hero_weights() -> Dict[str, float]:
                     hero_key = k
                     break
 
-        # Prefer patch-like key if present, else a winrate-like key
         patch_keys = [
             k for k in sample_keys
-            if re.fullmatch(r"\d+\.\d+[a-z]?", str(k).strip().lower().replace("·", "."))
+            if re.fullmatch(r"\d+\.\d+[a-z]?", str(k).strip().lower().replace("·", ".").replace("\u00b7", "."))
         ]
         win_key = patch_keys[0] if patch_keys else None
 
@@ -319,17 +374,13 @@ def load_windrun_hero_weights() -> Dict[str, float]:
             if out:
                 return out
 
-    # -------------------------
-    # 2) Try HTML <table> parsing
-    # -------------------------
+    # 2) HTML table
     try:
-        headers, rows = _fetch_table_html(HERO_WEIGHTS_URL)
+        headers, rows = _fetch_table_html(HERO_WEIGHTS_URL, timeout=timeout)
         headers_l = [h.strip().lower() for h in headers]
-
         hero_i = headers_l.index("hero") if "hero" in headers_l else 0
 
         win_i = None
-        # Prefer patch-style headers like 7.40 / 7·40 / 7.40c / 7·40c
         for i, h in enumerate(headers_l):
             if i == hero_i:
                 continue
@@ -338,7 +389,6 @@ def load_windrun_hero_weights() -> Dict[str, float]:
                 win_i = i
                 break
 
-        # Otherwise, fall back to any "win"/"wr" column
         if win_i is None:
             for i, h in enumerate(headers_l):
                 if i == hero_i:
@@ -356,75 +406,155 @@ def load_windrun_hero_weights() -> Dict[str, float]:
                 w = _to_float(r[win_i])
                 if hkey and w is not None:
                     out[hkey] = w
-
             if out:
                 return out
     except Exception:
-        # If table parsing doesn't work, we will try SSR parsing next.
         pass
 
-    # -------------------------
-    # 3) SSR HTML parse (anchors + nearby percent)
-    # -------------------------
-    r = requests.get(HERO_WEIGHTS_URL, timeout=45, headers=UA)
-    r.raise_for_status()
+    # 3) SSR parse
+    r = _fetch(HERO_WEIGHTS_URL, timeout=timeout, headers=_browser_headers())
     out = _parse_hero_wr_from_ssr_html(r.text)
-
     if not out:
-        raise RuntimeError(
-            "Could not parse hero winrates from Windrun heroes page. "
-            "Both table parsing and SSR parsing failed (format likely changed)."
-        )
+        raise RuntimeError("Could not parse hero winrates from Windrun heroes page (format changed).")
+    return out
+
+
+# --------------------------------------------------------------------------------------
+# Ability static mapping
+# --------------------------------------------------------------------------------------
+def _build_static_ability_maps(*, timeout: int = 45) -> Tuple[Dict[str, int], Dict[int, str]]:
+    """
+    Returns:
+      norm_to_valve_id: { "ball_lightning": 5101, ... }
+      valve_id_to_name: { 5101: "Ball Lightning", ... }
+
+    Confirmed payload shape (yours):
+      { "data": [ { englishName, shortName, tooltip, valveId, ... }, ... ] }
+    """
+    payload = _fetch_json(STATIC_ABILITIES_URL, timeout=timeout)
+    if not isinstance(payload, dict) or "data" not in payload or not isinstance(payload.get("data"), list):
+        raise RuntimeError("Static abilities endpoint returned unexpected JSON shape (expected dict with key 'data' list).")
+
+    norm_to_valve_id: Dict[str, int] = {}
+    valve_id_to_name: Dict[int, str] = {}
+
+    for r in payload["data"]:
+        if not isinstance(r, dict):
+            continue
+        vid = r.get("valveId")
+        nm = r.get("englishName") or r.get("shortName")
+        if vid is None or nm is None:
+            continue
+        try:
+            vid_int = int(vid)
+        except Exception:
+            continue
+        nm_str = str(nm).strip()
+        if not nm_str:
+            continue
+
+        n = norm_with_alias(nm_str)
+        if not n:
+            continue
+
+        norm_to_valve_id[n] = vid_int
+        valve_id_to_name[vid_int] = nm_str
+
+    if not norm_to_valve_id:
+        raise RuntimeError("Static abilities endpoint did not produce any usable (englishName, valveId) records.")
+
+    return norm_to_valve_id, valve_id_to_name
+
+
+# --------------------------------------------------------------------------------------
+# Ability pairs parsing: multiple strategies (kept for future fallback)
+# --------------------------------------------------------------------------------------
+_PAIR_LINE_RE = re.compile(
+    r"^\s*(?P<a>[^,]{2,80})\s*,\s*(?P<wr>\d{1,2}(?:\.\d{1,2})?)\s*%\s*\.\s*(?P<b>.{2,80})\s*$"
+)
+
+
+def _parse_pairs_from_pairs_page_html(html: str) -> List[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    text = soup.get_text(" ; ", strip=True)
+
+    if len(text) < 2000:
+        return []
+
+    low = text.lower()
+    start = low.find("ability pairs")
+    if start == -1:
+        return []
+
+    after = text[start:]
+    chunks = [c.strip() for c in after.split(" ; ") if c.strip()]
+
+    out: List[dict] = []
+    for c in chunks:
+        m = _PAIR_LINE_RE.match(c)
+        if not m:
+            continue
+
+        a_raw = m.group("a").strip()
+        b_raw = m.group("b").strip()
+        wr = _to_float(m.group("wr"))
+
+        a_norm = norm_with_alias(a_raw)
+        b_norm = norm_with_alias(b_raw)
+
+        if a_norm and b_norm:
+            out.append(
+                {
+                    "a_raw": a_raw,
+                    "b_raw": b_raw,
+                    "a_norm": a_norm,
+                    "b_norm": b_norm,
+                    "score": wr,
+                }
+            )
 
     return out
 
 
+def _try_pair_api_candidates(*, timeout: int = 45) -> List[dict]:
+    def _detect_fields(records: List[dict]) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+        if not records:
+            return None, None, None
 
+        sample_keys = set().union(*(r.keys() for r in records[:25]))
 
+        a_key = None
+        b_key = None
 
-# --------------------------------------------------------------------------------------
-# Public API: ability pairs
-# --------------------------------------------------------------------------------------
-def load_windrun_ability_pairs() -> List[dict]:
-    payload = _fetch_json(ABILITY_PAIRS_URL)
-    recs = _as_records(payload)
-
-    # Expected fields can vary. We will detect:
-    # - two ability name fields
-    # - one winrate field
-    out: List[dict] = []
-
-    if recs:
-        sample_keys = set().union(*(r.keys() for r in recs[:10]))
-
-        # find ability keys
-        ability_keys = []
-        for k in sample_keys:
-            lk = k.lower()
-            if "ability" in lk and ("1" in lk or "one" in lk):
-                ability_keys.append(k)
-            elif "ability" in lk and ("2" in lk or "two" in lk):
-                ability_keys.append(k)
-
-        # common direct names
-        for k in ("ability1", "ability_1", "ability 1", "a", "abilityOne"):
+        for k in ("ability1", "ability_1", "ability 1", "a", "first", "left"):
             if k in sample_keys:
-                ability_keys.insert(0, k)
-        for k in ("ability2", "ability_2", "ability 2", "b", "abilityTwo"):
+                a_key = k
+                break
+        for k in ("ability2", "ability_2", "ability 2", "b", "second", "right"):
             if k in sample_keys:
-                ability_keys.append(k)
+                b_key = k
+                break
 
-        # If still not clean, pick any two stringy columns containing "ability"
-        if len(ability_keys) < 2:
+        if a_key is None or b_key is None:
             for k in sample_keys:
-                if "ability" in k.lower():
-                    ability_keys.append(k)
-        ability_keys = list(dict.fromkeys(ability_keys))  # dedupe preserving order
+                lk = k.lower()
+                if a_key is None and "ability" in lk and ("1" in lk or "one" in lk):
+                    a_key = k
+                if b_key is None and "ability" in lk and ("2" in lk or "two" in lk):
+                    b_key = k
 
-        a_key = ability_keys[0] if len(ability_keys) > 0 else None
-        b_key = ability_keys[1] if len(ability_keys) > 1 else None
+        if a_key is None or b_key is None:
+            candidates = []
+            for k in sample_keys:
+                lk = k.lower()
+                if "ability" in lk or lk in ("a", "b"):
+                    candidates.append(k)
+            candidates = sorted(set(candidates))
+            if a_key is None and candidates:
+                a_key = candidates[0]
+            if b_key is None and len(candidates) > 1:
+                b_key = candidates[1]
 
-        # find winrate key
         win_key = None
         for k in sample_keys:
             lk = k.lower()
@@ -434,11 +564,24 @@ def load_windrun_ability_pairs() -> List[dict]:
         if win_key is None:
             for k in sample_keys:
                 lk = k.lower()
-                if "wr" in lk or ("win" in lk and "rate" in lk):
+                if "wr" in lk or ("win" in lk and ("rate" in lk or "pct" in lk or "%" in lk)):
                     win_key = k
                     break
 
-        if a_key and b_key and win_key:
+        return a_key, b_key, win_key
+
+    for url in PAIR_API_CANDIDATES:
+        try:
+            payload = _fetch_json(url, timeout=timeout, headers=dict(UA))
+            recs = _as_records(payload)
+            if not recs:
+                continue
+
+            a_key, b_key, win_key = _detect_fields(recs)
+            if not (a_key and b_key and win_key):
+                continue
+
+            out: List[dict] = []
             for r in recs:
                 a_raw = r.get(a_key)
                 b_raw = r.get(b_key)
@@ -447,66 +590,85 @@ def load_windrun_ability_pairs() -> List[dict]:
                 if not a_raw or not b_raw:
                     continue
 
-                a = norm_with_alias(a_raw)
-                b = norm_with_alias(b_raw)
+                a_norm = norm_with_alias(a_raw)
+                b_norm = norm_with_alias(b_raw)
                 sc = _to_float(sc_raw)
 
-                if a and b:
+                if a_norm and b_norm:
                     out.append(
                         {
                             "a_raw": str(a_raw),
                             "b_raw": str(b_raw),
-                            "a_norm": a,
-                            "b_norm": b,
+                            "a_norm": a_norm,
+                            "b_norm": b_norm,
                             "score": sc,
                         }
                     )
 
-            return out
-
-    # Fallback HTML
-    headers, rows = _fetch_table_html(ABILITY_PAIRS_URL)
-    headers_l = [h.strip().lower() for h in headers]
-
-    def idx(name: str, fallback: int) -> int:
-        n = name.strip().lower()
-        return headers_l.index(n) if n in headers_l else fallback
-
-    a_i = idx("ability 1", 0)
-    b_i = idx("ability 2", 1 if a_i == 0 else 0)
-
-    score_i = None
-    for i, h in enumerate(headers_l):
-        if "pair" in h and ("wr" in h or "win" in h):
-            score_i = i
-            break
-    if score_i is None:
-        score_i = 2
-
-    for r in rows:
-        if len(r) <= max(a_i, b_i, score_i):
+            if out:
+                return out
+        except Exception:
             continue
-        a_raw = r[a_i]
-        b_raw = r[b_i]
-        sc_raw = r[score_i]
 
-        a = norm_with_alias(a_raw)
-        b = norm_with_alias(b_raw)
-        sc = _to_float(sc_raw)
+    return []
 
-        if a and b:
-            out.append(
-                {
-                    "a_raw": a_raw,
-                    "b_raw": b_raw,
-                    "a_norm": a,
-                    "b_norm": b,
-                    "score": sc,
-                }
-            )
+
+# --------------------------------------------------------------------------------------
+# Public API: ability pairs (NEW approach with legacy shape)
+# --------------------------------------------------------------------------------------
+def load_windrun_ability_pairs(
+    pool: Optional[Iterable[str]] = None,
+    *,
+    timeout: int = 60,
+    headless: bool = True,
+) -> List[dict]:
+    """
+    Loads ability pairs using the Playwright scraper, then adapts results into the
+    legacy structure that live_gui.py already expects.
+
+    Returns list[dict] with keys:
+      a_raw, b_raw, a_norm, b_norm, score
+
+    pool:
+      Optional iterable of already-normalised ability keys (preferred), or raw names.
+      If provided, only pairs where both a_norm and b_norm are in pool are kept.
+    """
+    pool_set: Optional[Set[str]] = None
+    if pool is not None:
+        pool_set = {norm_with_alias(x) for x in pool if x}
+
+    raw_pairs = get_windrun_ability_pairs(headless=headless)
+
+    out: List[dict] = []
+    for r in raw_pairs:
+        a_raw = str(r.get("ability_1") or "").strip()
+        b_raw = str(r.get("ability_2") or "").strip()
+        score = r.get("win_rate")
+
+        if not a_raw or not b_raw:
+            continue
+
+        a_norm = norm_with_alias(a_raw)
+        b_norm = norm_with_alias(b_raw)
+
+        if pool_set is not None:
+            if a_norm not in pool_set or b_norm not in pool_set:
+                continue
+
+        sc = _to_float(score)
+        out.append(
+            {
+                "a_raw": a_raw,
+                "b_raw": b_raw,
+                "a_norm": a_norm,
+                "b_norm": b_norm,
+                "score": sc,
+            }
+        )
 
     return out
 
 
-def load_windrun_ability_table():
-    return load_windrun_ability_weights()
+# Convenience alias (legacy name in your codebase)
+def load_windrun_ability_table(*, timeout: int = 45) -> Dict[str, float]:
+    return load_windrun_ability_weights(timeout=timeout)

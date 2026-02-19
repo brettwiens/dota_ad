@@ -1,0 +1,5001 @@
+ability_1,ability_2,win_rate
+Kunkka,Tidebringer,52.57
+Lucent Beam,Eclipse,46.97
+Shadow Fiend,Requiem of Souls,57.46
+Berserker's Call,Counter Helix,55.88
+Sacred Arrow,Starstorm,51.41
+Lightning Bolt,Thundergod's Wrath,51.11
+Axe,Counter Helix,51.79
+Axe,Berserker's Call,52.19
+Tidehunter,Anchor Smash,57.3
+Shadow Shaman,Shackles,51.24
+Zeus,Lightning Bolt,49.76
+Ancient Apparition,Chilling Touch,48.37
+Juggernaut,Omnislash,50.59
+Drow Ranger,Multishot,53.95
+Slardar,Slithereen Crush,53.11
+Earthshaker,Aftershock,56.17
+Shadow Fiend,Presence of the Dark Lord,63.91
+Lina,Dragon Slave,49.25
+Pudge,Rot,52.02
+Storm Spirit,Ball Lightning,53.2
+Primal Beast,Trample,52.54
+Necrophos,Death Pulse,47.79
+Sniper,Headshot,58.59
+Witch Doctor,Death Ward,49.76
+Aftershock,Echo Slam,53.21
+Bristleback,Quill Spray,47.09
+Ether Shock,Shackles,50.89
+Luna,Moon Glaives,61.55
+Lion,Earth Spike,57.38
+Drow Ranger,Marksmanship,55.83
+Primal Beast,Uproar,53.87
+Zeus,Thundergod's Wrath,48.46
+Gyrocopter,Flak Cannon,59.4
+Lion,Finger of Death,44.69
+Mana Break,Mana Void,46.19
+Tinker,Rearm,44.34
+Rocket Barrage,Homing Missile,52.76
+Sand King,Burrowstrike,47.38
+Overload,Ball Lightning,53.32
+Dazzle,Poison Touch,49.01
+Phantom Rush,Juxtapose,47.9
+Drow Ranger,Frost Arrows,54.17
+Enigma,Black Hole,49.81
+Centaur Warrunner,Double Edge,51.41
+Enchantress,Impetus,50.62
+Lich,Chain Frost,53.45
+Alchemist,Acid Spray,49.28
+Doppelganger,Juxtapose,54.06
+Spirit Breaker,Charge of Darkness,53.45
+Warlock,Fatal Bonds,51.58
+Witch Doctor,Paralyzing Cask,52.4
+Largo,Catchy Lick,53.81
+Shadow Strike,Scream Of Pain,47.24
+Batrider,Sticky Napalm,52.2
+Morphling,Adaptive Strike,49.08
+Venomancer,Poison Sting,48.34
+Cold Feet,Ice Blast,55.16
+Silencer,Arcane Curse,48.92
+Ogre Magi,Fireblast,52.02
+Warlock,Chaotic Offering,55.49
+Skywrath Mage,Arcane Bolt,49.74
+Pugna,Nether Blast,49.29
+Dark Seer,Ion Shell,51.7
+Clockwerk,Battery Assault,53.7
+Magnus,Skewer,50.83
+Death Prophet,Crypt Swarm,53.69
+Outworld Devourer,Arcane Orb,55.77
+Wyrm's Wrath,Elder Dragon Form,49.06
+Riki,Blink Strike,45.76
+Mirana,Leap,52.51
+Quill Spray,Bristleback,50.99
+Nyx Assassin,Mind Flare,47.28
+Techies,Reactive Tazer,55.71
+Sven,Great Cleave,49.59
+Centaur Warrunner,Retaliate,51.84
+Razor,Static Link,51.76
+Witch Doctor,Maledict,49.5
+Bounty Hunter,Shuriken Toss,49.61
+Pudge,Dismember,49.7
+Earthshaker,Enchant Totem,46.86
+Beastmaster,Wild Axes,48.93
+Clinkz,Searing Arrows,43.09
+Multishot,Marksmanship,47.27
+Sand King,Epicenter,45.77
+Warlock,Upheaval,52.52
+Ember Spirit,Sleight of Fist,46.39
+Tidehunter,Kraken Shell,50.9
+Storm Spirit,Overload,50.56
+Stinger,Epicenter,48.09
+Pangolier,Swashbuckle,47.9
+Undying,Decay,50.28
+Shadow Shaman,Mass Serpent Ward,49.8
+Lifestealer,Ghoul Frenzy,54.8
+Hunter in the Night,Dark Ascension,52.79
+Phantom Assassin,Phantom Strike,44.73
+Vengeful Spirit,Wave of Terror,47.65
+Viper,Poison Attack,49.97
+Bloodseeker,Thirst,58.03
+Shadow Shaman,Ether Shock,48.36
+Clinkz,Strafe,43.08
+Necrophos,Heartstopper Aura,49.11
+Charge of Darkness,Greater Bash,53.17
+Silencer,Glaives of Wisdom,53.15
+Frostbite,Freezing Field,54.59
+Windranger,Focus Fire Facet,47.9
+Multishot,Frost Arrows,49.07
+Tinker,Laser,47.91
+Nature's Prophet,Sprout,51.38
+Omniknight,Hammer of Purity,54.21
+Windranger,Shackleshot,50.49
+Night Stalker,Hunter in the Night,52.72
+Juggernaut,Blade Dance,47.58
+Ringmaster,Tame the Beasts,48.41
+Silencer,Last Word,48.29
+Leshrac,Split Earth,55.3
+Shadow Fiend,Feast of Souls,55.2
+Luna,Lucent Beam,55.13
+Morphling,Waveform,50.45
+Riki,Tricks of the Trade,43.23
+Undying,Tombstone,50.89
+Bane,Fiend's Grip,55.42
+Earthshaker,Echo Slam,51.38
+Chaos Knight,Reality Rift,49.11
+Berserker's Blood,Life Break,54.16
+Midnight Pulse,Black Hole,52.49
+Tiny,Toss,47.46
+Lina,Laguna Blade,48.66
+Razor,Plasma Field,55.98
+Phantom Lancer,Juxtapose,50.26
+Bane,Brain Sap,53.43
+Meat Hook,Dismember,50.56
+Shuriken Toss,Track,52.25
+Pugna,Life Drain,50.07
+Puck,Dream Coil,43.44
+Phantom Assassin,Stifling Dagger,43.46
+Storm Surge,Eye of the Storm,51.32
+Lion,Mana Drain,44.58
+Timbersaw,Whirling Death,49.87
+Wraith King,Reincarnation,56.5
+Clockwerk,Power Cogs,53.34
+Sand King,Sand Storm,49.93
+Queen of Pain,Sonic Wave,46.67
+Burning Spear,Berserker's Blood,55.26
+Primal Beast,Pulverize,51.81
+Crystal Maiden,Crystal Nova,47.95
+Queen of Pain,Shadow Strike,47.15
+Legion Commander,Overwhelming Odds,50.85
+Paralyzing Cask,Death Ward,51.26
+Shackles,Mass Serpent Ward,52.3
+Storm Spirit,Static Remnant,47.99
+Great Cleave,God's Strength,50.77
+Visage,Soul Assumption,46.91
+Spirit Lance,Juxtapose,47.45
+Medusa,Split Shot,55.62
+Slark,Pounce,49.19
+Bounty Hunter,Jinada,47.11
+Sven,God's Strength,49.71
+Phantom Lancer,Phantom Rush,47.75
+Tiny,Avalanche,55.02
+Legion Commander,Moment of Courage,49.04
+Sand King,Stinger,44.55
+Dragon Slave,Laguna Blade,44.34
+Death Prophet,Exorcism,52.15
+Wraith King,Mortal Strike,51.03
+Mars,Arena Of Blood,54.46
+Tusk,Walrus PUNCH!,53.11
+Spectre,Shadow Step,44.1
+Naga Siren,Mirror Image,53.57
+March of the Machines,Rearm,41.74
+Leshrac,Pulse Nova,59.47
+Venomancer,Venomous Gale,44.58
+Pudge,Meat Hook,49.69
+Puck,Phase Shift,45.59
+Disruptor,Thunder Strike,49.63
+Blade Dance,Omnislash,47.62
+Puck,Illusory Orb,45.47
+Crystal Maiden,Frostbite,49.97
+Lich,Frost Blast,50.2
+Bristleback,Bristleback,49.15
+Ember Spirit,Searing Chains,49.23
+Dragon Slave,Fiery Soul,45.15
+Templar Assassin,Psi Blades,46.79
+Avalanche,Toss,53.65
+Jakiro,Dual Breath,46.28
+Slithereen Crush,Corrosive Haze,55.69
+Fatal Bonds,Chaotic Offering,53.18
+Arcane Curse,Global Silence,51.22
+Kraken Shell,Anchor Smash,50.0
+Rubick,Fade Bolt,49.36
+Axe,Culling Blade,46.29
+Rot,Dismember,50.26
+Slark,Dark Pact,47.62
+Outworld Devourer,Sanity's Eclipse,51.37
+Necrophos,Ghost Shroud,45.45
+Medusa,Mystic Snake,54.05
+Faceless Void,Time Walk,51.97
+Queen of Pain,Scream Of Pain,48.43
+Beastmaster,Primal Roar,48.37
+Clinkz,Skeleton Walk,48.39
+Dragon Knight,Dragon Tail,59.97
+Headshot,Take Aim,48.93
+Lina,Light Strike Array,56.91
+Io,Tether,54.4
+Poison Sting,Plague Ward,51.74
+Mana Drain,Finger of Death,41.22
+Ancient Apparition,Cold Feet,50.78
+Razor,Eye of the Storm,50.63
+Bounty Hunter,Track,54.43
+Razor,Storm Surge,51.5
+Necrophos,Reaper's Scythe,44.77
+Venomancer,Noxious Plague,48.87
+Oracle,Fortune's End,53.68
+Shadow Demon,Disruption,57.01
+Phantom Assassin,Coup de Grace,40.19
+Frost Arrows,Marksmanship,47.8
+Omniknight,Purification,55.63
+Meld,Psi Blades,48.84
+Leshrac,Diabolic Edict,55.3
+Searing Arrows,Skeleton Walk,50.62
+Spirit Breaker,Greater Bash,50.88
+Bane,Nightmare,45.77
+Shackleshot,Focus Fire Facet,44.91
+Nethertoxin,Corrosive Skin,52.97
+Largo,Frogstomp,52.78
+Mirana,Starstorm,47.35
+Arcane Orb,Sanity's Eclipse,50.16
+Lion,Hex,51.67
+Tusk,Snowball,55.51
+Shadow Fiend,Shadowraze,53.1
+Brain Sap,Fiend's Grip,53.13
+Outworld Devourer,Astral Imprisonment,51.43
+Static Remnant,Ball Lightning,50.64
+Greater Bash,Nether Strike,44.87
+Medusa,Gorgon's Grasp,53.47
+Dazzle,Shadow Wave,52.65
+Pugna,Decrepify,50.72
+Skywrath Mage,Concussive Shot,51.93
+Mirana,Moonlight Shadow,49.45
+Faceless Void,Time Lock,45.74
+Presence of the Dark Lord,Requiem of Souls,62.09
+Shrapnel,Assassinate,50.55
+Mirana,Sacred Arrow,49.82
+Phase Shift,Dream Coil,49.58
+Disruptor,Glimpse,48.97
+Static Remnant,Overload,47.37
+Centaur Warrunner,Hoof Stomp,53.63
+Sniper,Take Aim,54.32
+Maledict,Death Ward,49.17
+Slardar,Corrosive Haze,54.24
+Nature's Prophet,Teleportation,50.7
+Bloodseeker,Rupture,52.82
+Phantom Lancer,Doppelganger,52.77
+Counter Helix,Culling Blade,48.66
+Brewmaster,Drunken Brawler,52.55
+Decrepify,Life Drain,47.0
+Troll Warlord,Fervor,43.85
+Earth Spike,Mana Drain,52.33
+Berserker's Call,Culling Blade,49.32
+Grimstroke,Soulbind,53.33
+Lifestealer,Rage,54.05
+Anti-Mage,Mana Break,42.94
+Leshrac,Lightning Storm,54.41
+Lifestealer,Infest,50.14
+Sniper,Shrapnel,57.88
+Dragon Knight,Breathe Fire,56.5
+Timbersaw,Reactive Armor,47.92
+Bane,Enfeeble,54.43
+Slark,Saltwater Shiv,43.37
+Untouchable,Nature's Attendants,55.64
+Bloodseeker,Bloodrage,47.35
+Nyx Assassin,Impale,51.36
+Arcane Curse,Last Word,49.37
+Lycan,Summon Wolves,49.6
+Noxious Plague,Poison Sting,54.71
+Queen of Pain,Blink,55.68
+Lifestealer,Open Wounds,48.94
+Dark Willow,Shadow Realm,51.02
+Enchantress,Nature's Attendants,55.88
+Windranger,Powershot,45.97
+Void Spirit,Astral Step,54.11
+Luna,Lunar Orbit,57.71
+Windranger,Windrun,55.59
+Enigma,Midnight Pulse,51.38
+Dawnbreaker,Starbreaker,50.3
+Hex,Finger of Death,47.32
+Death Pulse,Heartstopper Aura,52.4
+Lycan,Shapeshift,53.84
+Templar Assassin,Refraction,51.14
+Nyx Assassin,Vendetta,45.2
+Axe,Battle Hunger,48.31
+Pugna,Nether Ward,53.53
+Underlord,Firestorm,55.09
+Shadow Shaman,Hex,48.25
+Weaver,Geminate Attack,40.6
+Burrowstrike,Epicenter,51.71
+Primal Beast,Onslaught,50.23
+Trample,Uproar,52.52
+Largo,Croak of Genius,53.22
+Techies,Sticky Bomb,51.71
+Ghost Shroud,Heartstopper Aura,51.65
+Spectre,Dispersion,54.02
+Kunkka,Ghostship,52.42
+Trample,Pulverize,51.61
+Huskar,Berserker's Blood,48.76
+Lycan,Feral Impulse,51.9
+Thirst,Rupture,54.17
+Venomancer,Plague Ward,45.32
+Immaterial,Coup de Grace,50.2
+Crypt Swarm,Exorcism,48.48
+Tidehunter,Ravage,58.2
+Toss,Grow,45.69
+Chaos Knight,Chaos Strike,46.49
+Juggernaut,Blade Fury,50.12
+Luna,Eclipse,55.06
+Guardian Sprint,Bash of the Deep,50.29
+Storm Spirit,Electric Vortex,47.08
+Dragon Knight,Wyrm's Wrath,54.64
+Shuriken Toss,Jinada,45.97
+Bash of the Deep,Corrosive Haze,50.12
+Refraction,Psi Blades,56.23
+Nature's Prophet,Wrath of Nature,49.14
+Heavenly Jump,Arc Lightning,51.26
+Elder Titan,Astral Spirit,49.06
+Dark Seer,Vacuum,53.93
+Magnus,Shockwave,49.34
+Viper,Nethertoxin,46.46
+Ringmaster,Impalement Arts,47.42
+Laser,Rearm,40.68
+Snapfire,Mortimer Kisses,52.58
+Diabolic Edict,Pulse Nova,51.91
+Crystal Maiden,Freezing Field,47.93
+Treant Protector,Overgrowth,52.64
+Enigma,Malefice,47.78
+Enfeeble,Fiend's Grip,55.64
+Light Strike Array,Laguna Blade,53.53
+Night Stalker,Crippling Fear,51.56
+Upheaval,Chaotic Offering,53.11
+Earthshock,Enrage,49.18
+Tiny,Grow,47.15
+Spectre,Haunt,48.82
+Snapfire,Scatterblast,49.02
+Wraith King,Wraithfire Blast,54.12
+Tree Grab,Grow,49.5
+Sven,Storm Hammer,53.99
+Death Pulse,Reaper's Scythe,45.65
+Silencer,Global Silence,48.99
+Omniknight,Repel,57.42
+Phantom Lancer,Spirit Lance,46.53
+Static Link,Eye of the Storm,47.12
+Paralyzing Cask,Maledict,52.62
+Smoke Screen,Cloak and Dagger,57.49
+Escape Act,Impalement Arts,48.39
+Burrowstrike,Sand Storm,54.79
+Earthshaker,Fissure,50.39
+Phantom Strike,Coup de Grace,47.26
+Phantom Rush,Doppelganger,51.79
+Ancient Apparition,Ice Vortex,49.15
+Kunkka,Torrent,52.55
+Lone Druid,Entangle,42.38
+Torrent,Ghostship,53.18
+Puck,Waning Rift,44.98
+Strafe,Searing Arrows,44.22
+Illusory Orb,Phase Shift,50.11
+Doom,Scorched Earth,49.55
+Blink Strike,Tricks of the Trade,43.8
+Weaver,Shukuchi,51.44
+Viper,Viper Strike,46.53
+Frost Blast,Chain Frost,54.01
+Illusory Orb,Dream Coil,48.23
+Largo,Amphibian Rhapsody,51.94
+Clinkz,Death Pact,43.01
+Uproar,Pulverize,51.58
+Noxious Plague,Venomous Gale,51.28
+Abaddon,Mist Coil,42.8
+Earth Spirit,Rolling Boulder,52.76
+Spectre,Spectral Dagger,51.04
+Doom,Devour,47.39
+Reality Rift,Chaos Strike,51.08
+Riki,Smoke Screen,50.81
+Phantom Assassin,Immaterial,46.53
+Enchantress,Untouchable,51.2
+Ice Path,Macropyre,53.86
+Pudge,Meat Shield,49.94
+Clockwerk,Hookshot,52.68
+Shadow Step,Haunt,47.46
+Nether Ward,Life Drain,50.29
+Warcry,God's Strength,51.16
+Legion Commander,Duel,48.29
+Battery Assault,Power Cogs,52.76
+Vengeful Spirit,Nether Swap,49.11
+Ringmaster,Wheel of Wonder,50.89
+Doom,Doom,48.22
+Skywrath Mage,Ancient Seal,50.62
+Huskar,Burning Spear,45.67
+Magic Missile,Nether Swap,51.02
+Tidebringer,Ghostship,52.1
+Mars,God's Rebuke,51.46
+Tinker,March of the Machines,44.44
+Double Edge,Retaliate,48.71
+Overwhelming Odds,Moment of Courage,51.37
+Skewer,Reverse Polarity,50.28
+Chaos Strike,Phantasm,54.74
+Ember Spirit,Flame Guard,51.35
+Mind Flare,Vendetta,44.78
+Magnus,Reverse Polarity,49.37
+Chen,Penitence,45.89
+Hoodwink,Acorn Shot,54.79
+Vengeful Spirit,Magic Missile,50.25
+Fiery Soul,Laguna Blade,45.12
+Riki,Cloak and Dagger,50.74
+Sven,Warcry,53.44
+Kez,Unknown Ability #1517,48.1
+Earth Spike,Hex,56.59
+Fatal Bonds,Upheaval,47.58
+Anti-Mage,Blink,45.92
+Bounty Hunter,Shadow Walk,50.83
+Zeus,Arc Lightning,40.99
+Electric Vortex,Ball Lightning,48.69
+Keeper of the Light,Chakra Magic,49.98
+Ancient Apparition,Ice Blast,53.81
+Spawn Spiderlings,Spin Web,53.87
+Templar Assassin,Meld,43.64
+Hoodwink,Sharpshooter,49.96
+Weaver,The Swarm,47.95
+Berserker's Call,Battle Hunger,51.25
+Corrosive Skin,Viper Strike,52.29
+Spirit Lance,Doppelganger,52.52
+Heartstopper Aura,Reaper's Scythe,52.23
+Ringmaster,Escape Act,48.81
+Vengeful Spirit,Vengeance Aura,51.95
+Frostbite,Arcane Aura,50.6
+Nether Blast,Life Drain,45.95
+Alchemist,Unstable Concoction,47.97
+Geminate Attack,Time Lapse,47.56
+Lich,Frost Shield,49.18
+Skywrath Mage,Mystic Flare,50.54
+Terrorblade,Conjure Image,51.19
+Bloodseeker,Blood Rite,52.08
+Windrun,Focus Fire Facet,50.07
+Feral Impulse,Shapeshift,53.78
+Meat Shield,Rot,55.33
+Jakiro,Liquid Frost,50.5
+Phoenix,Icarus Dive,49.73
+Battery Assault,Hookshot,50.91
+Ursa,Earthshock,43.5
+Pangolier,Rolling Thunder,47.38
+Hex,Shackles,52.84
+Monkey King,Boundless Strike,50.76
+Blood Rite,Rupture,48.38
+Muerta,Dead Shot,47.75
+Onslaught,Trample,47.39
+Slark,Shadow Dance,57.65
+Overwhelming Odds,Duel,51.92
+Arc Warden,Magnetic Field,48.76
+Poison Attack,Viper Strike,48.89
+Feast of Souls,Presence of the Dark Lord,53.62
+Corrosive Weaponry,Chemical Rage,53.62
+Void Spirit,Dissimilate,50.68
+Dark Willow,Bramble Maze,51.87
+Hex,Mass Serpent Ward,48.31
+Winter Wyvern,Arctic Burn,55.36
+Lina,Fiery Soul,57.23
+Juggernaut,Healing Ward,49.89
+Catchy Lick,Frogstomp,51.65
+Strafe,Skeleton Walk,54.24
+Blink,Scream Of Pain,53.0
+Immaterial,Phantom Strike,52.53
+Shadow Demon,Demonic Purge,52.85
+Abaddon,Aphotic Shield,50.99
+Medusa,Stone Gaze,53.96
+Keeper of the Light,Spirit Form,48.59
+Blink,Sonic Wave,51.43
+Dazzle,Shallow Grave,48.68
+Wraithfire Blast,Reincarnation,54.65
+Tame the Beasts,Wheel of Wonder,52.84
+Nethertoxin,Viper Strike,47.5
+Batrider,Firefly,51.85
+Io,Spirits,55.07
+Moonlight Shadow,Leap,54.69
+Witch Doctor,Voodoo Restoration,53.99
+Enchantress,Enchant,52.33
+Fervor,Battle Trance,47.09
+Guardian Sprint,Corrosive Haze,48.45
+Malefice,Black Hole,50.98
+Sand Storm,Epicenter,52.07
+Night Stalker,Dark Ascension,49.62
+Moment of Courage,Duel,48.04
+Warlock,Shadow Word,50.64
+Earthshock,Fury Swipes,53.07
+Reality Rift,Phantasm,52.51
+Disruptor,Kinetic Field,48.58
+Dragon Tail,Elder Dragon Form,46.84
+Crystal Maiden,Arcane Aura,46.34
+Frost Shield,Chain Frost,51.52
+Jakiro,Ice Path,49.98
+Vacuum,Wall of Replica,51.86
+Dual Breath,Macropyre,47.1
+Zeus,Heavenly Jump,43.67
+Snapfire,Lil' Shredder,48.99
+Jakiro,Macropyre,45.15
+Ether Shock,Mass Serpent Ward,48.58
+Dragon Knight,Elder Dragon Form,51.73
+Nether Blast,Decrepify,45.97
+Treant Protector,Nature's Grasp,46.02
+Anchor Smash,Ravage,55.77
+Skeleton Walk,Death Pact,51.69
+Legion Commander,Press The Attack,49.81
+Gyrocopter,Rocket Barrage,50.66
+Bristleback,Viscous Nasal Goo,48.34
+Brewmaster,Thunder Clap,47.81
+Ghoul Frenzy,Rage,55.83
+Inner Beast,Primal Roar,49.02
+Treant Protector,Leech Seed,53.43
+Stifling Dagger,Coup de Grace,43.45
+Shadowraze,Requiem of Souls,51.99
+Hoodwink,Bushwhack,51.86
+Viper,Corrosive Skin,49.98
+Dragon Slave,Light Strike Array,51.05
+Quill Spray,Warpath,46.62
+Night Stalker,Void,47.79
+Tusk,Ice Shards,55.16
+Summon Wolves,Feral Impulse,50.73
+Fury Swipes,Enrage,55.17
+Waning Rift,Dream Coil,47.49
+Chaos Knight,Phantasm,48.23
+Death Prophet,Silence,53.1
+Ghost Shroud,Death Pulse,48.42
+Nyx Assassin,Spiked Carapace,52.34
+Plasma Field,Eye of the Storm,53.01
+Phantom Rush,Spirit Lance,43.73
+Chaos Knight,Chaos Bolt,51.4
+Tidehunter,Gush,56.64
+Lightning Storm,Pulse Nova,51.56
+Anti-Mage,Mana Void,42.4
+Tiny,Tree Grab,47.23
+Huskar,Life Break,43.35
+Troll Warlord,Whirling Axes (Ranged),44.77
+Gush,Ravage,54.82
+Venomous Gale,Poison Sting,48.45
+Hammer of Purity,Repel,51.87
+Dazzle,Nothl Projection,42.85
+Kez,Echo Slash,51.28
+Shadow Strike,Sonic Wave,41.91
+Sprout,Teleportation,51.43
+Slardar,Guardian Sprint,46.01
+Smoke Screen,Blink Strike,50.63
+Onslaught,Uproar,51.56
+Timbersaw,Timber Chain,45.71
+Beastmaster,Inner Beast,41.34
+Marci,Bodyguard,49.66
+Waveform,Adaptive Strike,47.4
+Power Cogs,Hookshot,51.04
+Earth Spike,Finger of Death,52.58
+Overpower,Fury Swipes,53.18
+Elder Titan,Natural Order,53.85
+Muerta,The Calling,52.23
+Refraction,Meld,51.56
+Wild Axes,Primal Roar,53.33
+Untouchable,Impetus,50.0
+Winter Wyvern,Splinter Blast,51.11
+Crystal Nova,Freezing Field,53.89
+Arc Warden,Flux,49.7
+Time Lock,Chronosphere,49.54
+Chakra Magic,Spirit Form,51.23
+Great Cleave,Warcry,49.07
+Alchemist,Chemical Rage,53.23
+Kraken Shell,Ravage,48.85
+Crippling Fear,Hunter in the Night,53.08
+Dark Pact,Shadow Dance,56.46
+Void,Hunter in the Night,49.75
+Disruption,Demonic Purge,54.88
+Abaddon,Borrowed Time,50.91
+Ghost Shroud,Reaper's Scythe,46.74
+Broodmother,Spin Web,49.75
+Mortal Strike,Reincarnation,52.69
+Kinetic Field,Static Storm,51.17
+Troll Warlord,Battle Trance,48.67
+Jinada,Track,50.48
+Disruptor,Static Storm,49.18
+Brewmaster,Primal Split,52.43
+Lunar Orbit,Moon Glaives,58.37
+Fiend's Grip,Nightmare,48.9
+Ogre Magi,Ignite,52.96
+Onslaught,Pulverize,49.23
+Shackleshot,Powershot,46.1
+Mirror Image,Rip Tide,54.33
+Sprout,Wrath of Nature,49.03
+Searing Arrows,Death Pact,43.89
+Wraith King,Bone Guard,50.52
+Ursa,Overpower,42.02
+Magnus,Empower,52.33
+Gyrocopter,Call Down,51.56
+Feast of Souls,Requiem of Souls,50.78
+Keeper of the Light,Illuminate,44.52
+Teleportation,Wrath of Nature,50.73
+Ogre Magi,Bloodlust,53.02
+Fissure,Aftershock,54.73
+Tidebringer,X Marks the Spot,50.32
+Kez,Kazurai Katana,49.67
+Gyrocopter,Homing Missile,51.87
+Drunken Brawler,Primal Split,54.1
+Shadow Walk,Track,56.71
+Impale,Vendetta,50.83
+Muerta,Gunslinger,50.15
+Spectral Blade,Mortal Strike,45.23
+Incapacitating Bite,Insatiable Hunger,52.57
+Kunkka,X Marks the Spot,49.61
+Split Shot,Stone Gaze,47.16
+Enigma,Demonic Summoning,46.59
+Rolling Thunder,Swashbuckle,45.48
+Kez,Grappling Claw,50.67
+Ghoul Frenzy,Infest,46.6
+Searing Chains,Sleight of Fist,46.6
+Shackleshot,Windrun,54.33
+Jinada,Shadow Walk,50.49
+Sticky Napalm,Firefly,47.31
+Terrorblade,Metamorphosis,49.66
+Crystal Nova,Frostbite,52.52
+Nature's Attendants,Impetus,52.88
+Mind Flare,Impale,50.03
+Breathe Fire,Elder Dragon Form,45.11
+Scream Of Pain,Sonic Wave,42.0
+Spectral Dagger,Haunt,55.08
+Underlord,Pit of Malice,51.39
+Shadow Strike,Blink,53.61
+Batrider,Flaming Lasso,49.35
+Healing Ward,Omnislash,47.62
+Kez,Raptor Dance,49.88
+Bloodrage,Rupture,44.08
+Astral Imprisonment,Sanity's Eclipse,47.19
+Storm Surge,Static Link,45.95
+Burning Spear,Life Break,49.0
+Storm Surge,Plasma Field,53.41
+Kez,Unknown Ability #1519,47.12
+Venomous Gale,Plague Ward,44.42
+Ghoul Frenzy,Open Wounds,49.4
+Battle Hunger,Culling Blade,45.32
+Faceless Void,Chronosphere,48.55
+Surge,Wall of Replica,54.3
+Arcane Orb,Essence Flux,52.86
+Acid Spray,Chemical Rage,51.46
+Overpower,Enrage,47.75
+Broodmother,Insatiable Hunger,43.73
+Dark Seer,Wall of Replica,50.38
+Phoenix,Fire Spirits,52.02
+Ursa,Enrage,44.75
+Bone Guard,Reincarnation,53.52
+Arcane Aura,Freezing Field,50.03
+Illusory Orb,Waning Rift,47.93
+Drow Ranger,Gust,54.35
+Illuminate,Chakra Magic,47.02
+Fissure,Echo Slam,46.66
+Heavenly Jump,Thundergod's Wrath,46.89
+Phoenix,Supernova,52.3
+Sticky Napalm,Flaming Lasso,45.5
+Infernal Blade,Doom,50.66
+Nothl Projection,Poison Touch,43.41
+Monkey King,Jingu Mastery,50.1
+Brain Sap,Enfeeble,53.73
+Heavenly Jump,Lightning Bolt,52.11
+Viscous Nasal Goo,Bristleback,52.58
+Underlord,Fiend's Gate,51.31
+Dark Pact,Pounce,49.49
+Centaur Warrunner,Stampede,53.54
+Conjure Image,Metamorphosis,46.12
+Tinker,Defense Matrix,47.54
+Mist Coil,Borrowed Time,48.98
+Io,Overcharge,50.58
+Guardian Sprint,Slithereen Crush,48.91
+Tether,Overcharge,52.85
+Bloodrage,Thirst,49.55
+Snapfire,Firesnap Cookie,48.48
+Arcane Bolt,Mystic Flare,48.28
+Glaives of Wisdom,Global Silence,51.69
+Powershot,Windrun,52.07
+Slardar,Bash of the Deep,47.75
+Clockwerk,Rocket Flare,48.37
+Oracle,Purifying Flames,47.46
+Rage,Infest,51.6
+Devour,Doom,47.22
+Unstable Concoction,Chemical Rage,51.2
+Strafe,Death Pact,47.14
+Scorched Earth,Doom,52.3
+Batrider,Flamebreak,51.03
+Omniknight,Guardian Angel,51.03
+Arcane Curse,Glaives of Wisdom,48.18
+The Swarm,Shukuchi,60.96
+Split Earth,Pulse Nova,48.21
+Hex,Mana Drain,44.88
+Shadow Demon,Disseminate,50.18
+Stinger,Burrowstrike,49.46
+Torrent,Tidebringer,50.57
+Mystic Snake,Stone Gaze,48.05
+Ursa,Fury Swipes,45.67
+Viscous Nasal Goo,Quill Spray,44.62
+Blood Rite,Thirst,57.06
+Viscous Nasal Goo,Warpath,41.0
+Arcane Bolt,Ancient Seal,48.57
+Void Spirit,Aether Remnant,56.2
+Pounce,Shadow Dance,55.69
+Shadow Word,Chaotic Offering,51.88
+Hoof Stomp,Double Edge,54.6
+Summon Wolves,Shapeshift,50.04
+Moonlight Shadow,Sacred Arrow,52.88
+Thunder Strike,Glimpse,53.06
+Crystal Nova,Arcane Aura,48.26
+Croak of Genius,Amphibian Rhapsody,48.89
+Undying,Soul Rip,47.18
+Charge of Darkness,Nether Strike,48.29
+Snowball,Walrus PUNCH!,49.89
+Dispersion,Haunt,59.38
+Nether Blast,Nether Ward,50.0
+Arcane Bolt,Concussive Shot,52.1
+Lycan,Howl,51.87
+Whirling Death,Timber Chain,47.74
+Dark Seer,Surge,49.77
+Plasma Field,Static Link,50.19
+Ember Spirit,Fire Remnant,49.55
+Jakiro,Liquid Fire,47.42
+Weaver,Time Lapse,42.14
+Electric Vortex,Overload,47.6
+Catchy Lick,Croak of Genius,50.08
+Terrorblade,Reflection,54.95
+Empower,Reverse Polarity,55.13
+Glaives of Wisdom,Last Word,51.92
+Dawnbreaker,Solar Guardian,52.34
+Rubick,Telekinesis,46.41
+Arc Lightning,Thundergod's Wrath,46.03
+Hammer of Purity,Guardian Angel,43.46
+Timbersaw,Chakram,45.83
+Last Word,Global Silence,49.65
+Dual Breath,Ice Path,52.57
+Poison Touch,Shadow Wave,48.2
+Grimstroke,Stroke of Fate,52.11
+Whirling Death,Reactive Armor,53.17
+Leech Seed,Overgrowth,57.95
+Blade Fury,Omnislash,47.91
+Visage,Grave Chill,42.41
+Waning Rift,Phase Shift,49.28
+Devour,Scorched Earth,51.82
+Psi Blades,Psionic Trap,47.78
+Open Wounds,Infest,41.9
+Wraithfire Blast,Mortal Strike,47.77
+Leap,Starstorm,51.75
+Ice Vortex,Chilling Touch,47.87
+Dragon Tail,Wyrm's Wrath,49.92
+Ion Shell,Surge,49.43
+Spirit Breaker,Nether Strike,46.18
+Breathe Fire,Wyrm's Wrath,48.56
+Enchant Totem,Echo Slam,40.2
+Muerta,Pierce the Veil,51.48
+Marksmanship,Gust,49.13
+Enchant,Impetus,46.29
+Enfeeble,Nightmare,44.03
+Catchy Lick,Amphibian Rhapsody,49.96
+Howl,Shapeshift,51.54
+Proximity Mines,Blast Off!,48.33
+Retaliate,Stampede,52.02
+Shuriken Toss,Shadow Walk,49.87
+Earthshock,Overpower,42.7
+Immaterial,Stifling Dagger,49.75
+Shukuchi,Time Lapse,58.57
+Swashbuckle,Shield Crash,47.57
+Naga Siren,Ensnare,48.47
+Vacuum,Ion Shell,48.93
+Repel,Guardian Angel,50.34
+Battle Hunger,Counter Helix,48.41
+Decay,Flesh Golem,51.08
+Naga Siren,Rip Tide,53.45
+Naga Siren,Deluge,50.82
+Spin Web,Incapacitating Bite,56.14
+Wheel of Wonder,Impalement Arts,51.05
+Glimpse,Static Storm,48.43
+Wraith King,Spectral Blade,47.55
+Ion Shell,Wall of Replica,49.26
+Meat Hook,Rot,51.84
+Split Earth,Diabolic Edict,45.79
+Shadow Step,Spectral Dagger,49.56
+Silence,Exorcism,48.54
+Fissure,Enchant Totem,45.04
+Rage,Open Wounds,48.14
+The Swarm,Geminate Attack,48.62
+Lucent Beam,Moon Glaives,47.86
+Glimpse,Kinetic Field,48.3
+Aftershock,Static Remnant,61.93
+Cold Feet,Chilling Touch,48.42
+Stifling Dagger,Phantom Strike,47.46
+Poison Attack,Nethertoxin,48.46
+Terrorblade,Sunder,48.86
+Homing Missile,Call Down,50.64
+Acid Spray,Unstable Concoction,47.54
+Shallow Grave,Shadow Wave,52.05
+Ancient Seal,Mystic Flare,45.4
+Voodoo Restoration,Death Ward,53.84
+Torrent,X Marks the Spot,50.32
+Troll Warlord,Whirling Axes (Melee),43.63
+Poison Touch,Shallow Grave,48.25
+Flak Cannon,Call Down,52.77
+Scatterblast,Mortimer Kisses,50.83
+Saltwater Shiv,Shadow Dance,53.6
+Broodmother,Spawn Spiderlings,42.5
+Enchant Totem,Aftershock,52.41
+Aphotic Shield,Borrowed Time,54.49
+Spiked Carapace,Vendetta,49.95
+Pangolier,Shield Crash,50.84
+Tame the Beasts,Impalement Arts,47.44
+Earth Spirit,Boulder Smash,46.54
+Press The Attack,Moment of Courage,48.88
+Light Strike Array,Fiery Soul,49.95
+Astral Spirit,Natural Order,61.22
+Repel,Purification,55.49
+Abaddon,Curse of Avernus,47.18
+Spawn Spiderlings,Incapacitating Bite,52.74
+Kez,Unknown Ability #1520,49.2
+Sleight of Fist,Fire Remnant,44.8
+Blink Strike,Cloak and Dagger,47.77
+Shockwave,Skewer,47.86
+Fatal Bonds,Shadow Word,48.28
+Firefly,Flaming Lasso,46.85
+Blade Dance,Blade Fury,45.71
+Sticky Napalm,Flamebreak,47.23
+Doom,Infernal Blade,46.9
+Hammer of Purity,Purification,52.34
+Marci,Dispose,46.41
+Concussive Shot,Ancient Seal,50.0
+Astral Spirit,Echo Stomp,47.79
+Tame the Beasts,Escape Act,49.38
+Shadow Demon,Shadow Poison,46.01
+Outworld Devourer,Essence Flux,54.53
+Unknown Ability #1519,Unknown Ability #1520,46.87
+Brain Sap,Nightmare,45.8
+Chen,Hand of God,47.73
+Hoof Stomp,Retaliate,52.08
+Huskar,Voodoo Restoration,53.64
+Concussive Shot,Mystic Flare,52.09
+Winter Wyvern,Cold Embrace,53.76
+Visage,Gravekeeper's Cloak,44.34
+Undying,Flesh Golem,44.48
+Static Remnant,Electric Vortex,42.86
+The Swarm,Time Lapse,52.74
+Meat Shield,Dismember,46.82
+Stinger,Sand Storm,54.9
+Monkey King,Tree Dance,43.04
+Sacred Arrow,Leap,54.18
+Cloak and Dagger,Tricks of the Trade,44.23
+Howl,Feral Impulse,52.42
+Arcane Orb,Astral Imprisonment,49.85
+Lone Druid,Summon Spirit Bear,36.08
+Kez,Unknown Ability #1518,50.69
+Bloodrage,Blood Rite,44.04
+Shrapnel,Headshot,53.94
+Time Zone,Time Lock,47.01
+Spin Web,Insatiable Hunger,54.21
+Searing Chains,Fire Remnant,51.46
+Treant Protector,Living Armor,44.75
+Spectral Dagger,Dispersion,62.55
+Frogstomp,Croak of Genius,49.44
+Lone Druid,True Form,44.68
+Void,Dark Ascension,45.27
+Broodmother,Incapacitating Bite,44.2
+Thunder Strike,Static Storm,52.4
+Wave of Terror,Nether Swap,48.31
+Laser,March of the Machines,39.98
+Firestorm,Pit of Malice,56.5
+Blink,Mana Void,48.57
+Overwhelming Odds,Press The Attack,52.67
+Cold Feet,Ice Vortex,54.92
+Ether Shock,Hex,47.75
+Powershot,Focus Fire Facet,41.36
+Noxious Plague,Plague Ward,47.9
+Frogstomp,Amphibian Rhapsody,48.69
+Smoke Screen,Tricks of the Trade,48.68
+Chilling Touch,Ice Blast,52.22
+Mana Break,Blink,50.85
+Faceless Void,Time Zone,43.72
+Meld,Psionic Trap,41.53
+Mist Coil,Aphotic Shield,50.8
+Refraction,Psionic Trap,47.97
+Alchemist,Corrosive Weaponry,42.41
+Devour,Infernal Blade,49.09
+Tusk,Drinking Buddies,47.27
+Escape Act,Wheel of Wonder,52.03
+Phoenix,Sun Ray,49.79
+Demonic Summoning,Black Hole,47.75
+Fortune's End,Purifying Flames,49.57
+Nature's Grasp,Overgrowth,49.36
+Spectral Blade,Reincarnation,51.34
+Untouchable,Enchant,47.69
+Split Shot,Mystic Snake,49.57
+Whirling Death,Chakram,49.14
+Breathe Fire,Dragon Tail,48.65
+X Marks the Spot,Ghostship,47.94
+Mortimer Kisses,Firesnap Cookie,50.05
+Mars,Bulwark,50.22
+Unknown Ability #1517,Unknown Ability #1519,46.1
+Moonlight Shadow,Starstorm,46.8
+Shadowraze,Presence of the Dark Lord,53.37
+Slithereen Crush,Bash of the Deep,50.16
+Saltwater Shiv,Pounce,49.07
+Marci,Unleash,45.24
+Ice Vortex,Ice Blast,55.87
+Rolling Boulder,Magnetize,54.31
+Paralyzing Cask,Voodoo Restoration,55.43
+Thunder Strike,Kinetic Field,51.4
+Vengeance Aura,Wave of Terror,52.93
+Mirror Image,Song of the Siren,50.4
+Techies,Proximity Mines,52.49
+Toss,Tree Grab,45.51
+Purification,Guardian Angel,48.58
+Time Walk,Chronosphere,53.48
+Saltwater Shiv,Dark Pact,47.77
+Storm Hammer,Warcry,56.19
+Corrosive Weaponry,Acid Spray,47.82
+Fireblast,Ignite,51.03
+Defense Matrix,Rearm,40.39
+Keeper of the Light,Voodoo Restoration,53.47
+Summon Wolves,Howl,49.07
+Underlord,Atrophy Aura,54.31
+Rocket Barrage,Call Down,45.09
+Impale,Spiked Carapace,57.26
+Magic Missile,Vengeance Aura,59.72
+Arena Of Blood,God's Rebuke,48.82
+Liquid Fire,Macropyre,51.3
+Wild Axes,Inner Beast,49.65
+Searing Chains,Flame Guard,48.7
+Illuminate,Spirit Form,50.0
+Blade Dance,Healing Ward,46.32
+Crippling Fear,Dark Ascension,52.44
+Kazurai Katana,Unknown Ability #1520,48.21
+Malefice,Midnight Pulse,53.28
+Mind Flare,Spiked Carapace,49.7
+Decay,Tombstone,54.44
+Spawn Spiderlings,Insatiable Hunger,44.54
+Decrepify,Nether Ward,49.04
+Medusa,Mana Drain,57.95
+Split Earth,Lightning Storm,48.25
+Diabolic Edict,Lightning Storm,44.87
+Whirling Axes (Ranged),Fervor,44.62
+Splinter Blast,Cold Embrace,53.09
+Sticky Bomb,Proximity Mines,53.28
+Reactive Armor,Chakram,45.53
+Kazurai Katana,Unknown Ability #1517,49.2
+Impalement Arts,Aftershock,55.61
+Ice Shards,Walrus PUNCH!,48.39
+Shadow Step,Dispersion,51.8
+Shockwave,Reverse Polarity,47.64
+Bone Guard,Mortal Strike,47.89
+Gush,Kraken Shell,50.12
+Exorcism,Spirit Siphon,50.75
+Decay,Soul Rip,50.37
+Soul Rip,Tombstone,51.13
+Fireblast,Bloodlust,45.35
+Raptor Dance,Unknown Ability #1517,48.29
+Time Walk,Time Lock,54.06
+Bramble Maze,Cursed Crown,52.86
+Ice Shards,Snowball,55.2
+Timber Chain,Reactive Armor,46.33
+Avalanche,Grow,53.22
+Mirror Image,Ensnare,51.35
+Bristleback,Warpath,42.45
+Tombstone,Flesh Golem,51.04
+Liquid Frost,Dual Breath,49.67
+Nature's Prophet,Nature's Call,39.27
+Gorgon's Grasp,Mystic Snake,50.85
+Crypt Swarm,Silence,46.8
+Sticky Bomb,Reactive Tazer,53.99
+Entangle,True Form,47.84
+Sniper,Assassinate,49.41
+Unknown Ability #1517,Unknown Ability #1520,44.78
+Winter Wyvern,Winter's Curse,46.5
+Void,Crippling Fear,49.34
+Deluge,Mirror Image,48.34
+Gorgon's Grasp,Split Shot,46.13
+Techies,Inner Beast,55.94
+Fiend's Gate,Firestorm,51.27
+Frost Blast,Frost Shield,50.6
+Headshot,Assassinate,39.54
+Fiend's Gate,Pit of Malice,48.12
+Nothl Projection,Shadow Wave,41.72
+Starbreaker,Solar Guardian,52.57
+Hoof Stomp,Stampede,52.64
+Oracle,False Promise,52.23
+Thunder Clap,Drunken Brawler,50.82
+Sleight of Fist,Flame Guard,43.4
+Boulder Smash,Rolling Boulder,48.57
+Aftershock,Death Pulse,59.89
+Icarus Dive,Supernova,50.14
+Magic Missile,Wave of Terror,50.48
+Whirling Axes (Melee),Fervor,44.28
+Kazurai Katana,Raptor Dance,47.85
+Press The Attack,Duel,49.37
+Keeper of the Light,Pulse Nova,44.99
+Huskar,Ball Lightning,50.28
+Tether,Spirits,55.52
+Scorched Earth,Infernal Blade,51.9
+Elder Titan,Echo Stomp,47.67
+Echo Slash,Kazurai Katana,51.91
+Double Edge,Stampede,49.57
+Liquid Frost,Macropyre,48.93
+Visage,Summon Familiars,44.48
+Bristleback,Warpath,50.07
+Vengeance Aura,Nether Swap,51.66
+Naga Siren,Juxtapose,55.12
+Death Prophet,Spirit Siphon,53.4
+Echo Slash,Raptor Dance,46.96
+Sniper,Corrosive Weaponry,59.07
+Dissimilate,Astral Step,49.49
+Moon Glaives,Eclipse,46.01
+Defense Matrix,Laser,43.96
+Gunslinger,Pierce the Veil,48.2
+Arc Warden,Spark Wraith,46.23
+Sniper,Marksmanship,57.25
+Whirling Axes (Melee),Battle Trance,50.99
+Rubick,Arcane Supremacy,50.08
+Dissimilate,Aether Remnant,49.85
+Nothl Projection,Shallow Grave,42.94
+Jakiro,Corrosive Weaponry,48.3
+Templar Assassin,Psionic Trap,39.26
+Raptor Dance,Unknown Ability #1519,44.27
+Grappling Claw,Raptor Dance,45.58
+Fire Spirits,Supernova,53.34
+Chaos Bolt,Phantasm,50.54
+Centaur Warrunner,Dispersion,63.11
+Medusa,Arcane Aura,55.1
+Naga Siren,Song of the Siren,50.39
+Techies,Strafe,55.84
+Whirling Axes (Ranged),Battle Trance,49.53
+Time Zone,Time Walk,53.75
+Sharpshooter,Bushwhack,48.88
+Keeper of the Light,Ball Lightning,56.89
+Techies,Corrosive Weaponry,54.66
+Infest,Tether,64.72
+Dual Breath,Liquid Fire,47.48
+Malefice,Demonic Summoning,44.72
+Rocket Flare,Hookshot,46.18
+Earth Spirit,Magnetize,51.95
+Techies,Marksmanship,49.67
+Mars,Spear of Mars,54.1
+Trample,Windrun,55.83
+Storm Hammer,God's Strength,48.52
+Gush,Anchor Smash,53.05
+Techies,Frost Arrows,51.49
+Arctic Burn,Winter's Curse,58.18
+Chaos Bolt,Reality Rift,51.16
+Icarus Dive,Fire Spirits,51.99
+Bodyguard,Unleash,55.98
+Rearm,Rocket Flare,37.0
+Keeper of the Light,Impetus,47.67
+Medusa,Burning Spear,68.39
+Techies,Bloodrage,56.78
+Aftershock,Shadow Poison,51.09
+Shadow Word,Upheaval,47.64
+Rupture,Meat Hook,47.14
+Juggernaut,Great Cleave,50.34
+Arc Lightning,Lightning Bolt,45.12
+Dragon Knight,Corrosive Skin,63.74
+Storm Hammer,Great Cleave,51.1
+Trample,Blade Fury,54.9
+Grave Chill,Gravekeeper's Cloak,46.51
+Corrosive Weaponry,Unstable Concoction,48.55
+Teleportation,Nature's Call,39.04
+Keeper of the Light,Shadow Poison,41.51
+Centaur Warrunner,Corrosive Skin,56.97
+Voodoo Restoration,Infest,53.97
+Arena Of Blood,Spear of Mars,51.55
+Boundless Strike,Jingu Mastery,45.6
+Finger of Death,Decrepify,43.87
+Feast of Souls,Shadowraze,43.94
+Trample,Thirst,58.54
+Poison Attack,Corrosive Skin,54.53
+Drinking Buddies,Walrus PUNCH!,42.16
+Disseminate,Demonic Purge,49.91
+Flame Guard,Fire Remnant,50.79
+Trample,Shukuchi,57.09
+Sniper,God's Strength,62.08
+Keeper of the Light,Wild Axes,50.97
+Soul Assumption,Gravekeeper's Cloak,42.73
+Wraithfire Blast,Bone Guard,46.81
+Reactive Tazer,Proximity Mines,49.91
+Tidebringer,God's Strength,47.66
+Troll Warlord,Bash of the Deep,54.5
+Spectre,Juxtapose,50.9
+Chaos Knight,Juxtapose,44.22
+Voodoo Restoration,Maledict,53.07
+Freezing Field,Windrun,62.07
+Aftershock,Shadowraze,50.45
+Echo Slash,Grappling Claw,48.18
+Arc Warden,Bash of the Deep,54.73
+Ember Spirit,Sticky Napalm,54.18
+Oracle,Fate's Edict,45.36
+Dead Shot,Gunslinger,46.63
+Muerta,Decrepify,48.63
+Aftershock,Nether Blast,54.21
+Reflection,Sunder,52.56
+Metamorphosis,Sunder,47.89
+Grappling Claw,Unknown Ability #1517,46.42
+Slark,Phantom Rush,39.08
+Echo Slash,Unknown Ability #1519,45.84
+Grimstroke,Phantom's Embrace,54.07
+Treant Protector,Enchant Totem,50.56
+Sniper,Frost Arrows,53.52
+Vengeful Spirit,Bash of the Deep,50.65
+Viper,Bash of the Deep,48.23
+Windranger,Bash of the Deep,55.87
+Whirling Axes (Ranged),Whirling Axes (Melee),50.65
+Techies,Feast of Souls,50.93
+Arc Warden,Elder Dragon Form,44.96
+Curse of Avernus,Borrowed Time,58.32
+Grappling Claw,Kazurai Katana,47.66
+Juggernaut,Tree Grab,55.14
+Vacuum,Surge,48.13
+Trample,Enchant Totem,54.03
+Frost Arrows,Gust,48.31
+Arc Warden,Fury Swipes,59.32
+Crippling Fear,Sticky Napalm,61.25
+Rearm,Fatal Bonds,45.18
+Grappling Claw,Unknown Ability #1519,46.49
+Meat Shield,Meat Hook,47.53
+Living Armor,Overgrowth,53.33
+Blade Fury,Freezing Field,58.97
+Sniper,Bodyguard,67.5
+Rearm,Nether Ward,56.43
+Soulbind,Stroke of Fate,50.48
+Sun Ray,Supernova,49.33
+Io,Infest,57.72
+Techies,Meld,51.35
+Techies,Bodyguard,59.77
+Shadow Fiend,Nightmare,56.2
+Muerta,Ghost Shroud,50.39
+Sniper,Strafe,55.23
+Terrorblade,Tree Grab,58.83
+Mirana,Marksmanship,40.39
+Disseminate,Disruption,59.22
+Terrorblade,Great Cleave,59.34
+Mars,Grow,57.5
+Monkey King,Tree Grab,48.54
+Ice Path,Liquid Fire,52.24
+Spectre,Phantom Rush,42.58
+Drow Ranger,Bodyguard,67.91
+Summon Spirit Bear,Entangle,31.7
+Slark,Tricks of the Trade,43.44
+Aether Remnant,Astral Step,57.93
+Huskar,Decay,53.92
+Alchemist,Ion Shell,44.99
+Jakiro,Searing Arrows,49.21
+Troll Warlord,Fury Swipes,56.1
+Black Hole,Vacuum,53.85
+Strafe,Bash of the Deep,50.3
+Shuriken Toss,Aftershock,55.73
+Huskar,Death Pulse,49.9
+Dragon Knight,Heartstopper Aura,65.94
+Enchant Totem,Grow,46.03
+Death Ward,Penitence,49.4
+Demonic Summoning,Midnight Pulse,49.01
+Grave Chill,Summon Familiars,45.53
+Shadow Step,Mana Break,45.42
+Fissure,Rearm,48.7
+Elder Titan,Earth Splitter,48.3
+Arc Warden,Marksmanship,48.9
+Alchemist,Wrath of Nature,46.11
+Cloak and Dagger,Nether Blast,48.6
+Techies,Incapacitating Bite,56.0
+Blink,Slithereen Crush,55.22
+Lifestealer,Tree Grab,56.83
+Mirana,Bash of the Deep,50.6
+Huskar,Brain Sap,49.2
+Sniper,Inner Beast,59.15
+Slark,Phantom Strike,53.32
+Echo Slash,Unknown Ability #1520,49.5
+Fiery Soul,Wave of Terror,53.12
+Rearm,Shallow Grave,45.16
+Assassinate,Meld,47.78
+Shadow Fiend,Bodyguard,65.25
+Lina,Shadow Strike,49.8
+Lich,Sinister Gaze,50.4
+Lina,Dual Breath,51.01
+Lunar Orbit,Lucent Beam,47.46
+Keeper of the Light,Arcane Bolt,48.48
+Aphotic Shield,Curse of Avernus,58.01
+Slark,Nightmare,46.25
+Sacred Arrow,Rearm,52.33
+Lina,Arcane Curse,54.67
+Penitence,Hand of God,51.42
+Lina,Noxious Plague,55.4
+Tinker,Sacred Arrow,54.38
+Rot,Infest,65.17
+Aftershock,Viscous Nasal Goo,62.58
+Brewmaster,Tree Grab,51.84
+Freezing Field,Shukuchi,65.16
+Chaos Bolt,Chaos Strike,48.98
+Shadow Poison,Demonic Purge,43.65
+Cloak and Dagger,Upheaval,47.54
+Dragon Knight,Dispersion,67.76
+Blade Fury,Healing Ward,55.65
+Keeper of the Light,Poison Attack,45.79
+Monkey King,Wukong's Command,52.06
+Sniper,Doppelganger,59.67
+Summon Spirit Bear,Infest,38.68
+Aftershock,Lightning Storm,57.2
+Techies,Saltwater Shiv,51.13
+Lone Druid,Savage Roar,45.77
+Bounty Hunter,Stifling Dagger,54.85
+Avalanche,Tree Grab,54.75
+Overload,Stifling Dagger,46.9
+Lifestealer,Great Cleave,53.83
+Bloodseeker,Tree Grab,54.45
+Mass Serpent Ward,Vengeance Aura,57.56
+Blood Rite,Rearm,43.48
+Arc Warden,Psi Blades,50.1
+Shadow Fiend,Strafe,62.94
+Hammer of Purity,Stifling Dagger,49.59
+Arc Warden,Juxtapose,55.0
+Dark Willow,Cursed Crown,43.63
+Sniper,Saltwater Shiv,57.02
+Drow Ranger,Corrosive Weaponry,56.3
+Bloodrage,Omnislash,49.16
+Mortal Strike,Stifling Dagger,54.62
+Phoenix,Heartstopper Aura,56.93
+Sniper,Incapacitating Bite,63.66
+Blink,Ravage,54.11
+Keeper of the Light,Amphibian Rhapsody,48.0
+Blade Fury,Rot,59.37
+Jakiro,Burning Spear,43.67
+Omnislash,Great Cleave,50.95
+Terrorblade,Empower,67.16
+Lone Druid,Bash of the Deep,51.91
+Clinkz,Bash of the Deep,48.3
+Enchant Totem,Stifling Dagger,44.04
+Centaur Warrunner,Heartstopper Aura,58.51
+Techies,Bloodlust,55.53
+Bloodrage,Finger of Death,42.31
+Overload,Arc Lightning,52.14
+Grappling Claw,Unknown Ability #1520,51.18
+Aftershock,Shrapnel,58.89
+Midnight Pulse,Rearm,48.18
+Skywrath Mage,Rearm,45.82
+Timber Chain,Chakram,45.71
+Slark,Omnislash,41.63
+Arc Warden,Arc Lightning,53.43
+Overcharge,Relocate,41.38
+Electric Vortex,Black Hole,49.14
+Jakiro,Marksmanship,45.57
+Aftershock,Ice Vortex,59.18
+Jingu Mastery,Wukong's Command,45.14
+Enchant,Nature's Attendants,54.88
+Fortune's End,False Promise,55.0
+Rearm,Shrapnel,49.13
+Nature's Grasp,Leech Seed,55.34
+Powershot,Assassinate,48.15
+Centaur Warrunner,Berserker's Blood,57.95
+Ensnare,Song of the Siren,46.94
+Lunar Orbit,Grow,54.15
+Keeper of the Light,Overload,55.58
+Io,Relocate,43.76
+Shadow Fiend,Bloodrage,53.83
+Stifling Dagger,Wall of Replica,46.93
+Vengeance Aura,Chaotic Offering,71.05
+Frostbite,Cold Feet,54.82
+Tidebringer,Grow,46.49
+Shrapnel,Take Aim,47.91
+Focus Fire Facet,Time Lock,46.15
+Stinger,Enchant Totem,50.77
+Sharpshooter,Acorn Shot,48.68
+Medusa,Marksmanship,53.52
+Shadow Fiend,Frost Arrows,56.17
+Skywrath Mage,Frostbite,51.76
+Sanity's Eclipse,Essence Flux,50.22
+Shadow Fiend,Immaterial,66.37
+Dead Shot,The Calling,47.35
+Unknown Ability #1518,Unknown Ability #1520,49.12
+Omnislash,Tree Grab,52.33
+Tame the Beasts,Cloak and Dagger,49.67
+Arc Warden,Time Lock,46.0
+Slark,Blink Strike,49.56
+Focus Fire Facet,Headshot,38.22
+Pulverize,Blink,58.13
+Lina,Battle Hunger,50.33
+Morphling,Laguna Blade,44.77
+Thunder Clap,Primal Split,48.78
+Jakiro,Frost Arrows,44.42
+Centaur Warrunner,Kraken Shell,46.43
+Astral Spirit,Tidebringer,53.02
+Heartstopper Aura,Infest,64.35
+Nightmare,Static Link,44.62
+Dazzle,Bash of the Deep,46.52
+Centaur Warrunner,True Form,57.3
+Medusa,Immaterial,63.6
+Jakiro,Headshot,44.94
+Muerta,Meld,52.36
+Ancient Apparition,Impetus,43.47
+Gravekeeper's Cloak,Summon Familiars,52.7
+Troll Warlord,Time Lock,45.5
+Monkey King,Empower,68.17
+Cold Embrace,Winter's Curse,49.66
+Light Strike Array,Cloak and Dagger,57.47
+Shukuchi,Geminate Attack,53.62
+Rubick,Laguna Blade,50.68
+Aftershock,Scream Of Pain,56.11
+Pulverize,Blade Fury,57.37
+Razor,Arc Lightning,57.82
+Strafe,Omnislash,43.99
+Dragon Knight,Counter Helix,65.08
+Omniknight,Blade Fury,57.73
+Tether,Relocate,48.29
+Soul Rip,Flesh Golem,49.89
+Monkey King,Great Cleave,49.2
+Shadow Step,Juxtapose,46.47
+Batrider,Burning Spear,51.94
+Bramble Maze,Shadow Realm,54.67
+Alchemist,Nethertoxin,49.32
+Clockwerk,Blade Fury,59.73
+Jakiro,Poison Attack,49.43
+Arctic Burn,Cold Embrace,57.67
+Cloak and Dagger,Shadow Strike,53.9
+Stifling Dagger,Jinada,52.18
+Sniper,Refraction,61.98
+Lone Druid,Fury Swipes,53.92
+Ravage,Blink,59.91
+Blade Fury,Battery Assault,57.27
+Phantasm,Mirror Image,53.58
+Clinkz,Marksmanship,39.49
+Nature's Prophet,Marksmanship,42.73
+Nature's Prophet,Meld,50.23
+Ogre Magi,True Form,53.94
+Queen of Pain,Arc Lightning,49.77
+Arctic Burn,Splinter Blast,57.87
+Naga Siren,Phantom Rush,51.16
+Empower,Skewer,56.38
+Windranger,Arc Lightning,51.97
+Huskar,Amphibian Rhapsody,48.03
+Tinker,Fissure,50.23
+Drow Ranger,Immaterial,63.72
+Vengeance Aura,Lucent Beam,55.81
+Storm Spirit,Aftershock,65.58
+Techies,Refraction,62.09
+Troll Warlord,Elder Dragon Form,47.67
+Rot,Crippling Fear,56.74
+Kazurai Katana,Unknown Ability #1518,46.39
+Rearm,Split Earth,39.86
+Alchemist,Counter Helix,52.68
+Sniper,Guardian Sprint,59.67
+Hoodwink,Fury Swipes,61.45
+Techies,Headshot,46.73
+Drow Ranger,Saltwater Shiv,56.21
+Oracle,Assassinate,49.41
+Centaur Warrunner,Counter Helix,53.41
+Ignite,Bloodlust,44.0
+Clockwerk,Corrosive Skin,53.88
+Alchemist,Great Cleave,50.35
+Light Strike Array,Earth Spike,62.97
+Techies,Phase Shift,56.03
+Ravage,Vengeance Aura,56.5
+Ion Shell,Sticky Napalm,50.35
+Sniper,Heavenly Jump,59.57
+Mana Break,Focus Fire Facet,45.5
+Fade Bolt,Arcane Supremacy,45.26
+Dazzle,Arc Lightning,52.13
+Juggernaut,Phantom Strike,53.92
+Arc Warden,Moon Glaives,55.82
+Cloak and Dagger,Unstable Concoction,50.36
+Razor,Bash of the Deep,58.19
+Pulverize,Blink,52.49
+Mirana,Mana Break,48.46
+Tidehunter,Corrosive Skin,57.14
+Necrophos,Pulse Nova,52.62
+Viper,Mana Break,47.26
+Sniper,Bloodrage,54.42
+Windranger,Fury Swipes,60.62
+Medusa,Untouchable,52.03
+Feast of Souls,Omnislash,44.63
+Techies,Immaterial,58.0
+Sniper,Immaterial,57.89
+Cloak and Dagger,Diabolic Edict,57.42
+Techies,Searing Arrows,54.2
+Jakiro,Mana Break,53.0
+Vengeance Aura,Chain Frost,65.47
+Invoker,Rearm,41.73
+Dawnbreaker,Celestial Hammer,50.24
+Mind Flare,Finger of Death,41.83
+Drow Ranger,Incapacitating Bite,60.1
+Mirana,Psi Blades,48.8
+Nightmare,Focus Fire Facet,44.23
+Pulverize,Burrowstrike,55.66
+Medusa,Corrosive Weaponry,59.28
+Rubick,Powershot,46.99
+Windranger,Mana Break,52.53
+Techies,Doppelganger,57.11
+Mirana,Arc Lightning,49.64
+Omnislash,Tricks of the Trade,43.86
+Slark,Focus Fire Facet,36.87
+Jakiro,Entangle,47.1
+Warlock,Vengeance Aura,70.29
+Mana Break,Mirror Image,54.35
+Feast of Souls,Marksmanship,46.38
+Huskar,Pulse Nova,38.89
+Arc Warden,Mana Break,53.14
+Mortal Strike,God's Strength,45.89
+Burrowstrike,Slithereen Crush,53.51
+Drow Ranger,Doppelganger,58.6
+Venomancer,Corrosive Weaponry,47.57
+Shadow Fiend,Refraction,62.14
+Troll Warlord,Psi Blades,50.0
+Dragon Knight,Uproar,61.17
+Dream Coil,Arc Lightning,50.49
+Leshrac,Black Hole,57.42
+Huskar,Life Drain,45.26
+Juggernaut,Phantom Rush,51.34
+Tinker,Powershot,45.5
+Shadow Fiend,Marksmanship,57.42
+Arena Of Blood,Bulwark,50.73
+Gorgon's Grasp,Stone Gaze,47.8
+Omniknight,Rot,55.85
+Gush,Assassinate,58.54
+Hoodwink,Bash of the Deep,55.12
+Vengeful Spirit,Time Lock,48.29
+Techies,God's Strength,53.55
+Centaur Warrunner,Life Break,51.1
+Rolling Thunder,Shield Crash,48.9
+Hoodwink,Marksmanship,53.68
+Medusa,Mirror Image,60.29
+Rubick,Assassinate,47.3
+Sniper,Reactive Tazer,56.76
+Dragon Knight,Berserker's Blood,67.32
+Fiery Soul,Quill Spray,55.28
+Rot,Pulse Nova,52.33
+Arc Warden,Meld,47.91
+Shadowraze,Frostbite,48.4
+Alchemist,Devour,49.14
+Electric Vortex,Freezing Field,51.35
+Bloodrage,Bash of the Deep,46.8
+Leshrac,Frogstomp,56.16
+Blink,Epicenter,50.25
+Frogstomp,Rearm,40.64
+The Calling,Pierce the Veil,53.69
+Battery Assault,Rocket Flare,48.15
+Faceless Void,Time Dilation,52.84
+Trample,Surge,45.05
+Drow Ranger,Inner Beast,53.71
+Clinkz,Psi Blades,49.26
+Techies,Multishot,49.5
+Lifestealer,Berserker's Blood,60.05
+Cloak and Dagger,Split Earth,52.85
+Medusa,Mana Break,54.59
+Primal Beast,Rot,58.56
+Infest,Spirits,54.34
+Chen,Impetus,43.03
+Kez,Tree Grab,51.49
+Vengeful Spirit,Psi Blades,52.99
+Drow Ranger,Meld,59.2
+Terrorblade,Omnislash,49.25
+Arc Warden,Fiery Soul,52.49
+Grow,Anchor Smash,50.37
+Techies,Blade Dance,55.61
+Keeper of the Light,Chilling Touch,41.9
+Enchant Totem,Meld,40.15
+Centaur Warrunner,Storm Surge,50.87
+Take Aim,Assassinate,39.9
+Jakiro,Impetus,48.25
+Monkey King,Atrophy Aura,64.75
+Mist Coil,Curse of Avernus,47.0
+Boundless Strike,Wukong's Command,48.75
+Corrosive Weaponry,Focus Fire Facet,44.25
+Sniper,Feast of Souls,52.5
+Battle Hunger,Sticky Napalm,48.62
+Sniper,Dark Ascension,58.65
+Stifling Dagger,Impetus,52.38
+Slithereen Crush,Blink,57.14
+Oracle,Powershot,51.38
+Warlock,Spin Web,63.41
+Dragon Knight,Eye of the Storm,59.4
+Sniper,Searing Arrows,51.76
+Hammer of Purity,Grow,46.98
+Ogre Magi,Berserker's Blood,64.32
+Magnus,Blink,56.28
+Troll Warlord,Mana Break,46.73
+Bristleback,Corrosive Skin,50.5
+Mirana,Meld,42.96
+Centaur Warrunner,Eye of the Storm,52.14
+Shackles,Cloak and Dagger,61.71
+Leshrac,Midnight Pulse,60.61
+Pugna,Shackles,52.53
+Amphibian Rhapsody,Aftershock,46.21
+Bristleback,Dispersion,57.58
+Toss,Cloak and Dagger,51.52
+Rearm,The Swarm,46.46
+Aftershock,Shadow Strike,50.51
+Visage,Assassinate,44.7
+Razor,Fiery Soul,53.42
+Torrent,Frostbite,56.46
+Dazzle,Poison Attack,50.89
+Blink,Black Hole,53.67
+Invoker,Tornado (AD),44.81
+Enchant Totem,God's Strength,43.8
+Magnus,Rupture,49.62
+Nature's Prophet,Corrosive Weaponry,51.65
+Ghoul Frenzy,Omnislash,45.43
+God's Strength,Tree Grab,51.27
+Sniper,Wyrm's Wrath,67.77
+Viper,Elder Dragon Form,46.82
+Sniper,Mirror Image,63.61
+Sniper,Multishot,47.7
+Multishot,Gust,48.21
+Voodoo Restoration,Tether,61.48
+Huskar,Rearm,46.04
+Keeper of the Light,Glaives of Wisdom,50.9
+Spectral Blade,Wraithfire Blast,44.25
+Pulverize,Meat Hook,51.92
+Centaur Warrunner,Gravekeeper's Cloak,48.46
+Mana Break,Spirit Lance,47.18
+Dragon Knight,Rot,64.62
+Tidehunter,Grow,47.69
+Bodyguard,Tidebringer,54.36
+Drow Ranger,Refraction,62.31
+Mars,Dispersion,58.87
+Dragon Knight,Storm Surge,59.02
+Blade Dance,Tidebringer,47.42
+Aftershock,Ball Lightning,69.33
+Gyrocopter,Elder Dragon Form,54.38
+Phase Shift,Exorcism,52.84
+Shadow Fiend,Electric Vortex,59.54
+Freezing Field,Blink,57.22
+Vengeful Spirit,Arc Lightning,49.23
+Lina,Fatal Bonds,51.94
+Mortal Strike,Meld,44.19
+Viper,Marksmanship,43.41
+Drow Ranger,Mirror Image,66.15
+Terrorblade,Juxtapose,54.78
+Drow Ranger,Strafe,55.56
+Earthshaker,Impalement Arts,57.77
+Viper,Fury Swipes,46.11
+Mind Flare,Cloak and Dagger,54.15
+Clockwerk,Counter Helix,54.92
+Magnus,Blink,55.58
+Astral Step,Resonant Pulse,50.91
+Sniper,Blade Dance,55.84
+Earthshaker,Static Remnant,59.22
+Jakiro,Incapacitating Bite,45.97
+Monkey King,Phantom Strike,57.4
+Jakiro,Bodyguard,55.58
+Invoker,Cold Snap (AD),46.88
+Kraken Shell,Corrosive Skin,52.6
+Strafe,Marksmanship,43.49
+Shadow Fiend,Doppelganger,63.28
+Pudge,Berserker's Blood,56.92
+Stifling Dagger,Infernal Blade,62.66
+Jakiro,Inner Beast,50.39
+Wraithfire Blast,Cloak and Dagger,59.16
+Aftershock,Crypt Swarm,55.5
+Poison Sting,Poison Attack,54.86
+Juxtapose,Mirror Image,56.43
+Hoodwink,Meld,50.13
+Viper,Fiery Soul,45.67
+Shadow Fiend,Corrosive Weaponry,60.63
+Skywrath Mage,Chakra Magic,46.98
+Clockwerk,Rot,52.23
+Muerta,Corrosive Weaponry,55.64
+Lina,Shrapnel,53.54
+Tidehunter,Counter Helix,56.84
+Centaur Warrunner,Berserker's Call,52.63
+Sven,Tree Grab,52.37
+Terrorblade,Phantom Rush,48.68
+Bloodseeker,Omnislash,51.58
+Primal Beast,Blade Fury,59.47
+Crystal Maiden,Arc Lightning,46.17
+Shadow Fiend,Meld,53.56
+Monkey King,Omnislash,49.87
+Moon Glaives,Phantasm,57.94
+Monkey King,Bash of the Deep,52.91
+Natural Order,Earth Splitter,54.76
+Windranger,Time Lock,47.62
+Dispersion,True Form,55.56
+Finger of Death,Laser,45.24
+Mars,Heartstopper Aura,60.85
+Corrosive Weaponry,Marksmanship,49.6
+Windranger,Meld,50.13
+Shadow Demon,Juxtapose,55.97
+Bash of the Deep,Focus Fire Facet,48.4
+Lone Druid,Elder Dragon Form,44.15
+Moon Glaives,Mirror Image,63.3
+Slark,Corrosive Weaponry,46.28
+Primal Beast,Corrosive Skin,57.71
+Drow Ranger,Bloodrage,55.85
+Nature's Grasp,Rearm,45.21
+Bloodseeker,Great Cleave,50.27
+Mortal Strike,Grow,49.73
+Pulse Nova,Shukuchi,60.64
+Huskar,Nether Blast,43.09
+Keeper of the Light,Blinding Light,49.73
+Mirana,Time Lock,44.0
+Fiery Soul,Plasma Field,56.27
+Skywrath Mage,Magic Missile,48.27
+Brewmaster,Berserker's Blood,55.73
+Alchemist,Sand Storm,56.53
+Conjure Image,Sunder,46.93
+Vengeance Aura,Freezing Field,66.67
+Muerta,Incapacitating Bite,57.6
+Clinkz,Time Lock,47.73
+Terrorblade,Phantom Strike,57.87
+Omnislash,Inner Beast,46.79
+Dead Shot,Pierce the Veil,43.58
+Centaur Warrunner,Uproar,53.21
+Treant Protector,Mortal Strike,44.92
+Viper,Psi Blades,47.59
+Pugna,Frostbite,56.68
+Venomancer,Poison Attack,46.52
+Techies,Heavenly Jump,52.94
+Arc Warden,Geminate Attack,50.27
+Treant Protector,Tree Grab,51.47
+Unknown Ability #1518,Unknown Ability #1519,41.55
+Mirana,Fury Swipes,53.35
+Techies,Dark Ascension,50.67
+Mortimer Kisses,Lil' Shredder,47.99
+Batrider,Focus Fire Facet,50.13
+Tidehunter,Uproar,58.98
+Cloak and Dagger,Ion Shell,52.96
+Laser,Assassinate,48.66
+Reactive Tazer,Marksmanship,53.49
+Nyx Assassin,Cloak and Dagger,59.68
+Medusa,Juxtapose,65.32
+Juggernaut,Ghoul Frenzy,49.87
+Lone Druid,Arc Lightning,51.21
+Arc Warden,Impetus,49.6
+Mirana,Elder Dragon Form,43.4
+Rot,Corrosive Skin,60.92
+Arc Lightning,Focus Fire Facet,49.6
+Corrosive Weaponry,Juxtapose,45.28
+Slark,Overpower,48.11
+Hoodwink,Coup de Grace,54.59
+Aftershock,Whirling Death,68.38
+Ogre Magi,Tree Grab,56.49
+Storm Surge,Counter Helix,54.86
+Shadow Fiend,Rage,66.49
+Dragon Knight,Kraken Shell,56.49
+Fissure,Meat Hook,54.05
+Unknown Ability #1517,Unknown Ability #1518,46.76
+Dark Seer,Cloak and Dagger,53.51
+Vengeful Spirit,Fiery Soul,51.08
+Skywrath Mage,Cloak and Dagger,52.16
+Eye of the Storm,Windrun,54.74
+Burrowstrike,Ravage,50.41
+Omniknight,Tree Grab,54.2
+Strafe,Elder Dragon Form,45.26
+Kez,Omnislash,48.78
+Void Spirit,Resonant Pulse,52.17
+Keeper of the Light,Battle Hunger,49.73
+Disruptor,Magic Missile,47.55
+Burning Spear,Sticky Napalm,41.03
+Windranger,Marksmanship,47.83
+Clinkz,Elder Dragon Form,44.84
+Treant Protector,Tidebringer,45.65
+Ogre Magi,Dispersion,63.59
+Slark,Reality Rift,55.31
+Chaos Knight,Tree Grab,46.87
+Skywrath Mage,Assassinate,50.68
+Cloak and Dagger,Rocket Barrage,58.04
+Light Strike Array,Frostbite,56.95
+Leshrac,Light Strike Array,62.94
+Pudge,Corrosive Skin,56.13
+Spectre,Spirit Lance,43.32
+Blink,Skewer,57.22
+Aftershock,Arcane Bolt,53.95
+Finger of Death,Gush,47.68
+Lone Druid,Marksmanship,42.23
+Jakiro,Time Lock,55.31
+Ogre Magi,Life Break,54.1
+Lone Druid,Psi Blades,50.55
+Drow Ranger,Coup de Grace,54.1
+Ogre Magi,Lunar Orbit,54.92
+Leshrac,Torrent,60.11
+Huskar,Lightning Bolt,50.55
+Huskar,Purification,51.64
+Lina,Enfeeble,53.55
+Strafe,Time Lock,46.72
+Vengeance Aura,Doom,59.02
+Raptor Dance,Unknown Ability #1518,46.85
+Mirana,Juxtapose,52.05
+Timbersaw,Aftershock,57.26
+Shadow Fiend,Phase Shift,58.63
+Arc Warden,Poison Attack,51.51
+The Calling,Gunslinger,48.22
+Cloak and Dagger,Battery Assault,55.34
+Vengeance Aura,Death Ward,58.08
+Sniper,Meld,60.0
+Infest,Crippling Fear,49.59
+Arc Warden,Arctic Burn,59.89
+Mars,Corrosive Skin,54.95
+Hoodwink,Mana Break,50.82
+Ember Spirit,Grow,52.47
+Shadow Fiend,Inner Beast,56.87
+Tame the Beasts,Frostbite,50.0
+Mirana,Corrosive Weaponry,50.41
+Hoodwink,Arc Lightning,58.13
+Treant Protector,Hammer of Purity,45.45
+Magnus,Burrowstrike,57.3
+Drow Ranger,God's Strength,59.5
+Clinkz,Focus Fire Facet,37.19
+Queen of Pain,Bash of the Deep,52.62
+Oracle,Thundergod's Wrath,47.79
+Laguna Blade,Maledict,46.13
+Nature's Prophet,Bodyguard,55.25
+Muerta,Bodyguard,56.08
+Vengeful Spirit,Fury Swipes,58.56
+Ringmaster,Frostbite,50.28
+Aftershock,Double Edge,58.56
+Riki,Tree Grab,45.58
+Heavenly Jump,Marksmanship,51.93
+Blink,Freezing Field,54.42
+Grimstroke,Frostbite,56.08
+Troll Warlord,Arc Lightning,47.24
+Liquid Frost,Ice Path,53.46
+Magic Missile,Split Earth,55.68
+Ember Spirit,Natural Order,56.51
+Hoodwink,Psi Blades,56.23
+Pulverize,Charge of Darkness,51.25
+Ogre Magi,Corrosive Skin,66.76
+Chain Frost,Vacuum,54.17
+Grimstroke,Magic Missile,54.44
+Aftershock,Rocket Barrage,63.61
+Razor,Mana Break,57.22
+Lina,Ignite,53.89
+Uproar,Corrosive Skin,58.61
+Warlock,Spawn Spiderlings,59.17
+Primal Beast,Heartstopper Aura,60.83
+Guardian Sprint,Focus Fire Facet,43.06
+Trample,Cloak and Dagger,49.72
+Rubick,Lucent Beam,51.25
+Naga Siren,Doppelganger,52.92
+Treant Protector,Assassinate,44.29
+Pugna,Fiend's Grip,51.53
+Snapfire,Burning Spear,49.86
+Jakiro,Arc Lightning,54.87
+Lina,Thunder Strike,52.65
+Techies,Mirror Image,55.03
+Repel,Rearm,51.4
+Primal Beast,Dispersion,62.01
+Omniknight,Corrosive Skin,59.22
+Mind Flare,Lightning Bolt,49.72
+Juggernaut,Lunar Orbit,53.35
+Drow Ranger,Phase Shift,55.31
+Burrowstrike,Skewer,55.59
+Faceless Void,Tree Grab,51.96
+Nature's Prophet,Saltwater Shiv,51.12
+Overload,Sticky Napalm,52.1
+Medusa,Incapacitating Bite,63.31
+Bash of the Deep,Inner Beast,50.42
+Corrosive Weaponry,Elder Dragon Form,47.34
+Slark,Chemical Rage,53.22
+Largo,Repel,62.18
+Vengeful Spirit,Mana Break,48.46
+Sniper,Phase Shift,60.78
+Dark Seer,Blade Fury,62.18
+Terrorblade,Atrophy Aura,66.39
+Primal Beast,Exorcism,53.37
+Centaur Warrunner,Overgrowth,63.2
+Lifestealer,Phantom Strike,56.46
+Kraken Shell,Dispersion,52.25
+Rearm,Ice Path,46.07
+Saltwater Shiv,Marksmanship,48.6
+Slark,True Form,46.63
+Gyrocopter,Bash of the Deep,57.3
+Sticky Napalm,Rocket Barrage,51.4
+Immaterial,Juxtapose,52.53
+Medusa,Phase Shift,61.24
+Shadow Fiend,Blade Dance,57.87
+Demonic Summoning,Rearm,43.82
+Epicenter,Blink,54.21
+Mars,Enchant Totem,63.76
+Reflection,Metamorphosis,43.38
+Invoker,Glaives of Wisdom,48.17
+Chen,Holy Persuasion,45.35
+Windranger,Psi Blades,53.8
+Viper,Corrosive Weaponry,49.86
+Hoodwink,Elder Dragon Form,48.45
+Phoenix,Berserker's Blood,51.27
+Jakiro,Bloodrage,44.35
+Blade Fury,Diabolic Edict,57.34
+Cloak and Dagger,Venomous Gale,46.05
+Drow Ranger,Insatiable Hunger,57.91
+Dispersion,Quill Spray,56.21
+Meat Hook,Dragon Tail,53.39
+Clinkz,Mana Break,46.61
+Shadowraze,Cloak and Dagger,52.54
+Ogre Magi,Overgrowth,62.15
+Oracle,Frostbite,52.26
+Shadow Wave,Wall of Replica,54.39
+Legion Commander,Blink Strike,51.84
+Voodoo Restoration,Arcane Orb,70.25
+Lina,Impalement Arts,50.71
+Fiend's Grip,Sacred Arrow,54.11
+Battle Hunger,Cloak and Dagger,57.39
+Sacred Arrow,Meat Hook,57.95
+Chain Frost,Paralyzing Cask,53.69
+Juggernaut,Bash of the Deep,54.55
+Fiery Soul,Crypt Swarm,51.14
+Splinter Blast,Winter's Curse,51.42
+Thundergod's Wrath,Vengeance Aura,55.97
+Muerta,Marksmanship,48.58
+Centaur Warrunner,Nature's Attendants,54.26
+Kunkka,God's Strength,46.02
+Oracle,Magic Missile,50.28
+Homing Missile,Flak Cannon,54.83
+Phase Shift,Arc Lightning,56.53
+Viper,Focus Fire Facet,40.74
+Outworld Devourer,Pulse Nova,58.12
+Strafe,Impetus,46.72
+Skywrath Mage,Lightning Bolt,51.0
+Spectre,Phantom Strike,48.43
+Skywrath Mage,Powershot,46.72
+Slark,Inner Beast,44.73
+Brain Sap,Cloak and Dagger,54.13
+Windranger,Guardian Sprint,49.86
+Blade Fury,Dismember,58.29
+Finger of Death,Shadow Strike,44.0
+Jakiro,Heavenly Jump,50.29
+Dispersion,Enrage,60.86
+Ogre Magi,Chemical Rage,61.14
+Clockwerk,Dispersion,59.43
+Focus Fire Facet,Searing Arrows,43.71
+Timbersaw,Corrosive Skin,55.14
+Viper,Time Lock,45.14
+Tusk,Tree Grab,60.0
+Blink,Skewer,60.29
+Grimstroke,Chakra Magic,51.14
+Primal Beast,Berserker's Blood,55.3
+Clockwerk,Berserker's Call,54.73
+Spirits,Overcharge,53.01
+Dazzle,Fiery Soul,50.14
+Arc Warden,Coup de Grace,43.27
+Mars,God's Strength,48.14
+Techies,Insatiable Hunger,52.44
+Crystal Maiden,Bash of the Deep,42.12
+Pangolier,Tree Grab,46.84
+Medusa,Doppelganger,59.48
+Windranger,Corrosive Weaponry,54.89
+Ringmaster,Cloak and Dagger,50.86
+Lina,Venomous Gale,52.87
+Astral Spirit,Omnislash,58.05
+Muerta,Inner Beast,47.99
+Pulverize,Avalanche,57.18
+Nature's Prophet,Inner Beast,48.85
+Techies,Drunken Brawler,62.64
+Dazzle,Elder Dragon Form,49.14
+Arc Warden,Infernal Blade,52.87
+Centaur Warrunner,Reincarnation,55.75
+Dragon Knight,Lunar Orbit,61.78
+Shadow Fiend,Heavenly Jump,56.61
+Arc Warden,Corrosive Weaponry,56.77
+Skywrath Mage,Pulse Nova,50.72
+Tinker,Blood Rite,45.82
+Gyrocopter,Inner Beast,54.76
+Arc Warden,Focus Fire Facet,43.52
+Kunkka,Grow,45.82
+Razor,Fury Swipes,63.4
+Dark Seer,Freezing Field,55.04
+Flux,Magnetic Field,51.87
+Lifestealer,Counter Helix,56.48
+Vengeful Spirit,Juxtapose,47.84
+Grow,Kraken Shell,45.53
+Wraith King,Uproar,58.79
+Wraith King,Tree Grab,50.58
+Slithereen Crush,Time Walk,54.34
+Warlock,Cloak and Dagger,55.2
+Warlock,Avalanche,57.8
+Fiend's Grip,Gush,54.34
+Brewmaster,Phantom Strike,48.55
+Ogre Magi,Phantom Strike,62.43
+Nature's Grasp,Sticky Napalm,48.84
+Life Break,Dispersion,58.09
+Vengeful Spirit,Elder Dragon Form,45.51
+Tidebringer,Presence of the Dark Lord,54.49
+Dazzle,Mana Break,50.72
+Muerta,Bash of the Deep,53.04
+Lycan,Tree Grab,55.65
+Lina,Nature's Grasp,56.23
+Techies,Burning Spear,54.78
+Lone Druid,Time Lock,47.97
+Clinkz,Arc Lightning,44.77
+Warlock,Frostbite,57.85
+Fiery Soul,Shadow Poison,51.16
+Slardar,Blink,55.52
+Tinker,Gush,49.71
+Muerta,Arc Lightning,55.23
+Centaur Warrunner,Rot,61.63
+Anti-Mage,Great Cleave,48.84
+Brewmaster,Corrosive Skin,56.69
+Lion,Light Strike Array,54.94
+Tusk,Reality Rift,59.59
+Nature's Prophet,Frost Arrows,47.38
+Pulverize,Aftershock,53.94
+Heartstopper Aura,Corrosive Skin,57.73
+Trample,Rot,53.94
+Lunar Orbit,God's Strength,55.1
+Shadow Fiend,Repel,59.18
+Jakiro,Poison Touch,41.69
+Tidehunter,Eye of the Storm,53.06
+Void Spirit,Whirling Death,57.14
+Corrosive Weaponry,Poison Attack,54.52
+Crystal Nova,Cloak and Dagger,54.23
+Rubick,Sonic Wave,47.52
+Gyrocopter,God's Strength,59.36
+Phantasm,Conjure Image,53.22
+Mana Drain,Lightning Bolt,45.03
+Ball Lightning,Arcane Orb,72.22
+Techies,Wall of Replica,51.46
+Windranger,Fiery Soul,54.09
+Terrorblade,Ghoul Frenzy,52.63
+Slark,Static Link,47.37
+Light Strike Array,Avalanche,60.23
+Arc Warden,Strafe,49.71
+Nature's Prophet,Juxtapose,53.37
+Pudge,Heartstopper Aura,57.18
+Chaos Knight,Berserker's Blood,54.25
+Strafe,Arc Lightning,49.85
+Necrophos,Aftershock,57.18
+Hoodwink,Jinada,56.89
+Dragon Knight,Reincarnation,64.81
+Void Spirit,Hoof Stomp,53.08
+Magnus,Trample,45.16
+Sniper,Insatiable Hunger,63.05
+Largo,Frost Shield,56.6
+Centaur Warrunner,Grow,50.15
+Tidehunter,Dispersion,56.76
+Light Strike Array,Magic Missile,54.41
+Phoenix,Vengeance Aura,49.71
+Treant Protector,Lunar Orbit,54.41
+Blade Fury,Pulse Nova,60.0
+Marksmanship,Inner Beast,45.0
+Telekinesis,Fade Bolt,42.06
+Death Ward,Fatal Bonds,48.82
+Tusk,Corrosive Skin,62.35
+Queen of Pain,Fiery Soul,49.85
+Fortune's End,Fate's Edict,52.8
+Mirana,Fiery Soul,36.87
+Hoodwink,Mortal Strike,56.05
+Uproar,Exorcism,57.23
+Spectre,Tree Grab,46.02
+Leshrac,Pulverize,52.21
+Clockwerk,Exorcism,50.0
+Ember Spirit,Infest,46.15
+Windrun,Pulse Nova,58.28
+Chain Frost,Sinister Gaze,61.24
+Tinker,Meat Hook,55.33
+Skywrath Mage,Storm Hammer,53.25
+Powershot,Chakra Magic,47.93
+Tidehunter,Storm Surge,58.46
+Corrosive Skin,Untouchable,50.15
+Blade Fury,Eye of the Storm,53.71
+Lone Druid,Mana Break,47.48
+Fiend's Grip,Earth Spike,52.52
+Meepo,Earthbind,46.88
+Skywrath Mage,Shockwave,50.74
+Chaos Knight,Phantom Rush,42.43
+Mana Drain,Cloak and Dagger,48.66
+Shadow Fiend,Insatiable Hunger,66.17
+Tidehunter,Berserker's Blood,61.72
+Slark,Dream Coil,43.32
+Omnislash,Phantom Strike,54.3
+Death Prophet,Arc Lightning,54.01
+Sniper,Phantasm,63.99
+Sacred Arrow,Assassinate,57.14
+Leshrac,Avalanche,67.26
+Uproar,Rot,55.65
+Oracle,Chakra Magic,58.33
+Snapfire,Corrosive Weaponry,49.7
+Oracle,Sacred Arrow,53.87
+Void Spirit,Tree Grab,47.32
+Wraith King,Vengeance Aura,61.01
+Nature's Prophet,Mana Break,49.4
+Centaur Warrunner,Decay,55.06
+Arc Warden,Split Shot,42.26
+Torrent,Storm Hammer,52.98
+Mirana,Guardian Sprint,47.02
+Drow Ranger,Blade Dance,51.79
+Ogre Magi,Eye of the Storm,58.51
+Noxious Plague,Maledict,52.24
+Soul Assumption,Summon Familiars,41.49
+Shadow Demon,Arc Lightning,51.94
+Treant Protector,Anchor Smash,48.06
+Jakiro,Saltwater Shiv,48.06
+Tinker,Magic Missile,53.13
+Batrider,Elder Dragon Form,51.94
+Huskar,Powershot,45.67
+Jakiro,Immaterial,50.6
+Corrosive Skin,Dispersion,63.47
+Sniper,Coup de Grace,58.38
+Warlock,Gush,59.58
+Leshrac,Blood Rite,62.28
+Phantom Assassin,Great Cleave,44.31
+Muerta,Searing Arrows,51.2
+Jakiro,Phase Shift,44.91
+Vengeful Spirit,Great Cleave,50.0
+Outworld Devourer,Voodoo Restoration,70.66
+Hoodwink,Infernal Blade,58.68
+Muerta,Saltwater Shiv,55.69
+Keeper of the Light,Static Remnant,46.41
+Kez,Great Cleave,51.8
+Fissure,Cloak and Dagger,55.09
+Centaur Warrunner,Flesh Golem,56.89
+Bodyguard,Omnislash,55.69
+Marksmanship,Guardian Sprint,50.3
+Magnus,Hoof Stomp,52.1
+Marksmanship,Meld,45.95
+Venomancer,Frost Arrows,48.35
+Escape Act,Exorcism,46.25
+Anti-Mage,Tree Grab,46.85
+Catchy Lick,Cloak and Dagger,58.56
+Ghoul Frenzy,Inner Beast,42.34
+Nature's Prophet,Time Lock,53.45
+Dark Seer,Black Hole,50.75
+Hoodwink,Time Lock,57.36
+Uproar,Eye of the Storm,54.95
+Storm Hammer,Gush,53.15
+Medusa,Phantasm,60.96
+Viper,Juxtapose,43.37
+Techies,Poison Attack,59.94
+Lone Druid,Juxtapose,48.49
+Juxtapose,Inner Beast,51.51
+Oracle,Cloak and Dagger,57.83
+Beastmaster,Aftershock,54.82
+Slark,Swashbuckle,48.49
+Shadow Demon,Infernal Blade,56.33
+Jakiro,Strafe,45.78
+Treant Protector,Phantom Strike,51.81
+Shadow Fiend,God's Strength,59.04
+Gyrocopter,Time Lock,52.71
+Nether Blast,Chakra Magic,48.49
+Dragon Knight,Exorcism,61.75
+Warlock,Rearm,45.18
+Tinker,Shrapnel,47.29
+Purifying Flames,False Promise,44.88
+Drow Ranger,Reactive Tazer,52.27
+Blink,Electric Vortex,51.36
+Razor,Ghoul Frenzy,51.96
+Arc Warden,Ghoul Frenzy,47.73
+Magnus,Time Walk,48.94
+Skywrath Mage,Chaos Bolt,52.27
+Treant Protector,Grow,42.3
+Storm Hammer,Chain Frost,53.47
+Techies,Penitence,50.15
+Shadow Fiend,Astral Spirit,57.1
+Keeper of the Light,Shrapnel,48.34
+Mirana,Saltwater Shiv,43.2
+Lina,Thundergod's Wrath,53.17
+Arcane Aura,Assassinate,44.55
+Tinker,Starstorm,50.61
+Brewmaster,Dispersion,58.79
+Phantom Strike,Dragon Tail,57.58
+Shadow Fiend,Incapacitating Bite,63.03
+Faceless Void,Omnislash,46.36
+Power Cogs,Rocket Flare,50.0
+Hoodwink,Corrosive Weaponry,50.91
+Arc Warden,Phantasm,51.52
+Oracle,Lightning Bolt,53.64
+Slark,Ghoul Frenzy,49.7
+Blink,Hoof Stomp,55.76
+Blink,Dragon Tail,53.94
+Nature's Attendants,Tether,59.7
+Visage,Cloak and Dagger,52.12
+Lunar Orbit,Omnislash,50.91
+Troll Warlord,Split Shot,37.39
+Black Hole,Blink,51.37
+Naga Siren,Phantasm,55.32
+Oracle,Laguna Blade,50.76
+Gush,Lucent Beam,48.94
+Cloak and Dagger,Wild Axes,55.93
+Ogre Magi,Heartstopper Aura,55.62
+Vengeful Spirit,Dream Coil,51.98
+Tidehunter,Pulverize,51.98
+Muerta,Frost Arrows,48.33
+God's Strength,Phantom Strike,51.98
+Nature's Prophet,Hex,51.37
+Clockwerk,Uproar,56.53
+Mortal Strike,Corrosive Haze,48.33
+Sniper,Drunken Brawler,63.53
+Torrent,Earth Spike,61.09
+Anti-Mage,Omnislash,39.82
+Drow Ranger,Heavenly Jump,58.97
+Enchantress,Meld,48.33
+Inner Beast,Elder Dragon Form,47.11
+Monkey King,Psi Blades,58.36
+Batrider,Poison Sting,57.01
+Aftershock,Anchor Smash,61.28
+Pulverize,Berserker's Call,55.49
+Astral Spirit,Dream Coil,50.91
+Nature's Prophet,Poison Attack,50.3
+Lich,Magic Missile,46.95
+Bristleback,Aftershock,63.11
+Slark,Shapeshift,49.7
+Echo Slash,Unknown Ability #1518,50.3
+Mana Drain,Frostbite,50.3
+Healing Ward,Rearm,51.83
+Razor,Psi Blades,55.79
+Fiend's Grip,Storm Hammer,54.27
+Tricks of the Trade,Coup de Grace,35.47
+Sniper,Presence of the Dark Lord,53.52
+Pudge,Battery Assault,54.13
+Arc Warden,Flak Cannon,58.72
+Strafe,God's Strength,51.99
+Lina,Crypt Swarm,55.96
+Muerta,Glaives of Wisdom,65.44
+Lich,Frostbite,55.96
+Avalanche,Chain Frost,65.44
+Inner Beast,Coup de Grace,41.59
+Counter Helix,Kraken Shell,51.38
+Omnislash,Time Lock,46.79
+Nature's Prophet,Psi Blades,56.27
+Strafe,Coup de Grace,41.28
+Battery Assault,Shukuchi,56.88
+Dazzle,Psi Blades,48.01
+Viper,Guardian Sprint,47.24
+Medusa,Guardian Sprint,56.75
+Rot,Battery Assault,55.83
+Uproar,Infest,54.29
+Sniper,Burning Spear,55.52
+Witch Doctor,Magic Missile,53.37
+Batrider,Poison Attack,56.44
+Shadow Fiend,Saltwater Shiv,57.36
+Earth Spirit,Corrosive Skin,54.91
+Pugna,Assassinate,53.37
+Counter Helix,Eye of the Storm,56.75
+Gyrocopter,Fury Swipes,61.66
+Ogre Magi,Shapeshift,59.82
+Viper,Meld,40.49
+Legion Commander,Reality Rift,49.85
+Rot,Heartstopper Aura,54.77
+Tidebringer,Refraction,52.31
+Fiend's Grip,Vengeance Aura,58.46
+Lina,Plasma Field,53.85
+Ancient Apparition,Frost Arrows,51.08
+Hoodwink,Moon Glaives,56.62
+Phantom Assassin,Tree Grab,48.62
+Grimstroke,Cloak and Dagger,57.23
+Muerta,Phase Shift,54.63
+Ancient Apparition,Marksmanship,47.53
+Viper,Arc Lightning,53.7
+Hex,Hex,49.69
+Gush,Cloak and Dagger,52.78
+Nature's Prophet,Phase Shift,58.64
+Alchemist,Tree Grab,56.17
+Ember Spirit,Great Cleave,45.99
+Drow Ranger,Feast of Souls,54.32
+Arc Warden,Hammer of Purity,47.22
+Monkey King,Enchant Totem,50.62
+Black Hole,Fatal Bonds,44.44
+Ghoul Frenzy,Great Cleave,51.85
+Clockwerk,Heartstopper Aura,50.62
+Tidehunter,Heartstopper Aura,61.11
+Ogre Magi,Great Cleave,53.4
+Lunar Orbit,Tree Grab,59.57
+Tinker,Assassinate,44.75
+Ghoul Frenzy,Bodyguard,52.01
+Gyrocopter,Corrosive Weaponry,52.63
+Rubick,Gush,51.39
+Sand Storm,Freezing Field,55.42
+Storm Hammer,Black Hole,53.87
+Centaur Warrunner,Exorcism,53.25
+Pudge,Double Edge,42.41
+Focus Fire Facet,Glaives of Wisdom,55.73
+Phantom Assassin,Mortal Strike,48.3
+Spectre,Doppelganger,59.75
+Finger of Death,Shadow Wave,47.68
+Void Spirit,Rocket Barrage,52.32
+Techies,Poison Sting,63.16
+Leshrac,Freezing Field,61.61
+Laguna Blade,Powershot,46.75
+Gush,Vengeance Aura,62.23
+Dual Breath,Sticky Napalm,45.51
+Razor,Marksmanship,54.49
+Phantom Rush,Omnislash,45.82
+Venomancer,Elder Dragon Form,46.44
+Exorcism,Sand Storm,48.61
+Exorcism,Windrun,62.85
+Dark Willow,Wall of Replica,58.51
+Techies,Phantasm,53.56
+Laguna Blade,Fade Bolt,48.92
+Techies,Astral Spirit,53.73
+Astral Spirit,Enchant Totem,39.13
+Omnislash,Fiery Soul,52.48
+Treant Protector,Berserker's Blood,53.42
+Earth Spike,Chain Frost,63.66
+Dispersion,Double Edge,62.42
+Tusk,Blade Fury,63.04
+Huskar,Inner Fire,45.34
+Clinkz,Fury Swipes,51.24
+Avalanche,Ravage,55.28
+Mind Flare,Laguna Blade,46.89
+Techies,Coup de Grace,56.52
+Grimstroke,Chaos Bolt,54.66
+Keeper of the Light,Quill Spray,39.13
+Rocket Barrage,Flak Cannon,50.0
+Dazzle,Marksmanship,44.86
+Dazzle,Fury Swipes,52.34
+Gyrocopter,Juxtapose,57.94
+Dazzle,Time Lock,48.6
+Oracle,Ice Blast,49.53
+Gyrocopter,Psi Blades,57.63
+Assassinate,Shadow Strike,42.06
+Gyrocopter,Bodyguard,62.93
+Ghost Shroud,Exorcism,44.24
+Sand Storm,Black Hole,55.45
+Nature's Prophet,Coup de Grace,49.84
+Blade Dance,Great Cleave,49.84
+Ancient Apparition,Wall of Replica,51.09
+Burrowstrike,Hoof Stomp,55.76
+Elder Dragon Form,Mirror Image,53.58
+Battle Hunger,Fiery Soul,51.4
+Light Strike Array,Storm Hammer,58.88
+Vengeful Spirit,Strafe,45.79
+Chain Frost,Fatal Bonds,48.91
+Ember Spirit,Tree Grab,49.22
+Nature's Prophet,God's Strength,50.16
+Spectre,Great Cleave,47.35
+Techies,Guardian Sprint,53.12
+Batrider,Fiery Soul,60.94
+Ringmaster,Magic Missile,51.25
+Brain Sap,Lightning Bolt,48.44
+Naga Siren,Tree Grab,57.5
+Nature's Call,Wrath of Nature,41.56
+Terrorblade,Bash of the Deep,56.88
+Hoodwink,Wall of Replica,55.0
+Outworld Devourer,Ball Lightning,66.88
+Spectre,Mirror Image,48.12
+Nightmare,Bash of the Deep,44.06
+Tinker,Frogstomp,41.88
+Arc Warden,Chemical Rage,59.69
+Juggernaut,Bodyguard,57.81
+Vengeful Spirit,Geminate Attack,42.81
+Ghostship,Storm Hammer,53.75
+Pulse Nova,Arcane Orb,54.37
+Tusk,Dispersion,66.25
+Death Prophet,Fiery Soul,56.11
+Stifling Dagger,Meld,42.32
+Jakiro,Elder Dragon Form,40.44
+Voodoo Restoration,Sanity's Eclipse,63.64
+Uproar,Primal Roar,55.8
+Cloak and Dagger,Malefice,50.78
+Huskar,Shadow Wave,46.08
+Lina,Croak of Genius,54.23
+Zeus,Sacred Arrow,55.17
+Strafe,Poison Attack,52.98
+Nature's Prophet,Hex,50.78
+Disruptor,Frostbite,55.49
+Earth Spirit,Blade Fury,52.98
+Hoodwink,Geminate Attack,51.41
+Monkey King,Phantom Rush,47.65
+Jakiro,Dream Coil,44.65
+Noxious Plague,Earth Spike,65.72
+Razor,Elder Dragon Form,48.43
+Centaur Warrunner,Dismember,54.72
+Bloodseeker,Rot,54.72
+Focus Fire Facet,Poison Attack,45.6
+Skywrath Mage,Laguna Blade,43.71
+Storm Hammer,Electric Vortex,53.77
+Slark,Open Wounds,45.28
+Walrus PUNCH!,Swashbuckle,39.31
+Snapfire,Meld,46.86
+Bristleback,Reactive Armor,51.89
+Centaur Warrunner,Pulverize,55.35
+Astral Spirit,Flak Cannon,71.38
+Vengeful Spirit,Moon Glaives,52.2
+Paralyzing Cask,Cloak and Dagger,56.6
+Juggernaut,Empower,64.15
+Muerta,Juxtapose,54.09
+Wraith King,Rot,61.2
+Juggernaut,Bloodrage,44.48
+Frost Arrows,Elder Dragon Form,47.95
+Ogre Magi,Hookshot,48.26
+Tinker,Frostbite,45.74
+Reactive Armor,Quill Spray,48.58
+Tidehunter,Lunar Orbit,54.89
+Dragon Slave,Crypt Swarm,48.9
+Vengeful Spirit,Marksmanship,41.96
+Razor,Time Lock,46.37
+Earth Spike,Split Earth,57.73
+Skywrath Mage,Earth Spike,55.84
+Great Cleave,Phantom Strike,54.26
+Shadow Fiend,Hex,57.41
+Muerta,Hex,49.37
+Brewmaster,Rot,58.86
+Morphling,Bash of the Deep,51.9
+Repel,Black Hole,47.78
+Bloodrage,Marksmanship,51.27
+Fiend's Grip,Shackles,49.68
+Muerta,Nightmare,45.89
+Mirana,Moon Glaives,55.06
+Arc Warden,Saltwater Shiv,44.3
+Catchy Lick,Meat Hook,53.8
+Pugna,Powershot,49.68
+Mirana,Coup de Grace,46.84
+Storm Hammer,Ravage,57.91
+Bloodseeker,Counter Helix,58.23
+Vengeful Spirit,Ghoul Frenzy,48.73
+Dragon Knight,Tree Grab,56.83
+Juggernaut,Feast of Souls,40.63
+Nature's Prophet,Doppelganger,54.29
+Rubick,Macropyre,51.43
+Monkey King,Time Lock,43.49
+Riki,Omnislash,40.95
+Lunar Orbit,Enchant Totem,42.54
+Muerta,Psi Blades,56.83
+Pudge,Dispersion,57.78
+Rubick,Life Drain,49.84
+Marksmanship,Headshot,50.48
+Lich,Vengeance Aura,65.08
+Faceless Void,Great Cleave,47.94
+Drow Ranger,Wyrm's Wrath,57.78
+Tame the Beasts,Earth Spike,58.73
+Witch Doctor,Frostbite,46.98
+Soulbind,Phantom's Embrace,55.24
+Oracle,Fiend's Grip,55.87
+Catchy Lick,Rupture,50.16
+Phoenix,Sticky Napalm,41.72
+Nature's Prophet,Nightmare,47.45
+Echo Slam,Static Remnant,55.73
+Disruptor,Assassinate,51.59
+Summon Spirit Bear,True Form,34.08
+Lina,Maledict,56.37
+Ember Spirit,Presence of the Dark Lord,56.05
+Arc Warden,Incapacitating Bite,55.41
+Troll Warlord,Marksmanship,43.31
+Gyrocopter,Marksmanship,48.73
+Muerta,Refraction,62.74
+Silencer,Ball Lightning,51.27
+Freezing Field,Time Walk,48.73
+Mana Break,Swashbuckle,52.87
+Tidebringer,True Form,62.42
+Dream Coil,Bash of the Deep,46.18
+Ember Spirit,Coup de Grace,42.68
+Rubick,Magic Missile,51.59
+Crystal Maiden,Impetus,45.22
+Windranger,Juxtapose,51.91
+Clinkz,Corrosive Weaponry,35.14
+Grimstroke,Arcane Supremacy,56.23
+Jakiro,Nightmare,45.69
+Blade Fury,Black Hole,55.27
+Sand Storm,Death Ward,51.76
+Monkey King,Chemical Rage,58.79
+Kraken Shell,Untouchable,45.05
+Sniper,Bloodlust,58.47
+Battle Hunger,Aftershock,49.2
+Troll Warlord,Chaos Strike,45.37
+Dark Willow,Focus Fire Facet,41.35
+Pugna,Infernal Blade,57.05
+Medusa,Inner Beast,53.85
+Oracle,Avalanche,62.18
+Pudge,Blade Fury,56.09
+Disruptor,Cloak and Dagger,53.53
+Presence of the Dark Lord,Coup de Grace,48.72
+Slark,Immaterial,49.36
+Storm Spirit,Arc Lightning,52.56
+Muerta,Immaterial,57.05
+Keeper of the Light,Sacred Arrow,49.36
+Thundergod's Wrath,Powershot,49.04
+Gyrocopter,Astral Spirit,66.03
+Frost Arrows,Focus Fire Facet,40.71
+Diabolic Edict,Shukuchi,56.73
+Croak of Genius,Finger of Death,43.27
+Nature's Prophet,Searing Arrows,48.08
+Torrent,Light Strike Array,58.97
+Legion Commander,Tree Grab,49.04
+Tidehunter,True Form,56.59
+Shadow Demon,Focus Fire Facet,47.91
+Defense Matrix,March of the Machines,34.41
+Terrorblade,Time Lock,53.7
+Hoodwink,Bodyguard,65.92
+Tinker,Light Strike Array,54.98
+Juggernaut,Time Lock,50.8
+Vengeance Aura,Macropyre,61.09
+Requiem of Souls,Electric Vortex,60.13
+Finger of Death,Fatal Bonds,38.26
+Enchantress,Poison Attack,51.45
+Outworld Devourer,Glaives of Wisdom,59.16
+Dragon Knight,Berserker's Call,63.67
+Medusa,Bloodrage,59.49
+Shadow Shaman,Meat Hook,56.59
+Slark,Dragon Tail,51.13
+Rubick,Nether Blast,48.87
+Huskar,Wild Axes,49.2
+Morphling,Thundergod's Wrath,54.19
+Arc Warden,Headshot,43.23
+Gyrocopter,Refraction,60.97
+Torrent,Rearm,39.03
+Ogre Magi,Grow,45.81
+Frogstomp,Frostbite,52.26
+Pugna,Black Hole,51.94
+Leshrac,Crystal Nova,58.71
+Ogre Magi,Untouchable,55.48
+Enchantress,Focus Fire Facet,47.42
+Slark,Tree Grab,45.48
+Medusa,Storm Surge,53.55
+Leshrac,Sand Storm,56.77
+Mirana,Heavenly Jump,43.55
+Terrorblade,Chemical Rage,51.29
+Dismember,Charge of Darkness,51.94
+Vengeance Aura,Shadow Strike,52.58
+Deluge,Juxtapose,50.65
+Monkey King,Ghoul Frenzy,54.19
+Strafe,Fury Swipes,54.19
+Necrophos,Rot,42.58
+Bodyguard,Marksmanship,60.0
+Keeper of the Light,Powershot,48.87
+Earth Spirit,Dispersion,60.52
+Riki,Great Cleave,38.51
+Sniper,Grow,53.4
+Skywrath Mage,Mind Flare,43.37
+Chen,Arc Lightning,45.31
+Bloodrage,Elder Dragon Form,39.81
+Pugna,Cloak and Dagger,55.02
+Insatiable Hunger,Flak Cannon,59.22
+Nature's Prophet,Shackleshot,51.78
+Pugna,Mana Drain,43.04
+Lina,Wild Axes,57.93
+Primal Beast,Enchant Totem,54.05
+Oracle,Reaper's Scythe,47.57
+Warlock,Shrapnel,53.4
+Diabolic Edict,Sticky Napalm,48.54
+Ancient Apparition,Strafe,45.63
+Lifestealer,Lunar Orbit,60.52
+Bloodseeker,Phantom Strike,56.82
+Reincarnation,Corrosive Skin,64.61
+Troll Warlord,Geminate Attack,46.75
+Mirana,Doppelganger,48.05
+Frost Arrows,Dream Coil,52.27
+Blade Fury,Life Break,57.47
+Dawnbreaker,Grow,48.05
+Mars,Berserker's Blood,57.79
+Tree Grab,Anchor Smash,57.47
+Hoodwink,Wukong's Command,66.88
+Skywrath Mage,Finger of Death,39.61
+Bloodrage,Time Lock,46.75
+Phoenix,Corrosive Skin,54.55
+Nature's Prophet,Refraction,50.65
+Pangolier,Mana Break,52.6
+Medusa,Bash of the Deep,63.64
+Muerta,Mana Break,50.0
+Grimstroke,Earth Spike,53.9
+Wraithfire Blast,Magic Missile,48.7
+Chen,Poison Attack,51.95
+Powershot,Rearm,40.91
+Gush,Laser,51.95
+Nightmare,Fury Swipes,53.25
+Enigma,Electric Vortex,46.43
+Chaos Knight,Doppelganger,47.56
+Lina,Shadow Word,54.07
+Blade Dance,God's Strength,51.47
+Shadow Demon,Poison Attack,51.79
+Ghost Shroud,Pulse Nova,49.51
+Muerta,Elder Dragon Form,44.95
+Vengeance Aura,Black Hole,64.82
+Repel,Rot,56.68
+Pudge,Lunar Orbit,50.49
+Primal Beast,Windrun,60.59
+Uproar,Reincarnation,57.33
+Invoker,Assassinate,49.19
+Phantom Rush,Great Cleave,44.95
+Counter Helix,Life Break,57.65
+Powershot,Cloak and Dagger,54.07
+Mars,Natural Order,63.19
+Shadow Step,Moon Glaives,48.86
+Thirst,Eye of the Storm,61.24
+Pudge,Trample,48.21
+Disruption,Shadow Poison,50.65
+Focus Fire Facet,Impetus,44.12
+Oracle,Gush,51.31
+Arc Warden,Chaos Strike,51.63
+Morphling,Lucent Beam,49.02
+Earth Spike,Shadowraze,55.56
+Gyrocopter,Dark Ascension,59.8
+Grimstroke,Storm Hammer,52.61
+Tinker,Lightning Bolt,53.59
+Skywrath Mage,Gush,52.61
+Tidehunter,Berserker's Call,59.15
+Electric Vortex,Death Ward,50.98
+Frostbite,Split Earth,48.04
+Skywrath Mage,Wild Axes,51.63
+Magnus,Blink Strike,47.39
+Bodyguard,Tree Grab,56.86
+Muerta,Fury Swipes,60.78
+Outworld Devourer,Frostbite,58.17
+Brewmaster,Great Cleave,44.26
+Huskar,Overload,45.57
+Ember Spirit,God's Strength,44.92
+Tricks of the Trade,Moon Glaives,48.2
+Ravage,Magic Missile,54.75
+Mirana,Wyrm's Wrath,44.92
+Pugna,Magic Missile,58.69
+Meat Hook,Shackles,53.77
+Skywrath Mage,Decrepify,43.61
+Omniknight,Berserker's Blood,64.59
+Elder Titan,Tree Grab,46.89
+Nature's Prophet,Immaterial,54.1
+Marksmanship,Psi Blades,52.13
+Eye of the Storm,Corrosive Skin,56.39
+Venomancer,Fiend's Grip,60.86
+Shadow Shaman,Vengeance Aura,59.54
+Storm Surge,Dispersion,53.62
+Arc Warden,Wyrm's Wrath,51.97
+Mortal Strike,Anchor Smash,57.24
+Techies,Ball Lightning,58.55
+Pulverize,Time Walk,54.93
+Nature's Prophet,Heavenly Jump,50.99
+Bounty Hunter,Assassinate,38.82
+Techies,Focus Fire Facet,46.71
+Slithereen Crush,Shukuchi,58.55
+Snapfire,Searing Arrows,50.0
+Shadow Fiend,Shadow Step,55.26
+Electric Vortex,Vengeance Aura,54.61
+Rearm,Bramble Maze,49.67
+Terrorblade,Mirror Image,57.57
+Fiend's Gate,Atrophy Aura,51.64
+God's Strength,Moon Glaives,60.53
+Blade Fury,Ion Shell,55.92
+Oracle,Meat Hook,50.66
+Waveform,Black Hole,50.66
+Frost Shield,Rearm,43.09
+Phantom Rush,Mana Break,44.41
+Arc Warden,Dark Ascension,50.66
+Ravage,Time Walk,63.82
+Nature's Prophet,Wyrm's Wrath,51.32
+Dragon Knight,Great Cleave,56.11
+Huskar,Gush,52.48
+Bodyguard,Moon Glaives,65.02
+Tinker,Storm Hammer,57.1
+Blink,Toss,48.84
+Arc Warden,Frost Arrows,46.53
+Jakiro,Juxtapose,52.81
+Lightning Bolt,Powershot,52.15
+Earth Spirit,Rot,54.13
+Berserker's Blood,True Form,53.47
+Frostbite,Chain Frost,59.08
+Doom,Dispersion,58.09
+Drow Ranger,Conjure Image,60.4
+Dragon Knight,True Form,60.4
+Troll Warlord,Moon Glaives,51.16
+Rubick,Rearm,47.19
+Medusa,Arcane Orb,71.62
+Focus Fire Facet,Greater Bash,42.05
+Crystal Maiden,Glaives of Wisdom,46.36
+Blade Fury,Scorched Earth,52.98
+Monkey King,Mortal Strike,46.36
+Muerta,Overcharge,45.7
+Muerta,Wyrm's Wrath,50.33
+Morphling,Finger of Death,48.01
+Visage,Powershot,43.05
+Grimstroke,Decrepify,48.68
+Leshrac,Nether Blast,53.31
+Primal Beast,Thirst,56.29
+Lightning Bolt,Cloak and Dagger,56.62
+Strafe,Dream Coil,44.37
+Largo,Meat Hook,48.34
+Mind Flare,Assassinate,44.7
+Alchemist,Anchor Smash,44.04
+Outworld Devourer,Rearm,42.72
+Timbersaw,Dispersion,58.94
+Muerta,Heavenly Jump,49.67
+Tree Grab,Tricks of the Trade,42.72
+Snapfire,Corrosive Haze,52.65
+Medusa,Time Lapse,56.62
+Burrowstrike,Black Hole,52.98
+Pudge,Berserker's Call,55.3
+Sticky Napalm,Scorched Earth,48.34
+Blink,Berserker's Call,49.34
+Earth Spike,Paralyzing Cask,56.62
+Vengeful Spirit,Bodyguard,55.63
+Clinkz,Frost Arrows,40.4
+Invoker,Poison Attack,46.69
+Drow Ranger,Guardian Sprint,59.14
+Zeus,Powershot,46.84
+Shackles,Sticky Napalm,47.51
+Outworld Devourer,Assassinate,55.15
+Trample,Charge of Darkness,48.84
+God's Strength,Flak Cannon,57.14
+Medusa,Astral Imprisonment,51.83
+Drow Ranger,Juxtapose,58.47
+Sticky Napalm,Flame Guard,53.82
+Astral Spirit,God's Strength,46.51
+Terrorblade,Reality Rift,59.8
+Dispose,Unleash,42.19
+Immaterial,Marksmanship,56.81
+Tusk,Stifling Dagger,50.83
+Ogre Magi,Exorcism,52.49
+Mirana,Geminate Attack,49.17
+Uproar,Berserker's Call,58.14
+Gyrocopter,Wyrm's Wrath,55.48
+Slark,Lunar Orbit,49.83
+Undying,Ravage,48.5
+Void Spirit,Slithereen Crush,59.8
+Jakiro,Penitence,42.52
+Trample,Skewer,47.84
+Earth Spike,Ravage,55.48
+Lion,Decrepify,44.33
+Gyrocopter,Insatiable Hunger,64.0
+Rot,Eye of the Storm,48.33
+Mirana,Frost Arrows,44.33
+Drow Ranger,Presence of the Dark Lord,58.67
+Sniper,Unknown Ability #1519,60.67
+Mirana,Immaterial,52.33
+Ember Spirit,Blade Fury,53.67
+Queen of Pain,Infernal Blade,51.33
+Sand King,Blink,46.0
+Mars,Tree Grab,55.33
+Feast of Souls,Coup de Grace,45.67
+Pudge,Life Break,50.0
+Bodyguard,Elder Dragon Form,54.0
+Silencer,Mind Flare,47.0
+Slithereen Crush,Phantom Strike,52.33
+Death Prophet,Bash of the Deep,49.33
+Rubick,Chain Frost,58.33
+Corrosive Weaponry,Frost Arrows,46.0
+Sniper,Wall of Replica,54.33
+Lunar Orbit,Eclipse,43.33
+Exorcism,Tricks of the Trade,47.0
+Witch Doctor,Storm Hammer,49.67
+Nature's Prophet,Arc Lightning,51.17
+Skywrath Mage,Avalanche,52.84
+Hoodwink,Grow,49.16
+Astral Spirit,Elder Dragon Form,47.16
+Strafe,Moon Glaives,44.48
+Viper,Saltwater Shiv,45.82
+Eye of the Storm,Heartstopper Aura,51.51
+Reincarnation,Dispersion,69.23
+Dark Seer,Pulse Nova,50.5
+Drow Ranger,Phantasm,69.9
+Dark Willow,Bloodrage,46.15
+Frostbite,Maledict,51.84
+Skywrath Mage,Homing Missile,50.5
+Brewmaster,Blade Fury,54.85
+Mirana,Blade Dance,44.15
+Entangle,Focus Fire Facet,45.82
+Queen of Pain,Mana Break,47.16
+Focus Fire Facet,Burning Spear,43.48
+Lion,Powershot,48.83
+Keeper of the Light,Shadowraze,40.13
+Rubick,Wrath of Nature,50.17
+Marksmanship,Penitence,48.83
+Kunkka,Astral Spirit,51.51
+Maledict,Cloak and Dagger,59.53
+Arc Warden,Doppelganger,55.52
+Mana Break,Doppelganger,55.18
+Treant Protector,Blink Strike,47.16
+Mars,Rot,51.84
+Skywrath Mage,Sacred Arrow,50.84
+Terrorblade,Phantasm,63.88
+Sniper,Surge,57.19
+Arc Warden,Inner Beast,49.5
+Time Walk,Life Break,53.85
+Venomancer,Wyrm's Wrath,42.47
+Terrorblade,Chaos Strike,61.74
+Rubick,Frostbite,55.03
+Enchantress,Strafe,52.01
+Monkey King,God's Strength,50.34
+Enchant Totem,Corrosive Haze,48.32
+Noxious Plague,Battle Hunger,53.36
+Luna,Bodyguard,63.76
+Jakiro,Guardian Sprint,45.97
+Vengeful Spirit,Focus Fire Facet,39.26
+Huskar,Shadow Word,45.12
+Marksmanship,Presence of the Dark Lord,61.62
+Pugna,Impetus,51.52
+Dawnbreaker,Tree Grab,52.19
+Jakiro,Meld,45.79
+Viper,Strafe,45.79
+Hammer of Purity,Meld,42.76
+Muerta,Bloodrage,48.48
+Vengeful Spirit,Mortal Strike,44.44
+Chaos Knight,Spirit Lance,41.41
+Anchor Smash,True Form,59.26
+Dawnbreaker,Blade Fury,53.87
+Void Spirit,Diabolic Edict,48.15
+Tidehunter,Untouchable,57.24
+Primal Beast,Berserker's Call,57.24
+Shadow Demon,Glaives of Wisdom,63.3
+Ogre Magi,Reincarnation,58.25
+Mirana,Bodyguard,51.85
+Hoodwink,Juxtapose,56.9
+Largo,Blade Fury,64.19
+Huskar,Nature's Attendants,53.38
+Rot,Ion Shell,48.99
+Bloodrage,Thundergod's Wrath,40.54
+Tidehunter,Reincarnation,54.39
+Pudge,Counter Helix,53.72
+Morphling,Brain Sap,53.38
+Void Spirit,Dragon Tail,54.73
+Blink,Dismember,51.01
+Dawnbreaker,Enchant Totem,50.0
+Fissure,Assassinate,56.08
+Arena Of Blood,Blink,59.8
+Dragon Knight,Grow,54.39
+Luna,Bash of the Deep,54.73
+Phantom Rush,Shadow Step,39.19
+Drow Ranger,Mana Break,56.76
+Ember Spirit,Blade Dance,43.58
+Arc Warden,Bodyguard,58.11
+Trample,Grow,48.99
+Lion,Fissure,48.65
+Tidehunter,Exorcism,60.14
+Jakiro,Geminate Attack,47.64
+Rot,Life Break,46.62
+Shukuchi,Rocket Barrage,60.47
+Storm Hammer,Lucent Beam,53.38
+Clockwerk,Blink,58.11
+Rubick,Shrapnel,49.66
+Tree Grab,Shapeshift,53.04
+Sniper,Moonlight Shadow,59.46
+Headshot,Inner Beast,50.85
+Tidehunter,Rot,58.98
+Shrapnel,Sticky Napalm,50.17
+Huskar,Meat Hook,51.86
+Gyrocopter,Saltwater Shiv,52.2
+Doppelganger,Moon Glaives,55.59
+Windranger,Saltwater Shiv,48.81
+Lion,Wraithfire Blast,46.44
+Arc Lightning,Inner Beast,48.14
+Cloak and Dagger,Laser,56.61
+Drow Ranger,Dark Ascension,58.31
+Brain Sap,Finger of Death,44.41
+Dream Coil,Time Lock,44.41
+Skywrath Mage,Lucent Beam,50.17
+Burrowstrike,Battery Assault,51.53
+Ancient Apparition,Incapacitating Bite,43.39
+Magic Missile,Cold Feet,53.9
+Warlock,Tombstone,56.61
+Focus Fire Facet,Sticky Napalm,47.46
+Poison Attack,Poison Touch,46.78
+Magnus,Blade Fury,53.56
+Void Spirit,Blade Fury,55.59
+Torrent,Magic Missile,56.61
+Terrorblade,Insatiable Hunger,58.84
+Rearm,Vacuum,44.56
+Jakiro,Dark Ascension,49.32
+Nature's Prophet,Bloodrage,48.64
+Heavenly Jump,Focus Fire Facet,45.24
+Alchemist,Corrosive Skin,51.02
+Mana Break,Haunt,47.28
+Necrophos,Crypt Swarm,44.56
+Corrosive Skin,Quill Spray,48.3
+Arc Warden,Metamorphosis,47.96
+Arc Warden,Burning Spear,52.04
+Grimstroke,Paralyzing Cask,53.74
+Centaur Warrunner,Trample,54.42
+Storm Hammer,Split Earth,54.08
+Lina,Powershot,49.66
+Frogstomp,Cloak and Dagger,54.76
+Techies,Untouchable,51.02
+Leshrac,Plasma Field,58.5
+Rearm,Astral Imprisonment,39.8
+Ogre Magi,Blink Strike,58.5
+Lina,Arcane Bolt,51.02
+Aftershock,Wild Axes,56.8
+Strafe,Psi Blades,45.24
+Terrorblade,Hunter in the Night,55.78
+Shadow Shaman,Cloak and Dagger,58.5
+Berserker's Blood,Flesh Golem,57.82
+Great Cleave,Coup de Grace,43.2
+Lone Druid,Moon Glaives,48.46
+Venomancer,Mana Break,41.64
+Muerta,Strafe,53.24
+Mind Flare,Laser,40.96
+Frogstomp,Avalanche,54.27
+Omniknight,Exorcism,56.66
+Epicenter,Shukuchi,55.29
+Slithereen Crush,Blink Strike,48.81
+Frost Arrows,Chilling Touch,49.15
+Fiend's Grip,Shadow Strike,47.1
+Exorcism,Electric Vortex,51.19
+Clockwerk,Time Walk,59.04
+Razor,Bodyguard,58.7
+Mirana,Inner Beast,48.46
+Viper,Bodyguard,50.85
+Gyrocopter,Guardian Sprint,59.04
+Medusa,Meld,57.34
+Lifestealer,Rot,56.66
+Terrorblade,Feral Impulse,55.29
+Pangolier,Empower,50.85
+Keeper of the Light,Crippling Fear,39.93
+Nature's Prophet,Incapacitating Bite,53.58
+Juggernaut,Immaterial,53.24
+Guardian Sprint,Elder Dragon Form,43.69
+Thundergod's Wrath,Fade Bolt,49.49
+Dazzle,Meld,41.98
+Mind Flare,Reaper's Scythe,46.76
+Monkey King,Static Link,47.95
+Arena Of Blood,Avalanche,54.79
+Light Strike Array,Wraithfire Blast,52.4
+Warlock,Magic Missile,57.19
+Jakiro,Doppelganger,57.88
+Muerta,Penitence,46.23
+Nature's Prophet,Bash of the Deep,58.22
+Invoker,Arc Lightning,42.47
+Light Strike Array,Split Earth,52.74
+Meld,Impetus,43.84
+Lina,Burning Spear,56.16
+Starstorm,Cloak and Dagger,51.71
+Dragon Knight,Reactive Armor,57.53
+Phoenix,Burning Spear,47.26
+Invoker,Focus Fire Facet,39.38
+Mars,Overgrowth,57.19
+Arc Warden,Jinada,49.32
+Chain Frost,Tombstone,56.51
+Rupture,Toss,46.58
+Mana Break,Juxtapose,52.05
+Keeper of the Light,Plague Ward,45.55
+Meat Hook,Toss,48.29
+Overload,Quill Spray,44.18
+Black Hole,Time Walk,52.4
+Rubick,Sacred Arrow,48.97
+Immaterial,Omnislash,48.29
+Techies,Fervor,55.82
+Omnislash,Bash of the Deep,53.77
+Amphibian Rhapsody,Tether,56.51
+Meat Hook,Power Cogs,55.14
+Feast of Souls,God's Strength,49.83
+Tree Dance,Jingu Mastery,42.61
+Dark Willow,Dream Coil,51.2
+Finger of Death,Blink Strike,49.14
+Shadow Demon,Fiery Soul,54.64
+Keeper of the Light,Impalement Arts,45.02
+Viper,Frost Arrows,45.7
+Legion Commander,Phantom Strike,54.64
+Terrorblade,Elder Dragon Form,44.67
+Slark,Unknown Ability #1517,52.58
+Viper,Wyrm's Wrath,54.64
+Omniknight,Grow,51.2
+Mana Drain,Meat Hook,47.08
+Corrosive Weaponry,Headshot,55.67
+Dark Seer,Diabolic Edict,47.08
+Snapfire,Bash of the Deep,50.86
+Hoodwink,Chaos Strike,62.89
+Gyrocopter,Frost Arrows,62.2
+Drow Ranger,Searing Arrows,57.73
+Fate's Edict,Purifying Flames,43.99
+Tusk,Blink Strike,55.33
+Rot,Reincarnation,60.48
+Muerta,Bloodlust,54.98
+Ringmaster,Earth Spike,58.08
+Leap,Static Link,52.23
+Gush,Macropyre,52.92
+Lina,Sand Storm,50.17
+Outworld Devourer,Arcane Bolt,53.95
+Grave Chill,Soul Assumption,44.83
+Gyrocopter,Doppelganger,52.07
+Elder Dragon Form,Incapacitating Bite,48.62
+Tinker,Split Earth,47.24
+Storm Surge,Reincarnation,54.48
+Rubick,Meat Hook,52.76
+Outworld Devourer,Nether Blast,45.17
+Timbersaw,Blade Fury,55.86
+Magnus,Storm Hammer,53.45
+Terrorblade,God's Strength,57.93
+Omniknight,Heartstopper Aura,57.59
+Lina,Midnight Pulse,57.24
+Fiend's Grip,Meat Hook,51.38
+Witch Doctor,Sacred Arrow,54.48
+Fire Spirits,Sun Ray,46.55
+Noxious Plague,Avalanche,60.0
+Clinkz,Fiery Soul,47.93
+Luna,Doppelganger,57.59
+Pudge,Storm Surge,44.48
+Earth Spirit,Aftershock,54.83
+Mind Flare,Brain Sap,50.34
+Muerta,Time Lock,48.1
+Lone Druid,Incapacitating Bite,52.25
+Blade Fury,Rocket Barrage,56.75
+Treant Protector,Stifling Dagger,47.06
+Troll Warlord,Fiery Soul,47.75
+Tree Grab,Coup de Grace,51.56
+Alchemist,Infest,45.67
+Hammer of Purity,Unknown Ability #1518,53.63
+Pulverize,Split Earth,48.1
+Legion Commander,Blade Fury,53.98
+Drow Ranger,Headshot,50.17
+Magnus,Meat Hook,48.1
+Rubick,Thundergod's Wrath,49.83
+Warlock,Powershot,50.52
+Fiery Soul,Dream Coil,53.98
+Bloodseeker,Empower,59.52
+Clockwerk,Meat Hook,52.94
+Jakiro,Coup de Grace,46.71
+Magic Missile,Paralyzing Cask,55.02
+Witch Doctor,Vengeance Aura,62.63
+Mortal Strike,Blink Strike,46.71
+Grimstroke,The Swarm,52.25
+Wraith King,Berserker's Blood,58.13
+Dream Coil,Tricks of the Trade,38.41
+Mars,Uproar,54.33
+Clinkz,Coup de Grace,37.15
+Rupture,Blade Fury,53.82
+Pugna,Wild Axes,56.6
+Arc Warden,Poison Sting,57.64
+Impalement Arts,Echo Slam,54.51
+Omnislash,Leap,55.21
+Finger of Death,Crypt Swarm,40.62
+Boundless Strike,Tree Dance,52.43
+Vengeful Spirit,Saltwater Shiv,47.22
+Largo,Cloak and Dagger,57.29
+Leshrac,Storm Hammer,62.5
+Techies,Rage,55.9
+Arc Warden,Curse of Avernus,54.86
+Drow Ranger,Nightmare,51.04
+Pulse Nova,Crippling Fear,57.99
+Storm Hammer,Death Ward,45.49
+Primal Beast,Counter Helix,48.96
+Gyrocopter,Headshot,45.14
+Cloak and Dagger,Thunder Strike,59.72
+Nightmare,Shadowraze,47.92
+Lion,Magic Missile,54.51
+Dark Willow,Frost Arrows,55.05
+Sniper,Untouchable,63.41
+Monkey King,Chaos Strike,54.36
+Marksmanship,Shackleshot,46.69
+Shadow Fiend,Hex,60.98
+Astral Spirit,Coup de Grace,51.57
+Ogre Magi,Reality Rift,55.75
+Presence of the Dark Lord,Mortal Strike,54.7
+Strafe,Mana Break,44.6
+Vengeful Spirit,Blade Dance,47.74
+Savage Roar,True Form,43.55
+Ogre Magi,Pulverize,60.28
+Ether Shock,Cloak and Dagger,51.22
+Dispersion,Retaliate,57.84
+Aftershock,Blink Strike,48.78
+Ghostship,Earth Spike,54.7
+Pugna,Lightning Bolt,53.66
+Bloodrage,Dream Coil,45.99
+Presence of the Dark Lord,God's Strength,50.87
+Retaliate,Quill Spray,48.78
+Blade Fury,Slithereen Crush,55.05
+Pangolier,Great Cleave,48.78
+Huskar,Crippling Fear,47.74
+Frogstomp,Death Ward,52.61
+Centaur Warrunner,Untouchable,51.92
+Arc Warden,Mirror Image,55.75
+Ancient Apparition,Poison Attack,45.64
+Ogre Magi,Battery Assault,56.79
+Frogstomp,Black Hole,46.34
+Aftershock,Proximity Mines,64.81
+Skywrath Mage,Reaper's Scythe,49.48
+Nature's Prophet,Focus Fire Facet,48.78
+Ogre Magi,Kraken Shell,53.85
+Powershot,Reaper's Scythe,43.36
+Natural Order,Sleight of Fist,54.55
+Warlock,Earth Spike,57.34
+Burrowstrike,Dragon Tail,53.5
+Gyrocopter,Immaterial,57.34
+Lone Druid,Bodyguard,54.2
+Grimstroke,Assassinate,47.55
+Tinker,Nether Ward,57.69
+Magic Missile,Chain Frost,55.24
+Rubick,Noxious Plague,56.99
+Pugna,Rearm,49.3
+Bloodrage,Arc Lightning,47.55
+Rearm,Homing Missile,44.41
+Jakiro,Focus Fire Facet,41.26
+Silencer,Hex,47.9
+Medusa,Coup de Grace,55.94
+Tusk,Berserker's Blood,55.59
+Dream Coil,Vengeance Aura,59.44
+Dark Seer,Aftershock,58.74
+Rubick,Laser,44.06
+Gyrocopter,Dream Coil,53.15
+Enchantress,Elder Dragon Form,54.55
+Tinker,Avalanche,61.19
+Disruptor,Sacred Arrow,47.2
+Dragon Knight,Blade Fury,64.69
+Lina,Gush,52.8
+Assassinate,Wild Axes,49.3
+Centaur Warrunner,Frost Shield,53.85
+Brain Sap,Reaper's Scythe,50.0
+Ghoul Frenzy,God's Strength,51.4
+Ghostship,Sacred Arrow,54.9
+Sniper,Corrosive Haze,55.59
+Medusa,Heavenly Jump,59.09
+Bloodrage,Assassinate,39.16
+Timbersaw,Pulse Nova,47.9
+Tidehunter,Arena Of Blood,54.2
+Naga Siren,Omnislash,51.58
+Frogstomp,Fiend's Grip,63.51
+Naga Siren,Mana Break,55.09
+Juggernaut,Inner Beast,48.07
+Bane,Magic Missile,55.44
+Dazzle,Infernal Blade,52.63
+Gush,Chaotic Offering,62.11
+Static Link,Focus Fire Facet,45.26
+Warlock,Sacred Arrow,50.88
+Clockwerk,Cloak and Dagger,54.74
+Luna,Inner Beast,56.84
+Sven,Berserker's Blood,56.84
+Exorcism,Corrosive Skin,54.74
+Slark,Bloodrage,43.51
+Death Ward,Split Earth,45.96
+Rubick,Proximity Mines,54.39
+Pudge,Uproar,53.68
+Void Spirit,Crippling Fear,53.33
+Kraken Shell,Heartstopper Aura,45.26
+Nature's Prophet,Elder Dragon Form,51.23
+Spectre,Mana Break,42.11
+Alchemist,Scorched Earth,50.53
+Ball Lightning,Arcane Aura,47.02
+Muerta,Doppelganger,57.54
+Echo Slash,Enchant Totem,45.07
+Silencer,Thundergod's Wrath,44.01
+Lion,Gush,51.06
+Wraith King,Great Cleave,51.76
+Vengeful Spirit,Corrosive Weaponry,48.59
+Tinker,Ice Path,52.82
+Lich,Storm Hammer,50.35
+Laguna Blade,Earth Spike,58.8
+Lone Druid,Fiery Soul,45.77
+Magnus,Slithereen Crush,52.46
+Pudge,Kraken Shell,44.37
+Drow Ranger,Ghoul Frenzy,59.86
+Medusa,Elder Dragon Form,61.27
+Omniknight,Counter Helix,61.62
+Fiery Soul,Poison Touch,52.82
+Reincarnation,Kraken Shell,49.65
+Storm Spirit,Fiery Soul,40.85
+Chen,Infernal Blade,46.83
+Shadow Demon,Magic Missile,56.34
+Nature's Prophet,Mortal Strike,50.35
+Juggernaut,Tricks of the Trade,43.31
+Ember Spirit,True Form,50.7
+Omniknight,Eye of the Storm,52.46
+Uproar,Counter Helix,56.18
+Jakiro,Hex,51.59
+Batrider,Dream Coil,50.53
+Dragon Knight,Quill Spray,54.42
+Leshrac,Tame the Beasts,53.71
+Dazzle,Hammer of Purity,43.82
+Marksmanship,Take Aim,43.46
+Clinkz,Headshot,36.75
+Visage,Thundergod's Wrath,46.29
+Reactive Tazer,God's Strength,53.36
+Keeper of the Light,Frost Arrows,45.94
+Juggernaut,Fiery Soul,46.29
+Battle Hunger,Enfeeble,48.76
+Queen of Pain,Poison Attack,52.3
+Fiend's Grip,Laser,56.89
+Juggernaut,Guardian Sprint,50.53
+Windranger,Elder Dragon Form,44.88
+Omniknight,Berserker's Call,62.19
+Ogre Magi,Storm Surge,57.95
+Ogre Magi,Counter Helix,58.3
+Skywrath Mage,Light Strike Array,52.3
+Void Spirit,Searing Chains,54.96
+Rubick,Fiend's Grip,49.29
+Oracle,Storm Hammer,53.55
+Death Prophet,Impetus,51.06
+Great Cleave,Tricks of the Trade,42.55
+Vengeful Spirit,Tree Grab,45.74
+Sacred Arrow,Frostbite,50.0
+Omnislash,Presence of the Dark Lord,55.32
+Morphling,Juxtapose,58.16
+Penitence,Fury Swipes,50.71
+Leshrac,Blade Fury,65.96
+Arc Warden,Searing Arrows,47.52
+Razor,Juxtapose,53.9
+Fiend's Grip,Avalanche,54.61
+Reaper's Scythe,Decrepify,48.58
+Dragon Knight,Retaliate,55.67
+Snapfire,Marksmanship,40.07
+Blink,Fiend's Grip,60.64
+Gush,Death Ward,53.9
+Troll Warlord,Corrosive Weaponry,42.91
+Earth Spike,Cold Feet,58.51
+Gyrocopter,Coup de Grace,54.61
+Sniper,Astral Spirit,56.74
+Techies,Repel,52.48
+Finger of Death,Waveform,46.81
+Enchant Totem,Presence of the Dark Lord,49.65
+Disruptor,Chaos Bolt,48.58
+Ringmaster,Storm Hammer,51.77
+Life Drain,Tether,48.23
+Timbersaw,Eye of the Storm,46.81
+Razor,Corrosive Weaponry,55.32
+Necrophos,Freezing Field,49.29
+Gyrocopter,Incapacitating Bite,51.77
+Uproar,Lunar Orbit,52.84
+Queen of Pain,Fury Swipes,51.42
+Huskar,Crystal Nova,52.13
+Invoker,Impetus,38.08
+Mirana,Strafe,41.99
+Shadow Fiend,Waveform,58.72
+Enigma,Blink,54.09
+Void Spirit,Electric Vortex,54.09
+Moon Glaives,Conjure Image,54.8
+Uproar,Life Break,53.38
+Jakiro,Refraction,55.87
+Arc Warden,Insatiable Hunger,55.16
+Arc Warden,Greater Bash,48.75
+Lina,Crystal Nova,48.04
+Batrider,Battle Hunger,51.25
+Muerta,Fiery Soul,56.23
+Windranger,Heavenly Jump,58.72
+Trample,Guardian Sprint,49.47
+Black Hole,Icarus Dive,54.45
+Arc Warden,God's Strength,51.96
+Dark Seer,Frostbite,52.31
+Earth Spike,Mass Serpent Ward,54.8
+Leap,Corrosive Haze,55.16
+Phantom Rush,Tree Grab,48.75
+Hoodwink,Headshot,43.77
+Enchantress,Assassinate,53.74
+Corrosive Skin,Retaliate,48.4
+Omniknight,Phantom Strike,55.52
+Nature's Prophet,Strafe,53.02
+Pugna,Earth Spike,62.28
+Clinkz,Poison Attack,46.26
+Enchant Totem,Tree Grab,51.25
+Keeper of the Light,Ice Vortex,42.35
+Mars,True Form,51.79
+Leshrac,Nethertoxin,58.21
+Grimstroke,Homing Missile,51.07
+Shackles,Chain Frost,56.43
+Nature's Prophet,Blade Dance,48.21
+Monkey King,Grow,47.14
+Saltwater Shiv,Focus Fire Facet,41.79
+Monkey King,Overpower,52.14
+Tidehunter,Quill Spray,57.14
+Slithereen Crush,Ravage,52.86
+Death Prophet,Poison Attack,58.93
+Muerta,Phantasm,55.0
+Enchant Totem,Anchor Smash,55.36
+Techies,Ghoul Frenzy,56.43
+Witch Doctor,Earth Spike,54.64
+Gyrocopter,Arc Lightning,57.5
+Fiend's Grip,Magic Missile,55.71
+Astral Spirit,Walrus PUNCH!,49.64
+Techies,Unknown Ability #1519,49.64
+Poison Attack,Burning Spear,49.29
+Chaos Knight,Great Cleave,50.36
+Skywrath Mage,Shrapnel,47.86
+Visage,Frostbite,48.93
+Snapfire,Dark Ascension,49.64
+Arena Of Blood,Tombstone,51.43
+Pulverize,Sand Storm,57.14
+Legion Commander,Lunar Orbit,51.07
+Legion Commander,Natural Order,56.79
+Puck,Arc Lightning,50.0
+Rot,Electric Vortex,51.79
+Nature's Attendants,Dispersion,61.79
+Eye of the Storm,Dispersion,57.5
+Brewmaster,Chemical Rage,48.57
+Techies,Impetus,57.86
+Phantom Lancer,Tree Grab,55.0
+Windranger,Hammer of Purity,50.71
+Hoodwink,Incapacitating Bite,50.0
+Torrent,Cloak and Dagger,54.64
+Pugna,Death Ward,54.64
+Techies,Moonlight Shadow,54.64
+Muerta,Poison Attack,59.64
+Escape Act,Fiend's Grip,52.86
+Clinkz,Meld,43.57
+Keeper of the Light,Rocket Flare,40.36
+Muerta,Shackleshot,53.57
+Aftershock,Plague Ward,48.93
+Windranger,Frost Arrows,50.0
+Zeus,Frostbite,51.43
+Monkey King,Shapeshift,61.79
+Eye of the Storm,Vengeance Aura,49.64
+Lina,Mind Flare,46.43
+Necrophos,Nether Blast,42.86
+Multishot,Grow,48.57
+Crystal Maiden,Mana Break,46.95
+Techies,Surge,54.84
+Fiend's Grip,Ether Shock,46.24
+Nyx Assassin,Blade Fury,58.78
+Luna,Juxtapose,54.12
+Toss,Blink,49.1
+Jakiro,Glaives of Wisdom,54.84
+Zeus,Magic Missile,50.9
+Nature's Prophet,Hammer of Purity,44.44
+Muerta,Ghoul Frenzy,50.54
+Uproar,Heartstopper Aura,62.01
+Terrorblade,Doppelganger,58.78
+Brewmaster,Omnislash,41.94
+Slark,Hunter in the Night,51.61
+Slark,Infest,43.01
+Finger of Death,Electric Vortex,49.82
+Slark,Grave Chill,42.65
+Venomancer,Incapacitating Bite,50.9
+Phantom Assassin,Omnislash,43.01
+Aftershock,Spawn Spiderlings,56.27
+Clockwerk,Reincarnation,56.27
+Centaur Warrunner,Battery Assault,57.71
+Impetus,Overpower,46.24
+Primal Beast,Shukuchi,62.72
+Phantom Strike,Battery Assault,55.56
+Troll Warlord,Headshot,45.16
+Brewmaster,Cinder Brew,50.54
+Gyrocopter,Heavenly Jump,53.05
+Disruptor,Meat Hook,44.44
+Windrun,Death Ward,59.35
+Windranger,Headshot,42.45
+Troll Warlord,Focus Fire Facet,41.01
+Drow Ranger,Bloodlust,58.27
+Terrorblade,True Form,58.63
+Disruptor,Avalanche,53.24
+Bane,Bash of the Deep,47.12
+Aftershock,Dark Pact,62.95
+Fiend's Grip,Wraithfire Blast,55.04
+Leshrac,Vacuum,58.27
+Lina,Macropyre,44.96
+Hoodwink,Hammer of Purity,52.88
+Mass Serpent Ward,Nether Blast,48.2
+Nature's Prophet,Presence of the Dark Lord,50.36
+Dragon Tail,Charge of Darkness,51.08
+Lina,Chain Frost,54.68
+Kunkka,Bodyguard,51.44
+Rot,Primal Split,58.27
+Windranger,Jinada,52.52
+Luna,Psi Blades,60.79
+Lion,Sacred Arrow,53.24
+Mirana,Multishot,41.01
+Pudge,Frost Shield,40.65
+Nyx Assassin,Tree Grab,57.55
+God's Strength,Headshot,60.79
+Muerta,Moon Glaives,52.52
+Blink,Hoof Stomp,56.47
+Ogre Magi,Anchor Smash,52.52
+Slark,Great Cleave,45.68
+Windranger,Poison Attack,57.91
+Juggernaut,Hunter in the Night,53.6
+Tree Dance,Wukong's Command,48.01
+Laguna Blade,Crypt Swarm,46.93
+Bloodrage,Tree Grab,52.71
+Storm Surge,Berserker's Call,55.96
+Medusa,Wyrm's Wrath,56.68
+Mars,Finger of Death,50.9
+Jakiro,Feast of Souls,45.13
+Omniknight,Dispersion,65.34
+Monkey King,Reality Rift,53.07
+Storm Surge,Corrosive Skin,51.62
+Sniper,Rage,58.84
+Clockwerk,Burrowstrike,57.04
+Leap,God's Strength,55.96
+Enigma,Rearm,41.88
+Skywrath Mage,Mana Drain,42.6
+Ghostship,Gush,47.29
+Invoker,Infernal Blade,43.68
+Inner Beast,Moon Glaives,54.51
+Rubick,Avalanche,55.6
+Enigma,Storm Hammer,54.15
+Ogre Magi,Tidebringer,60.65
+Clockwerk,Eye of the Storm,48.74
+Keeper of the Light,Nethertoxin,44.04
+Lone Druid,Headshot,41.16
+Tidehunter,Reactive Armor,54.51
+Treant Protector,Feral Impulse,43.68
+Oracle,Wild Axes,56.68
+Shukuchi,Flaming Lasso,53.07
+Oracle,Lucent Beam,51.99
+Presence of the Dark Lord,Corrosive Haze,54.15
+Blink,Reverse Polarity,57.4
+Mass Serpent Ward,Teleportation,46.21
+Avalanche,Split Earth,57.04
+Presence of the Dark Lord,Infest,49.1
+Dark Seer,Meat Hook,54.71
+Void Spirit,Aftershock,60.14
+Slark,Berserker's Blood,52.9
+Batrider,Arc Lightning,50.36
+Grimstroke,Powershot,51.09
+Saltwater Shiv,Elder Dragon Form,45.65
+Mirana,Ghoul Frenzy,51.45
+Laguna Blade,Sacred Arrow,50.72
+Nature's Prophet,Fiery Soul,53.99
+Mass Serpent Ward,Avalanche,54.71
+Lina,Viper Strike,52.9
+Ogre Magi,Uproar,57.97
+Hoodwink,Focus Fire Facet,44.2
+Nature's Prophet,Poison Sting,54.35
+Death Prophet,Infernal Blade,57.61
+Dream Coil,Moon Glaives,56.16
+Hoodwink,Fiery Soul,50.0
+Monkey King,True Form,49.28
+Saltwater Shiv,Omnislash,44.93
+Mind Flare,Aftershock,50.36
+Blade Dance,Tree Grab,49.64
+Dragon Knight,Nature's Attendants,56.88
+Skywrath Mage,Shadow Strike,43.48
+Witch Doctor,Light Strike Array,52.9
+Keeper of the Light,Magic Missile,55.8
+Leshrac,Shrapnel,56.73
+Rubick,Shadow Strike,46.55
+Grimstroke,Sacred Arrow,49.09
+Primal Beast,Lunar Orbit,54.18
+Great Cleave,Shapeshift,53.82
+Gyrocopter,Strafe,52.73
+Slark,Stifling Dagger,49.45
+Blade Dance,Focus Fire Facet,37.82
+Earth Spike,Ice Path,61.45
+Shadow Fiend,Searing Arrows,57.82
+Poison Sting,Stifling Dagger,50.55
+Ogre Magi,Hammer of Purity,49.45
+Rage,Berserker's Blood,57.09
+Rubick,Mystic Flare,51.27
+Ancient Apparition,Meld,39.64
+Oracle,Brain Sap,50.91
+Laser,Lucent Beam,49.82
+Keeper of the Light,Fissure,54.18
+Morphling,Time Lock,52.0
+Hoodwink,Blade Dance,48.73
+Oracle,Macropyre,48.36
+Tinker,Cloak and Dagger,51.64
+Mind Flare,Wild Axes,47.27
+Vengeful Spirit,Split Shot,45.45
+Shadow Shaman,Magic Missile,48.36
+Leshrac,Maledict,59.64
+Timbersaw,Heartstopper Aura,52.0
+Disruptor,Rearm,40.0
+Strafe,Moonlight Shadow,41.09
+Mortal Strike,Great Cleave,49.64
+Strafe,Headshot,42.7
+Black Hole,Rage,50.36
+Batrider,Assassinate,51.82
+Dazzle,Poison Sting,54.38
+Windranger,Nightmare,51.82
+Treant Protector,Great Cleave,48.54
+Tree Grab,Blink Strike,47.08
+Blade Fury,Epicenter,52.92
+Finger of Death,Sacred Arrow,46.72
+Mirana,Incapacitating Bite,52.92
+Frost Blast,Cloak and Dagger,54.01
+Witch Doctor,Wraithfire Blast,46.35
+Clinkz,Moon Glaives,42.34
+Sacred Arrow,Lightning Bolt,56.57
+Arc Warden,Mortal Strike,56.93
+Morphling,Mind Flare,48.91
+Great Cleave,Reality Rift,50.73
+Chain Frost,Blink,57.66
+Razor,Saltwater Shiv,48.18
+Arc Warden,Glaives of Wisdom,58.39
+Dragon Tail,Shukuchi,62.04
+Leshrac,Smoke Screen,56.2
+Dazzle,Focus Fire Facet,48.91
+Pugna,Avalanche,59.12
+Sand King,Blade Fury,46.35
+Timbersaw,Kraken Shell,43.43
+Strafe,Chilling Touch,46.72
+Magnus,Waveform,46.72
+Uproar,Storm Surge,55.47
+Rubick,Reaper's Scythe,51.09
+Laguna Blade,Shadow Strike,41.61
+Lone Druid,Frost Arrows,47.99
+Invoker,Powershot,46.89
+Nature's Prophet,Feast of Souls,45.05
+Phantasm,Split Shot,56.78
+Sniper,Conjure Image,58.24
+Muerta,Dark Ascension,54.58
+Alchemist,Assassinate,42.86
+Hammer of Purity,Assassinate,49.45
+Grimstroke,Laser,51.65
+Mana Break,Nightmare,42.12
+Eye of the Storm,Time Walk,52.01
+Outworld Devourer,Powershot,49.08
+Venomancer,Bash of the Deep,46.15
+Wraith King,Counter Helix,57.51
+Chen,Glaives of Wisdom,48.72
+Techies,Dream Coil,53.85
+Warlock,Storm Hammer,53.48
+Noxious Plague,Wild Axes,57.88
+Lone Druid,Ghoul Frenzy,48.72
+Ogre Magi,Primal Roar,50.92
+Sniper,Shadow Step,56.04
+Blink Strike,Skewer,52.01
+Lina,Brain Sap,47.25
+Arc Warden,Hunter in the Night,45.42
+Gyrocopter,Meld,49.82
+Phantom Strike,True Form,53.11
+Lina,Wrath of Nature,56.41
+Vengeful Spirit,Static Link,44.32
+Largo,Aftershock,53.85
+Mirana,Headshot,41.03
+Exorcism,Battery Assault,49.63
+Warlock,Frogstomp,47.79
+Cloak and Dagger,Dual Breath,51.84
+Venomancer,Dream Coil,48.9
+Techies,Mana Break,57.35
+Lone Druid,Inner Beast,49.26
+Blood Rite,Frostbite,55.88
+Bristleback,Heartstopper Aura,50.0
+Visage,Chakra Magic,42.28
+Death Prophet,Fury Swipes,56.62
+Viper,Coup de Grace,43.01
+Dark Seer,Shukuchi,59.56
+Lifestealer,Blink Strike,54.41
+Thundergod's Wrath,Arcane Aura,47.06
+Grow,Stifling Dagger,47.79
+Troll Warlord,Juxtapose,44.49
+Omniknight,Blink Strike,56.25
+Luna,Dream Coil,63.97
+God's Strength,Refraction,52.21
+Corrosive Weaponry,Mana Break,51.47
+Muerta,God's Strength,51.1
+Troll Warlord,Coup de Grace,40.44
+Luna,Elder Dragon Form,54.41
+Hoodwink,Curse of Avernus,52.21
+Dark Seer,Electric Vortex,50.37
+Arena Of Blood,Anchor Smash,52.94
+Tree Grab,True Form,56.25
+Monkey King,Blade Dance,47.06
+Corrosive Weaponry,Poison Sting,54.04
+Inner Beast,Time Lock,51.47
+Witch Doctor,Gush,48.9
+Bristleback,Exorcism,52.94
+Arc Warden,Corrosive Haze,52.21
+Slardar,Blade Fury,55.35
+Lion,Mind Flare,42.8
+Paralyzing Cask,Rearm,45.39
+Luna,Shadow Step,54.61
+Bodyguard,Arc Lightning,57.56
+Ogre Magi,Finger of Death,47.97
+Shadow Shaman,Frostbite,49.82
+Tidebringer,Shapeshift,54.24
+Light Strike Array,Burrowstrike,52.4
+Poison Touch,Sticky Napalm,43.17
+Gyrocopter,Haunt,53.51
+Clinkz,Juxtapose,46.49
+Lina,Lucent Beam,48.71
+Troll Warlord,Flak Cannon,49.82
+Vengeful Spirit,Coup de Grace,47.23
+Tidehunter,Trample,50.92
+Laguna Blade,Decrepify,46.49
+Venomancer,Marksmanship,39.48
+Brewmaster,Uproar,56.83
+Fissure,Earth Spike,53.87
+Rubick,Ice Blast,56.46
+Lunar Orbit,Anchor Smash,52.4
+Rubick,Storm Hammer,48.34
+Ghostship,Magic Missile,53.87
+Crypt Swarm,Lightning Bolt,49.82
+Bodyguard,Great Cleave,55.72
+Razor,Focus Fire Facet,47.23
+Lone Druid,Doppelganger,47.41
+Keeper of the Light,Gush,47.41
+Pugna,Poison Attack,52.22
+Centaur Warrunner,Enrage,55.19
+Viper,Geminate Attack,48.52
+Muerta,Battle Trance,55.19
+Spectre,Omnislash,42.96
+Epicenter,Time Walk,49.26
+Burrowstrike,Toss,48.52
+Venomancer,Focus Fire Facet,41.11
+Skywrath Mage,Thundergod's Wrath,49.26
+Sniper,Dream Coil,56.3
+Muerta,Feast of Souls,49.26
+Repel,God's Strength,50.37
+Primal Beast,Eye of the Storm,52.22
+Strafe,Nightmare,38.15
+Omniknight,Infest,53.33
+Ghoul Frenzy,Immaterial,50.0
+Bodyguard,Flak Cannon,65.56
+Abaddon,Blade Fury,53.7
+Jakiro,Hex,47.41
+Slark,Strafe,43.33
+Corrosive Weaponry,Coup de Grace,45.93
+Grimstroke,Fiend's Grip,55.93
+Morphling,Lightning Bolt,58.15
+Frogstomp,Earth Spike,55.56
+Wraith King,Corrosive Skin,63.7
+Slark,Bodyguard,48.89
+Ghoul Frenzy,Grow,45.56
+Gyrocopter,Repel,58.15
+Arena Of Blood,Counter Helix,52.59
+Gyrocopter,Moon Glaives,55.93
+Rubick,Fissure,51.11
+Medusa,Haunt,59.63
+Ringmaster,Wraithfire Blast,47.04
+Primal Beast,Grow,50.37
+Moon Glaives,Haunt,59.26
+Electric Vortex,Burrowstrike,50.74
+Exorcism,Shadow Wave,47.96
+Bodyguard,Coup de Grace,53.16
+Muerta,Coup de Grace,48.7
+Corrosive Weaponry,Incapacitating Bite,47.21
+Morphling,Bloodrage,48.33
+Marksmanship,Wave of Terror,48.33
+Blink,Diabolic Edict,53.9
+Alchemist,Rot,52.04
+Pulverize,Frogstomp,50.93
+Electric Vortex,Blink,52.42
+Ringmaster,Sacred Arrow,53.9
+Ghoul Frenzy,Tree Grab,50.93
+Windranger,Bodyguard,60.59
+Necrophos,Exorcism,39.78
+Shadow Fiend,Guardian Sprint,58.36
+Rot,Scorched Earth,50.93
+Troll Warlord,Bodyguard,53.9
+Death Prophet,Elder Dragon Form,56.13
+Pugna,Ether Shock,47.58
+Disruptor,Ice Path,48.7
+Enchantress,Stifling Dagger,55.76
+Sticky Napalm,Arcane Curse,44.98
+Sacred Arrow,Powershot,47.21
+Arcane Orb,Arcane Bolt,52.79
+Tidehunter,Repel,50.93
+Void Spirit,Battery Assault,52.79
+Saltwater Shiv,Coup de Grace,37.17
+Chen,Bash of the Deep,43.87
+Batrider,Crippling Fear,61.71
+Timbersaw,Rot,46.84
+Slardar,Corrosive Skin,59.11
+Berserker's Blood,Enrage,53.16
+Windranger,Blade Dance,47.21
+Batrider,Overload,56.51
+Lone Druid,Meld,44.61
+Blink,Dragon Tail,63.57
+Medusa,Fury Swipes,65.06
+Time Walk,Skewer,56.13
+Dark Seer,Storm Hammer,52.42
+Doom,Heartstopper Aura,47.96
+Hoodwink,Searing Arrows,52.42
+Ancient Apparition,Infernal Blade,52.79
+Techies,Entangle,48.33
+Oracle,Mind Flare,46.1
+Mass Serpent Ward,Frostbite,53.53
+Terrorblade,Blink Strike,47.76
+Corrosive Weaponry,Strafe,47.39
+Lightning Bolt,Gush,52.61
+Undying,Aftershock,51.49
+Tinker,Mind Flare,46.64
+Dream Coil,Tree Grab,52.99
+Nyx Assassin,Meat Hook,50.0
+Troll Warlord,Overpower,47.39
+Uproar,Quill Spray,49.25
+Timbersaw,Time Walk,50.0
+Puck,Glaives of Wisdom,47.76
+Nature's Prophet,Corrosive Haze,47.01
+Enchant Totem,Blink Strike,41.42
+Sniper,Flesh Golem,61.94
+Juggernaut,Corrosive Weaponry,48.51
+Time Walk,Time Dilation,60.45
+Axe,Rot,53.36
+Centaur Warrunner,Time Walk,58.96
+Bounty Hunter,Battle Hunger,51.87
+Fiend's Grip,Venomous Gale,63.43
+Hoodwink,God's Strength,56.72
+Phoenix,Rot,49.25
+Earthshaker,Shrapnel,58.21
+Enchant Totem,Wall of Replica,53.73
+Lunar Orbit,Counter Helix,51.87
+Terrorblade,Bodyguard,59.7
+Lich,Avalanche,55.97
+Keeper of the Light,Ice Path,52.24
+Skywrath Mage,Sprout,55.6
+Ghoul Frenzy,Nightmare,50.0
+Earth Spike,Maledict,52.24
+Mortal Strike,Reality Rift,47.01
+Tidebringer,Blink Strike,51.12
+Luna,God's Strength,60.07
+Lina,Nethertoxin,53.73
+Dark Willow,Marksmanship,47.39
+Reflection,Conjure Image,43.66
+Dark Willow,Strafe,52.43
+Warlock,Light Strike Array,51.69
+Tame the Beasts,Magic Missile,56.93
+Gyrocopter,Time Lapse,60.3
+Lifestealer,Immaterial,57.68
+Rubick,Freezing Field,53.56
+Ghostship,Vengeance Aura,62.55
+Freezing Field,Rage,52.06
+Doom,Corrosive Skin,51.31
+Vengeful Spirit,Flak Cannon,53.93
+Tinker,Torrent,46.07
+Tinker,Fatal Bonds,48.69
+Reality Rift,Overwhelming Odds,53.18
+Witch Doctor,Frogstomp,49.81
+Nightmare,Marksmanship,43.45
+Rubick,Crypt Swarm,50.19
+Drow Ranger,Astral Spirit,56.93
+Pugna,Freezing Field,58.8
+Rubick,Eclipse,48.69
+Medusa,Glaives of Wisdom,64.42
+Lich,Light Strike Array,47.94
+Bristleback,Eye of the Storm,50.94
+Ember Spirit,Empower,50.56
+Omniknight,Uproar,58.05
+Keeper of the Light,Lucent Beam,44.19
+Feast of Souls,Elder Dragon Form,51.31
+Lunar Orbit,Great Cleave,49.06
+Terrorblade,Moon Glaives,59.93
+Noxious Plague,Powershot,50.56
+Zeus,Storm Hammer,50.56
+Juggernaut,Earthshock,53.93
+Muerta,Guardian Sprint,49.44
+Leshrac,Ghostship,60.3
+Arc Warden,Dream Coil,51.31
+Chain Frost,Split Earth,59.18
+Poison Attack,Overpower,47.94
+Fiery Soul,God's Strength,56.55
+Void Spirit,Finger of Death,45.69
+Undying,Chaotic Offering,51.69
+Hoodwink,Doppelganger,55.26
+Tusk,Battery Assault,56.77
+Luna,Marksmanship,48.12
+Sniper,Entangle,56.02
+Nature's Prophet,Dream Coil,52.26
+Sniper,Summon Wolves,62.41
+Skywrath Mage,Maledict,53.01
+Corrosive Skin,True Form,57.14
+Mars,Atrophy Aura,65.04
+Monkey King,Blink Strike,54.89
+Mars,Exorcism,50.38
+Tinker,Midnight Pulse,52.63
+Juggernaut,Astral Spirit,56.39
+Muerta,Wukong's Command,51.88
+Dark Seer,Time Walk,52.26
+Marksmanship,Phase Shift,52.26
+Lina,Illusory Orb,51.13
+Dark Seer,Blink,51.88
+Oracle,Chain Frost,55.64
+Razor,Leap,59.02
+Dragon Knight,Life Break,68.8
+Clockwerk,Grow,47.37
+Medusa,Time Lock,61.28
+Kraken Shell,Retaliate,47.74
+Enchantress,Marksmanship,46.99
+Vengeful Spirit,Frost Arrows,43.98
+Snapfire,God's Strength,45.86
+Storm Surge,Exorcism,49.62
+Hand of God,Tether,55.64
+Ghoul Frenzy,Corrosive Weaponry,53.38
+Juxtapose,Incapacitating Bite,50.0
+Gyrocopter,Fiery Soul,53.76
+Exorcism,Frost Shield,49.62
+Magnus,Shukuchi,62.78
+Clockwerk,Berserker's Blood,58.65
+Exorcism,Crippling Fear,53.38
+Pulse Nova,Ion Shell,46.62
+Gush,Wrath of Nature,49.81
+Monkey King,Insatiable Hunger,46.42
+God's Strength,Anchor Smash,48.68
+Windranger,Wyrm's Wrath,45.28
+Shadow Shaman,Fiend's Grip,44.91
+Scatterblast,Lil' Shredder,48.3
+Windranger,Infernal Blade,57.74
+Ancient Apparition,Focus Fire Facet,36.23
+Dawnbreaker,Dispersion,63.4
+Ghoul Frenzy,Blade Dance,46.04
+Omniknight,Enchant Totem,54.34
+Shadow Fiend,Headshot,56.23
+Keeper of the Light,Frostbite,55.47
+Brewmaster,Empower,57.36
+Monkey King,Fiery Soul,52.08
+Dawnbreaker,Burrowstrike,50.94
+Rubick,Dragon Slave,46.79
+Morphling,Psi Blades,54.34
+Sniper,Reincarnation,68.68
+Windrun,Shadow Strike,53.96
+Slark,Crippling Fear,52.83
+Morphling,Noxious Plague,58.11
+Abaddon,Corrosive Skin,52.08
+Exorcism,Kraken Shell,50.19
+Sven,Enchant Totem,50.94
+Storm Hammer,Cold Feet,55.47
+Exorcism,Scorched Earth,47.92
+Grimstroke,Fatal Bonds,56.23
+Lina,Frogstomp,54.72
+Hammer of Purity,Mortal Strike,43.77
+Arc Warden,Battle Trance,53.21
+Coup de Grace,Refraction,48.68
+Wraith King,Berserker's Call,54.72
+Void Spirit,Waveform,48.3
+Largo,Shadow Word,47.55
+Storm Hammer,Chaotic Offering,61.51
+Jakiro,Blade Dance,38.11
+Shukuchi,Whirling Death,60.38
+Lifestealer,Corrosive Skin,55.85
+Plasma Field,Exorcism,54.34
+Shadow Demon,Ice Path,63.77
+Overload,Assassinate,48.68
+Monkey King,Hunter in the Night,51.7
+Mirana,Refraction,58.11
+Scatterblast,Firesnap Cookie,50.38
+Arena Of Blood,Time Walk,61.74
+Gyrocopter,Wall of Replica,58.71
+Gorgon's Grasp,Rearm,41.29
+Arc Warden,Bloodrage,50.76
+Shadow Fiend,Reactive Tazer,55.3
+Dark Willow,Phase Shift,57.95
+Stifling Dagger,Walrus PUNCH!,43.94
+Ogre Magi,Enchant Totem,56.06
+Lifestealer,Phantom Rush,51.14
+Marci,Tree Grab,47.73
+Invoker,Bash of the Deep,39.02
+Storm Spirit,Glaives of Wisdom,60.23
+Muerta,Focus Fire Facet,44.32
+Reincarnation,Battery Assault,53.03
+Meat Hook,Slithereen Crush,50.38
+Terrorblade,Dream Coil,57.2
+Arc Lightning,Shadow Wave,49.62
+Rubick,Light Strike Array,60.61
+Techies,Battle Trance,50.76
+Windranger,Inner Beast,48.11
+Medusa,Strafe,53.03
+Focus Fire Facet,Poison Touch,45.08
+Berserker's Blood,Double Edge,54.55
+Mirana,Shadow Step,40.53
+Lina,Sonic Wave,43.56
+Lightning Bolt,Laser,54.92
+Mirana,Focus Fire Facet,40.53
+Gyrocopter,Searing Arrows,53.41
+Nature's Prophet,Impetus,50.38
+Ancient Apparition,Wrath of Nature,47.35
+Earth Spirit,Skewer,49.62
+Vengeful Spirit,Omnislash,49.24
+Magnus,Dragon Tail,53.79
+Slark,Incapacitating Bite,44.7
+Witch Doctor,Fissure,49.62
+Vengeful Spirit,God's Strength,53.03
+Medusa,Moon Glaives,53.41
+Earthshaker,Shadowraze,50.0
+Monkey King,Corrosive Haze,54.92
+Pugna,Meat Hook,48.11
+Huskar,Assassinate,46.21
+Noxious Plague,Magic Missile,56.82
+Skywrath Mage,Laser,43.18
+Marksmanship,Searing Arrows,42.42
+Ringmaster,Meat Hook,54.17
+Mirana,Impetus,47.35
+Wraith King,Heartstopper Aura,55.3
+Arc Warden,Heavenly Jump,50.38
+Tidehunter,Nature's Attendants,54.55
+Keeper of the Light,Nether Blast,45.45
+Doom,Rot,48.86
+Grimstroke,Infernal Blade,53.23
+Visage,Lightning Bolt,46.77
+Grow,Inner Beast,47.15
+Powershot,Sonic Wave,43.35
+Enchant Totem,Reality Rift,51.33
+Electric Vortex,Windrun,51.71
+Witch Doctor,Powershot,51.33
+Largo,Shallow Grave,52.85
+Ghoul Frenzy,Bloodrage,49.81
+Rubick,Glaives of Wisdom,53.99
+Hammer of Purity,Enchant Totem,45.25
+Slark,Skeleton Walk,49.81
+Oracle,Finger of Death,38.78
+Nature's Prophet,Guardian Sprint,49.43
+Lich,Shrapnel,50.95
+Arc Warden,Wall of Replica,51.33
+Lich,Sacred Arrow,55.51
+Techies,Illusory Orb,51.71
+Doom,Vengeance Aura,53.61
+Largo,Magic Missile,57.79
+Snapfire,Poison Attack,49.43
+Meat Hook,Wraithfire Blast,47.91
+Sniper,Illusory Orb,52.47
+Dazzle,Corrosive Weaponry,47.15
+Doppelganger,Elder Dragon Form,49.05
+Hoodwink,Saltwater Shiv,52.85
+Starstorm,Rearm,51.33
+Mana Drain,Magic Missile,50.57
+Lifestealer,Anchor Smash,51.71
+Gyrocopter,Blade Dance,54.75
+Drow Ranger,Entangle,46.39
+Oracle,Wraithfire Blast,46.77
+Nyx Assassin,Storm Hammer,56.65
+Hoodwink,Poison Sting,55.89
+Invoker,Laguna Blade,40.68
+Oracle,Homing Missile,52.09
+Mirana,Mortal Strike,49.43
+Grimstroke,Meat Hook,49.05
+Bodyguard,God's Strength,51.71
+Oracle,Infernal Blade,53.82
+Thirst,Battery Assault,57.63
+Rubick,Earth Spike,55.34
+Enchant Totem,Assassinate,49.24
+Morphling,Arc Lightning,57.63
+Muerta,Geminate Attack,54.96
+Time Walk,Flaming Lasso,54.2
+Tinker,Nature's Grasp,48.09
+Hoodwink,Phantasm,63.74
+Take Aim,Impetus,41.98
+Lifestealer,Omnislash,46.18
+Grimstroke,Light Strike Array,51.91
+Lone Druid,Corrosive Weaponry,49.24
+Sniper,Overcharge,58.02
+Pangolier,Exorcism,54.96
+Kez,Phantom Strike,50.38
+Hoodwink,Split Shot,51.91
+Oracle,Torrent,58.78
+Oracle,Shockwave,51.53
+Grow,Berserker's Blood,51.53
+Bloodseeker,Blink Strike,51.91
+Luna,Strafe,55.73
+Cloak and Dagger,Scream Of Pain,52.29
+Axe,Blade Fury,53.44
+Vengeance Aura,Laser,56.11
+Oracle,Fissure,61.07
+Focus Fire Facet,Surge,48.47
+Clinkz,Blade Dance,39.69
+Venomancer,Saltwater Shiv,43.51
+Arc Warden,Refraction,50.38
+Mortal Strike,Tree Grab,50.76
+Counter Helix,Reincarnation,59.54
+Tinker,Maledict,46.18
+Earth Spirit,Berserker's Blood,46.18
+Leshrac,Brain Sap,60.69
+Rupture,Skewer,49.62
+Thirst,Laguna Blade,53.44
+Witch Doctor,Avalanche,60.31
+Mana Break,Phantasm,50.76
+Skywrath Mage,Arcane Aura,51.53
+Silencer,Phase Shift,54.79
+Oracle,Chaos Bolt,59.39
+Dragon Knight,Pulverize,53.64
+Dark Seer,Blink,57.09
+True Form,Quill Spray,47.89
+Rubick,Shadowraze,46.74
+Techies,Spin Web,62.07
+Crystal Maiden,Marksmanship,42.53
+Slardar,Uproar,46.74
+Tinker,Paralyzing Cask,48.28
+Viper,Burning Spear,50.19
+Huskar,Lucent Beam,42.91
+Hoodwink,Corrosive Haze,58.62
+Ogre Magi,Dismember,56.32
+Corrosive Skin,Pulse Nova,53.26
+Jakiro,Ghoul Frenzy,49.04
+Leech Seed,Living Armor,54.02
+Meat Hook,Chain Frost,51.34
+Monkey King,Bodyguard,57.47
+Disruptor,Gush,56.7
+Morphling,Assassinate,52.11
+Nature's Prophet,Poison Touch,50.19
+Hoodwink,Ghoul Frenzy,52.49
+Great Cleave,Inner Beast,47.13
+Croak of Genius,Assassinate,46.74
+Hoodwink,Dark Ascension,50.57
+Slark,Battery Assault,49.81
+Frost Arrows,Poison Attack,45.98
+God's Strength,Guardian Sprint,47.13
+Earth Spike,Magic Missile,62.07
+Shadow Fiend,Multishot,52.11
+Drow Ranger,Shadow Step,57.85
+Sniper,Ghoul Frenzy,59.77
+Nether Swap,Blink,50.19
+Slark,Haunt,41.76
+Great Cleave,Blink Strike,45.98
+Mirana,Bloodrage,45.21
+Troll Warlord,Static Link,43.68
+Fiery Soul,Illusory Orb,50.57
+Slark,Geminate Attack,48.28
+Viper,Ghoul Frenzy,45.98
+Counter Helix,True Form,54.41
+Earth Spirit,Exorcism,54.23
+Aftershock,Chakram,68.85
+Heavenly Jump,Dream Coil,51.15
+Tidehunter,Life Break,58.08
+Tree Grab,Inner Beast,45.38
+Mirana,Spirit Lance,45.77
+Viper,Headshot,40.38
+Witch Doctor,Meat Hook,50.0
+Arena Of Blood,Blink,62.31
+Mirana,Shackleshot,44.62
+Moon Glaives,Dark Ascension,57.69
+Juggernaut,Reality Rift,50.77
+Omnislash,Guardian Sprint,50.38
+Witch Doctor,Penitence,48.85
+Gyrocopter,Enrage,63.08
+Spirit Breaker,Pulverize,53.85
+Lunar Orbit,Blade Fury,56.54
+Razor,Thirst,58.08
+Immaterial,Tidebringer,52.69
+Pulverize,Slithereen Crush,52.31
+Pulverize,Catchy Lick,50.38
+Oracle,Light Strike Array,53.85
+Dark Seer,Rearm,43.85
+Storm Hammer,Slithereen Crush,48.46
+Terrorblade,Immaterial,56.15
+Mirana,Corrosive Haze,49.62
+Brain Sap,Magic Missile,42.31
+Fiend's Grip,Hex,47.31
+Dream Coil,Flak Cannon,51.15
+Visage,Magic Missile,46.92
+Pulverize,Rot,54.23
+Grimstroke,Disruption,53.85
+Shadow Demon,Frostbite,46.92
+Bloodrage,Coup de Grace,40.0
+Repel,Tidebringer,54.62
+Mirana,Phase Shift,56.92
+Ravage,Shukuchi,58.3
+Chen,Mana Break,54.05
+Monkey King,Coup de Grace,51.35
+Tidehunter,Frost Shield,52.51
+Arc Warden,Time Lapse,54.05
+Mars,Blink,57.92
+Pangolier,Coup de Grace,53.28
+Snapfire,Bodyguard,60.23
+Spectre,Blink Strike,43.24
+Frogstomp,Paralyzing Cask,51.74
+Medusa,Arc Lightning,68.34
+Queen of Pain,Glaives of Wisdom,55.98
+Storm Hammer,Primal Roar,63.32
+Gyrocopter,Mana Break,53.28
+Hoodwink,Arctic Burn,64.86
+Vengeful Spirit,Incapacitating Bite,47.49
+Dazzle,Dream Coil,50.19
+Troll Warlord,Wyrm's Wrath,49.42
+Nyx Assassin,Shukuchi,59.07
+Pugna,Fissure,57.14
+Centaur Warrunner,Arena Of Blood,54.44
+Silencer,Poison Attack,48.26
+Storm Hammer,Freezing Field,56.37
+Battle Hunger,Maledict,54.44
+Tricks of the Trade,Time Lock,47.49
+Pudge,Rupture,42.08
+Grimstroke,Shockwave,51.74
+Viper,Dream Coil,48.65
+Skywrath Mage,Meat Hook,52.12
+Bristleback,Kraken Shell,36.29
+Shadow Step,Coup de Grace,40.93
+Nightmare,Requiem of Souls,55.6
+Sniper,Warcry,62.16
+Huskar,Proximity Mines,47.49
+Centaur Warrunner,Lunar Orbit,56.37
+Silencer,Heavenly Jump,51.35
+Skywrath Mage,Ice Path,58.69
+Death Pulse,Pulse Nova,49.81
+Strafe,Feast of Souls,55.21
+Naga Siren,Great Cleave,50.97
+Sven,Blade Fury,51.35
+Jakiro,Psi Blades,47.49
+Shadowraze,Magic Missile,49.03
+Void Spirit,Starstorm,55.21
+Techies,Wrath of Nature,50.97
+Slardar,Rot,55.6
+Pugna,Arc Lightning,50.39
+Corrosive Weaponry,Dream Coil,48.84
+Heartstopper Aura,Pulse Nova,51.94
+Shadow Demon,Assassinate,48.06
+Primal Beast,Reincarnation,54.26
+Medusa,Gravekeeper's Cloak,53.49
+Troll Warlord,Burning Spear,43.8
+Luna,Blade Dance,55.43
+Avalanche,Chaotic Offering,62.02
+Mars,Time Walk,54.26
+Hammer of Purity,Blink Strike,51.94
+Undying,The Swarm,52.71
+Tusk,Exorcism,58.91
+Marksmanship,Blade Dance,46.9
+Clockwerk,Thirst,55.04
+Centaur Warrunner,Ion Shell,51.94
+Ghoul Frenzy,Corrosive Haze,52.33
+Lich,Powershot,50.39
+Entangle,Dream Coil,39.15
+Lich,Earth Spike,53.1
+Storm Hammer,Paralyzing Cask,50.78
+Fiery Soul,Burning Spear,50.78
+Kunkka,Tree Grab,54.26
+Techies,Blast Off!,49.61
+Rubick,Viper Strike,49.22
+Invoker,Magic Missile,45.35
+Invoker,Fiery Soul,41.47
+Bounty Hunter,Tree Grab,49.22
+Bushwhack,Acorn Shot,52.33
+Snapfire,Mana Break,47.67
+Shadow Demon,Elder Dragon Form,44.57
+Ogre Magi,Double Edge,52.33
+Tree Grab,Phantom Strike,56.2
+Troll Warlord,Incapacitating Bite,53.1
+Sacred Arrow,Cloak and Dagger,51.16
+Rearm,Concussive Shot,45.74
+Outworld Devourer,Magic Missile,56.98
+Lifestealer,Inner Beast,44.57
+Shadow Demon,Fury Swipes,60.47
+Clinkz,Saltwater Shiv,41.47
+Void Spirit,Burrowstrike,56.59
+Windranger,Moon Glaives,56.2
+Viper,Poison Sting,46.9
+Juxtapose,Reality Rift,52.71
+Treant Protector,Reality Rift,49.61
+Battery Assault,Charge of Darkness,62.4
+The Swarm,Tombstone,54.26
+Frogstomp,Split Earth,45.35
+Mass Serpent Ward,Storm Hammer,46.51
+Chaos Knight,Mirror Image,48.45
+Tinker,Earth Spike,55.43
+Zeus,Gush,48.06
+Visage,Sacred Arrow,46.51
+Bodyguard,Empower,67.32
+Earth Spike,Avalanche,62.65
+Earth Spirit,Rupture,48.64
+Dismember,Battery Assault,56.03
+Juggernaut,Nightmare,45.53
+Venomancer,Battle Hunger,47.86
+Winter Wyvern,Rearm,48.25
+Pulverize,Waveform,49.42
+Vengeful Spirit,Nightmare,37.74
+Gyrocopter,Phase Shift,61.87
+Wave of Terror,Coup de Grace,39.3
+Lone Druid,Focus Fire Facet,40.86
+Crystal Maiden,Time Lock,52.14
+Rot,Nature's Attendants,58.37
+Pudge,Decay,55.64
+Alchemist,Tidebringer,52.53
+Brain Sap,Assassinate,45.53
+Zeus,Mind Flare,49.42
+Windranger,Searing Arrows,51.75
+Invoker,Meld,36.96
+Meat Hook,Ravage,50.58
+Muerta,Mirror Image,56.81
+Crystal Maiden,Frost Arrows,42.02
+Slark,Insatiable Hunger,46.69
+Dragon Knight,Untouchable,54.09
+Shadow Demon,Light Strike Array,54.47
+Mars,Counter Helix,52.14
+Legion Commander,Counter Helix,58.37
+Corrosive Weaponry,Omnislash,45.91
+Finger of Death,Arcane Aura,50.97
+Pugna,Gush,49.03
+Troll Warlord,Meld,49.81
+Mirana,Hammer of Purity,45.14
+Pugna,Light Strike Array,60.7
+Brewmaster,Exorcism,51.56
+Magic Missile,Lucent Beam,46.09
+Shadow Step,Spirit Lance,39.45
+Hammer of Purity,Corrosive Haze,52.73
+Pugna,Laguna Blade,53.12
+Leshrac,Wheel of Wonder,55.08
+Drow Ranger,Penitence,53.91
+Slark,Earthshock,49.22
+Tidehunter,Slithereen Crush,57.42
+Spectre,Ghoul Frenzy,42.58
+Beastmaster,Cloak and Dagger,53.52
+Tusk,Empower,62.89
+Finger of Death,Illusory Orb,48.05
+Terrorblade,Shapeshift,58.2
+Morphling,Crypt Swarm,50.78
+Keeper of the Light,Arc Lightning,50.78
+Earthshaker,Stinger,53.52
+Mirana,Chaos Strike,53.12
+Dazzle,Moon Glaives,50.0
+Queen of Pain,Meld,44.92
+Earthshaker,Death Pulse,58.98
+Leshrac,Electric Vortex,56.64
+Brewmaster,Heartstopper Aura,56.25
+Batrider,Dual Breath,53.91
+Ogre Magi,Enrage,61.72
+Muerta,Flak Cannon,58.2
+Centaur Warrunner,Scorched Earth,53.52
+Outworld Devourer,Crypt Swarm,58.2
+Viper,Split Shot,43.75
+Vengeful Spirit,Hammer of Purity,46.88
+Muerta,Impetus,55.47
+Omniknight,Burrowstrike,55.86
+Eye of the Storm,Shukuchi,60.55
+Silencer,Laguna Blade,42.19
+Sniper,Nightmare,54.69
+Keeper of the Light,Light Strike Array,49.61
+Dark Willow,Wrath of Nature,52.73
+Lifestealer,Bodyguard,52.73
+Oracle,Mystic Flare,51.56
+Sniper,Shackleshot,53.52
+Bloodseeker,Uproar,55.47
+Centaur Warrunner,Shadow Dance,57.42
+Windranger,Bloodrage,50.59
+Sniper,Time Lapse,60.78
+Exorcism,Vengeance Aura,56.47
+Rubick,Ghostship,52.55
+Gyrocopter,Reactive Tazer,56.86
+Keeper of the Light,Mass Serpent Ward,47.45
+Warlock,Shackles,56.08
+Hoodwink,Impetus,52.55
+Finger of Death,Wraithfire Blast,43.53
+Jakiro,God's Strength,44.71
+Phantom Assassin,Grow,39.22
+Huskar,Plasma Field,49.41
+Nature's Prophet,Headshot,43.92
+Huskar,Shadowraze,42.75
+Visage,Lucent Beam,44.31
+Static Link,Hunter in the Night,54.12
+Dazzle,Assassinate,46.27
+Muerta,Reactive Tazer,52.55
+Kraken Shell,Berserker's Blood,50.2
+Skywrath Mage,Fissure,53.33
+Frogstomp,Chain Frost,56.47
+Queen of Pain,Psi Blades,49.02
+Echo Slam,Death Pulse,53.73
+Chen,Meld,48.24
+Nyx Assassin,Avalanche,56.47
+Earthshaker,Pulverize,53.73
+Mana Break,Dream Coil,48.24
+Fissure,Lightning Bolt,50.59
+Immaterial,Grow,48.63
+Fiend's Grip,Light Strike Array,59.61
+Gyrocopter,Feast of Souls,47.06
+Time Walk,Dragon Tail,54.51
+Nature's Prophet,Repel,53.33
+Largo,Avalanche,60.39
+Lifestealer,Heartstopper Aura,65.49
+Juggernaut,Repel,48.63
+Haunt,Mirror Image,58.04
+Brewmaster,Counter Helix,56.08
+Sven,Phantom Strike,61.18
+Bristleback,Retaliate,40.78
+Necrophos,Crystal Nova,45.1
+Clockwerk,Rocket Barrage,59.22
+Monkey King,Leap,61.57
+Ancient Apparition,Dream Coil,47.84
+Keeper of the Light,Assassinate,48.24
+Invoker,Ghost Walk (AD),40.78
+Mirana,Jinada,49.8
+Refraction,Elder Dragon Form,51.76
+Rubick,Cloak and Dagger,50.98
+Invoker,Mana Break,42.52
+Bash of the Deep,Shackleshot,56.69
+Terrorblade,Inner Beast,62.2
+Tusk,Heartstopper Aura,61.81
+Fissure,Death Ward,54.33
+Thunder Strike,Chakra Magic,52.76
+Troll Warlord,Insatiable Hunger,46.06
+Thundergod's Wrath,Fatal Bonds,48.82
+Muerta,Astral Spirit,52.76
+Uproar,Enrage,60.24
+Storm Hammer,Magic Missile,52.36
+Berserker's Call,Freezing Field,53.94
+Undying,Vengeance Aura,54.72
+Storm Spirit,Frostbite,57.48
+Mars,Life Break,51.18
+Zeus,Light Strike Array,55.12
+Rubick,Death Ward,46.06
+Huskar,Quill Spray,50.0
+Lifestealer,Thirst,57.87
+Enfeeble,Fiery Soul,46.46
+Reactive Tazer,Focus Fire Facet,47.64
+Heartstopper Aura,Untouchable,53.15
+Lich,Gush,50.79
+Brewmaster,Blink Strike,51.57
+Thirst,Haunt,56.69
+Lina,Ether Shock,48.43
+Viper,Moon Glaives,48.82
+Timbersaw,Blink,48.82
+Magnus,Toss,45.28
+Magic Missile,Powershot,44.88
+Enigma,Sacred Arrow,52.36
+Phoenix,Dispersion,57.87
+Dawnbreaker,Berserker's Blood,48.82
+Ghostship,Avalanche,62.6
+Troll Warlord,Strafe,38.19
+Visage,Reaper's Scythe,47.24
+Drow Ranger,Unknown Ability #1519,51.57
+Earth Spirit,Counter Helix,53.54
+Lone Druid,Infernal Blade,56.69
+Luna,Bloodrage,53.36
+Dawnbreaker,Corrosive Skin,53.75
+Pudge,Onslaught,46.64
+Visage,Mind Flare,45.85
+Largo,Pulverize,52.96
+Viper,Doppelganger,48.62
+Coup de Grace,Meld,47.83
+Static Link,Time Lock,46.25
+Avalanche,Black Hole,55.73
+Pugna,Glaives of Wisdom,60.47
+Enigma,Frostbite,46.64
+Battery Assault,Diabolic Edict,50.2
+Fiend's Grip,Malefice,49.01
+Weaver,Marksmanship,35.57
+Blink,Chain Frost,52.57
+Thirst,Freezing Field,59.29
+Slark,Shadow Walk,56.13
+Invoker,Elder Dragon Form,40.71
+Dark Willow,Dark Ascension,51.38
+Nature's Prophet,Penitence,48.22
+Shadow Fiend,Entangle,48.22
+Legion Commander,Berserker's Blood,54.15
+Cloak and Dagger,Void,49.8
+Frostbite,Ancient Seal,54.94
+Shadow Fiend,Coup de Grace,60.47
+Disruptor,Earth Spike,53.75
+Bodyguard,Juxtapose,52.96
+Ogre Magi,Rot,58.1
+Waveform,Slithereen Crush,54.55
+Chain Frost,Maledict,57.31
+Techies,Spectral Dagger,55.34
+Troll Warlord,Blade Dance,41.9
+Abaddon,Rot,47.83
+Visage,Gush,51.38
+Lion,Lightning Bolt,50.2
+Immaterial,Exorcism,56.52
+Noxious Plague,Fatal Bonds,52.57
+Bloodrage,Great Cleave,47.04
+Lich,Cloak and Dagger,56.52
+Jakiro,Unknown Ability #1519,48.62
+Ember Spirit,Drunken Brawler,50.99
+Rubick,Wild Axes,56.52
+Rubick,Lightning Bolt,50.99
+Viper,Inner Beast,50.0
+Skywrath Mage,Brain Sap,48.81
+Timbersaw,Berserker's Call,47.22
+Lycan,Great Cleave,53.17
+Lich,Meat Hook,52.78
+Medusa,Reactive Tazer,53.97
+Uproar,Electric Vortex,49.6
+Electric Vortex,Pulse Nova,48.02
+Io,Nature's Attendants,60.71
+Nature's Prophet,Moon Glaives,51.59
+Grow,Tricks of the Trade,43.65
+Ringmaster,Avalanche,50.4
+Mirana,Nightmare,42.06
+Omnislash,Penitence,39.68
+Ancient Apparition,Macropyre,46.43
+Aftershock,Pulse Nova,52.78
+Shuriken Toss,Stifling Dagger,50.79
+Razor,Strafe,51.59
+Arena Of Blood,Tidebringer,47.62
+Corrosive Weaponry,Static Link,44.05
+Tusk,Uproar,57.54
+Immaterial,God's Strength,47.62
+Gush,Windrun,60.71
+Berserker's Call,Epicenter,50.4
+Shadow Demon,Frost Arrows,43.25
+Shadow Fiend,Bloodlust,60.32
+Enigma,Vengeance Aura,58.73
+Frostbite,Powershot,42.86
+Blink,Diabolic Edict,53.57
+Ogre Magi,Nature's Attendants,55.16
+Pudge,Pulverize,48.81
+Slithereen Crush,Charge of Darkness,52.78
+Mars,Retaliate,45.63
+Slardar,Dispersion,53.97
+Jakiro,Untouchable,52.38
+Nature's Prophet,Dark Ascension,55.16
+Invoker,Wukong's Command,46.43
+Magnus,Electric Vortex,49.6
+Techies,Death Pact,49.6
+Viper,Mortal Strike,48.41
+Invoker,Wall of Replica,47.22
+Doom,Blade Fury,53.97
+Sven,Mortal Strike,48.02
+Medusa,Reincarnation,59.13
+Tusk,Charge of Darkness,58.96
+Tidehunter,Tree Grab,56.18
+Tinker,Fiend's Grip,52.99
+Invoker,Chaos Meteor (AD),33.86
+Dragon Knight,Frost Shield,53.39
+Avalanche,Paralyzing Cask,60.16
+Centaur Warrunner,Spiked Carapace,56.57
+Vengeful Spirit,Bloodrage,46.61
+Largo,Gush,57.77
+Reality Rift,Walrus PUNCH!,49.0
+Powershot,Chain Frost,49.4
+Nature's Prophet,Ball Lightning,51.39
+Reincarnation,Heartstopper Aura,59.36
+Presence of the Dark Lord,Moon Glaives,60.16
+Jakiro,Fervor,55.38
+Techies,Overpower,56.97
+Invoker,Arcane Orb,40.24
+Storm Spirit,Assassinate,44.62
+Phoenix,Tombstone,55.38
+Tidebringer,Reality Rift,49.0
+Lion,Frogstomp,54.58
+Phantom Rush,Blade Dance,37.45
+Keeper of the Light,Stifling Dagger,47.81
+Pulverize,Storm Hammer,55.78
+Troll Warlord,Ghoul Frenzy,47.01
+Batrider,Poison Touch,52.59
+Avalanche,Cloak and Dagger,66.53
+Death Prophet,Laguna Blade,52.19
+Windranger,Impetus,47.81
+Morphling,Wild Axes,55.78
+Juggernaut,Blink Strike,50.6
+Lich,Shackles,51.79
+Terrorblade,Psi Blades,58.57
+Queen of Pain,Heavenly Jump,50.2
+Lich,Wraithfire Blast,48.21
+Muerta,Dream Coil,53.39
+Dragon Knight,Battery Assault,56.57
+Lone Druid,Geminate Attack,47.81
+Brain Sap,Chakra Magic,56.18
+Vengeful Spirit,Meld,45.42
+Feast of Souls,Bash of the Deep,51.39
+Lina,Poison Touch,44.62
+Sniper,Poison Sting,65.74
+Tidehunter,Battery Assault,56.18
+Oracle,Split Earth,46.61
+Hex,Focus Fire Facet,45.42
+Fissure,Finger of Death,51.0
+Overload,Viscous Nasal Goo,43.6
+Monkey King,Fury Swipes,57.2
+Gyrocopter,Ghoul Frenzy,54.8
+Keeper of the Light,Laguna Blade,39.2
+Rubick,Crystal Nova,48.4
+Lion,Meat Hook,50.0
+Nyx Assassin,Burrowstrike,54.4
+Wave of Terror,Elder Dragon Form,49.6
+Muerta,Hex,48.0
+Earth Spirit,Hoof Stomp,53.6
+Decay,Double Edge,49.6
+Noxious Plague,Dragon Slave,51.6
+Shadow Step,Doppelganger,44.4
+Beastmaster,Tree Grab,45.2
+Pangolier,Lucky Shot,49.6
+Lina,Tame the Beasts,50.8
+Earth Spike,Chaotic Offering,61.2
+Poison Attack,Incapacitating Bite,59.6
+Magnus,Berserker's Call,51.2
+Necrophos,Black Hole,42.8
+Vengeful Spirit,Refraction,52.0
+Mirror Image,Conjure Image,52.8
+Pugna,Reaper's Scythe,54.8
+Exorcism,Shadow Strike,47.6
+Ancient Apparition,Dark Ascension,50.0
+Jakiro,Fiery Soul,52.8
+Nature's Prophet,Geminate Attack,44.8
+Viper,Heavenly Jump,55.6
+Outworld Devourer,Sacred Arrow,56.8
+Heartstopper Aura,Dispersion,60.0
+Venomancer,Juxtapose,43.6
+Reincarnation,Vengeance Aura,60.4
+Tidehunter,Dismember,54.0
+Mirana,Searing Arrows,48.0
+Skywrath Mage,Soul Assumption,52.8
+Corrosive Haze,Meld,47.2
+Centaur Warrunner,Blade Fury,53.6
+Earth Spirit,Blink,52.0
+Immaterial,Reincarnation,55.2
+Grimstroke,Ice Path,48.8
+Arc Warden,Skeleton Walk,56.0
+Drow Ranger,Dream Coil,58.0
+Windranger,Poison Sting,58.8
+Io,Life Drain,53.6
+Meat Hook,Sprout,56.0
+Zeus,Meat Hook,57.6
+Necrophos,Brain Sap,46.4
+Moon Glaives,Insatiable Hunger,54.8
+Fiery Soul,Ion Shell,56.8
+Blade Fury,Power Cogs,54.0
+Terrorblade,Mortal Strike,56.4
+Tidehunter,Immaterial,52.8
+Hoof Stomp,Skewer,54.0
+Axe,Blink,49.2
+Dark Seer,Avalanche,61.2
+Skywrath Mage,Wraithfire Blast,46.4
+Largo,Frostbite,61.45
+Light Strike Array,Meat Hook,57.43
+Nature's Prophet,Ghoul Frenzy,59.44
+Timbersaw,Shukuchi,57.43
+Necrophos,Shadowraze,40.16
+Static Link,Bash of the Deep,51.81
+Troll Warlord,Chemical Rage,53.01
+Disruptor,Disruption,55.82
+Omnislash,Static Link,44.58
+Witch Doctor,Brain Sap,51.41
+Dragon Knight,Time Walk,58.63
+Keeper of the Light,Crypt Swarm,39.76
+God's Strength,Time Lock,42.97
+Grimstroke,Avalanche,48.59
+Ghoul Frenzy,Feast of Souls,48.19
+Largo,Rocket Barrage,59.04
+Keeper of the Light,Shuriken Toss,44.58
+Powershot,Wild Axes,49.0
+Blood Rite,Earth Spike,60.24
+Skywrath Mage,Nether Blast,49.0
+Earth Spirit,Heartstopper Aura,51.0
+Immaterial,Elder Dragon Form,51.41
+Shackleshot,Sprout,51.81
+Saltwater Shiv,Frost Arrows,43.78
+Disseminate,Dispersion,59.04
+Shadow Shaman,Earth Spike,54.62
+Bodyguard,Mortal Strike,55.02
+Arc Warden,Guardian Sprint,48.59
+Centaur Warrunner,Infest,49.0
+Io,Voodoo Restoration,54.22
+Queen of Pain,Juxtapose,51.41
+Viper,Leap,53.41
+Frogstomp,Storm Hammer,59.04
+Shadow Step,Omnislash,37.75
+Mirana,God's Strength,49.4
+Hoodwink,Greater Bash,52.21
+Astral Spirit,Earth Splitter,49.0
+Dark Willow,Enrage,56.63
+Coup de Grace,Swashbuckle,46.99
+Chaos Knight,True Form,50.6
+Moonlight Shadow,Frost Arrows,51.41
+Gyrocopter,Tricks of the Trade,49.8
+Rubick,Mind Flare,48.59
+Thundergod's Wrath,Gush,50.2
+Batrider,Noxious Plague,59.84
+Mars,Kraken Shell,51.41
+Corrosive Haze,Headshot,49.0
+Rubick,Split Earth,44.58
+Terrorblade,Grow,49.4
+Juxtapose,Conjure Image,41.53
+Disruptor,Storm Hammer,48.39
+Arc Warden,Fervor,48.79
+Leshrac,Ice Path,65.73
+Muerta,Infernal Blade,53.23
+Ancient Apparition,Inner Beast,47.58
+Venomancer,Burning Spear,43.95
+Skywrath Mage,Fade Bolt,47.58
+Poison Sting,Incapacitating Bite,52.82
+Keeper of the Light,Fiend's Grip,52.02
+Morphling,Fury Swipes,60.08
+Keeper of the Light,Brain Sap,47.98
+Fiend's Grip,Fissure,54.84
+Morphling,Powershot,49.19
+Arc Warden,Nightmare,43.15
+Spectral Blade,Enchant Totem,44.35
+Gyrocopter,Grow,56.45
+Tinker,Shadowraze,48.79
+Outworld Devourer,Gush,58.47
+Pugna,Storm Hammer,59.27
+Enchant Totem,Great Cleave,47.98
+Focus Fire Facet,Fury Swipes,50.0
+Frost Arrows,Coup de Grace,46.37
+Uproar,Kraken Shell,42.34
+Medusa,Surge,60.89
+Assassinate,Rocket Flare,43.15
+Dark Seer,Burrowstrike,54.44
+Huskar,Fissure,47.18
+Lina,Poison Attack,55.24
+Arc Lightning,Untouchable,49.6
+Viper,Refraction,53.23
+Phantom Assassin,Blade Dance,39.52
+Timbersaw,Freezing Field,53.23
+Omniknight,Anchor Smash,51.21
+Reactive Tazer,Frost Arrows,50.81
+Shadow Demon,Fiend's Grip,54.44
+Windranger,Strafe,50.4
+Huskar,Electric Vortex,47.18
+Leshrac,Rearm,51.21
+Clockwerk,Dismember,58.47
+Doom,Charge of Darkness,56.85
+Drow Ranger,Drunken Brawler,64.11
+Lifestealer,Mortal Strike,47.58
+Grimstroke,Wraithfire Blast,48.79
+Rot,Spirits,52.82
+Treant Protector,Sleight of Fist,45.56
+Lifestealer,Uproar,51.61
+Juggernaut,Tidebringer,50.81
+Immaterial,Untouchable,47.18
+Skywrath Mage,Cold Feet,48.79
+Arc Warden,Blade Dance,48.99
+Crypt Swarm,Assassinate,44.94
+Gush,Rearm,44.13
+Viper,Corrosive Haze,47.37
+Muerta,Blade Dance,51.01
+Infest,Ion Shell,44.13
+Rearm,Nature's Call,35.22
+Bodyguard,Grow,53.04
+Troll Warlord,Saltwater Shiv,44.94
+Light Strike Array,Chain Frost,52.63
+Queen of Pain,Marksmanship,48.58
+Blink,Nether Swap,52.63
+Ember Spirit,Wall of Replica,52.63
+Ogre Magi,Infest,46.56
+Dragon Knight,Phantom Strike,61.94
+Ringmaster,Gush,50.61
+Mana Drain,Ball Lightning,51.01
+Monkey King,Lunar Orbit,57.09
+Huskar,Mind Flare,46.15
+Medusa,Psi Blades,64.78
+Black Hole,Nether Blast,48.18
+Sven,Anchor Smash,48.18
+Nyx Assassin,Rocket Barrage,52.63
+Ursa,Tree Grab,44.94
+Centaur Warrunner,Culling Blade,50.2
+Techies,Conjure Image,50.61
+Hoodwink,Frost Arrows,48.58
+Moonlight Shadow,Headshot,49.8
+Ancient Apparition,Burning Spear,46.96
+Pangolier,Omnislash,44.13
+Pudge,Infest,54.25
+Phoenix,Black Hole,48.99
+Razor,Moon Glaives,55.47
+Strafe,Corrosive Haze,48.18
+Hoodwink,Flak Cannon,56.68
+Void Spirit,Inner Fire,47.77
+Clockwerk,Shukuchi,58.3
+Naga Siren,Reality Rift,58.7
+Windranger,Mortal Strike,51.82
+Sand King,Pulverize,44.94
+Morphling,Wrath of Nature,50.61
+Witch Doctor,Shackles,54.25
+Terrorblade,Nightmare,54.66
+Ravage,Charge of Darkness,54.25
+Dragon Slave,Thundergod's Wrath,46.56
+Dispersion,Gravekeeper's Cloak,58.3
+Disruptor,Powershot,47.77
+Lunar Orbit,Finger of Death,49.8
+Corrosive Weaponry,Split Shot,50.2
+Ghost Shroud,Rot,43.32
+Terrorblade,Rage,54.66
+Vengeful Spirit,Doppelganger,53.04
+Bloodseeker,Eye of the Storm,55.47
+Sniper,Mana Break,60.73
+Windranger,Doppelganger,51.82
+Monkey King,Duel,57.49
+Dark Willow,Fiend's Grip,56.1
+Tree Grab,Reality Rift,50.41
+Vengeful Spirit,Searing Arrows,47.15
+Shackles,Chaotic Offering,57.72
+Huskar,Avalanche,57.72
+Clockwerk,Reaper's Scythe,48.37
+Viper,Incapacitating Bite,53.66
+Juggernaut,Chaos Strike,55.28
+Rubick,Brain Sap,54.47
+Assassinate,Thunder Strike,59.35
+Fissure,Sacred Arrow,50.41
+Razor,Poison Attack,57.72
+Earth Spirit,Meat Hook,48.37
+Hammer of Purity,Wall of Replica,52.44
+Plasma Field,Lightning Bolt,46.34
+Bash of the Deep,Penitence,48.37
+Dark Willow,Bloodlust,53.66
+Puck,Mana Break,35.77
+Mars,Reactive Armor,56.91
+Nyx Assassin,Brain Sap,47.15
+Sand King,Electric Vortex,50.0
+Elder Dragon Form,Conjure Image,45.53
+Monkey King,Geminate Attack,45.12
+Sniper,Wave of Terror,58.54
+Tidebringer,Coup de Grace,45.53
+Tusk,Anchor Smash,55.28
+Vengeful Spirit,Inner Beast,47.15
+Techies,Corrosive Haze,55.69
+Jakiro,Astral Spirit,42.68
+Luna,Coup de Grace,54.07
+Lightning Bolt,Decrepify,50.41
+Windranger,Geminate Attack,53.25
+Slark,Wyrm's Wrath,51.63
+Slardar,Exorcism,48.37
+Disruptor,Ice Blast,52.44
+Spirit Breaker,Trample,49.59
+Onslaught,Black Hole,46.75
+Rupture,Storm Hammer,51.22
+Ancient Apparition,Poison Sting,52.44
+Ogre Magi,Decay,53.66
+Terrorblade,Blade Dance,56.5
+Poison Sting,Poison Touch,53.66
+Huskar,Crypt Swarm,43.9
+Bodyguard,Presence of the Dark Lord,71.14
+Wraith King,Dispersion,66.26
+Windranger,Ghoul Frenzy,55.69
+Nature's Prophet,Astral Spirit,50.81
+Trample,Pulse Nova,57.72
+Lunar Orbit,Tidebringer,50.81
+Oracle,Firestorm,56.91
+Rubick,Finger of Death,50.41
+Kez,Ghoul Frenzy,50.81
+Fiend's Grip,Windrun,63.82
+Pugna,Crypt Swarm,49.39
+Undying,Freezing Field,51.02
+Earthshaker,Anchor Smash,55.92
+Keeper of the Light,Arcane Orb,39.18
+Blade Fury,Decrepify,49.39
+Nature's Prophet,Spirit Lance,49.8
+Ion Shell,Shukuchi,55.51
+Luna,Time Lock,55.92
+Techies,Shadow Walk,57.96
+Queen of Pain,Assassinate,50.2
+Legion Commander,Great Cleave,48.98
+Enchantress,Psi Blades,46.94
+Lina,Sticky Bomb,51.84
+Gyrocopter,Penitence,55.51
+Dazzle,Strafe,43.67
+Vengeful Spirit,Leap,53.88
+Dragon Knight,Primal Roar,55.1
+Necrophos,Ball Lightning,44.9
+Ogre Magi,Arena Of Blood,59.59
+Death Ward,Sprout,53.47
+Void Spirit,Wraithfire Blast,49.39
+Jakiro,Grow,44.49
+Ancient Apparition,Corrosive Weaponry,49.8
+Dawnbreaker,Atrophy Aura,53.47
+Bodyguard,Feral Impulse,55.92
+Visage,Wraithfire Blast,51.43
+Queen of Pain,Elder Dragon Form,51.43
+Storm Surge,Kraken Shell,45.31
+Axe,Storm Surge,52.65
+Marci,Blade Fury,53.88
+Undying,Gush,51.84
+Rubick,Astral Imprisonment,53.88
+Wraith King,Lunar Orbit,59.59
+Rupture,Earth Spike,55.1
+Brewmaster,Life Break,58.37
+Arena Of Blood,Dispersion,57.14
+Luna,Immaterial,62.04
+Skywrath Mage,Noxious Plague,55.92
+Frost Arrows,Fiery Soul,44.49
+Shukuchi,Hoof Stomp,64.49
+Batrider,Infernal Blade,55.51
+Muerta,Arctic Burn,67.35
+Leshrac,Upheaval,49.8
+Visage,Shrapnel,48.16
+Brewmaster,Anchor Smash,49.39
+Troll Warlord,Doppelganger,48.98
+Juggernaut,Strafe,46.94
+Abaddon,Dispersion,53.47
+Wheel of Wonder,Earth Spike,55.51
+Huskar,Sacred Arrow,53.47
+Lunar Orbit,Dispersion,62.86
+Ember Spirit,Omnislash,53.06
+Lifestealer,Empower,61.22
+Avalanche,Maledict,57.96
+Earth Spike,Lightning Bolt,59.02
+Warlock,Midnight Pulse,52.46
+Hoodwink,Unleash,59.84
+Earth Spirit,Time Walk,48.77
+Snapfire,Saltwater Shiv,51.64
+Exorcism,Nature's Attendants,52.87
+Shadow Demon,Bash of the Deep,56.97
+Nature's Prophet,Multishot,38.11
+Keeper of the Light,Shadow Wave,43.03
+Invoker,Sun Strike (AD),43.44
+Skywrath Mage,Shackles,54.1
+Frost Arrows,Dark Ascension,47.13
+Aftershock,Whirling Axes (Melee),56.15
+Outworld Devourer,Storm Hammer,57.38
+Ogre Magi,God's Strength,56.15
+Sniper,Skeleton Walk,64.34
+Leshrac,Windrun,66.39
+Brewmaster,Shapeshift,50.0
+Vengeance Aura,Wrath of Nature,54.51
+Oracle,Shrapnel,53.28
+Eye of the Storm,Kraken Shell,49.18
+Crystal Maiden,Fury Swipes,39.34
+Pugna,Sacred Arrow,55.33
+Dazzle,Frost Arrows,48.77
+Noxious Plague,Catchy Lick,62.7
+Dazzle,Burning Spear,50.0
+Outworld Devourer,Laguna Blade,50.0
+Immaterial,Great Cleave,54.92
+Leshrac,Frostbite,57.79
+Huskar,Thundergod's Wrath,51.23
+Invoker,Macropyre,51.23
+Kunkka,Blade Dance,50.0
+Earthshaker,Trample,51.23
+Crypt Swarm,Cloak and Dagger,46.31
+Ember Spirit,Bodyguard,52.87
+Sniper,Focus Fire Facet,51.64
+Medusa,Geminate Attack,55.33
+Windrun,Lucent Beam,60.25
+Kunkka,Presence of the Dark Lord,57.79
+Terrorblade,Coup de Grace,58.61
+Largo,Corrosive Skin,56.15
+Luna,Mana Break,52.46
+Silencer,Malefice,51.64
+Jakiro,Insatiable Hunger,45.9
+Clockwerk,Pulverize,52.87
+Drow Ranger,Fervor,56.97
+Troll Warlord,Frost Arrows,42.8
+Hoodwink,Gunslinger,49.38
+Assassinate,Nether Blast,49.38
+Eye of the Storm,Quill Spray,51.44
+Starstorm,Assassinate,55.56
+Enchantress,Frost Arrows,48.97
+Arena Of Blood,Berserker's Call,49.79
+Earth Spike,Lucent Beam,53.91
+Cloak and Dagger,Dragon Tail,57.61
+Visage,Fiend's Grip,48.56
+Dismember,Burrowstrike,46.09
+Alchemist,Death Pact,43.62
+Luna,Guardian Sprint,52.67
+Frostbite,Life Drain,50.21
+Burrowstrike,Avalanche,54.32
+Void Spirit,Toss,54.73
+Shadow Demon,Mana Break,52.67
+Venomancer,Fiery Soul,43.21
+Life Drain,Sticky Napalm,39.51
+Dispersion,Scorched Earth,63.79
+Laguna Blade,Laser,48.97
+Visage,Meat Hook,46.5
+Repel,Exorcism,52.67
+Lone Druid,Flak Cannon,46.91
+Zeus,Brain Sap,46.09
+Centaur Warrunner,Chemical Rage,51.44
+Faceless Void,Phantom Strike,50.21
+Impetus,Penitence,41.15
+Pugna,Ball Lightning,47.74
+Treant Protector,Overpower,46.5
+Muerta,Split Shot,43.62
+Omniknight,Battery Assault,58.85
+Rubick,Pulse Nova,53.5
+Void Spirit,Natural Order,56.38
+Fiend's Grip,Hex,52.26
+Fiery Soul,Lightning Storm,48.15
+Huskar,Battle Hunger,46.5
+Necrophos,Wild Axes,51.85
+Sniper,Juxtapose,67.08
+Monkey King,Battle Trance,56.38
+Primal Beast,Kraken Shell,37.04
+Bloodrage,God's Strength,45.68
+Timbersaw,Exorcism,53.91
+Multishot,Coup de Grace,48.56
+Wraithfire Blast,Storm Hammer,50.21
+Underlord,Ravage,52.26
+Uproar,Dispersion,67.08
+Spectre,Hunter in the Night,53.91
+Queen of Pain,Illusory Orb,51.03
+Lina,Ice Blast,57.61
+Alchemist,Heartstopper Aura,52.26
+Counter Helix,Epicenter,47.74
+Bane,Gush,52.26
+Mirana,Infernal Blade,48.15
+Blade Dance,Presence of the Dark Lord,59.67
+Omnislash,Moon Glaives,60.91
+Juggernaut,Leap,53.72
+Lifestealer,Blade Dance,49.59
+Oracle,Earth Spike,57.02
+Immaterial,Mana Break,48.76
+Abaddon,Tree Grab,42.56
+Clinkz,Bodyguard,48.35
+Dragon Knight,Arena Of Blood,65.7
+Tusk,Feral Impulse,53.31
+Lone Druid,Overpower,49.59
+Storm Surge,Grow,47.11
+Undying,Chain Frost,51.65
+Lightning Bolt,Lucent Beam,48.76
+Dazzle,Impetus,42.98
+Jakiro,Repel,49.59
+Rearm,Arcane Curse,42.98
+Omniknight,Mortal Strike,56.61
+Monkey King,Mana Break,51.24
+Thundergod's Wrath,Nether Blast,49.59
+Rupture,Avalanche,57.44
+Timbersaw,Storm Hammer,51.24
+Mars,Blade Fury,64.05
+Phantom Rush,Tidebringer,47.93
+Pugna,Frogstomp,53.72
+Mass Serpent Ward,Tombstone,52.07
+Phantom Assassin,Enchant Totem,42.56
+Chemical Rage,Tether,54.96
+Ogre Magi,Flesh Golem,57.44
+Vengeance Aura,Pulse Nova,57.85
+Skywrath Mage,Thunder Strike,52.48
+Dispersion,Earthshock,60.74
+Anchor Smash,Blink Strike,54.55
+Gyrocopter,Bloodrage,55.79
+Rubick,Starstorm,54.55
+Alchemist,Blade Fury,57.85
+Necrophos,Shrapnel,45.45
+Dragon Knight,Slithereen Crush,67.77
+Rot,Cloak and Dagger,45.04
+Luna,Refraction,61.16
+Shadow Shaman,Sacred Arrow,50.41
+Blood Rite,Avalanche,52.89
+Dragon Knight,Blink Strike,61.16
+Hoodwink,Poison Attack,53.72
+Lifestealer,Coup de Grace,45.87
+Nyx Assassin,Charge of Darkness,51.24
+Enigma,Paralyzing Cask,50.41
+Troll Warlord,Greater Bash,43.39
+Oracle,Nether Blast,46.28
+Burrowstrike,Freezing Field,50.0
+Lina,Lightning Bolt,54.55
+Aftershock,Slithereen Crush,56.02
+Shadow Demon,Poison Sting,48.96
+Corrosive Skin,Enrage,57.26
+Razor,Headshot,52.7
+Croak of Genius,Thundergod's Wrath,49.79
+Earth Spirit,Berserker's Call,53.53
+Ember Spirit,Heartstopper Aura,48.13
+Techies,Leech Seed,54.77
+Huskar,Cloak and Dagger,47.72
+Guardian Sprint,Coup de Grace,44.81
+Void Spirit,Overwhelming Odds,53.94
+Powershot,Lucent Beam,49.38
+Uproar,Epicenter,49.79
+Treant Protector,Stinger,52.7
+Centaur Warrunner,Hookshot,49.79
+Clockwerk,Blink,52.7
+Laser,Reaper's Scythe,42.74
+Shadow Fiend,Mirror Image,64.73
+Ghostship,Burrowstrike,49.79
+Pugna,Crystal Nova,56.85
+Pugna,Noxious Plague,54.36
+Drow Ranger,Rage,64.73
+Tusk,Enchant Totem,59.34
+Marksmanship,Refraction,51.87
+Brain Sap,Mana Drain,41.49
+Terrorblade,Moment of Courage,49.38
+Nature's Prophet,Insatiable Hunger,45.23
+Exorcism,Death Pulse,39.83
+Lion,Shadowraze,46.47
+Crypt Swarm,Chakra Magic,52.7
+Windranger,Immaterial,50.62
+Meld,Jinada,46.06
+Slithereen Crush,Cloak and Dagger,56.85
+Queen of Pain,Brain Sap,52.28
+Silencer,Wall of Replica,56.02
+Undying,Cloak and Dagger,45.64
+Queen of Pain,Laguna Blade,47.72
+Lone Druid,Searing Arrows,43.98
+Outworld Devourer,Lucent Beam,46.47
+Arc Warden,Haunt,58.09
+Time Walk,Hoof Stomp,56.85
+Stinger,Grow,41.91
+Rubick,Wraithfire Blast,46.89
+Earth Spike,Death Ward,58.92
+Magnus,Cloak and Dagger,57.26
+Timbersaw,Reincarnation,47.3
+Feast of Souls,Bodyguard,56.43
+Storm Hammer,Avalanche,57.68
+Huskar,Shadow Strike,42.74
+Icarus Dive,Sun Ray,49.79
+Outworld Devourer,Wild Axes,55.6
+Time Walk,Pulse Nova,58.09
+Alchemist,Shrapnel,50.62
+Wheel of Wonder,Magic Missile,58.09
+Grimstroke,Lightning Bolt,52.7
+Necrophos,Plasma Field,52.7
+Skywrath Mage,Glaives of Wisdom,55.19
+Blink Strike,Black Hole,48.55
+Oracle,Cold Feet,48.96
+Berserker's Call,Blade Fury,58.33
+Hoodwink,Noxious Plague,57.08
+Leshrac,Gush,60.42
+Brain Sap,Death Ward,54.58
+Lightning Bolt,Magic Missile,53.75
+Magnus,Charge of Darkness,50.83
+Centaur Warrunner,Quill Spray,55.42
+Dark Willow,Battle Trance,50.42
+Ringmaster,Assassinate,42.92
+Catchy Lick,Fiend's Grip,58.75
+Dark Seer,Pulverize,56.25
+Paralyzing Cask,Black Hole,55.83
+Tinker,Shallow Grave,44.17
+Queen of Pain,Phase Shift,52.92
+Blink,Battery Assault,60.0
+Huskar,Frostbite,54.58
+Broodmother,Tree Grab,46.67
+Techies,Overload,58.75
+Largo,Rot,52.92
+Blink,Reverse Polarity,55.0
+Sven,Dispersion,66.25
+Wraith King,Phantom Strike,52.92
+Storm Spirit,Shadowraze,48.33
+Arena Of Blood,Charge of Darkness,57.08
+Centaur Warrunner,Repel,52.92
+Hoodwink,Strafe,49.17
+Ghoul Frenzy,Presence of the Dark Lord,54.17
+Wraithfire Blast,Frostbite,53.33
+Keeper of the Light,Cloak and Dagger,48.75
+Primal Beast,Storm Surge,48.75
+Leshrac,Shadow Strike,49.58
+Clockwerk,Kraken Shell,44.17
+Shadowraze,Wraithfire Blast,48.75
+Moonlight Shadow,Psi Blades,52.08
+Medusa,Ghoul Frenzy,56.67
+Bodyguard,Psi Blades,60.0
+Earth Spirit,Rocket Barrage,48.33
+Ember Spirit,Shapeshift,57.08
+Tame the Beasts,Avalanche,55.0
+Oracle,Maledict,45.83
+Time Lock,Fervor,49.17
+Presence of the Dark Lord,Grow,55.42
+Puck,Fiery Soul,45.42
+Troll Warlord,Inner Beast,42.5
+Outworld Devourer,Lightning Bolt,47.5
+Brewmaster,Feral Impulse,50.42
+Pudge,Reaper's Scythe,43.33
+Blade Fury,Death Ward,57.5
+Reactive Tazer,Bloodrage,57.5
+Beastmaster,Blade Fury,50.42
+Techies,Leap,59.58
+Winter Wyvern,Sacred Arrow,52.08
+Alchemist,Blink,54.58
+Elder Dragon Form,Bloodlust,48.75
+Troll Warlord,Guardian Sprint,52.5
+Axe,Uproar,53.75
+Skywrath Mage,Aftershock,49.37
+Maledict,Sonic Wave,46.03
+Razor,Greater Bash,51.88
+Medusa,Refraction,45.19
+Brain Sap,Maledict,51.46
+Ravage,Tombstone,52.72
+Reactive Tazer,Bodyguard,55.65
+Meat Hook,Rocket Barrage,52.72
+Earth Spike,Sonic Wave,54.39
+Invoker,Fury Swipes,44.77
+Heartstopper Aura,Ion Shell,52.3
+Pulverize,Counter Helix,48.12
+Phantom Lancer,Great Cleave,43.93
+Rupture,Vengeance Aura,53.14
+Reactive Tazer,Strafe,55.65
+Saltwater Shiv,Chemical Rage,46.44
+Disruptor,Lucent Beam,42.26
+Drow Ranger,Haunt,66.95
+Sniper,Spectral Dagger,61.92
+Torrent,Wraithfire Blast,58.58
+Viper,Nightmare,44.35
+Void Spirit,Lunar Orbit,53.97
+Tree Grab,Insatiable Hunger,50.63
+Arc Warden,Conjure Image,51.05
+Shadow Fiend,Dream Coil,61.92
+Blade Fury,Exorcism,55.23
+Snapfire,Arc Lightning,54.39
+Dazzle,Glaives of Wisdom,54.81
+Disruptor,Wraithfire Blast,48.54
+Clinkz,Nightmare,39.33
+Undying,Avalanche,51.88
+Undying,Arena Of Blood,52.3
+Ghoul Frenzy,Moonlight Shadow,50.63
+Counter Helix,Rot,54.39
+Uproar,Pulse Nova,59.83
+Meat Hook,Reaper's Scythe,46.44
+Crypt Swarm,Reaper's Scythe,51.88
+Lone Druid,Wyrm's Wrath,41.42
+Visage,Infernal Blade,48.54
+Void Spirit,Meat Hook,51.46
+Leshrac,Aftershock,60.67
+Solar Guardian,Celestial Hammer,51.88
+Luna,Wyrm's Wrath,55.65
+Grimstroke,Gush,54.39
+Rubick,Paralyzing Cask,48.12
+Laguna Blade,Gush,46.03
+Mars,Flesh Golem,56.49
+Tusk,Slithereen Crush,57.74
+Brain Sap,Chain Frost,60.67
+Lich,Rearm,33.89
+Pugna,Poison Sting,60.67
+Mind Flare,Decrepify,49.37
+Faceless Void,Empower,59.83
+Sniper,Enrage,60.67
+Silencer,Track,48.54
+Rearm,Diabolic Edict,45.61
+Ogre Magi,Hunter in the Night,55.65
+Tidehunter,Epicenter,61.51
+Pugna,Upheaval,43.1
+Astral Spirit,Grow,46.86
+Toss,Time Walk,46.86
+Ancient Apparition,Elder Dragon Form,51.46
+Tusk,Rot,56.9
+Oracle,Proximity Mines,50.63
+Clinkz,Wyrm's Wrath,47.28
+Medusa,Headshot,51.88
+Bloodseeker,Lunar Orbit,59.83
+Mana Break,Shackleshot,40.59
+Leap,Phase Shift,60.67
+Sand Storm,Heartstopper Aura,57.56
+Cloak and Dagger,Fireblast,55.04
+Void Spirit,Blink,50.0
+Omniknight,Great Cleave,50.42
+Nature's Prophet,Leap,55.88
+Repel,Great Cleave,44.12
+Invoker,Marksmanship,40.34
+Omniknight,Life Break,49.58
+Omniknight,Lunar Orbit,53.36
+Jakiro,Greater Bash,48.32
+Refraction,Moon Glaives,60.5
+Bane,Sacred Arrow,54.2
+Berserker's Call,Rot,57.98
+Elder Titan,Anchor Smash,46.22
+Crypt Swarm,Thundergod's Wrath,47.06
+Noxious Plague,Frostbite,56.72
+Fissure,Ravage,54.62
+Sniper,Poison Attack,63.45
+Earth Spirit,Uproar,46.22
+Tusk,Blink,58.4
+Finger of Death,Vacuum,44.12
+Avalanche,Death Ward,57.14
+Ogre Magi,Epicenter,53.78
+Fiend's Grip,Blood Rite,52.52
+Blood Rite,Storm Hammer,58.4
+Techies,Juxtapose,57.98
+Wild Axes,Lucent Beam,47.9
+Warlock,Assassinate,52.52
+Morphling,Illusory Orb,44.12
+Terrorblade,Fiery Soul,53.36
+Abaddon,Vengeance Aura,55.88
+Phantom Lancer,Omnislash,41.18
+Lifestealer,Berserker's Call,53.36
+Legion Commander,Waveform,49.58
+Burning Spear,Overpower,45.8
+Shrapnel,Fatal Bonds,49.16
+Sniper,Unknown Ability #1520,52.52
+Queen of Pain,Time Lock,48.74
+Black Hole,Split Earth,48.74
+Void Spirit,Great Cleave,43.28
+Rot,Berserker's Blood,62.18
+Muerta,Chaos Strike,49.58
+Dark Seer,Sticky Napalm,50.0
+Timbersaw,Retaliate,48.32
+Leshrac,Cloak and Dagger,65.55
+Troll Warlord,Mortal Strike,42.02
+Brain Sap,Laguna Blade,40.76
+Death Prophet,Hammer of Purity,61.34
+Tinker,Homing Missile,50.0
+Mind Flare,Shuriken Toss,47.06
+Sven,Lunar Orbit,57.38
+Infest,Devour,45.57
+Bodyguard,Dispose,48.1
+Rubick,Ice Path,63.29
+Rearm,Rocket Barrage,46.84
+Legion Commander,Snowball,50.21
+Nyx Assassin,Magic Missile,49.79
+Morphling,Ghoul Frenzy,61.6
+Omniknight,Thirst,50.63
+Tinker,Rocket Flare,41.77
+Batrider,Static Link,48.52
+Skywrath Mage,Starstorm,44.73
+Pudge,Slithereen Crush,53.16
+Nature's Prophet,Entangle,41.35
+Focus Fire Facet,Incapacitating Bite,47.68
+Earth Spike,Shackles,54.43
+Nightmare,Skeleton Walk,40.08
+Queen of Pain,Burning Spear,47.68
+Fiend's Grip,Frostbite,54.43

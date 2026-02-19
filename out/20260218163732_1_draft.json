@@ -1,0 +1,438 @@
+{
+  "source_image": "C:\\Program Files (x86)\\Steam\\userdata\\59046080\\760\\remote\\570\\screenshots\\20260218163732_1.jpg",
+  "ultimates": [
+    {
+      "cell": "Ultimate1",
+      "name": "ravage",
+      "conf": 0.9998739957809448
+    },
+    {
+      "cell": "Ultimate2",
+      "name": "coup_de_grace",
+      "conf": 0.9999973773956299
+    },
+    {
+      "cell": "Ultimate3",
+      "name": "fiend_s_gate",
+      "conf": 0.9999872446060181
+    },
+    {
+      "cell": "Ultimate4",
+      "name": "supernova",
+      "conf": 0.9999841451644897
+    },
+    {
+      "cell": "Ultimate5",
+      "name": "call_down",
+      "conf": 0.9999538660049438
+    },
+    {
+      "cell": "Ultimate6",
+      "name": "warpath",
+      "conf": 0.9999880790710449
+    },
+    {
+      "cell": "Ultimate7",
+      "name": "pulverize",
+      "conf": 0.8609990477561951
+    },
+    {
+      "cell": "Ultimate8",
+      "name": "arena_of_blood",
+      "conf": 0.9999394416809082
+    },
+    {
+      "cell": "Ultimate9",
+      "name": "infest",
+      "conf": 0.9999920129776001
+    },
+    {
+      "cell": "Ultimate10",
+      "name": "chaotic_offering",
+      "conf": 0.9999970197677612
+    },
+    {
+      "cell": "Ultimate11",
+      "name": "dismember",
+      "conf": 0.9998993873596191
+    },
+    {
+      "cell": "Ultimate12",
+      "name": "mana_void",
+      "conf": 0.9999326467514038
+    }
+  ],
+  "heroes": [
+    {
+      "cell": "Hero1",
+      "name": "tidehunter",
+      "conf": 0.8348669409751892
+    },
+    {
+      "cell": "Hero2",
+      "name": "bristleback",
+      "conf": 0.8335918188095093
+    },
+    {
+      "cell": "Hero3",
+      "name": "phantom_assassin",
+      "conf": 0.5042140483856201
+    },
+    {
+      "cell": "Hero4",
+      "name": "gyrocopter",
+      "conf": 0.9073760509490967
+    },
+    {
+      "cell": "Hero5",
+      "name": "underlord",
+      "conf": 0.7301369905471802
+    },
+    {
+      "cell": "Hero6",
+      "name": "phoenix",
+      "conf": 0.43274959921836853
+    },
+    {
+      "cell": "Hero7",
+      "name": "primal_beast",
+      "conf": 0.9125027060508728
+    },
+    {
+      "cell": "Hero8",
+      "name": "anti-mage",
+      "conf": 0.8771985173225403
+    },
+    {
+      "cell": "Hero9",
+      "name": "mars",
+      "conf": 0.31960970163345337
+    },
+    {
+      "cell": "Hero10",
+      "name": "pudge",
+      "conf": 0.7415523529052734
+    },
+    {
+      "cell": "Hero11",
+      "name": "lifestealer",
+      "conf": 0.8777799606323242
+    },
+    {
+      "cell": "Hero12",
+      "name": "unknown",
+      "conf": 0.2075829952955246
+    }
+  ],
+  "abilities": [
+    {
+      "cell": "Ability1",
+      "name": "gush",
+      "conf": 0.9886687397956848
+    },
+    {
+      "cell": "Ability2",
+      "name": "kraken_shell",
+      "conf": 0.9999645948410034
+    },
+    {
+      "cell": "Ability3",
+      "name": "anchor_smash",
+      "conf": 0.9995304346084595
+    },
+    {
+      "cell": "Ability4",
+      "name": "viscous_nasal_goo",
+      "conf": 0.9999469518661499
+    },
+    {
+      "cell": "Ability5",
+      "name": "quill_spray",
+      "conf": 0.9994310736656189
+    },
+    {
+      "cell": "Ability6",
+      "name": "bristleback_ability",
+      "conf": 0.999927282333374
+    },
+    {
+      "cell": "Ability7",
+      "name": "stifling_dagger",
+      "conf": 0.9999576807022095
+    },
+    {
+      "cell": "Ability8",
+      "name": "phantom_strike",
+      "conf": 0.9996663331985474
+    },
+    {
+      "cell": "Ability9",
+      "name": "silent_as_the_grave",
+      "conf": 0.5123856067657471
+    },
+    {
+      "cell": "Ability10",
+      "name": "rocket_barrage",
+      "conf": 0.9999918937683105
+    },
+    {
+      "cell": "Ability11",
+      "name": "homing_missile",
+      "conf": 0.9997714161872864
+    },
+    {
+      "cell": "Ability12",
+      "name": "flak_cannon",
+      "conf": 0.9965422749519348
+    },
+    {
+      "cell": "Ability13",
+      "name": "firestorm",
+      "conf": 0.9996901750564575
+    },
+    {
+      "cell": "Ability14",
+      "name": "pit_of_malice",
+      "conf": 0.9999902248382568
+    },
+    {
+      "cell": "Ability15",
+      "name": "atrophy_aura",
+      "conf": 0.9999585151672363
+    },
+    {
+      "cell": "Ability16",
+      "name": "icarus_dive",
+      "conf": 0.9999991655349731
+    },
+    {
+      "cell": "Ability17",
+      "name": "fire_spirits",
+      "conf": 0.9999973773956299
+    },
+    {
+      "cell": "Ability18",
+      "name": "sun_ray",
+      "conf": 0.9999734163284302
+    },
+    {
+      "cell": "Ability19",
+      "name": "onslaught",
+      "conf": 0.9998348951339722
+    },
+    {
+      "cell": "Ability20",
+      "name": "trample",
+      "conf": 0.9996238946914673
+    },
+    {
+      "cell": "Ability21",
+      "name": "uproar_max",
+      "conf": 0.9999281167984009
+    },
+    {
+      "cell": "Ability22",
+      "name": "mana_break",
+      "conf": 0.9999932050704956
+    },
+    {
+      "cell": "Ability23",
+      "name": "blink_anti_mage",
+      "conf": 0.9996063113212585
+    },
+    {
+      "cell": "Ability24",
+      "name": "counterspell",
+      "conf": 0.9999270439147949
+    },
+    {
+      "cell": "Ability25",
+      "name": "spear_of_mars",
+      "conf": 0.9954097867012024
+    },
+    {
+      "cell": "Ability26",
+      "name": "god_s_rebuke",
+      "conf": 0.9999744892120361
+    },
+    {
+      "cell": "Ability27",
+      "name": "bulwark",
+      "conf": 0.9784987568855286
+    },
+    {
+      "cell": "Ability28",
+      "name": "meat_hook",
+      "conf": 0.9986245632171631
+    },
+    {
+      "cell": "Ability29",
+      "name": "rot",
+      "conf": 0.9084530472755432
+    },
+    {
+      "cell": "Ability30",
+      "name": "flesh_heap",
+      "conf": 0.9990450739860535
+    },
+    {
+      "cell": "Ability31",
+      "name": "rage",
+      "conf": 0.99946528673172
+    },
+    {
+      "cell": "Ability32",
+      "name": "open_wounds",
+      "conf": 0.9999712705612183
+    },
+    {
+      "cell": "Ability33",
+      "name": "ghoul_frenzy",
+      "conf": 0.9999972581863403
+    },
+    {
+      "cell": "Ability34",
+      "name": "fatal_bonds",
+      "conf": 0.9973214268684387
+    },
+    {
+      "cell": "Ability35",
+      "name": "shadow_word",
+      "conf": 0.9999284744262695
+    },
+    {
+      "cell": "Ability36",
+      "name": "upheaval",
+      "conf": 0.9998676776885986
+    }
+  ],
+  "warnings": [],
+  "hero_vec": [
+    "tidehunter",
+    "bristleback",
+    "phantom_assassin",
+    "gyrocopter",
+    "underlord",
+    "phoenix",
+    "primal_beast",
+    "anti-mage",
+    "mars",
+    "pudge",
+    "lifestealer",
+    "unknown"
+  ],
+  "ultimate_vec": [
+    "ravage",
+    "coup_de_grace",
+    "fiend_s_gate",
+    "supernova",
+    "call_down",
+    "warpath",
+    "pulverize",
+    "arena_of_blood",
+    "infest",
+    "chaotic_offering",
+    "dismember",
+    "mana_void"
+  ],
+  "ability_vec": [
+    "gush",
+    "kraken_shell",
+    "anchor_smash",
+    "viscous_nasal_goo",
+    "quill_spray",
+    "bristleback_ability",
+    "stifling_dagger",
+    "phantom_strike",
+    "silent_as_the_grave",
+    "rocket_barrage",
+    "homing_missile",
+    "flak_cannon",
+    "firestorm",
+    "pit_of_malice",
+    "atrophy_aura",
+    "icarus_dive",
+    "fire_spirits",
+    "sun_ray",
+    "onslaught",
+    "trample",
+    "uproar_max",
+    "mana_break",
+    "blink_anti_mage",
+    "counterspell",
+    "spear_of_mars",
+    "god_s_rebuke",
+    "bulwark",
+    "meat_hook",
+    "rot",
+    "flesh_heap",
+    "rage",
+    "open_wounds",
+    "ghoul_frenzy",
+    "fatal_bonds",
+    "shadow_word",
+    "upheaval"
+  ],
+  "all_picks_vec": [
+    "tidehunter",
+    "bristleback",
+    "phantom_assassin",
+    "gyrocopter",
+    "underlord",
+    "phoenix",
+    "primal_beast",
+    "anti-mage",
+    "mars",
+    "pudge",
+    "lifestealer",
+    "unknown",
+    "ravage",
+    "coup_de_grace",
+    "fiend_s_gate",
+    "supernova",
+    "call_down",
+    "warpath",
+    "pulverize",
+    "arena_of_blood",
+    "infest",
+    "chaotic_offering",
+    "dismember",
+    "mana_void",
+    "gush",
+    "kraken_shell",
+    "anchor_smash",
+    "viscous_nasal_goo",
+    "quill_spray",
+    "bristleback_ability",
+    "stifling_dagger",
+    "phantom_strike",
+    "silent_as_the_grave",
+    "rocket_barrage",
+    "homing_missile",
+    "flak_cannon",
+    "firestorm",
+    "pit_of_malice",
+    "atrophy_aura",
+    "icarus_dive",
+    "fire_spirits",
+    "sun_ray",
+    "onslaught",
+    "trample",
+    "uproar_max",
+    "mana_break",
+    "blink_anti_mage",
+    "counterspell",
+    "spear_of_mars",
+    "god_s_rebuke",
+    "bulwark",
+    "meat_hook",
+    "rot",
+    "flesh_heap",
+    "rage",
+    "open_wounds",
+    "ghoul_frenzy",
+    "fatal_bonds",
+    "shadow_word",
+    "upheaval"
+  ]
+}

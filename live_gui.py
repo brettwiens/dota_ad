@@ -1,3 +1,4 @@
+# live_gui.py
 from __future__ import annotations
 
 import re
@@ -29,8 +30,8 @@ IMAGE_EXTS = {".jpg", ".jpeg"}
 HERO_ICON_DIR = BASE_DIR / "icons" / "heroes"
 ABILITY_ICON_DIR = BASE_DIR / "icons" / "abilities"
 
-TOP_PAIRS = 25
-ICON_SIZE = 28
+TOP_PAIRS = 60
+ICON_SIZE = 36
 
 try:
     from PIL import Image, ImageTk
@@ -117,8 +118,52 @@ def rank_by_weight(
 
 
 def available_ability_norm_set(infer_out: dict) -> set:
-    vals = infer_out.get("ultimate_vec", []) + infer_out.get("ability_vec", [])
-    vals = [x for x in vals if x and x != "unknown"]
+    vals = []
+
+    # Prefer the actual inferred lists (stable)
+    for item in (infer_out.get("ultimates") or []):
+        n = item.get("name")
+        if n and n != "unknown":
+            vals.append(n)
+
+    for item in (infer_out.get("abilities") or []):
+        n = item.get("name")
+        if n and n != "unknown":
+            vals.append(n)
+
+    # Fall back to vecs if they exist
+    if not vals:
+        vals = (infer_out.get("ultimate_vec") or []) + (infer_out.get("ability_vec") or [])
+        vals = [x for x in vals if x and x != "unknown"]
+
+    return {normalize_name(x) for x in vals}
+
+def available_entity_norm_set(infer_out: dict) -> set:
+    vals = []
+
+    # Heroes
+    for item in (infer_out.get("heroes") or []):
+        n = item.get("name")
+        if n and n != "unknown":
+            vals.append(n)
+
+    # Ultimates
+    for item in (infer_out.get("ultimates") or []):
+        n = item.get("name")
+        if n and n != "unknown":
+            vals.append(n)
+
+    # Abilities
+    for item in (infer_out.get("abilities") or []):
+        n = item.get("name")
+        if n and n != "unknown":
+            vals.append(n)
+
+    # Fall back to vecs if they exist
+    if not vals:
+        vals = (infer_out.get("hero_vec") or []) + (infer_out.get("ultimate_vec") or []) + (infer_out.get("ability_vec") or [])
+        vals = [x for x in vals if x and x != "unknown"]
+
     return {normalize_name(x) for x in vals}
 
 
@@ -126,7 +171,8 @@ def outstanding_pairs(infer_out: dict, pairs_source: Optional[List[dict]]) -> Li
     if not pairs_source:
         return []
 
-    norm_set = available_ability_norm_set(infer_out)
+    # norm_set = available_ability_norm_set(infer_out)
+    norm_set = available_entity_norm_set(infer_out)
 
     out = []
     for p in pairs_source:
@@ -296,6 +342,8 @@ class LiveDraftGUI(tk.Tk):
         self.pairs_loaded = False
         self.pairs_loading = False
 
+        self._pairs_pool_norms = set()
+
         try:
             self.status.set("Loading WR ALL ability win rates...")
             self.update_idletasks()
@@ -305,11 +353,8 @@ class LiveDraftGUI(tk.Tk):
             self.update_idletasks()
             self.hero_weights = load_windrun_hero_weights()
 
-            print("[debug] hero_weights loaded:", len(self.hero_weights))
-            print("[debug] sample hero keys:", list(self.hero_weights.keys())[:10])
-
-
-            self._start_pairs_load()
+            # print("[debug] hero_weights loaded:", len(self.hero_weights))
+            # print("[debug] sample hero keys:", list(self.hero_weights.keys())[:10])
 
             self.status.set(
                 f"Windrun loaded: abilities={len(self.ability_weights)} heroes={len(self.hero_weights)}"
@@ -336,20 +381,26 @@ class LiveDraftGUI(tk.Tk):
             foreground=[("selected", "#000000")],
         )
 
-    def _start_pairs_load(self):
+    def _start_pairs_load(self, infer_out: dict):
         if self.pairs_loading or self.pairs_loaded:
+            return
+
+        # pool_norms = available_ability_norm_set(infer_out)
+        pool_norms = available_entity_norm_set(infer_out)
+        if not pool_norms:
             return
 
         self.pairs_loading = True
         self.pairs_box.delete("1.0", "end")
-        self.pairs_box.insert("end", "Loading ability pairs in background...\n")
+        self.pairs_box.insert("end", "Loading ability pairs for current pool...\n")
 
         def worker():
             try:
-                pairs = load_windrun_ability_pairs()
-                self.after(0, lambda: self._pairs_loaded_ok(pairs))
+                # NEW: pass pool to collector so it filters before returning
+                pairs = load_windrun_ability_pairs(pool=pool_norms, timeout=60, headless=True)
+                self.after(0, lambda pairs=pairs: self._pairs_loaded_ok(pairs))
             except Exception as e:
-                self.after(0, lambda: self._pairs_loaded_fail(e))
+                self.after(0, lambda e=e: self._pairs_loaded_fail(e))
 
         threading.Thread(target=worker, daemon=True).start()
 
@@ -374,6 +425,17 @@ class LiveDraftGUI(tk.Tk):
         try:
             img_path = latest_image_in_folder(SCREENSHOT_DIR)
             infer_out = infer_one(str(img_path), verbose=False)
+
+            current_pool = available_ability_norm_set(infer_out)
+
+            # Reload pairs if pool changed (or if never loaded)
+            if (not self.pairs_loading) and ((not self.pairs_loaded) or (current_pool != self._pairs_pool_norms)):
+                # Reset state so we can reload
+                self.pairs_loaded = False
+                self.pairs_cache = []
+                self._pairs_pool_norms = set(current_pool)
+                self._start_pairs_load(infer_out)
+
 
             picks = build_picks(infer_out)
             ranked = rank_by_weight(picks, self.ability_weights, self.hero_weights)
