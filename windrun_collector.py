@@ -165,15 +165,6 @@ def _fetch_table_html(url: str, *, timeout: int = 45, headers: Optional[Dict[str
 
 
 def _as_records(payload: Any) -> List[dict]:
-    """
-    Convert various JSON shapes to a list[dict].
-
-    Handles:
-      - list[dict]
-      - dict with 'data' / 'rows' / 'results'
-      - dict with nested dict containing those keys
-      - dict that itself is a single record
-    """
     if payload is None:
         return []
 
@@ -260,7 +251,6 @@ def load_windrun_ability_weights(*, timeout: int = 45) -> Dict[str, float]:
             if out:
                 return out
 
-    # HTML fallback
     headers, rows = _fetch_table_html(ABILITY_WEIGHTS_URL, timeout=timeout)
     headers_l = [h.strip().lower() for h in headers]
 
@@ -294,10 +284,6 @@ def load_windrun_ability_weights(*, timeout: int = 45) -> Dict[str, float]:
 # Public API: hero weights
 # --------------------------------------------------------------------------------------
 def _parse_hero_wr_from_ssr_html(html: str) -> Dict[str, float]:
-    """
-    Parse Windrun SSR hero page (no JSON, maybe no usable <table>)
-    by reading anchor + percent text.
-    """
     soup = BeautifulSoup(html, "html.parser")
     out: Dict[str, float] = {}
 
@@ -325,20 +311,11 @@ def _parse_hero_wr_from_ssr_html(html: str) -> Dict[str, float]:
 
 
 def load_windrun_hero_weights(*, timeout: int = 45) -> Dict[str, float]:
-    """
-    Load hero win rates from Windrun.
-
-    Strategy:
-    1) Try JSON.
-    2) Try HTML <table>.
-    3) Fall back to SSR parse (anchors + nearby percent).
-    """
     payload = _fetch_json(HERO_WEIGHTS_URL, timeout=timeout)
     recs = _as_records(payload)
 
     out: Dict[str, float] = {}
 
-    # 1) JSON
     if recs:
         sample_keys = set().union(*(r.keys() for r in recs[:10]))
 
@@ -374,7 +351,6 @@ def load_windrun_hero_weights(*, timeout: int = 45) -> Dict[str, float]:
             if out:
                 return out
 
-    # 2) HTML table
     try:
         headers, rows = _fetch_table_html(HERO_WEIGHTS_URL, timeout=timeout)
         headers_l = [h.strip().lower() for h in headers]
@@ -411,7 +387,6 @@ def load_windrun_hero_weights(*, timeout: int = 45) -> Dict[str, float]:
     except Exception:
         pass
 
-    # 3) SSR parse
     r = _fetch(HERO_WEIGHTS_URL, timeout=timeout, headers=_browser_headers())
     out = _parse_hero_wr_from_ssr_html(r.text)
     if not out:
@@ -423,14 +398,6 @@ def load_windrun_hero_weights(*, timeout: int = 45) -> Dict[str, float]:
 # Ability static mapping
 # --------------------------------------------------------------------------------------
 def _build_static_ability_maps(*, timeout: int = 45) -> Tuple[Dict[str, int], Dict[int, str]]:
-    """
-    Returns:
-      norm_to_valve_id: { "ball_lightning": 5101, ... }
-      valve_id_to_name: { 5101: "Ball Lightning", ... }
-
-    Confirmed payload shape (yours):
-      { "data": [ { englishName, shortName, tooltip, valveId, ... }, ... ] }
-    """
     payload = _fetch_json(STATIC_ABILITIES_URL, timeout=timeout)
     if not isinstance(payload, dict) or "data" not in payload or not isinstance(payload.get("data"), list):
         raise RuntimeError("Static abilities endpoint returned unexpected JSON shape (expected dict with key 'data' list).")
@@ -614,59 +581,63 @@ def _try_pair_api_candidates(*, timeout: int = 45) -> List[dict]:
 
 
 # --------------------------------------------------------------------------------------
-# Public API: ability pairs (NEW approach with legacy shape)
+# Public API: ability pairs (CACHED full download + optional in-memory filter)
 # --------------------------------------------------------------------------------------
+_PAIR_CACHE_FULL: Optional[List[dict]] = None
+
+
 def load_windrun_ability_pairs(
     pool: Optional[Iterable[str]] = None,
     *,
     timeout: int = 60,
     headless: bool = True,
+    force_reload: bool = False,
 ) -> List[dict]:
     """
-    Loads ability pairs using the Playwright scraper, then adapts results into the
-    legacy structure that live_gui.py already expects.
+    One-time download of the full pairs table (via Playwright), cached in memory.
+    Later calls optionally filter to a pool in Python without re-hitting Windrun.
 
     Returns list[dict] with keys:
       a_raw, b_raw, a_norm, b_norm, score
-
-    pool:
-      Optional iterable of already-normalised ability keys (preferred), or raw names.
-      If provided, only pairs where both a_norm and b_norm are in pool are kept.
     """
+    global _PAIR_CACHE_FULL
+
     pool_set: Optional[Set[str]] = None
     if pool is not None:
         pool_set = {norm_with_alias(x) for x in pool if x}
 
-    raw_pairs = get_windrun_ability_pairs(headless=headless)
+    if force_reload or _PAIR_CACHE_FULL is None:
+        raw_pairs = get_windrun_ability_pairs(headless=headless)
 
-    out: List[dict] = []
-    for r in raw_pairs:
-        a_raw = str(r.get("ability_1") or "").strip()
-        b_raw = str(r.get("ability_2") or "").strip()
-        score = r.get("win_rate")
+        out: List[dict] = []
+        for r in raw_pairs:
+            a_raw = str(r.get("ability_1") or "").strip()
+            b_raw = str(r.get("ability_2") or "").strip()
+            score = r.get("win_rate")
 
-        if not a_raw or not b_raw:
-            continue
-
-        a_norm = norm_with_alias(a_raw)
-        b_norm = norm_with_alias(b_raw)
-
-        if pool_set is not None:
-            if a_norm not in pool_set or b_norm not in pool_set:
+            if not a_raw or not b_raw:
                 continue
 
-        sc = _to_float(score)
-        out.append(
-            {
-                "a_raw": a_raw,
-                "b_raw": b_raw,
-                "a_norm": a_norm,
-                "b_norm": b_norm,
-                "score": sc,
-            }
-        )
+            a_norm = norm_with_alias(a_raw)
+            b_norm = norm_with_alias(b_raw)
+            sc = _to_float(score)
 
-    return out
+            out.append(
+                {
+                    "a_raw": a_raw,
+                    "b_raw": b_raw,
+                    "a_norm": a_norm,
+                    "b_norm": b_norm,
+                    "score": sc,
+                }
+            )
+
+        _PAIR_CACHE_FULL = out
+
+    if pool_set is None:
+        return list(_PAIR_CACHE_FULL)
+
+    return [p for p in _PAIR_CACHE_FULL if p.get("a_norm") in pool_set and p.get("b_norm") in pool_set]
 
 
 # Convenience alias (legacy name in your codebase)

@@ -117,27 +117,6 @@ def rank_by_weight(
     return out
 
 
-def available_ability_norm_set(infer_out: dict) -> set:
-    vals = []
-
-    # Prefer the actual inferred lists (stable)
-    for item in (infer_out.get("ultimates") or []):
-        n = item.get("name")
-        if n and n != "unknown":
-            vals.append(n)
-
-    for item in (infer_out.get("abilities") or []):
-        n = item.get("name")
-        if n and n != "unknown":
-            vals.append(n)
-
-    # Fall back to vecs if they exist
-    if not vals:
-        vals = (infer_out.get("ultimate_vec") or []) + (infer_out.get("ability_vec") or [])
-        vals = [x for x in vals if x and x != "unknown"]
-
-    return {normalize_name(x) for x in vals}
-
 def available_entity_norm_set(infer_out: dict) -> set:
     vals = []
 
@@ -171,7 +150,6 @@ def outstanding_pairs(infer_out: dict, pairs_source: Optional[List[dict]]) -> Li
     if not pairs_source:
         return []
 
-    # norm_set = available_ability_norm_set(infer_out)
     norm_set = available_entity_norm_set(infer_out)
 
     out = []
@@ -279,7 +257,7 @@ class LiveDraftGUI(tk.Tk):
 
         ttk.Label(left, text="Ranked Picks").pack(anchor="w")
 
-        cols = ("rank", "weight", "conf", "cell", "pair")
+        cols = ("rank", "weight", "cell", "pair")
 
         grid = ttk.Frame(left)
         grid.pack(fill="both", expand=True)
@@ -289,43 +267,71 @@ class LiveDraftGUI(tk.Tk):
         grid.columnconfigure(2, weight=1, uniform="x")
         grid.rowconfigure(1, weight=1)
 
-        ttk.Label(grid, text="Heroes").grid(row=0, column=0, sticky="w")
-        ttk.Label(grid, text="Ultimates").grid(row=0, column=1, sticky="w", padx=(8, 0))
-        ttk.Label(grid, text="Abilities").grid(row=0, column=2, sticky="w", padx=(8, 0))
+        ttk.Label(grid, text="Heroes", style="HeroHeader.TLabel").grid(
+            row=0, column=0, sticky="w"
+        )
+
+        ttk.Label(grid, text="Ultimates", style="UltimateHeader.TLabel").grid(
+            row=0, column=1, sticky="w", padx=(8, 0)
+        )
+
+        ttk.Label(grid, text="Abilities", style="AbilityHeader.TLabel").grid(
+            row=0, column=2, sticky="w", padx=(8, 0)
+        )
+
 
         def make_tree(parent):
+            container = ttk.Frame(parent)
+
             t = ttk.Treeview(
-                parent,
+                container,
                 columns=cols,
                 show=("tree", "headings"),
                 height=25,
                 style="Striped.Treeview",
             )
+
+            xbar = ttk.Scrollbar(container, orient="horizontal", command=t.xview)
+            t.configure(xscrollcommand=xbar.set)
+
             t.heading("#0", text="Pick")
             t.heading("rank", text="#")
             t.heading("weight", text="WR")
-            t.heading("conf", text="Conf")
             t.heading("cell", text="Cell")
             t.heading("pair", text="Best Pair")
 
             t.column("#0", width=220)
             t.column("rank", width=36, anchor="center")
             t.column("weight", width=70, anchor="e")
-            t.column("conf", width=60, anchor="e")
             t.column("cell", width=60)
-            t.column("pair", width=180)
+            t.column("pair", width=260)
 
             t.tag_configure("odd", background="#f4f4f4")
             t.tag_configure("even", background="#ffffff")
-            return t
 
-        self.hero_tree = make_tree(grid)
-        self.ult_tree = make_tree(grid)
-        self.abil_tree = make_tree(grid)
+            t.tag_configure("hero_fg", foreground="#8B0000")      # dark red
+            t.tag_configure("ultimate_fg", foreground="#003366")  # dark blue
+            t.tag_configure("ability_fg", foreground="#0B6623")   # dark green
 
-        self.hero_tree.grid(row=1, column=0, sticky="nsew")
-        self.ult_tree.grid(row=1, column=1, sticky="nsew", padx=(8, 0))
-        self.abil_tree.grid(row=1, column=2, sticky="nsew", padx=(8, 0))
+
+            # layout
+            container.rowconfigure(0, weight=1)
+            container.columnconfigure(0, weight=1)
+            t.grid(row=0, column=0, sticky="nsew")
+            xbar.grid(row=1, column=0, sticky="ew")
+
+            # return both so caller can grid the container but still access the tree
+            return container, t
+
+
+        hero_frame, self.hero_tree = make_tree(grid)
+        ult_frame, self.ult_tree = make_tree(grid)
+        abil_frame, self.abil_tree = make_tree(grid)
+
+        hero_frame.grid(row=1, column=0, sticky="nsew")
+        ult_frame.grid(row=1, column=1, sticky="nsew", padx=(8, 0))
+        abil_frame.grid(row=1, column=2, sticky="nsew", padx=(8, 0))
+
 
         ttk.Label(right, text="Outstanding Ability Pairs").pack(anchor="w")
         self.pairs_box = tk.Text(right, font=("Consolas", 10))
@@ -342,6 +348,7 @@ class LiveDraftGUI(tk.Tk):
         self.pairs_loaded = False
         self.pairs_loading = False
 
+        # Kept, but no longer used for triggering reloads (pairs are cached globally now)
         self._pairs_pool_norms = set()
 
         try:
@@ -352,9 +359,6 @@ class LiveDraftGUI(tk.Tk):
             self.status.set("Loading hero win rates...")
             self.update_idletasks()
             self.hero_weights = load_windrun_hero_weights()
-
-            # print("[debug] hero_weights loaded:", len(self.hero_weights))
-            # print("[debug] sample hero keys:", list(self.hero_weights.keys())[:10])
 
             self.status.set(
                 f"Windrun loaded: abilities={len(self.ability_weights)} heroes={len(self.hero_weights)}"
@@ -375,6 +379,25 @@ class LiveDraftGUI(tk.Tk):
             pass
 
         style.configure("Striped.Treeview", rowheight=32)
+        # Larger coloured section headers
+        style.configure(
+            "HeroHeader.TLabel",
+            font=("Segoe UI", 14, "bold"),
+            foreground="#8B0000",   # dark red
+        )
+
+        style.configure(
+            "UltimateHeader.TLabel",
+            font=("Segoe UI", 14, "bold"),
+            foreground="#003366",   # dark blue
+        )
+
+        style.configure(
+            "AbilityHeader.TLabel",
+            font=("Segoe UI", 14, "bold"),
+            foreground="#0B6623",   # dark green
+        )
+
         style.map(
             "Striped.Treeview",
             background=[("selected", "#cfe8ff")],
@@ -385,19 +408,20 @@ class LiveDraftGUI(tk.Tk):
         if self.pairs_loading or self.pairs_loaded:
             return
 
-        # pool_norms = available_ability_norm_set(infer_out)
+        # We keep this just to avoid starting the load before we have *any* entities,
+        # but we no longer use it to filter the download.
         pool_norms = available_entity_norm_set(infer_out)
         if not pool_norms:
             return
 
         self.pairs_loading = True
         self.pairs_box.delete("1.0", "end")
-        self.pairs_box.insert("end", "Loading ability pairs for current pool...\n")
+        self.pairs_box.insert("end", "Loading full ability pairs table (one-time)...\n")
 
         def worker():
             try:
-                # NEW: pass pool to collector so it filters before returning
-                pairs = load_windrun_ability_pairs(pool=pool_norms, timeout=60, headless=True)
+                # IMPORTANT: no pool filtering here; collector will cache full dataset
+                pairs = load_windrun_ability_pairs(timeout=60, headless=True)
                 self.after(0, lambda pairs=pairs: self._pairs_loaded_ok(pairs))
             except Exception as e:
                 self.after(0, lambda e=e: self._pairs_loaded_fail(e))
@@ -426,16 +450,9 @@ class LiveDraftGUI(tk.Tk):
             img_path = latest_image_in_folder(SCREENSHOT_DIR)
             infer_out = infer_one(str(img_path), verbose=False)
 
-            current_pool = available_ability_norm_set(infer_out)
-
-            # Reload pairs if pool changed (or if never loaded)
-            if (not self.pairs_loading) and ((not self.pairs_loaded) or (current_pool != self._pairs_pool_norms)):
-                # Reset state so we can reload
-                self.pairs_loaded = False
-                self.pairs_cache = []
-                self._pairs_pool_norms = set(current_pool)
+            # One-time load: if pairs aren't loaded yet, start them.
+            if (not self.pairs_loading) and (not self.pairs_loaded):
                 self._start_pairs_load(infer_out)
-
 
             picks = build_picks(infer_out)
             ranked = rank_by_weight(picks, self.ability_weights, self.hero_weights)
@@ -490,25 +507,31 @@ class LiveDraftGUI(tk.Tk):
                 w = row.get("weight")
                 w_txt = "n/a" if w is None else f"{w:.2f}"
 
-                c = row.get("conf")
-                c_txt = "n/a" if c is None else f"{c:.3f}"
-
                 partner = bmap.get(row["name_norm"])
                 pair_txt = ""
                 if partner:
                     p, s = partner
                     pair_txt = f"{p} ({'n/a' if s is None else f'{s:.2f}'})"
 
-                tag = "odd" if (idx % 2 == 1) else "even"
+                row_tag = "odd" if (idx % 2 == 1) else "even"
+
+                # Colour tag based on which tree we are inserting into
+                if tree is self.hero_tree:
+                    colour_tag = "hero_fg"
+                elif tree is self.ult_tree:
+                    colour_tag = "ultimate_fg"
+                else:
+                    colour_tag = "ability_fg"
 
                 tree.insert(
                     parent="",
                     index="end",
                     text=name,
                     image=icon if icon else "",
-                    values=(f"{row['rank']:02d}", w_txt, c_txt, row.get("cell", ""), pair_txt),
-                    tags=(tag,),
+                    values=(f"{row['rank']:02d}", w_txt, row.get("cell", ""), pair_txt),
+                    tags=(row_tag, colour_tag),
                 )
+
 
         insert_rows(self.hero_tree, heroes)
         insert_rows(self.ult_tree, ults)
@@ -516,6 +539,11 @@ class LiveDraftGUI(tk.Tk):
 
     def _render_pairs(self, pairs: List[dict]):
         self.pairs_box.delete("1.0", "end")
+
+        # Configure colour tags once
+        self.pairs_box.tag_configure("hero", foreground="#8B0000")       # dark red
+        self.pairs_box.tag_configure("ultimate", foreground="#003366")   # dark blue
+        self.pairs_box.tag_configure("ability", foreground="#0B6623")    # dark green
 
         if self.pairs_loading:
             self.pairs_box.insert("end", "Loading ability pairs in background...\n")
@@ -529,9 +557,43 @@ class LiveDraftGUI(tk.Tk):
             self.pairs_box.insert("end", "(none)\n")
             return
 
+        # Build a lookup of type by norm name from current ranked list
+        current_types = {}
+        for tree in (self.hero_tree, self.ult_tree, self.abil_tree):
+            for item in tree.get_children():
+                name = tree.item(item)["text"]
+                norm = normalize_name(name)
+                if tree is self.hero_tree:
+                    current_types[norm] = "hero"
+                elif tree is self.ult_tree:
+                    current_types[norm] = "ultimate"
+                else:
+                    current_types[norm] = "ability"
+
         for i, p in enumerate(pairs[:TOP_PAIRS], 1):
             sc = "n/a" if p.get("score") is None else f"{p['score']:.2f}"
-            self.pairs_box.insert("end", f"{i:02d}. {p['a_raw']} + {p['b_raw']}   score={sc}\n")
+
+            a_norm = p["a_norm"]
+            b_norm = p["b_norm"]
+
+            a_type = current_types.get(a_norm, "ability")
+            b_type = current_types.get(b_norm, "ability")
+
+            # Number
+            self.pairs_box.insert("end", f"{i:02d}. ")
+
+            # Ability A (coloured)
+            self.pairs_box.insert("end", p["a_raw"], a_type)
+
+            # Separator
+            self.pairs_box.insert("end", " + ")
+
+            # Ability B (coloured)
+            self.pairs_box.insert("end", p["b_raw"], b_type)
+
+            # Score
+            self.pairs_box.insert("end", f"   {sc}\n")
+
 
     def _render_error(self, e: Exception):
         self.pairs_box.delete("1.0", "end")

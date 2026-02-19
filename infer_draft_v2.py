@@ -122,7 +122,7 @@ USE_BUFFERED_TEMPLATE = True
 
 # Confidence thresholds:
 # If the classifier confidence is below these thresholds, we label the pick as "unknown".
-HERO_MIN_CONF = 0.30
+HERO_MIN_CONF = 0.10
 ABILITY_MIN_CONF = 0.30
 
 

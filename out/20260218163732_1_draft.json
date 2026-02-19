@@ -120,7 +120,7 @@
     },
     {
       "cell": "Hero12",
-      "name": "unknown",
+      "name": "warlock",
       "conf": 0.2075829952955246
     }
   ],
@@ -319,7 +319,7 @@
     "mars",
     "pudge",
     "lifestealer",
-    "unknown"
+    "warlock"
   ],
   "ultimate_vec": [
     "ravage",
@@ -385,7 +385,7 @@
     "mars",
     "pudge",
     "lifestealer",
-    "unknown",
+    "warlock",
     "ravage",
     "coup_de_grace",
     "fiend_s_gate",
