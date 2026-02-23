@@ -1,11 +1,44 @@
 # live_gui.py
 from __future__ import annotations
 
+"""
+Dota AD Live Draft Assistant (Tkinter)
+
+========================================================================================
+INDEXX
+  1.0 Imports + Paths
+  2.0 Infer Loader
+  3.0 Normalisation + Typed Keys
+    3.1 base_norm
+    3.2 typed_key helpers
+    3.3 doom collision helpers (doom vs doom_ability)
+  4.0 Draft Data Builders
+    4.1 latest_image_in_folder
+    4.2 build_picks (typed keys)
+    4.3 ranking (weights)
+  5.0 Selection State (Option A)
+    5.1 state model
+    5.2 apply locks and availability filters
+  6.0 Ability Pairs
+    6.1 resolve pair norms to local typed keys
+    6.2 outstanding_pairs_resolved
+    6.3 best_pair_map
+  7.0 Icons
+  8.0 GUI
+    8.1 layout
+    8.2 context menus (mark me, mark other, clear, lock)
+    8.3 rendering (ranked, pairs, selected lists)
+========================================================================================
+"""
+
+# ======================================================================================
+# TAG: 1.0 Imports + Paths
+# ======================================================================================
 import re
 import traceback
 import threading
 from pathlib import Path
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Tuple
 
 import importlib.util
 import inspect
@@ -35,11 +68,15 @@ ICON_SIZE = 36
 
 try:
     from PIL import Image, ImageTk
+
     PIL_OK = True
 except Exception:
     PIL_OK = False
 
 
+# ======================================================================================
+# TAG: 2.0 Infer Loader
+# ======================================================================================
 def load_infer_one(infer_path: Path):
     if not infer_path.exists():
         raise FileNotFoundError(f"infer file not found: {infer_path}")
@@ -59,6 +96,64 @@ def load_infer_one(infer_path: Path):
 infer_one = load_infer_one(INFER_PATH)
 
 
+# ======================================================================================
+# TAG: 3.0 Normalisation + Typed Keys
+# ======================================================================================
+
+# TAG: 3.1 base_norm
+def base_norm(name: str) -> str:
+    """
+    Base normalisation for display and internal keys.
+    Uses windrun_collector.norm_with_alias (already handles possessive artifacts, aliases, etc).
+    """
+    return normalize_name(name or "")
+
+
+# TAG: 3.2 typed_key helpers
+def typed_key(kind: str, normed: str) -> str:
+    return f"{kind}:{normed}"
+
+
+def split_typed_key(k: str) -> Tuple[str, str]:
+    if ":" in k:
+        a, b = k.split(":", 1)
+        return a, b
+    return "unknown", k
+
+
+def display_from_key(k: str) -> str:
+    """
+    Display name fallback when we only have a typed key.
+    """
+    _, n = split_typed_key(k)
+    return n.replace("_", " ").title()
+
+
+# TAG: 3.3 doom collision helpers (doom vs doom_ability)
+def _variants_for_pair_norm(n: str) -> List[str]:
+    """
+    Equivalent norm variants so doom and doom_ability can match.
+    """
+    n = (n or "").strip()
+    if not n:
+        return []
+    out = [n]
+    if n.endswith("_ability"):
+        out.append(n[: -len("_ability")])
+    else:
+        out.append(n + "_ability")
+    seen = set()
+    uniq = []
+    for x in out:
+        if x and x not in seen:
+            seen.add(x)
+            uniq.append(x)
+    return uniq
+
+
+# ======================================================================================
+# TAG: 4.0 Draft Data Builders
+# ======================================================================================
 def latest_image_in_folder(folder: Path) -> Path:
     files = [p for p in folder.iterdir() if p.is_file() and p.suffix.lower() in IMAGE_EXTS]
     if not files:
@@ -67,26 +162,92 @@ def latest_image_in_folder(folder: Path) -> Path:
     return files[0]
 
 
+# TAG: 4.2 build_picks (typed keys)
 def build_picks(infer_out: dict) -> List[dict]:
-    picks = []
+    """
+    Produces picks with stable typed keys.
+
+    pick fields:
+      - type: hero | ultimate | ability
+      - name: raw display name from model
+      - base_norm: normalised (alias-aware)
+      - key: typed key using base_norm (hero:doom, ultimate:doom, ability:arcane_orb, etc)
+      - weight_norm: normal used for ability weight lookup (may need doom_ability handling)
+    """
+    picks: List[dict] = []
+
+    def _ptype(kind: str) -> str:
+        if kind == "heroes":
+            return "hero"
+        if kind == "ultimates":
+            return "ultimate"
+        return "ability"
+
     for kind in ("heroes", "ultimates", "abilities"):
-        for item in infer_out.get(kind, []):
+        for item in infer_out.get(kind, []) or []:
             name = item.get("name")
-            if not name:
+            if not name or name == "unknown":
                 continue
 
-            ptype = "hero" if kind == "heroes" else "ultimate" if kind == "ultimates" else "ability"
+            ptype = _ptype(kind)
+            bn = base_norm(name)
+            k = typed_key(ptype, bn)
+
+            wn = bn
 
             picks.append(
                 {
                     "type": ptype,
                     "cell": item.get("cell"),
                     "name": name,
-                    "name_norm": normalize_name(name),
+                    "base_norm": bn,
+                    "key": k,
+                    "weight_norm": wn,
                     "conf": item.get("conf"),
                 }
             )
+
     return picks
+
+
+# TAG: 4.3 ranking (weights)
+def lookup_weight_for_pick(
+    p: dict,
+    ability_weights: Dict[str, float],
+    hero_weights: Dict[str, float],
+) -> Optional[float]:
+    """
+    Weights dicts may include typed keys:
+      - ability:<norm>
+      - hero:<norm>
+    but we also fall back to legacy untyped keys.
+    """
+    typ = p["type"]
+    bn = p["base_norm"]
+
+    if typ == "hero":
+        return hero_weights.get(f"hero:{bn}") if f"hero:{bn}" in hero_weights else hero_weights.get(bn)
+
+    cand_norms: List[str] = []
+    cand_norms.extend(_variants_for_pair_norm(p.get("weight_norm") or bn))
+    cand_norms.extend(_variants_for_pair_norm(bn))
+
+    seen = set()
+    for n in cand_norms:
+        if n in seen:
+            continue
+        seen.add(n)
+
+        v = ability_weights.get(f"ability:{n}")
+        if v is not None:
+            return v
+
+    for n in list(seen):
+        v = ability_weights.get(n)
+        if v is not None:
+            return v
+
+    return None
 
 
 def rank_by_weight(
@@ -94,19 +255,16 @@ def rank_by_weight(
     ability_weights: Dict[str, float],
     hero_weights: Dict[str, float],
 ) -> List[dict]:
-    out = []
+    out: List[dict] = []
     for p in picks:
         p2 = dict(p)
-        if p2["type"] == "hero":
-            p2["weight"] = hero_weights.get(p2["name_norm"])
-        else:
-            p2["weight"] = ability_weights.get(p2["name_norm"])
+        p2["weight"] = lookup_weight_for_pick(p2, ability_weights, hero_weights)
         out.append(p2)
 
     def sort_key(d: dict):
         w = d.get("weight")
         c = d.get("conf")
-        has_w = (w is not None)
+        has_w = w is not None
         return (
             0 if has_w else 1,
             -(w if w is not None else 0),
@@ -117,71 +275,172 @@ def rank_by_weight(
     return out
 
 
-def available_entity_norm_set(infer_out: dict) -> set:
-    vals = []
+# ======================================================================================
+# TAG: 5.0 Selection State (Option A)
+# ======================================================================================
 
-    # Heroes
-    for item in (infer_out.get("heroes") or []):
-        n = item.get("name")
-        if n and n != "unknown":
-            vals.append(n)
-
-    # Ultimates
-    for item in (infer_out.get("ultimates") or []):
-        n = item.get("name")
-        if n and n != "unknown":
-            vals.append(n)
-
-    # Abilities
-    for item in (infer_out.get("abilities") or []):
-        n = item.get("name")
-        if n and n != "unknown":
-            vals.append(n)
-
-    # Fall back to vecs if they exist
-    if not vals:
-        vals = (infer_out.get("hero_vec") or []) + (infer_out.get("ultimate_vec") or []) + (infer_out.get("ability_vec") or [])
-        vals = [x for x in vals if x and x != "unknown"]
-
-    return {normalize_name(x) for x in vals}
+# status_by_key: "avail" | "me" | "other"
+# locked_by_type: None or a specific key for hero/ultimate/ability lock
+Status = str
 
 
-def outstanding_pairs(infer_out: dict, pairs_source: Optional[List[dict]]) -> List[dict]:
+def _default_status() -> Status:
+    return "avail"
+
+
+# TAG: 5.2 apply locks and availability filters
+def compute_allowed_sets(
+    all_picks: List[dict],
+    status_by_key: Dict[str, Status],
+    locked_by_type: Dict[str, Optional[str]],
+) -> Dict[str, set]:
+    """
+    Applies:
+      - others removed from availability
+      - if locked hero, only that hero is allowed
+      - if locked ultimate, only that ultimate is allowed
+      - if 3 abilities selected by me, only those 3 abilities are allowed (analysis focus shifts)
+    """
+    all_keys = {p["key"] for p in all_picks}
+
+    available = {k for k in all_keys if status_by_key.get(k, "avail") != "other"}
+    me_selected = {k for k in available if status_by_key.get(k, "avail") == "me"}
+
+    heroes = {k for k in available if k.startswith("hero:")}
+    ults = {k for k in available if k.startswith("ultimate:")}
+    abils = {k for k in available if k.startswith("ability:")}
+
+    me_heroes = {k for k in me_selected if k.startswith("hero:")}
+    me_ults = {k for k in me_selected if k.startswith("ultimate:")}
+    me_abils = {k for k in me_selected if k.startswith("ability:")}
+
+    if locked_by_type.get("hero") in heroes:
+        heroes = {locked_by_type["hero"]}
+    elif me_heroes:
+        heroes = set(me_heroes)
+
+    if locked_by_type.get("ultimate") in ults:
+        ults = {locked_by_type["ultimate"]}
+    elif me_ults:
+        ults = set(me_ults)
+
+    if len(me_abils) >= 3:
+        abils = set(list(me_abils)[:3])
+    elif locked_by_type.get("ability") in abils:
+        abils = {locked_by_type["ability"]}
+
+    return {
+        "available": available,
+        "me": me_selected,
+        "heroes": heroes,
+        "ultimates": ults,
+        "abilities": abils,
+    }
+
+
+# ======================================================================================
+# TAG: 6.0 Ability Pairs
+# ======================================================================================
+
+# TAG: 6.1 resolve pair norms to local typed keys
+def resolve_pair_norm_to_local_key(
+    pair_norm: str,
+    hero_by_norm: Dict[str, str],
+    ult_by_norm: Dict[str, str],
+    abil_by_norm: Dict[str, str],
+) -> Optional[str]:
+    """
+    Resolves a pair-side norm to the correct local typed key.
+    Priority: ultimate, then ability, then hero.
+    Uses doom variants to avoid doom hero shadowing doom ultimate.
+    """
+    for v in _variants_for_pair_norm(pair_norm):
+        k = ult_by_norm.get(v)
+        if k:
+            return k
+    for v in _variants_for_pair_norm(pair_norm):
+        k = abil_by_norm.get(v)
+        if k:
+            return k
+    for v in _variants_for_pair_norm(pair_norm):
+        k = hero_by_norm.get(v)
+        if k:
+            return k
+    return None
+
+
+# TAG: 6.2 outstanding_pairs_resolved
+def outstanding_pairs_resolved(
+    allowed_keys: set,
+    pairs_source: Optional[List[dict]],
+    hero_by_norm: Dict[str, str],
+    ult_by_norm: Dict[str, str],
+    abil_by_norm: Dict[str, str],
+) -> List[dict]:
+    """
+    Filters Windrun pairs to those fully present in allowed_keys, using robust resolution:
+      - prefers ultimate over ability over hero when mapping a_norm/b_norm
+      - doom vs doom_ability both map to the same pick if needed
+    """
     if not pairs_source:
         return []
 
-    norm_set = available_entity_norm_set(infer_out)
-
-    out = []
+    out: List[dict] = []
     for p in pairs_source:
-        if p.get("a_norm") in norm_set and p.get("b_norm") in norm_set:
-            out.append(p)
+        a_norm = p.get("a_norm")
+        b_norm = p.get("b_norm")
+        if not a_norm or not b_norm:
+            continue
+
+        a_key = resolve_pair_norm_to_local_key(a_norm, hero_by_norm, ult_by_norm, abil_by_norm)
+        b_key = resolve_pair_norm_to_local_key(b_norm, hero_by_norm, ult_by_norm, abil_by_norm)
+        if not a_key or not b_key:
+            continue
+
+        if a_key in allowed_keys and b_key in allowed_keys:
+            p2 = dict(p)
+            p2["a_key"] = a_key
+            p2["b_key"] = b_key
+            out.append(p2)
 
     out.sort(key=lambda d: (d.get("score") is not None, d.get("score") or -1), reverse=True)
     return out
 
 
+# TAG: 6.3 best_pair_map
 def best_pair_map(pairs: List[dict]) -> dict:
-    best = {}
+    """
+    best[k] = (partner_display, score)
+    k is local typed key.
+    """
+    best: Dict[str, Tuple[str, Optional[float]]] = {}
 
-    def update(k, partner, score):
+    def update(k: str, partner: str, score: Optional[float]):
         cur = best.get(k)
-        if cur is None or (score or -1) > (cur[1] or -1):
+        cur_score = cur[1] if cur else None
+        if cur is None or (score or -1) > (cur_score or -1):
             best[k] = (partner, score)
 
     for p in pairs:
-        update(p["a_norm"], p["b_raw"], p.get("score"))
-        update(p["b_norm"], p["a_raw"], p.get("score"))
+        a_key = p.get("a_key")
+        b_key = p.get("b_key")
+        if not a_key or not b_key:
+            continue
+        update(a_key, p.get("b_raw") or display_from_key(b_key), p.get("score"))
+        update(b_key, p.get("a_raw") or display_from_key(a_key), p.get("score"))
 
     return best
 
 
+# ======================================================================================
+# TAG: 7.0 Icons
+# ======================================================================================
 class IconCache:
     def __init__(self):
-        self.cache = {}
+        self.cache: Dict[str, object] = {}
 
     def _candidates(self, name: str) -> List[str]:
-        base = name.lower().strip()
+        base = (name or "").lower().strip()
         variants = {
             base,
             base.replace(" ", "_"),
@@ -225,122 +484,151 @@ class IconCache:
         return None
 
 
+# ======================================================================================
+# TAG: 8.0 GUI
+# ======================================================================================
 class LiveDraftGUI(tk.Tk):
+    # ----------------------------------------------------------------------------------
+    # TAG: 8.1 Layout
+    # ----------------------------------------------------------------------------------
     def __init__(self):
         super().__init__()
 
         self.title("Dota AD Live Draft Assistant")
-        self.geometry("1220x740")
+        self.geometry("1400x820")
 
         self.icon_cache = IconCache()
-        self._images = []
+        self._images: List[object] = []
+
+        self.status_by_key: Dict[str, Status] = {}
+        self.locked_by_type: Dict[str, Optional[str]] = {"hero": None, "ultimate": None, "ability": None}
+
+        self._latest_picks: List[dict] = []
+        self._latest_pick_by_key: Dict[str, dict] = {}
 
         self._setup_styles()
 
-        top = ttk.Frame(self, padding=6)
-        top.pack(fill="x")
+        topbar = ttk.Frame(self, padding=6)
+        topbar.pack(fill="x")
 
         self.status = tk.StringVar(value="Starting up...")
-        ttk.Label(top, textvariable=self.status).pack(side="left")
+        ttk.Label(topbar, textvariable=self.status).pack(side="left")
 
-        ttk.Button(top, text="Refresh (R)", command=self.refresh).pack(side="right")
-        ttk.Button(top, text="Quit (Q)", command=self.destroy).pack(side="right", padx=6)
+        ttk.Button(topbar, text="Refresh (R)", command=self.refresh).pack(side="right")
+        ttk.Button(topbar, text="Quit (Q)", command=self.destroy).pack(side="right", padx=6)
 
-        main = ttk.PanedWindow(self, orient="horizontal")
+        main = ttk.PanedWindow(self, orient="vertical")
         main.pack(fill="both", expand=True)
 
-        left = ttk.Frame(main, padding=6)
-        right = ttk.Frame(main, padding=6)
+        top = ttk.Frame(main, padding=6)
+        bottom = ttk.Frame(main, padding=6)
 
-        main.add(left, weight=3)
-        main.add(right, weight=2)
+        main.add(top, weight=4)
+        main.add(bottom, weight=1)
 
-        ttk.Label(left, text="Ranked Picks").pack(anchor="w")
+        top_grid = ttk.Frame(top)
+        top_grid.pack(fill="both", expand=True)
 
-        cols = ("rank", "weight", "cell", "pair")
+        for c in range(4):
+            top_grid.columnconfigure(c, weight=1, uniform="top")
+        top_grid.rowconfigure(1, weight=1)
 
-        grid = ttk.Frame(left)
-        grid.pack(fill="both", expand=True)
+        ttk.Label(top_grid, text="Heroes", style="HeroHeader.TLabel").grid(row=0, column=0, sticky="w")
+        ttk.Label(top_grid, text="Ultimates", style="UltimateHeader.TLabel").grid(row=0, column=1, sticky="w", padx=(8, 0))
+        ttk.Label(top_grid, text="Abilities", style="AbilityHeader.TLabel").grid(row=0, column=2, sticky="w", padx=(8, 0))
+        ttk.Label(top_grid, text="Outstanding Pairs", style="PairsHeader.TLabel").grid(row=0, column=3, sticky="w", padx=(8, 0))
 
-        grid.columnconfigure(0, weight=1, uniform="x")
-        grid.columnconfigure(1, weight=1, uniform="x")
-        grid.columnconfigure(2, weight=1, uniform="x")
-        grid.rowconfigure(1, weight=1)
+        cols = ("rank", "weight", "pair")
 
-        ttk.Label(grid, text="Heroes", style="HeroHeader.TLabel").grid(
-            row=0, column=0, sticky="w"
-        )
-
-        ttk.Label(grid, text="Ultimates", style="UltimateHeader.TLabel").grid(
-            row=0, column=1, sticky="w", padx=(8, 0)
-        )
-
-        ttk.Label(grid, text="Abilities", style="AbilityHeader.TLabel").grid(
-            row=0, column=2, sticky="w", padx=(8, 0)
-        )
-
-
-        def make_tree(parent):
+        def make_tree(parent) -> Tuple[ttk.Frame, ttk.Treeview]:
             container = ttk.Frame(parent)
 
             t = ttk.Treeview(
                 container,
                 columns=cols,
                 show=("tree", "headings"),
-                height=25,
+                height=22,
                 style="Striped.Treeview",
             )
 
             xbar = ttk.Scrollbar(container, orient="horizontal", command=t.xview)
-            t.configure(xscrollcommand=xbar.set)
+            ybar = ttk.Scrollbar(container, orient="vertical", command=t.yview)
+            t.configure(xscrollcommand=xbar.set, yscrollcommand=ybar.set)
 
             t.heading("#0", text="Pick")
             t.heading("rank", text="#")
             t.heading("weight", text="WR")
-            t.heading("cell", text="Cell")
             t.heading("pair", text="Best Pair")
 
-            t.column("#0", width=220)
+            t.column("#0", width=140)
             t.column("rank", width=36, anchor="center")
             t.column("weight", width=70, anchor="e")
-            t.column("cell", width=60)
             t.column("pair", width=260)
 
             t.tag_configure("odd", background="#f4f4f4")
             t.tag_configure("even", background="#ffffff")
 
-            t.tag_configure("hero_fg", foreground="#8B0000")      # dark red
-            t.tag_configure("ultimate_fg", foreground="#003366")  # dark blue
-            t.tag_configure("ability_fg", foreground="#0B6623")   # dark green
+            t.tag_configure("me_bg", background="#dff0d8")       # soft green
+            t.tag_configure("other_bg", background="#f2dede")    # soft red
+            t.tag_configure("locked_fg", foreground="#6a0dad")   # purple
 
-
-            # layout
             container.rowconfigure(0, weight=1)
             container.columnconfigure(0, weight=1)
-            t.grid(row=0, column=0, sticky="nsew")
-            xbar.grid(row=1, column=0, sticky="ew")
 
-            # return both so caller can grid the container but still access the tree
+            t.grid(row=0, column=0, sticky="nsew")
+            ybar.grid(row=0, column=1, sticky="ns")
+            xbar.grid(row=1, column=0, columnspan=2, sticky="ew")
+
             return container, t
 
-
-        hero_frame, self.hero_tree = make_tree(grid)
-        ult_frame, self.ult_tree = make_tree(grid)
-        abil_frame, self.abil_tree = make_tree(grid)
+        hero_frame, self.hero_tree = make_tree(top_grid)
+        ult_frame, self.ult_tree = make_tree(top_grid)
+        abil_frame, self.abil_tree = make_tree(top_grid)
 
         hero_frame.grid(row=1, column=0, sticky="nsew")
         ult_frame.grid(row=1, column=1, sticky="nsew", padx=(8, 0))
         abil_frame.grid(row=1, column=2, sticky="nsew", padx=(8, 0))
 
+        pairs_frame = ttk.Frame(top_grid)
+        pairs_frame.grid(row=1, column=3, sticky="nsew", padx=(8, 0))
+        pairs_frame.rowconfigure(0, weight=1)
+        pairs_frame.columnconfigure(0, weight=1)
 
-        ttk.Label(right, text="Outstanding Ability Pairs").pack(anchor="w")
-        self.pairs_box = tk.Text(right, font=("Consolas", 10))
-        self.pairs_box.pack(fill="both", expand=True)
+        self.pairs_box = tk.Text(pairs_frame, font=("Consolas", 10), wrap="none")
+        pairs_y = ttk.Scrollbar(pairs_frame, orient="vertical", command=self.pairs_box.yview)
+        pairs_x = ttk.Scrollbar(pairs_frame, orient="horizontal", command=self.pairs_box.xview)
+        self.pairs_box.configure(yscrollcommand=pairs_y.set, xscrollcommand=pairs_x.set)
+
+        self.pairs_box.grid(row=0, column=0, sticky="nsew")
+        pairs_y.grid(row=0, column=1, sticky="ns")
+        pairs_x.grid(row=1, column=0, columnspan=2, sticky="ew")
+
+        bottom_grid = ttk.Frame(bottom)
+        bottom_grid.pack(fill="both", expand=True)
+        bottom_grid.columnconfigure(0, weight=1, uniform="bottom")
+        bottom_grid.columnconfigure(1, weight=1, uniform="bottom")
+        bottom_grid.rowconfigure(1, weight=1)
+
+        ttk.Label(bottom_grid, text="Selected by Me", style="SelectedMeHeader.TLabel").grid(row=0, column=0, sticky="w")
+        ttk.Label(bottom_grid, text="Selected by Others", style="SelectedOtherHeader.TLabel").grid(row=0, column=1, sticky="w", padx=(8, 0))
+
+        self.sel_me_tree = self._make_selected_tree(bottom_grid)
+        self.sel_other_tree = self._make_selected_tree(bottom_grid)
+
+        self.sel_me_tree.grid(row=1, column=0, sticky="nsew")
+        self.sel_other_tree.grid(row=1, column=1, sticky="nsew", padx=(8, 0))
 
         self.bind("<r>", lambda e: self.refresh())
         self.bind("<R>", lambda e: self.refresh())
         self.bind("<q>", lambda e: self.destroy())
         self.bind("<Q>", lambda e: self.destroy())
+
+        self._build_context_menus()
+        self._bind_tree_events(self.hero_tree)
+        self._bind_tree_events(self.ult_tree)
+        self._bind_tree_events(self.abil_tree)
+        self._bind_selected_tree_events(self.sel_me_tree)
+        self._bind_selected_tree_events(self.sel_other_tree)
 
         self.ability_weights: Dict[str, float] = {}
         self.hero_weights: Dict[str, float] = {}
@@ -348,26 +636,19 @@ class LiveDraftGUI(tk.Tk):
         self.pairs_loaded = False
         self.pairs_loading = False
 
-        # Kept, but no longer used for triggering reloads (pairs are cached globally now)
-        self._pairs_pool_norms = set()
-
         try:
-            self.status.set("Loading WR ALL ability win rates...")
+            self.status.set("Loading Windrun ability win rates...")
             self.update_idletasks()
             self.ability_weights = load_windrun_ability_weights()
 
-            self.status.set("Loading hero win rates...")
+            self.status.set("Loading Windrun hero win rates...")
             self.update_idletasks()
             self.hero_weights = load_windrun_hero_weights()
 
-            self.status.set(
-                f"Windrun loaded: abilities={len(self.ability_weights)} heroes={len(self.hero_weights)}"
-            )
-
+            self.status.set(f"Windrun loaded: abilities={len(self.ability_weights)} heroes={len(self.hero_weights)}")
         except Exception as e:
             self.status.set("Windrun load failed")
-            self.pairs_box.delete("1.0", "end")
-            self.pairs_box.insert("end", str(e) + "\n\n" + traceback.format_exc())
+            self._render_error(e)
 
         self.after(150, self.refresh)
 
@@ -379,24 +660,14 @@ class LiveDraftGUI(tk.Tk):
             pass
 
         style.configure("Striped.Treeview", rowheight=32)
-        # Larger coloured section headers
-        style.configure(
-            "HeroHeader.TLabel",
-            font=("Segoe UI", 14, "bold"),
-            foreground="#8B0000",   # dark red
-        )
 
-        style.configure(
-            "UltimateHeader.TLabel",
-            font=("Segoe UI", 14, "bold"),
-            foreground="#003366",   # dark blue
-        )
+        style.configure("HeroHeader.TLabel", font=("Segoe UI", 14, "bold"), foreground="#8B0000")
+        style.configure("UltimateHeader.TLabel", font=("Segoe UI", 14, "bold"), foreground="#003366")
+        style.configure("AbilityHeader.TLabel", font=("Segoe UI", 14, "bold"), foreground="#0B6623")
+        style.configure("PairsHeader.TLabel", font=("Segoe UI", 14, "bold"), foreground="#333333")
 
-        style.configure(
-            "AbilityHeader.TLabel",
-            font=("Segoe UI", 14, "bold"),
-            foreground="#0B6623",   # dark green
-        )
+        style.configure("SelectedMeHeader.TLabel", font=("Segoe UI", 12, "bold"), foreground="#2e6b2e")
+        style.configure("SelectedOtherHeader.TLabel", font=("Segoe UI", 12, "bold"), foreground="#7a2a2a")
 
         style.map(
             "Striped.Treeview",
@@ -404,14 +675,142 @@ class LiveDraftGUI(tk.Tk):
             foreground=[("selected", "#000000")],
         )
 
+    def _make_selected_tree(self, parent: ttk.Frame) -> ttk.Treeview:
+        cols = ("key", "type", "name")
+        t = ttk.Treeview(parent, columns=cols, show="headings", height=6)
+
+        t.heading("key", text="Key")
+        t.heading("type", text="Type")
+        t.heading("name", text="Name")
+
+        # Hide key column but keep the value for event handling
+        t.column("key", width=0, stretch=False)
+        t.column("type", width=90, anchor="w")
+        t.column("name", width=320, anchor="w")
+
+        return t
+
+    # ----------------------------------------------------------------------------------
+    # TAG: 8.2 Context menus (mark me, mark other, clear, lock)
+    # ----------------------------------------------------------------------------------
+    def _build_context_menus(self):
+        self.menu = tk.Menu(self, tearoff=0)
+        self.menu.add_command(label="Mark Selected by Me", command=lambda: self._menu_apply("me"))
+        self.menu.add_command(label="Mark Selected by Others", command=lambda: self._menu_apply("other"))
+        self.menu.add_command(label="Clear (Available)", command=lambda: self._menu_apply("avail"))
+        self.menu.add_separator()
+        self.menu.add_command(label="Lock This Type to This Pick", command=self._menu_lock)
+        self.menu.add_command(label="Clear Lock for This Type", command=self._menu_unlock)
+
+        self._menu_target_tree: Optional[ttk.Treeview] = None
+        self._menu_target_item: Optional[str] = None
+        self._menu_target_key: Optional[str] = None
+
+    def _bind_tree_events(self, tree: ttk.Treeview):
+        tree.bind("<Button-3>", lambda e, t=tree: self._on_tree_right_click(e, t))
+        tree.bind("<Double-1>", lambda e, t=tree: self._on_tree_double_click(e, t))
+
+    def _bind_selected_tree_events(self, tree: ttk.Treeview):
+        tree.bind("<Double-1>", lambda e, t=tree: self._on_selected_double_click(e, t))
+        tree.bind("<Button-3>", lambda e, t=tree: self._on_selected_right_click(e, t))
+
+    def _on_tree_right_click(self, event, tree: ttk.Treeview):
+        item = tree.identify_row(event.y)
+
+        if item:
+            tree.selection_set(item)
+            key = item  # iid is typed key
+            self._menu_target_tree = tree
+            self._menu_target_item = item
+            self._menu_target_key = key
+        else:
+            self._menu_target_tree = tree
+            self._menu_target_item = None
+            self._menu_target_key = None
+
+        try:
+            self.menu.tk_popup(event.x_root, event.y_root)
+        finally:
+            self.menu.grab_release()
+
+    def _on_tree_double_click(self, event, tree: ttk.Treeview):
+        item = tree.identify_row(event.y)
+        if not item:
+            return
+
+        key = item  # iid is typed key
+        if not key:
+            nm = tree.item(item).get("text") or ""
+            bn = base_norm(nm)
+            key = typed_key(
+                "hero" if tree is self.hero_tree else "ultimate" if tree is self.ult_tree else "ability",
+                bn,
+            )
+
+        cur = self.status_by_key.get(key, "avail")
+        self.status_by_key[key] = "me" if cur != "me" else "avail"
+        self.refresh()
+
+    def _on_selected_double_click(self, event, tree: ttk.Treeview):
+        item = tree.identify_row(event.y)
+        if not item:
+            return
+        key = tree.item(item).get("values", ["", "", ""])[0]  # hidden key col
+        if not key:
+            return
+        self.status_by_key[key] = "avail"
+        self.refresh()
+
+    def _on_selected_right_click(self, event, tree: ttk.Treeview):
+        item = tree.identify_row(event.y)
+        if not item:
+            return
+        tree.selection_set(item)
+        key = tree.item(item).get("values", ["", "", ""])[0]
+        if not key:
+            return
+
+        self._menu_target_tree = None
+        self._menu_target_item = None
+        self._menu_target_key = key
+        try:
+            self.menu.tk_popup(event.x_root, event.y_root)
+        finally:
+            self.menu.grab_release()
+
+    def _menu_apply(self, status: Status):
+        k = self._menu_target_key
+        if not k:
+            return
+        self.status_by_key[k] = status
+        self.refresh()
+
+    def _menu_lock(self):
+        k = self._menu_target_key
+        if not k:
+            return
+        typ, _ = split_typed_key(k)
+        if typ in ("hero", "ultimate", "ability"):
+            self.locked_by_type[typ] = k
+        self.refresh()
+
+    def _menu_unlock(self):
+        k = self._menu_target_key
+        if not k:
+            return
+        typ, _ = split_typed_key(k)
+        if typ in self.locked_by_type:
+            self.locked_by_type[typ] = None
+        self.refresh()
+
+    # ----------------------------------------------------------------------------------
+    # TAG: 8.3 Rendering and refresh loop
+    # ----------------------------------------------------------------------------------
     def _start_pairs_load(self, infer_out: dict):
         if self.pairs_loading or self.pairs_loaded:
             return
 
-        # We keep this just to avoid starting the load before we have *any* entities,
-        # but we no longer use it to filter the download.
-        pool_norms = available_entity_norm_set(infer_out)
-        if not pool_norms:
+        if not (infer_out.get("heroes") or infer_out.get("ultimates") or infer_out.get("abilities")):
             return
 
         self.pairs_loading = True
@@ -420,7 +819,6 @@ class LiveDraftGUI(tk.Tk):
 
         def worker():
             try:
-                # IMPORTANT: no pool filtering here; collector will cache full dataset
                 pairs = load_windrun_ability_pairs(timeout=60, headless=True)
                 self.after(0, lambda pairs=pairs: self._pairs_loaded_ok(pairs))
             except Exception as e:
@@ -450,18 +848,52 @@ class LiveDraftGUI(tk.Tk):
             img_path = latest_image_in_folder(SCREENSHOT_DIR)
             infer_out = infer_one(str(img_path), verbose=False)
 
-            # One-time load: if pairs aren't loaded yet, start them.
             if (not self.pairs_loading) and (not self.pairs_loaded):
                 self._start_pairs_load(infer_out)
 
             picks = build_picks(infer_out)
+            self._latest_picks = picks
+            self._latest_pick_by_key = {p["key"]: p for p in picks}
+
+            for p in picks:
+                self.status_by_key.setdefault(p["key"], "avail")
+
+            allowed = compute_allowed_sets(picks, self.status_by_key, self.locked_by_type)
             ranked = rank_by_weight(picks, self.ability_weights, self.hero_weights)
 
-            pairs = outstanding_pairs(infer_out, self.pairs_cache if self.pairs_loaded else None)
+            hero_by_norm: Dict[str, str] = {}
+            ult_by_norm: Dict[str, str] = {}
+            abil_by_norm: Dict[str, str] = {}
+
+            for p in picks:
+                bn = p["base_norm"]
+                k = p["key"]
+                if p["type"] == "hero":
+                    hero_by_norm[bn] = k
+                elif p["type"] == "ultimate":
+                    ult_by_norm[bn] = k
+                    for v in _variants_for_pair_norm(bn):
+                        ult_by_norm[v] = k
+                else:
+                    abil_by_norm[bn] = k
+                    for v in _variants_for_pair_norm(bn):
+                        abil_by_norm[v] = k
+
+            allowed_pairs_keys = set(allowed["heroes"]) | set(allowed["ultimates"]) | set(allowed["abilities"])
+
+            pairs = outstanding_pairs_resolved(
+                allowed_pairs_keys,
+                self.pairs_cache if self.pairs_loaded else None,
+                hero_by_norm,
+                ult_by_norm,
+                abil_by_norm,
+            )
+
             bmap = best_pair_map(pairs)
 
-            self._render_ranked(ranked, bmap)
-            self._render_pairs(pairs)
+            self._render_ranked(ranked, bmap, allowed)
+            self._render_pairs(pairs, allowed)
+            self._render_selected_lists()
 
             extra = ""
             if self.pairs_loading:
@@ -475,27 +907,30 @@ class LiveDraftGUI(tk.Tk):
             self.status.set("Error")
             self._render_error(e)
 
-    def _render_ranked(self, ranked: List[dict], bmap: dict):
+    def _render_ranked(self, ranked: List[dict], bmap: dict, allowed: dict):
         for t in (self.hero_tree, self.ult_tree, self.abil_tree):
             for r in t.get_children():
                 t.delete(r)
 
         self._images = []
 
-        heroes, ults, abil = [], [], []
+        heroes, ults, abils = [], [], []
         for i, row in enumerate(ranked, 1):
             r2 = dict(row)
             r2["rank"] = i
-            typ = r2.get("type")
-            if typ == "hero":
+            if r2["type"] == "hero":
                 heroes.append(r2)
-            elif typ == "ultimate":
+            elif r2["type"] == "ultimate":
                 ults.append(r2)
             else:
-                abil.append(r2)
+                abils.append(r2)
 
-        def insert_rows(tree: ttk.Treeview, rows: List[dict]):
+        def insert_rows(tree: ttk.Treeview, rows: List[dict], allowed_set: set):
             for idx, row in enumerate(rows, 1):
+                k = row["key"]
+                if k not in allowed_set:
+                    continue
+
                 name = row["name"]
                 typ = row["type"]
 
@@ -507,7 +942,7 @@ class LiveDraftGUI(tk.Tk):
                 w = row.get("weight")
                 w_txt = "n/a" if w is None else f"{w:.2f}"
 
-                partner = bmap.get(row["name_norm"])
+                partner = bmap.get(k)
                 pair_txt = ""
                 if partner:
                     p, s = partner
@@ -515,35 +950,40 @@ class LiveDraftGUI(tk.Tk):
 
                 row_tag = "odd" if (idx % 2 == 1) else "even"
 
-                # Colour tag based on which tree we are inserting into
-                if tree is self.hero_tree:
-                    colour_tag = "hero_fg"
-                elif tree is self.ult_tree:
-                    colour_tag = "ultimate_fg"
-                else:
-                    colour_tag = "ability_fg"
+                st = self.status_by_key.get(k, "avail")
+                status_tag = ""
+                if st == "me":
+                    status_tag = "me_bg"
+                elif st == "other":
+                    status_tag = "other_bg"
+
+                lock_tag = ""
+                if self.locked_by_type.get(typ) == k:
+                    lock_tag = "locked_fg"
+
+                tags = tuple(t for t in (row_tag, status_tag, lock_tag) if t)
 
                 tree.insert(
                     parent="",
                     index="end",
+                    iid=k,
                     text=name,
                     image=icon if icon else "",
-                    values=(f"{row['rank']:02d}", w_txt, row.get("cell", ""), pair_txt),
-                    tags=(row_tag, colour_tag),
+                    values=(f"{row['rank']:02d}", w_txt, pair_txt),
+                    tags=tags,
                 )
 
+        insert_rows(self.hero_tree, heroes, allowed["heroes"])
+        insert_rows(self.ult_tree, ults, allowed["ultimates"])
+        insert_rows(self.abil_tree, abils, allowed["abilities"])
 
-        insert_rows(self.hero_tree, heroes)
-        insert_rows(self.ult_tree, ults)
-        insert_rows(self.abil_tree, abil)
-
-    def _render_pairs(self, pairs: List[dict]):
+    def _render_pairs(self, pairs: List[dict], allowed: dict):
         self.pairs_box.delete("1.0", "end")
 
-        # Configure colour tags once
-        self.pairs_box.tag_configure("hero", foreground="#8B0000")       # dark red
-        self.pairs_box.tag_configure("ultimate", foreground="#003366")   # dark blue
-        self.pairs_box.tag_configure("ability", foreground="#0B6623")    # dark green
+        self.pairs_box.tag_configure("hero", foreground="#8B0000")
+        self.pairs_box.tag_configure("ultimate", foreground="#003366")
+        self.pairs_box.tag_configure("ability", foreground="#0B6623")
+        self.pairs_box.tag_configure("picked_bold", font=("Consolas", 10, "bold"))
 
         if self.pairs_loading:
             self.pairs_box.insert("end", "Loading ability pairs in background...\n")
@@ -557,43 +997,60 @@ class LiveDraftGUI(tk.Tk):
             self.pairs_box.insert("end", "(none)\n")
             return
 
-        # Build a lookup of type by norm name from current ranked list
-        current_types = {}
-        for tree in (self.hero_tree, self.ult_tree, self.abil_tree):
-            for item in tree.get_children():
-                name = tree.item(item)["text"]
-                norm = normalize_name(name)
-                if tree is self.hero_tree:
-                    current_types[norm] = "hero"
-                elif tree is self.ult_tree:
-                    current_types[norm] = "ultimate"
-                else:
-                    current_types[norm] = "ability"
+        me_set = {k for k, st in self.status_by_key.items() if st == "me"}
+
+        key_to_type: Dict[str, str] = {}
+        for k in allowed["heroes"]:
+            key_to_type[k] = "hero"
+        for k in allowed["ultimates"]:
+            key_to_type[k] = "ultimate"
+        for k in allowed["abilities"]:
+            key_to_type[k] = "ability"
 
         for i, p in enumerate(pairs[:TOP_PAIRS], 1):
             sc = "n/a" if p.get("score") is None else f"{p['score']:.2f}"
 
-            a_norm = p["a_norm"]
-            b_norm = p["b_norm"]
+            a_key = p.get("a_key")
+            b_key = p.get("b_key")
+            if not a_key or not b_key:
+                continue
 
-            a_type = current_types.get(a_norm, "ability")
-            b_type = current_types.get(b_norm, "ability")
+            a_type = key_to_type.get(a_key, "ability")
+            b_type = key_to_type.get(b_key, "ability")
 
-            # Number
+            bold = (a_key in me_set) or (b_key in me_set)
+
             self.pairs_box.insert("end", f"{i:02d}. ")
 
-            # Ability A (coloured)
-            self.pairs_box.insert("end", p["a_raw"], a_type)
+            if bold:
+                self.pairs_box.insert("end", p.get("a_raw", display_from_key(a_key)), ("picked_bold", a_type))
+            else:
+                self.pairs_box.insert("end", p.get("a_raw", display_from_key(a_key)), (a_type,))
 
-            # Separator
             self.pairs_box.insert("end", " + ")
 
-            # Ability B (coloured)
-            self.pairs_box.insert("end", p["b_raw"], b_type)
+            if bold:
+                self.pairs_box.insert("end", p.get("b_raw", display_from_key(b_key)), ("picked_bold", b_type))
+            else:
+                self.pairs_box.insert("end", p.get("b_raw", display_from_key(b_key)), (b_type,))
 
-            # Score
             self.pairs_box.insert("end", f"   {sc}\n")
 
+    def _render_selected_lists(self):
+        for t in (self.sel_me_tree, self.sel_other_tree):
+            for r in t.get_children():
+                t.delete(r)
+
+        for k, st in sorted(self.status_by_key.items()):
+            if st not in ("me", "other"):
+                continue
+            typ, _ = split_typed_key(k)
+            disp = self._latest_pick_by_key.get(k, {}).get("name") or display_from_key(k)
+
+            if st == "me":
+                self.sel_me_tree.insert("", "end", values=(k, typ, disp))
+            else:
+                self.sel_other_tree.insert("", "end", values=(k, typ, disp))
 
     def _render_error(self, e: Exception):
         self.pairs_box.delete("1.0", "end")

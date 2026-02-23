@@ -1,0 +1,438 @@
+{
+  "source_image": "C:\\Program Files (x86)\\Steam\\userdata\\59046080\\760\\remote\\570\\screenshots\\20260219104529_1.jpg",
+  "ultimates": [
+    {
+      "cell": "Ultimate1",
+      "name": "relocate",
+      "conf": 0.9999974966049194
+    },
+    {
+      "cell": "Ultimate2",
+      "name": "true_form",
+      "conf": 0.9982155561447144
+    },
+    {
+      "cell": "Ultimate3",
+      "name": "dark_ascension",
+      "conf": 0.9999892711639404
+    },
+    {
+      "cell": "Ultimate4",
+      "name": "unleash",
+      "conf": 0.9999958276748657
+    },
+    {
+      "cell": "Ultimate5",
+      "name": "death_ward",
+      "conf": 0.9999754428863525
+    },
+    {
+      "cell": "Ultimate6",
+      "name": "spawn_spiderlings",
+      "conf": 0.9999730587005615
+    },
+    {
+      "cell": "Ultimate7",
+      "name": "wall_of_replica",
+      "conf": 0.9999637603759766
+    },
+    {
+      "cell": "Ultimate8",
+      "name": "doom_ability",
+      "conf": 0.999687910079956
+    },
+    {
+      "cell": "Ultimate9",
+      "name": "primal_roar",
+      "conf": 0.9999804496765137
+    },
+    {
+      "cell": "Ultimate10",
+      "name": "flaming_lasso",
+      "conf": 0.999902606010437
+    },
+    {
+      "cell": "Ultimate11",
+      "name": "chakram",
+      "conf": 0.9999942779541016
+    },
+    {
+      "cell": "Ultimate12",
+      "name": "coup_de_grace",
+      "conf": 0.9999990463256836
+    }
+  ],
+  "heroes": [
+    {
+      "cell": "Hero1",
+      "name": "io",
+      "conf": 0.9429468512535095
+    },
+    {
+      "cell": "Hero2",
+      "name": "broodmother",
+      "conf": 0.5563562512397766
+    },
+    {
+      "cell": "Hero3",
+      "name": "lone_druid",
+      "conf": 0.509221613407135
+    },
+    {
+      "cell": "Hero4",
+      "name": "witch_doctor",
+      "conf": 0.7428025603294373
+    },
+    {
+      "cell": "Hero5",
+      "name": "night_stalker",
+      "conf": 0.9626169800758362
+    },
+    {
+      "cell": "Hero6",
+      "name": "marci",
+      "conf": 0.4475148618221283
+    },
+    {
+      "cell": "Hero7",
+      "name": "void_spirit",
+      "conf": 0.7192432284355164
+    },
+    {
+      "cell": "Hero8",
+      "name": "phantom_assassin",
+      "conf": 0.6344277262687683
+    },
+    {
+      "cell": "Hero9",
+      "name": "doom",
+      "conf": 0.5672720074653625
+    },
+    {
+      "cell": "Hero10",
+      "name": "timbersaw",
+      "conf": 0.8745719194412231
+    },
+    {
+      "cell": "Hero11",
+      "name": "beastmaster",
+      "conf": 0.6658464074134827
+    },
+    {
+      "cell": "Hero12",
+      "name": "batrider",
+      "conf": 0.8110604286193848
+    }
+  ],
+  "abilities": [
+    {
+      "cell": "Ability1",
+      "name": "tether",
+      "conf": 0.9999568462371826
+    },
+    {
+      "cell": "Ability2",
+      "name": "spirits",
+      "conf": 0.9999855756759644
+    },
+    {
+      "cell": "Ability3",
+      "name": "overcharge",
+      "conf": 0.9999897480010986
+    },
+    {
+      "cell": "Ability4",
+      "name": "insatiable_hunger",
+      "conf": 0.9994908571243286
+    },
+    {
+      "cell": "Ability5",
+      "name": "spin_web",
+      "conf": 0.9995964169502258
+    },
+    {
+      "cell": "Ability6",
+      "name": "incapacitating_bite",
+      "conf": 0.9995720982551575
+    },
+    {
+      "cell": "Ability7",
+      "name": "death_seeker",
+      "conf": 0.4403589963912964
+    },
+    {
+      "cell": "Ability8",
+      "name": "spirit_link",
+      "conf": 0.9996911287307739
+    },
+    {
+      "cell": "Ability9",
+      "name": "summon_spirit_bear",
+      "conf": 0.999996542930603
+    },
+    {
+      "cell": "Ability10",
+      "name": "paralyzing_cask",
+      "conf": 0.9990803003311157
+    },
+    {
+      "cell": "Ability11",
+      "name": "voodoo_restoration",
+      "conf": 0.9999988079071045
+    },
+    {
+      "cell": "Ability12",
+      "name": "maledict",
+      "conf": 0.999990701675415
+    },
+    {
+      "cell": "Ability13",
+      "name": "void",
+      "conf": 0.9999814033508301
+    },
+    {
+      "cell": "Ability14",
+      "name": "crippling_fear",
+      "conf": 0.9999068975448608
+    },
+    {
+      "cell": "Ability15",
+      "name": "hunter_in_the_night",
+      "conf": 0.9949134588241577
+    },
+    {
+      "cell": "Ability16",
+      "name": "dispose",
+      "conf": 0.9997665286064148
+    },
+    {
+      "cell": "Ability17",
+      "name": "rebound",
+      "conf": 0.9996954202651978
+    },
+    {
+      "cell": "Ability18",
+      "name": "sidekick",
+      "conf": 0.9999909400939941
+    },
+    {
+      "cell": "Ability19",
+      "name": "vacuum",
+      "conf": 0.999987006187439
+    },
+    {
+      "cell": "Ability20",
+      "name": "ion_shell",
+      "conf": 0.9996289014816284
+    },
+    {
+      "cell": "Ability21",
+      "name": "surge",
+      "conf": 0.9990205764770508
+    },
+    {
+      "cell": "Ability22",
+      "name": "stifling_dagger",
+      "conf": 0.9996191263198853
+    },
+    {
+      "cell": "Ability23",
+      "name": "phantom_strike",
+      "conf": 0.991255521774292
+    },
+    {
+      "cell": "Ability24",
+      "name": "fate_s_edict",
+      "conf": 0.6589936017990112
+    },
+    {
+      "cell": "Ability25",
+      "name": "devour",
+      "conf": 0.9999904632568359
+    },
+    {
+      "cell": "Ability26",
+      "name": "scorched_earth",
+      "conf": 0.9998507499694824
+    },
+    {
+      "cell": "Ability27",
+      "name": "infernal_blade",
+      "conf": 0.9999709129333496
+    },
+    {
+      "cell": "Ability28",
+      "name": "whirling_death",
+      "conf": 0.9113959670066833
+    },
+    {
+      "cell": "Ability29",
+      "name": "timber_chain",
+      "conf": 0.9997074007987976
+    },
+    {
+      "cell": "Ability30",
+      "name": "reactive_armor",
+      "conf": 0.9749252796173096
+    },
+    {
+      "cell": "Ability31",
+      "name": "wild_axes",
+      "conf": 0.9778186082839966
+    },
+    {
+      "cell": "Ability32",
+      "name": "call_of_the_wild_hawk",
+      "conf": 0.9983599781990051
+    },
+    {
+      "cell": "Ability33",
+      "name": "inner_beast",
+      "conf": 0.9999756813049316
+    },
+    {
+      "cell": "Ability34",
+      "name": "sticky_napalm",
+      "conf": 0.9998308420181274
+    },
+    {
+      "cell": "Ability35",
+      "name": "flamebreak",
+      "conf": 0.9991657733917236
+    },
+    {
+      "cell": "Ability36",
+      "name": "firefly",
+      "conf": 0.9999743700027466
+    }
+  ],
+  "warnings": [],
+  "hero_vec": [
+    "io",
+    "broodmother",
+    "lone_druid",
+    "witch_doctor",
+    "night_stalker",
+    "marci",
+    "void_spirit",
+    "phantom_assassin",
+    "doom",
+    "timbersaw",
+    "beastmaster",
+    "batrider"
+  ],
+  "ultimate_vec": [
+    "relocate",
+    "true_form",
+    "dark_ascension",
+    "unleash",
+    "death_ward",
+    "spawn_spiderlings",
+    "wall_of_replica",
+    "doom_ability",
+    "primal_roar",
+    "flaming_lasso",
+    "chakram",
+    "coup_de_grace"
+  ],
+  "ability_vec": [
+    "tether",
+    "spirits",
+    "overcharge",
+    "insatiable_hunger",
+    "spin_web",
+    "incapacitating_bite",
+    "death_seeker",
+    "spirit_link",
+    "summon_spirit_bear",
+    "paralyzing_cask",
+    "voodoo_restoration",
+    "maledict",
+    "void",
+    "crippling_fear",
+    "hunter_in_the_night",
+    "dispose",
+    "rebound",
+    "sidekick",
+    "vacuum",
+    "ion_shell",
+    "surge",
+    "stifling_dagger",
+    "phantom_strike",
+    "fate_s_edict",
+    "devour",
+    "scorched_earth",
+    "infernal_blade",
+    "whirling_death",
+    "timber_chain",
+    "reactive_armor",
+    "wild_axes",
+    "call_of_the_wild_hawk",
+    "inner_beast",
+    "sticky_napalm",
+    "flamebreak",
+    "firefly"
+  ],
+  "all_picks_vec": [
+    "io",
+    "broodmother",
+    "lone_druid",
+    "witch_doctor",
+    "night_stalker",
+    "marci",
+    "void_spirit",
+    "phantom_assassin",
+    "doom",
+    "timbersaw",
+    "beastmaster",
+    "batrider",
+    "relocate",
+    "true_form",
+    "dark_ascension",
+    "unleash",
+    "death_ward",
+    "spawn_spiderlings",
+    "wall_of_replica",
+    "doom_ability",
+    "primal_roar",
+    "flaming_lasso",
+    "chakram",
+    "coup_de_grace",
+    "tether",
+    "spirits",
+    "overcharge",
+    "insatiable_hunger",
+    "spin_web",
+    "incapacitating_bite",
+    "death_seeker",
+    "spirit_link",
+    "summon_spirit_bear",
+    "paralyzing_cask",
+    "voodoo_restoration",
+    "maledict",
+    "void",
+    "crippling_fear",
+    "hunter_in_the_night",
+    "dispose",
+    "rebound",
+    "sidekick",
+    "vacuum",
+    "ion_shell",
+    "surge",
+    "stifling_dagger",
+    "phantom_strike",
+    "fate_s_edict",
+    "devour",
+    "scorched_earth",
+    "infernal_blade",
+    "whirling_death",
+    "timber_chain",
+    "reactive_armor",
+    "wild_axes",
+    "call_of_the_wild_hawk",
+    "inner_beast",
+    "sticky_napalm",
+    "flamebreak",
+    "firefly"
+  ]
+}

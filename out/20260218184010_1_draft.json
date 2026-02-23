@@ -1,0 +1,438 @@
+{
+  "source_image": "C:\\Program Files (x86)\\Steam\\userdata\\59046080\\760\\remote\\570\\screenshots\\20260218184010_1.jpg",
+  "ultimates": [
+    {
+      "cell": "Ultimate1",
+      "name": "warpath",
+      "conf": 0.9996750354766846
+    },
+    {
+      "cell": "Ultimate2",
+      "name": "time_lapse",
+      "conf": 0.9999905824661255
+    },
+    {
+      "cell": "Ultimate3",
+      "name": "overgrowth",
+      "conf": 0.9997597336769104
+    },
+    {
+      "cell": "Ultimate4",
+      "name": "magnetize",
+      "conf": 0.9999971389770508
+    },
+    {
+      "cell": "Ultimate5",
+      "name": "mass_serpent_ward",
+      "conf": 0.9992550015449524
+    },
+    {
+      "cell": "Ultimate6",
+      "name": "earth_splitter",
+      "conf": 0.9999997615814209
+    },
+    {
+      "cell": "Ultimate7",
+      "name": "true_form",
+      "conf": 0.8062034249305725
+    },
+    {
+      "cell": "Ultimate8",
+      "name": "vendetta",
+      "conf": 0.9999514818191528
+    },
+    {
+      "cell": "Ultimate9",
+      "name": "nether_strike",
+      "conf": 0.9999613761901855
+    },
+    {
+      "cell": "Ultimate10",
+      "name": "moonlight_shadow",
+      "conf": 0.9997443556785583
+    },
+    {
+      "cell": "Ultimate11",
+      "name": "reaper_s_scythe",
+      "conf": 0.9996751546859741
+    },
+    {
+      "cell": "Ultimate12",
+      "name": "freezing_field",
+      "conf": 0.9999603033065796
+    }
+  ],
+  "heroes": [
+    {
+      "cell": "Hero1",
+      "name": "bristleback",
+      "conf": 0.7030351758003235
+    },
+    {
+      "cell": "Hero2",
+      "name": "elder_titan",
+      "conf": 0.9161953926086426
+    },
+    {
+      "cell": "Hero3",
+      "name": "weaver",
+      "conf": 0.8572728633880615
+    },
+    {
+      "cell": "Hero4",
+      "name": "shadow_shaman",
+      "conf": 0.683564305305481
+    },
+    {
+      "cell": "Hero5",
+      "name": "ogre_magi",
+      "conf": 0.9477779269218445
+    },
+    {
+      "cell": "Hero6",
+      "name": "earth_spirit",
+      "conf": 0.6918253302574158
+    },
+    {
+      "cell": "Hero7",
+      "name": "lone_druid",
+      "conf": 0.42432042956352234
+    },
+    {
+      "cell": "Hero8",
+      "name": "crystal_maiden",
+      "conf": 0.46339714527130127
+    },
+    {
+      "cell": "Hero9",
+      "name": "nyx_assassin",
+      "conf": 0.8959203362464905
+    },
+    {
+      "cell": "Hero10",
+      "name": "necrophos",
+      "conf": 0.1294645369052887
+    },
+    {
+      "cell": "Hero11",
+      "name": "spirit_breaker",
+      "conf": 0.3706980049610138
+    },
+    {
+      "cell": "Hero12",
+      "name": "mirana",
+      "conf": 0.7577515840530396
+    }
+  ],
+  "abilities": [
+    {
+      "cell": "Ability1",
+      "name": "viscous_nasal_goo",
+      "conf": 0.9946923851966858
+    },
+    {
+      "cell": "Ability2",
+      "name": "quill_spray",
+      "conf": 0.9971075654029846
+    },
+    {
+      "cell": "Ability3",
+      "name": "bristleback_ability",
+      "conf": 0.9999508857727051
+    },
+    {
+      "cell": "Ability4",
+      "name": "echo_stomp",
+      "conf": 0.9999212026596069
+    },
+    {
+      "cell": "Ability5",
+      "name": "astral_spirit",
+      "conf": 0.9999692440032959
+    },
+    {
+      "cell": "Ability6",
+      "name": "natural_order",
+      "conf": 0.9968906044960022
+    },
+    {
+      "cell": "Ability7",
+      "name": "the_swarm",
+      "conf": 0.9999829530715942
+    },
+    {
+      "cell": "Ability8",
+      "name": "shukuchi",
+      "conf": 0.9998207688331604
+    },
+    {
+      "cell": "Ability9",
+      "name": "geminate_attack",
+      "conf": 0.9872373342514038
+    },
+    {
+      "cell": "Ability10",
+      "name": "ether_shock",
+      "conf": 0.9999845027923584
+    },
+    {
+      "cell": "Ability11",
+      "name": "hex_shadow_shaman",
+      "conf": 0.9990488886833191
+    },
+    {
+      "cell": "Ability12",
+      "name": "shackles",
+      "conf": 0.9999006986618042
+    },
+    {
+      "cell": "Ability13",
+      "name": "fireblast",
+      "conf": 0.9999970197677612
+    },
+    {
+      "cell": "Ability14",
+      "name": "ignite",
+      "conf": 0.9996564388275146
+    },
+    {
+      "cell": "Ability15",
+      "name": "bloodlust",
+      "conf": 0.999987006187439
+    },
+    {
+      "cell": "Ability16",
+      "name": "boulder_smash",
+      "conf": 0.9752141833305359
+    },
+    {
+      "cell": "Ability17",
+      "name": "rolling_boulder",
+      "conf": 0.9999997615814209
+    },
+    {
+      "cell": "Ability18",
+      "name": "geomagnetic_grip",
+      "conf": 0.9999996423721313
+    },
+    {
+      "cell": "Ability19",
+      "name": "death_seeker",
+      "conf": 0.34861990809440613
+    },
+    {
+      "cell": "Ability20",
+      "name": "spirit_link",
+      "conf": 0.9990449547767639
+    },
+    {
+      "cell": "Ability21",
+      "name": "summon_spirit_bear",
+      "conf": 0.9999922513961792
+    },
+    {
+      "cell": "Ability22",
+      "name": "crystal_nova",
+      "conf": 0.9743809103965759
+    },
+    {
+      "cell": "Ability23",
+      "name": "frostbite",
+      "conf": 0.9999432563781738
+    },
+    {
+      "cell": "Ability24",
+      "name": "arcane_aura",
+      "conf": 0.9222798347473145
+    },
+    {
+      "cell": "Ability25",
+      "name": "impale",
+      "conf": 0.9995583891868591
+    },
+    {
+      "cell": "Ability26",
+      "name": "aghanim_s_shard_ability",
+      "conf": 0.8883606791496277
+    },
+    {
+      "cell": "Ability27",
+      "name": "spiked_carapace",
+      "conf": 0.9793388247489929
+    },
+    {
+      "cell": "Ability28",
+      "name": "death_pulse",
+      "conf": 0.994900643825531
+    },
+    {
+      "cell": "Ability29",
+      "name": "ghost_shroud",
+      "conf": 0.9986187219619751
+    },
+    {
+      "cell": "Ability30",
+      "name": "heartstopper_aura",
+      "conf": 0.9939370155334473
+    },
+    {
+      "cell": "Ability31",
+      "name": "charge_of_darkness",
+      "conf": 0.9997661709785461
+    },
+    {
+      "cell": "Ability32",
+      "name": "bulldoze",
+      "conf": 0.9918476343154907
+    },
+    {
+      "cell": "Ability33",
+      "name": "greater_bash",
+      "conf": 0.999886155128479
+    },
+    {
+      "cell": "Ability34",
+      "name": "starstorm",
+      "conf": 0.9999942779541016
+    },
+    {
+      "cell": "Ability35",
+      "name": "sacred_arrow",
+      "conf": 0.999664306640625
+    },
+    {
+      "cell": "Ability36",
+      "name": "leap",
+      "conf": 0.9990359544754028
+    }
+  ],
+  "warnings": [],
+  "hero_vec": [
+    "bristleback",
+    "elder_titan",
+    "weaver",
+    "shadow_shaman",
+    "ogre_magi",
+    "earth_spirit",
+    "lone_druid",
+    "crystal_maiden",
+    "nyx_assassin",
+    "necrophos",
+    "spirit_breaker",
+    "mirana"
+  ],
+  "ultimate_vec": [
+    "warpath",
+    "time_lapse",
+    "overgrowth",
+    "magnetize",
+    "mass_serpent_ward",
+    "earth_splitter",
+    "true_form",
+    "vendetta",
+    "nether_strike",
+    "moonlight_shadow",
+    "reaper_s_scythe",
+    "freezing_field"
+  ],
+  "ability_vec": [
+    "viscous_nasal_goo",
+    "quill_spray",
+    "bristleback_ability",
+    "echo_stomp",
+    "astral_spirit",
+    "natural_order",
+    "the_swarm",
+    "shukuchi",
+    "geminate_attack",
+    "ether_shock",
+    "hex_shadow_shaman",
+    "shackles",
+    "fireblast",
+    "ignite",
+    "bloodlust",
+    "boulder_smash",
+    "rolling_boulder",
+    "geomagnetic_grip",
+    "death_seeker",
+    "spirit_link",
+    "summon_spirit_bear",
+    "crystal_nova",
+    "frostbite",
+    "arcane_aura",
+    "impale",
+    "aghanim_s_shard_ability",
+    "spiked_carapace",
+    "death_pulse",
+    "ghost_shroud",
+    "heartstopper_aura",
+    "charge_of_darkness",
+    "bulldoze",
+    "greater_bash",
+    "starstorm",
+    "sacred_arrow",
+    "leap"
+  ],
+  "all_picks_vec": [
+    "bristleback",
+    "elder_titan",
+    "weaver",
+    "shadow_shaman",
+    "ogre_magi",
+    "earth_spirit",
+    "lone_druid",
+    "crystal_maiden",
+    "nyx_assassin",
+    "necrophos",
+    "spirit_breaker",
+    "mirana",
+    "warpath",
+    "time_lapse",
+    "overgrowth",
+    "magnetize",
+    "mass_serpent_ward",
+    "earth_splitter",
+    "true_form",
+    "vendetta",
+    "nether_strike",
+    "moonlight_shadow",
+    "reaper_s_scythe",
+    "freezing_field",
+    "viscous_nasal_goo",
+    "quill_spray",
+    "bristleback_ability",
+    "echo_stomp",
+    "astral_spirit",
+    "natural_order",
+    "the_swarm",
+    "shukuchi",
+    "geminate_attack",
+    "ether_shock",
+    "hex_shadow_shaman",
+    "shackles",
+    "fireblast",
+    "ignite",
+    "bloodlust",
+    "boulder_smash",
+    "rolling_boulder",
+    "geomagnetic_grip",
+    "death_seeker",
+    "spirit_link",
+    "summon_spirit_bear",
+    "crystal_nova",
+    "frostbite",
+    "arcane_aura",
+    "impale",
+    "aghanim_s_shard_ability",
+    "spiked_carapace",
+    "death_pulse",
+    "ghost_shroud",
+    "heartstopper_aura",
+    "charge_of_darkness",
+    "bulldoze",
+    "greater_bash",
+    "starstorm",
+    "sacred_arrow",
+    "leap"
+  ]
+}
