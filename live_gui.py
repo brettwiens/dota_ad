@@ -28,22 +28,27 @@ INDEXX
     8.1 layout
     8.2 context menus (mark me, mark other, clear, lock)
     8.3 rendering (ranked, pairs, selected lists)
+    8.4 ChatGPT explain popup (click pair)
 ========================================================================================
 """
 
 # ======================================================================================
 # TAG: 1.0 Imports + Paths
 # ======================================================================================
+import os
 import re
 import traceback
 import threading
+from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Dict, Tuple
 
 import importlib.util
-import inspect
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
+import json
+import time
+import hashlib
 
 from windrun_collector import (
     norm_with_alias as normalize_name,
@@ -66,12 +71,37 @@ ABILITY_ICON_DIR = BASE_DIR / "icons" / "abilities"
 TOP_PAIRS = 60
 ICON_SIZE = 36
 
+# -------------------------
+# ChatGPT cost controls
+# -------------------------
+CHATGPT_MODEL = "gpt-4o-mini"  # small + cheap :contentReference[oaicite:1]{index=1}
+# Alternative ultra-cheap option: "gpt-4.1-nano" :contentReference[oaicite:2]{index=2}
+
+CHATGPT_MAX_OUTPUT_TOKENS = 260  # hard cap for cost control :contentReference[oaicite:3]{index=3}
+
+CACHE_DIR = BASE_DIR / "cache"
+PAIR_EXPLAIN_CACHE_PATH = CACHE_DIR / "pair_explain_cache.json"
+PAIR_EXPLAIN_CACHE_TTL_DAYS = 90  # set None/0 to never expire
+PAIR_EXPLAIN_PROMPT_VERSION = "v1"  # bump to invalidate old cache entries
+
 try:
     from PIL import Image, ImageTk
 
     PIL_OK = True
 except Exception:
     PIL_OK = False
+
+# Optional dependency for ChatGPT explanations:
+#   pip install openai
+# and set env var:
+#   OPENAI_API_KEY=...
+try:
+    from openai import OpenAI  # type: ignore
+
+    OPENAI_OK = True
+except Exception:
+    OPENAI_OK = False
+    OpenAI = None  # type: ignore
 
 
 # ======================================================================================
@@ -87,9 +117,6 @@ def load_infer_one(infer_path: Path):
 
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)  # type: ignore[attr-defined]
-
-    print("USING INFER FILE:", inspect.getsourcefile(mod))
-    print("infer_one signature:", inspect.signature(mod.infer_one))
     return mod.infer_one
 
 
@@ -485,6 +512,187 @@ class IconCache:
 
 
 # ======================================================================================
+# TAG: 8.4 ChatGPT explain popup (click pair)
+# ======================================================================================
+@dataclass(frozen=True)
+class PairExplainRequest:
+    a_name: str
+    b_name: str
+    a_type: str
+    b_type: str
+    score: Optional[float] = None
+
+_cache_lock = threading.Lock()
+
+
+def _cache_load() -> dict:
+    try:
+        if not PAIR_EXPLAIN_CACHE_PATH.exists():
+            return {}
+        with PAIR_EXPLAIN_CACHE_PATH.open("r", encoding="utf-8") as f:
+            return json.load(f) or {}
+    except Exception:
+        return {}
+
+
+def _cache_save(cache: dict) -> None:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    tmp = PAIR_EXPLAIN_CACHE_PATH.with_suffix(".tmp")
+    with tmp.open("w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
+    tmp.replace(PAIR_EXPLAIN_CACHE_PATH)
+
+
+def _cache_key_for_pair(a_name: str, b_name: str, model: str) -> str:
+    # Order-independent, so A+B == B+A
+    a = base_norm(a_name)
+    b = base_norm(b_name)
+    left, right = sorted([a, b])
+    raw = f"{PAIR_EXPLAIN_PROMPT_VERSION}|{model}|{left}|{right}"
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def _cache_get_explanation(cache_key: str) -> Optional[str]:
+    with _cache_lock:
+        cache = _cache_load()
+        entry = cache.get(cache_key)
+        if not entry:
+            return None
+
+        # TTL
+        ttl_days = PAIR_EXPLAIN_CACHE_TTL_DAYS
+        if ttl_days and ttl_days > 0:
+            ts = entry.get("ts")
+            if ts is None:
+                return None
+            age_days = (time.time() - float(ts)) / 86400.0
+            if age_days > float(ttl_days):
+                # expire it
+                cache.pop(cache_key, None)
+                _cache_save(cache)
+                return None
+
+        text = entry.get("text")
+        return text if isinstance(text, str) and text.strip() else None
+
+
+def _cache_put_explanation(cache_key: str, text: str, meta: Optional[dict] = None) -> None:
+    with _cache_lock:
+        cache = _cache_load()
+        cache[cache_key] = {
+            "ts": time.time(),
+            "text": text,
+            "meta": meta or {},
+        }
+        _cache_save(cache)
+
+class PairExplainPopup(tk.Toplevel):
+    def __init__(self, master: tk.Misc, title: str):
+        super().__init__(master)
+        self.title(title)
+        self.geometry("760x520")
+        self.transient(master)
+        self.grab_set()
+
+        self.status_var = tk.StringVar(value="Thinking...")
+
+        top = ttk.Frame(self, padding=10)
+        top.pack(fill="x")
+
+        ttk.Label(top, textvariable=self.status_var).pack(side="left")
+
+        self.txt = tk.Text(self, wrap="word")
+        self.txt.pack(fill="both", expand=True, padx=10, pady=(0, 10))
+        self._set_text("Working on it...")
+        self._set_readonly(True)
+
+        btns = ttk.Frame(self, padding=(10, 0, 10, 10))
+        btns.pack(fill="x")
+
+        ttk.Button(btns, text="Close", command=self.destroy).pack(side="right")
+
+    def _set_readonly(self, readonly: bool):
+        self.txt.config(state=("disabled" if readonly else "normal"))
+
+    def _set_text(self, text: str):
+        self._set_readonly(False)
+        self.txt.delete("1.0", "end")
+        self.txt.insert("1.0", text)
+        self._set_readonly(True)
+
+    def set_text_done(self, text: str):
+        self._set_text(text)
+        self.status_var.set("Done")
+
+    def set_text_error(self, text: str):
+        self._set_text(text)
+        self.status_var.set("Error")
+
+
+def explain_pair_via_openai(req: PairExplainRequest) -> str:
+    model = CHATGPT_MODEL
+    cache_key = _cache_key_for_pair(req.a_name, req.b_name, model)
+
+    cached = _cache_get_explanation(cache_key)
+    if cached:
+        return cached + "\n\n(cached)"
+
+    if not OPENAI_OK:
+        return (
+            "OpenAI Python SDK is not installed.\n\n"
+            "Run:\n"
+            "  pip install openai\n"
+        )
+
+    if not os.getenv("OPENAI_API_KEY"):
+        return (
+            "OPENAI_API_KEY is not set.\n\n"
+            "Set it as an environment variable, for example in PowerShell:\n"
+            "  setx OPENAI_API_KEY \"your_key_here\"\n"
+            "Then restart your terminal/app.\n"
+        )
+
+    client = OpenAI()
+
+    # Short prompt to keep token usage down
+    prompt = (
+        "Dota 2 Ability Draft analyst. Answer concisely.\n\n"
+        f"Pair:\n"
+        f"- A: {req.a_name} (type: {req.a_type})\n"
+        f"- B: {req.b_name} (type: {req.b_type})\n"
+        f"Score: {req.score}\n\n"
+        "Explain what makes this pair powerful in AD.\n"
+        "Format:\n"
+        "1) Core interaction (2-3 bullets)\n"
+        "2) How it wins fights (2-3 bullets)\n"
+        "3) Execution tips (2-3 bullets)\n"
+        "4) Counters (2-3 bullets)\n"
+    ).strip()
+
+    resp = client.responses.create(
+        model=model,
+        input=prompt,
+        max_output_tokens=CHATGPT_MAX_OUTPUT_TOKENS,
+    )
+
+    text = (resp.output_text or "").strip()
+    if not text:
+        text = "(No response text returned.)"
+
+    _cache_put_explanation(
+        cache_key,
+        text,
+        meta={
+            "model": model,
+            "a": req.a_name,
+            "b": req.b_name,
+            "score": req.score,
+        },
+    )
+    return text
+
+
+# ======================================================================================
 # TAG: 8.0 GUI
 # ======================================================================================
 class LiveDraftGUI(tk.Tk):
@@ -505,6 +713,9 @@ class LiveDraftGUI(tk.Tk):
 
         self._latest_picks: List[dict] = []
         self._latest_pick_by_key: Dict[str, dict] = {}
+
+        # Pair-click support: tag -> pair payload
+        self._pair_payload_by_tag: Dict[str, dict] = {}
 
         self._setup_styles()
 
@@ -977,13 +1188,47 @@ class LiveDraftGUI(tk.Tk):
         insert_rows(self.ult_tree, ults, allowed["ultimates"])
         insert_rows(self.abil_tree, abils, allowed["abilities"])
 
+    def _on_pair_click(self, tag: str):
+        payload = self._pair_payload_by_tag.get(tag)
+        if not payload:
+            return
+
+        req = PairExplainRequest(
+            a_name=payload["a_name"],
+            b_name=payload["b_name"],
+            a_type=payload["a_type"],
+            b_type=payload["b_type"],
+            score=payload.get("score"),
+        )
+
+        title = f"Why is this pair strong?"
+        popup = PairExplainPopup(self, title=title)
+        popup.set_text_done("Thinking...")
+
+        def worker():
+            try:
+                text = explain_pair_via_openai(req)
+                self.after(0, lambda: popup.set_text_done(text))
+            except Exception as e:
+                err = f"{e}\n\n{traceback.format_exc()}"
+                self.after(0, lambda: popup.set_text_error(err))
+                self.after(0, lambda: messagebox.showerror("ChatGPT error", str(e)))
+
+        threading.Thread(target=worker, daemon=True).start()
+
     def _render_pairs(self, pairs: List[dict], allowed: dict):
         self.pairs_box.delete("1.0", "end")
+
+        # Reset clickable mapping each render
+        self._pair_payload_by_tag = {}
 
         self.pairs_box.tag_configure("hero", foreground="#8B0000")
         self.pairs_box.tag_configure("ultimate", foreground="#003366")
         self.pairs_box.tag_configure("ability", foreground="#0B6623")
         self.pairs_box.tag_configure("picked_bold", font=("Consolas", 10, "bold"))
+
+        # Clickable line styling
+        self.pairs_box.tag_configure("pair_clickable", underline=1)
 
         if self.pairs_loading:
             self.pairs_box.insert("end", "Loading ability pairs in background...\n")
@@ -991,6 +1236,10 @@ class LiveDraftGUI(tk.Tk):
 
         if not self.pairs_loaded:
             self.pairs_box.insert("end", "(pairs not loaded)\n")
+            self.pairs_box.insert(
+                "end",
+                "\nTip: Click-to-explain needs OpenAI SDK. Install with: pip install openai\n",
+            )
             return
 
         if not pairs:
@@ -1007,8 +1256,12 @@ class LiveDraftGUI(tk.Tk):
         for k in allowed["abilities"]:
             key_to_type[k] = "ability"
 
+        # Instruction line
+        self.pairs_box.insert("end", "Tip: click a pair line to ask ChatGPT why it is strong.\n\n")
+
         for i, p in enumerate(pairs[:TOP_PAIRS], 1):
-            sc = "n/a" if p.get("score") is None else f"{p['score']:.2f}"
+            sc_val = p.get("score")
+            sc = "n/a" if sc_val is None else f"{sc_val:.2f}"
 
             a_key = p.get("a_key")
             b_key = p.get("b_key")
@@ -1020,21 +1273,47 @@ class LiveDraftGUI(tk.Tk):
 
             bold = (a_key in me_set) or (b_key in me_set)
 
+            # Capture start index for tagging the full line as clickable
+            line_start = self.pairs_box.index("end-1c")
+
             self.pairs_box.insert("end", f"{i:02d}. ")
 
+            a_name = p.get("a_raw", display_from_key(a_key))
+            b_name = p.get("b_raw", display_from_key(b_key))
+
             if bold:
-                self.pairs_box.insert("end", p.get("a_raw", display_from_key(a_key)), ("picked_bold", a_type))
+                self.pairs_box.insert("end", a_name, ("picked_bold", a_type))
             else:
-                self.pairs_box.insert("end", p.get("a_raw", display_from_key(a_key)), (a_type,))
+                self.pairs_box.insert("end", a_name, (a_type,))
 
             self.pairs_box.insert("end", " + ")
 
             if bold:
-                self.pairs_box.insert("end", p.get("b_raw", display_from_key(b_key)), ("picked_bold", b_type))
+                self.pairs_box.insert("end", b_name, ("picked_bold", b_type))
             else:
-                self.pairs_box.insert("end", p.get("b_raw", display_from_key(b_key)), (b_type,))
+                self.pairs_box.insert("end", b_name, (b_type,))
 
             self.pairs_box.insert("end", f"   {sc}\n")
+
+            line_end = self.pairs_box.index("end-1c")
+
+            # Create a unique tag per line, bind click
+            tag = f"pair_{i:02d}"
+            self.pairs_box.tag_add(tag, line_start, line_end)
+            self.pairs_box.tag_add("pair_clickable", line_start, line_end)
+
+            # Store payload for ChatGPT
+            self._pair_payload_by_tag[tag] = {
+                "a_name": a_name,
+                "b_name": b_name,
+                "a_type": a_type,
+                "b_type": b_type,
+                "score": sc_val,
+            }
+
+            # Bind click handler for this tag
+            self.pairs_box.tag_bind(tag, "<Button-1>", lambda e, t=tag: self._on_pair_click(t))
+            self.pairs_box.tag_bind(tag, "<Double-1>", lambda e, t=tag: self._on_pair_click(t))
 
     def _render_selected_lists(self):
         for t in (self.sel_me_tree, self.sel_other_tree):

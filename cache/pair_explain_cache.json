@@ -1,0 +1,12 @@
+{
+  "41ac90a123e94fa48c94f015570d59895d6051d7503bc28a66b280cedd5abb23": {
+    "ts": 1771821620.278884,
+    "text": "### Core Interaction\n- **Damage Over Time**: Infernal Blade applies a strong initial hit and a burn effect, complementing Stifling Dagger's damage and slow.\n- **Mobility Control**: Stifling Dagger allows for quick repositioning after dealing damage, enhancing mobility during fights.\n- **Execution at Low Health**: Infernal Blade deals bonus damage to low-health targets, enabling kills when combined with Dagger's initial burst.\n\n### How It Wins Fights\n- **Chaining Damage**: Burst damage from Dagger can initiate fights, followed by Infernal Blade to finish off weakened enemies.\n- **Slow and Disable**: The combined slow from Dagger and the potential stun from Infernal Blade disrupts enemy positioning and escape routes.\n- **Zone Control**: The burn from Infernal Blade can deter enemies from engaging or fleeing, maintaining pressure in fights.\n\n### Execution Tips\n- **Combo Timing**: Start with Stifling Dagger to initiate, then follow up with Infernal Blade for maximum effect.\n- **Positioning**: Use the mobility from Dagger to reposition for optimal Infernal Blade hits, ensuring you're in the right spot.\n- **Target Priority**: Focus low-health enemy heroes with Infernal Blade to secure kills while using St",
+    "meta": {
+      "model": "gpt-4o-mini",
+      "a": "Stifling Dagger",
+      "b": "Infernal Blade",
+      "score": 59.65
+    }
+  }
+}
